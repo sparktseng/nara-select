@@ -11,3 +11,4 @@
     });
   });
 })();
+if (!document.querySelector('script[src*="site-tracking.js"]')) { const tracking=document.createElement('script'); tracking.src='/assets/site-tracking.js?v=20260918-ga4'; tracking.defer=true; document.body.appendChild(tracking); }
