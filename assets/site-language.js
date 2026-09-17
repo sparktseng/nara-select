@@ -18,12 +18,12 @@
   let language = queryLanguage || normalise(localStorage.getItem('nara-language')) || detect();
 
   const common = {
-    'zh-Hant': { home: '← 回首頁 HOME', maps: 'Google Maps 導航', line: 'LINE 詢問', access: '交通與停車資訊', instagram: 'Instagram', language: '🌐 LANGUAGE' },
-    en: { home: '← Home', maps: 'Google Maps directions', line: 'Ask on LINE', access: 'Directions & parking', instagram: 'Instagram', language: '🌐 LANGUAGE' },
-    th: { home: '← กลับหน้าหลัก', maps: 'นำทางด้วย Google Maps', line: 'สอบถามทาง LINE', access: 'การเดินทางและที่จอดรถ', instagram: 'Instagram', language: '🌐 ภาษา' },
-    vi: { home: '← Về trang chủ', maps: 'Chỉ đường Google Maps', line: 'Hỏi qua LINE', access: 'Đường đi & đỗ xe', instagram: 'Instagram', language: '🌐 NGÔN NGỮ' },
-    id: { home: '← Kembali ke beranda', maps: 'Petunjuk Google Maps', line: 'Tanya lewat LINE', access: 'Arah & parkir', instagram: 'Instagram', language: '🌐 BAHASA' },
-    ja: { home: '← ホームへ戻る', maps: 'Googleマップで案内', line: 'LINEで問い合わせ', access: 'アクセス・駐車場', instagram: 'Instagram', language: '🌐 言語' }
+    'zh-Hant': { home: '← 回首頁 HOME', maps: 'Google Maps 導航', line: 'LINE 詢問', access: '交通與停車資訊', instagram: 'Instagram', faq: '常見問題', guide: '苗栗鐵道散步', language: '🌐 LANGUAGE' },
+    en: { home: '← Home', maps: 'Google Maps directions', line: 'Ask on LINE', access: 'Directions & parking', instagram: 'Instagram', faq: 'FAQ', guide: 'Miaoli railway walk', language: '🌐 LANGUAGE' },
+    th: { home: '← กลับหน้าหลัก', maps: 'นำทางด้วย Google Maps', line: 'สอบถามทาง LINE', access: 'การเดินทางและที่จอดรถ', instagram: 'Instagram', faq: 'คำถามที่พบบ่อย', guide: 'เดินเล่นทางรถไฟเหมียวลี่', language: '🌐 ภาษา' },
+    vi: { home: '← Về trang chủ', maps: 'Chỉ đường Google Maps', line: 'Hỏi qua LINE', access: 'Đường đi & đỗ xe', instagram: 'Instagram', faq: 'Câu hỏi thường gặp', guide: 'Dạo quanh đường sắt Miêu Lật', language: '🌐 NGÔN NGỮ' },
+    id: { home: '← Kembali ke beranda', maps: 'Petunjuk Google Maps', line: 'Tanya lewat LINE', access: 'Arah & parkir', instagram: 'Instagram', faq: 'Pertanyaan umum', guide: 'Jalan-jalan kereta Miaoli', language: '🌐 BAHASA' },
+    ja: { home: '← ホームへ戻る', maps: 'Googleマップで案内', line: 'LINEで問い合わせ', access: 'アクセス・駐車場', instagram: 'Instagram', faq: 'よくある質問', guide: '苗栗鉄道散策', language: '🌐 言語' }
   };
 
   const drinks = {
@@ -111,7 +111,7 @@
     set('main > section:nth-of-type(4) .section-title', data.faqTitle);
     set('.faq article:nth-child(1) h3', data.q1); set('.faq article:nth-child(1) p', data.a1); set('.faq article:nth-child(2) h3', data.q2); set('.faq article:nth-child(2) p', data.a2); set('.faq article:nth-child(3) h3', data.q3); set('.faq article:nth-child(3) p', data.a3);
     set('main > section:nth-of-type(4) .actions .btn:nth-child(1)', c.home); set('main > section:nth-of-type(4) .actions .btn:nth-child(2)', c.instagram);
-    const footer = document.querySelector('footer .wrap'); if (footer) footer.innerHTML = `<strong>5號店 Nara Select</strong><br>${data.footer}<br>© 2026 Nara Select`;
+    set('[data-footer-address]', data.footer);
   }
 
   function applySelect(data) {
@@ -121,7 +121,7 @@
     set('main > section:nth-of-type(3) .title', data.smallTitle); set('main > section:nth-of-type(3) .lead', data.smallLead); set('main > section:nth-of-type(3) .photo-card:nth-child(1) h3', data.elephant); set('main > section:nth-of-type(3) .photo-card:nth-child(1) p', data.elephantText); set('main > section:nth-of-type(3) .photo-card:nth-child(2) h3', data.blind); set('main > section:nth-of-type(3) .photo-card:nth-child(2) p', data.blindText);
     set('main > section:nth-of-type(4) .title', data.figuresTitle); set('main > section:nth-of-type(4) .photo-card:nth-child(1) h3', data.figures); set('main > section:nth-of-type(4) .photo-card:nth-child(1) p', data.figuresText); set('main > section:nth-of-type(4) .photo-card:nth-child(2) h2', data.visitTitle); set('main > section:nth-of-type(4) .photo-card:nth-child(2) p', data.visitText);
     set('main > section:nth-of-type(4) .actions .btn:nth-child(1)', c.line); set('main > section:nth-of-type(4) .actions .btn:nth-child(2)', c.access); set('main > section:nth-of-type(4) .actions .btn:nth-child(3)', c.maps); set('main > section:nth-of-type(4) .notice', data.notice);
-    const footer = document.querySelector('footer .wrap'); if (footer) footer.innerHTML = `<strong>5號店 Nara Select</strong><br>${data.footer}<br>© 2026 Nara Select`;
+    set('[data-footer-address]', data.footer);
   }
 
   function applyAccess(data) {
@@ -135,7 +135,7 @@
     set('.parking .card:nth-child(1) h3', data.rear); set('.parking .card:nth-child(1) p', data.rearText); set('.parking .card:nth-child(2) h3', data.front); set('.parking .card:nth-child(2) p', data.frontText); set('.parking .note', data.note);
     set('main > section:nth-of-type(4) .section-title', data.arrivalTitle); set('.arrival .card:nth-child(1) h3', data.addressTitle); set('.arrival .card:nth-child(1) p', data.address, true); set('.arrival .card:nth-child(2) h3', data.landmarkTitle); set('.arrival .card:nth-child(2) p', data.landmarkText);
     set('main > section:nth-of-type(4) .actions .btn:nth-child(1)', data.intro); set('main > section:nth-of-type(4) .actions .btn:nth-child(2)', c.instagram);
-    const footer = document.querySelector('footer .wrap'); if (footer) footer.innerHTML = `<strong>5號店 Nara Select</strong><br>${data.footer}<br>© 2026 Nara Select`;
+    set('[data-footer-address]', data.footer);
   }
 
   function syncLinks() {
@@ -145,7 +145,7 @@
       const url = new URL(raw, location.origin);
       if (url.origin !== location.origin) return;
       url.searchParams.set('lang', language);
-      url.searchParams.set('v', '20260917-access6');
+      url.searchParams.set('v', '20260917-content6');
       link.href = `${url.pathname}${url.search}${url.hash}`;
     });
   }
@@ -156,6 +156,7 @@
     if (path.endsWith('/thai-drinks.html')) applyDrinks(drinks[language] || drinks.en);
     if (path.endsWith('/thai-select.html')) applySelect(select[language] || select.en);
     if (path.endsWith('/access.html')) applyAccess(access[language] || access.en);
+    document.querySelectorAll('[data-common]').forEach(element => { const value = common[language][element.dataset.common]; if (value) element.textContent = value; });
     document.querySelectorAll('[data-language-select]').forEach(select => { select.value = language; });
     syncLinks();
   }
