@@ -122,6 +122,7 @@
       const url = new URL(raw, location.origin);
       if (url.origin !== location.origin) return;
       url.searchParams.set('lang', language);
+      url.searchParams.set('v', '20260917-6lang');
       link.href = `${url.pathname}${url.search}${url.hash}`;
     });
   }
