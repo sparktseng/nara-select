@@ -19,12 +19,12 @@ for (const vendor of vendors) {
       if (data['@context'] !== 'https://schema.org' || !data['@type'] || data.address?.streetAddress !== vendor.street || data.address?.postalCode !== vendor.postal) errors.push(`${page}: incomplete address JSON-LD`);
       if (vendor.menu && !data.hasMenu) errors.push(`${page}: missing hasMenu JSON-LD`);
     } catch { errors.push(`${page}: invalid JSON-LD`); }
-    if (vendor.menu) for (const required of ['data-menu-open','data-menu-dialog','foodpanda.com.tw/restaurant/ifkl/','rel="noopener sponsored"']) if (!html.includes(required)) errors.push(`${page}: missing ${required}`);
+    if (vendor.menu) for (const required of ['data-menu-open','data-menu-dialog','foodpanda.com.tw/restaurant/ifkl/','rel="noopener sponsored"','class="vendor-gallery"','store-02-yakisoba-bread.webp','store-02-braised-pork-rice.webp','store-02-menu-overview.webp','store-02-shop-interior.webp','store-02-shiba-inu.webp','store-02-dining-room.webp','store-02-exterior-sign.webp']) if (!html.includes(required)) errors.push(`${page}: missing ${required}`);
     if ((await stat(page)).size > 20000) errors.push(`${page}: page too large`);
   }
 }
 
-for (const file of ['assets/vendor-page.css','assets/vendor-language.js','assets/nambo-wan-share.svg','assets/hei-xin-tang-share.svg','assets/thai-milk-tea.webp','404.html']) {
+for (const file of ['assets/vendor-page.css','assets/vendor-language.js','assets/nambo-wan-share.svg','assets/hei-xin-tang-share.svg','assets/thai-milk-tea.webp','assets/store-02-yakisoba-bread.webp','assets/store-02-braised-pork-rice.webp','assets/store-02-menu-overview.webp','assets/store-02-shop-interior.webp','assets/store-02-shiba-inu.webp','assets/store-02-dining-room.webp','assets/store-02-exterior-sign.webp','404.html']) {
   try { await access(file); } catch { errors.push(`missing ${file}`); }
 }
 const sitemap = await readFile('sitemap.xml', 'utf8');
