@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fff4df"/>
+  <circle cx="1080" cy="90" r="250" fill="#4c3028" opacity=".12"/>
+  <circle cx="100" cy="610" r="230" fill="#c88752" opacity=".25"/>
+  <text x="90" y="120" font-family="sans-serif" font-size="30" font-weight="700" fill="#8a5b34">苗栗火車頭園區・鐵路一村 6號店</text>
+  <text x="90" y="280" font-family="sans-serif" font-size="76" font-weight="800" fill="#322923">黑心糖</text>
+  <text x="90" y="380" font-family="sans-serif" font-size="68" font-weight="800" fill="#322923">古早味剉冰店</text>
+  <text x="92" y="500" font-family="sans-serif" font-size="29" fill="#654f43">地址・營業時間・Google Maps</text>
+  <text x="92" y="555" font-family="sans-serif" font-size="23" fill="#8a6d5d">RAILWAY VILLAGE SHOP GUIDE</text>
+</svg>
