@@ -11,7 +11,7 @@ for (const vendor of vendors) {
   for (const lang of languages) {
     const page = `${lang}railway-village/${vendor.slug}`;
     const html = await readFile(page, 'utf8');
-    for (const required of ['<title>','meta name="description"','rel="canonical"','property="og:title"','property="og:description"','application/ld+json',`<h1>${vendor.name}</h1>`,vendor.map,'loading="lazy"',vendor.street.replace('鐵路一村',''),vendor.nearby,vendor.postal]) if (!html.includes(required)) errors.push(`${page}: missing ${required}`);
+    for (const required of ['<title>','meta name="description"','rel="canonical"','property="og:title"','property="og:description"','application/ld+json',`<h1>${vendor.name}</h1>`,vendor.map,'loading="lazy"','class="notice">※',vendor.street.replace('鐵路一村',''),vendor.nearby,vendor.postal]) if (!html.includes(required)) errors.push(`${page}: missing ${required}`);
     if ((html.match(/hreflang=/g) || []).length !== 7) errors.push(`${page}: hreflang count`);
     const match = html.match(/<script type="application\/ld\+json">([^<]+)<\/script>/);
     try {
