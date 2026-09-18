@@ -3,7 +3,7 @@ import { readFile, access, stat } from 'node:fs/promises';
 const languages = ['', 'en/', 'ja/', 'th/', 'vi/', 'id/'];
 const vendors = [
   {slug:'02-nambo-wan-yakisoba-bread.html',name:'喃啵萬 炒麵麵包',map:'svvYSrcNzCKEuG7v8',street:'鐵路一村34號',postal:'360',nearby:'37'},
-  {slug:'06-hei-xin-tang-shaved-ice.html',name:'黑心糖古早味剉冰店',map:'ZM9AiKtW1nfAFimd6',street:'鐵路一村38號',postal:'360005',nearby:'37'}
+  {slug:'06-hei-xin-tang-shaved-ice.html',name:'黑心糖古早味剉冰店',map:'ZM9AiKtW1nfAFimd6',street:'鐵路一村38號',postal:'360',nearby:'37'}
 ];
 const errors = [];
 
