@@ -2,7 +2,7 @@ import { readFile, access, stat } from 'node:fs/promises';
 
 const languages = ['', 'en/', 'ja/', 'th/', 'vi/', 'id/'];
 const vendors = [
-  {slug:'02-nambo-wan-yakisoba-bread.html',name:'喃啵萬 炒麵麵包',map:'svvYSrcNzCKEuG7v8',street:'鐵路一村34號',postal:'360',nearby:'37'},
+  {slug:'02-nambo-wan-yakisoba-bread.html',name:'喃啵萬 炒麵麵包',map:'svvYSrcNzCKEuG7v8',street:'鐵路一村34號',postal:'360',nearby:'37',menu:true},
   {slug:'06-hei-xin-tang-shaved-ice.html',name:'黑心糖古早味剉冰店',map:'ZM9AiKtW1nfAFimd6',street:'鐵路一村38號',postal:'360',nearby:'37'}
 ];
 const errors = [];
@@ -17,7 +17,9 @@ for (const vendor of vendors) {
     try {
       const data = JSON.parse(match?.[1] || '');
       if (data['@context'] !== 'https://schema.org' || !data['@type'] || data.address?.streetAddress !== vendor.street || data.address?.postalCode !== vendor.postal) errors.push(`${page}: incomplete address JSON-LD`);
+      if (vendor.menu && !data.hasMenu) errors.push(`${page}: missing hasMenu JSON-LD`);
     } catch { errors.push(`${page}: invalid JSON-LD`); }
+    if (vendor.menu) for (const required of ['data-menu-open','data-menu-dialog','foodpanda.com.tw/restaurant/ifkl/','rel="noopener sponsored"']) if (!html.includes(required)) errors.push(`${page}: missing ${required}`);
     if ((await stat(page)).size > 20000) errors.push(`${page}: page too large`);
   }
 }
