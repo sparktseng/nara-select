@@ -6,9 +6,656 @@
     "timezone": "Asia/Taipei",
     "status": "完成",
     "discovered": 106,
-    "newCandidates": 70
+    "newCandidates": 70,
+    "availableCandidates": 100
   },
   "candidates": [
+    {
+      "sourceItemId": "CBMi_gJBVV95cUxQMUhiRTZqX3loRkhyQ0lzcXFFYU12eVRFc0NBeFZBZzNsOUFVdnlrR25LcndLYVF2d1ZYRkN2bGE5dWMyR2VGU1o1cjdTV2YtNGVTOFloVkcyMUhQYURNM3lyQU9sOVVDMC1WazlDV28wc3U3eGhsaUFKamptSmJnNHFyUFAtODRyRlBzRldBaWJQa0VXekhLMnpVdDFfSFFZcHlfXzhOcXRIQXNMM0NLc05EZ0IxcDRpZUNlckJFRFE5Z0JPTG1vRVN5TFZaUHViVllPaXVONmxobWdkZ3U3clNLX1k4dy1EUmh0TXh6Y19jUlh5MTlheG1wcUxFUFFiZlFOSWVsdy0yczJueDZDcXBOUXBmWngwRlJiWDA5ZkRTR0dsbEJXeUlocWg5WWZTQmZua2YzZzN4bkRIbGE2VzdqOER1UWFUUE0yUVU3WlRyUS1DMDY5RkJTcHZLRy1XbWh0VXFlOC1Rc09SSHdiaE5JMVdiMURncmZOR2d3",
+      "title": "【客華雙語】火車迷、貓奴注意！假日必訪新景點 客委會投近11億「苗栗火車頭園區」盛大開幕 - hakka.gov.tw",
+      "url": "https://news.google.com/rss/articles/CBMi_gJBVV95cUxQMUhiRTZqX3loRkhyQ0lzcXFFYU12eVRFc0NBeFZBZzNsOUFVdnlrR25LcndLYVF2d1ZYRkN2bGE5dWMyR2VGU1o1cjdTV2YtNGVTOFloVkcyMUhQYURNM3lyQU9sOVVDMC1WazlDV28wc3U3eGhsaUFKamptSmJnNHFyUFAtODRyRlBzRldBaWJQa0VXekhLMnpVdDFfSFFZcHlfXzhOcXRIQXNMM0NLc05EZ0IxcDRpZUNlckJFRFE5Z0JPTG1vRVN5TFZaUHViVllPaXVONmxobWdkZ3U3clNLX1k4dy1EUmh0TXh6Y19jUlh5MTlheG1wcUxFUFFiZlFOSWVsdy0yczJueDZDcXBOUXBmWngwRlJiWDA5ZkRTR0dsbEJXeUlocWg5WWZTQmZua2YzZzN4bkRIbGE2VzdqOER1UWFUUE0yUVU3WlRyUS1DMDY5RkJTcHZLRy1XbWh0VXFlOC1Rc09SSHdiaE5JMVdiMURncmZOR2d3?oc=5",
+      "publishedAt": "Fri, 25 Apr 2025 07:00:00 GMT",
+      "summary": "【客華雙語】火車迷、貓奴注意！假日必訪新景點 客委會投近11億「苗栗火車頭園區」盛大開幕 &nbsp;&nbsp; hakka.gov.tw",
+      "publisher": "hakka.gov.tw",
+      "query": "(苗栗 鐵路一村 OR 苗栗 火車頭園區) site:hakka.gov.tw",
+      "sourceGroup": "客家委員會",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "開幕"
+      ],
+      "id": "70f9690ea1a30aecb8df4a54"
+    },
+    {
+      "sourceItemId": "CBMirgFBVV95cUxOM0loQ3lDLXpzWmREVjBkdlZjWnhYVGx3VjZHUzFtem9KNWpJNGVEZ2t2Q1dtVmk3OFU4dlRnNE5tMUJFVDFVT29mbldSQmd6UUpvdHhnQThicFVseXVUZ1BXZm9BclJucTVNaFc2ZWQ3cEtqLS0zWldsM2Y2QnBXTzdRclpyZFl1aGdWa1duNGh2YXNzc3ZVUVJDZWcwMmdlU1ZTam41NnZKZ3ZtaXc",
+      "title": "火車迷、貓奴注意！假日必訪新景點 客委會投近11億「苗栗火車頭園區」盛大開幕 - hakka.gov.tw",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOM0loQ3lDLXpzWmREVjBkdlZjWnhYVGx3VjZHUzFtem9KNWpJNGVEZ2t2Q1dtVmk3OFU4dlRnNE5tMUJFVDFVT29mbldSQmd6UUpvdHhnQThicFVseXVUZ1BXZm9BclJucTVNaFc2ZWQ3cEtqLS0zWldsM2Y2QnBXTzdRclpyZFl1aGdWa1duNGh2YXNzc3ZVUVJDZWcwMmdlU1ZTam41NnZKZ3ZtaXc?oc=5",
+      "publishedAt": "Fri, 02 May 2025 07:00:00 GMT",
+      "summary": "火車迷、貓奴注意！假日必訪新景點 客委會投近11億「苗栗火車頭園區」盛大開幕 &nbsp;&nbsp; hakka.gov.tw",
+      "publisher": "hakka.gov.tw",
+      "query": "(苗栗 鐵路一村 OR 苗栗 火車頭園區) site:hakka.gov.tw",
+      "sourceGroup": "客家委員會",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "開幕"
+      ],
+      "id": "74ab318ef3ebc9ad80eefb8b"
+    },
+    {
+      "sourceItemId": "CBMidkFVX3lxTE5SYjJyRVRhWWZGQk44VnFlZEllaVhFcHdFdjYzLVZIb05FeTlkb3lTYlNZbzBKcURBcm54aUZhQ0ZGSXFDX1hJdEE0RmRqVmNQUG5CUWlIUkYyZzg1TFlMYVp1WS1vU1JjaWJkN1dId3NrcE5FdlE",
+      "title": "行政處發包科-苗栗鐵路一村復甦計劃-火車頭園區願景館新建工程 - miaoli.gov.tw",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5SYjJyRVRhWWZGQk44VnFlZEllaVhFcHdFdjYzLVZIb05FeTlkb3lTYlNZbzBKcURBcm54aUZhQ0ZGSXFDX1hJdEE0RmRqVmNQUG5CUWlIUkYyZzg1TFlMYVp1WS1vU1JjaWJkN1dId3NrcE5FdlE?oc=5",
+      "publishedAt": "Thu, 10 Oct 2019 23:38:22 GMT",
+      "summary": "行政處發包科-苗栗鐵路一村復甦計劃-火車頭園區願景館新建工程 &nbsp;&nbsp; miaoli.gov.tw",
+      "publisher": "miaoli.gov.tw",
+      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
+      "sourceGroup": "苗栗縣政府",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵路一村",
+        "鐵路一村"
+      ],
+      "id": "5d6feeb7640c97f21619457f"
+    },
+    {
+      "sourceItemId": "CBMia0FVX3lxTE96U19xTjNMM0lpRlU1MFZDV2FkczRkUHdoUndtRFVKSjJ4eVRUeVhsWXBSbkdfdE04czVFckk4NlVWSDI1dl8waDEzdDhkYWc5RW5hWnh2bzRONlpmQVp0azgxWDlOcThhQmZ3",
+      "title": "苗栗火車頭園區願景館春節活動不停歇 - miaoli.gov.tw",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE96U19xTjNMM0lpRlU1MFZDV2FkczRkUHdoUndtRFVKSjJ4eVRUeVhsWXBSbkdfdE04czVFckk4NlVWSDI1dl8waDEzdDhkYWc5RW5hWnh2bzRONlpmQVp0azgxWDlOcThhQmZ3?oc=5",
+      "publishedAt": "Fri, 28 Jan 2022 05:57:18 GMT",
+      "summary": "苗栗火車頭園區願景館春節活動不停歇 &nbsp;&nbsp; miaoli.gov.tw",
+      "publisher": "miaoli.gov.tw",
+      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
+      "sourceGroup": "苗栗縣政府",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "活動"
+      ],
+      "id": "40b35dba3e6aed28489dc672"
+    },
+    {
+      "sourceItemId": "CBMia0FVX3lxTE1pZnV0V1JaakZJdjVaRFB0eVMtVHgzRHlEM0VxOGIyeDVtZmw0QV9HMkhiOHh2d3kxZDQ2Yy1SSC1WVlV1UGZKSmJWRE5JQ2ZVZExJNE1PaHI1YkZ2OXRWSF9XQXB6aEV3RC1J",
+      "title": "苗栗火車頭園區竣工將結合客家文化打造成為觀光旅遊亮點 - miaoli.gov.tw",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1pZnV0V1JaakZJdjVaRFB0eVMtVHgzRHlEM0VxOGIyeDVtZmw0QV9HMkhiOHh2d3kxZDQ2Yy1SSC1WVlV1UGZKSmJWRE5JQ2ZVZExJNE1PaHI1YkZ2OXRWSF9XQXB6aEV3RC1J?oc=5",
+      "publishedAt": "Sat, 17 Feb 2024 18:53:22 GMT",
+      "summary": "苗栗火車頭園區竣工將結合客家文化打造成為觀光旅遊亮點 &nbsp;&nbsp; miaoli.gov.tw",
+      "publisher": "miaoli.gov.tw",
+      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
+      "sourceGroup": "苗栗縣政府",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "6b1f1f682027ca4ccb6fc64c"
+    },
+    {
+      "sourceItemId": "CBMia0FVX3lxTFBKcEJyNHA4YkJEZmN4UzVxekxEMUtQNm1UXzY5ZS1FMk5ZUmhoRmdKT19MdjdwRm1jOFZDUUg0V05WdnVxM3dHaVBnbEZJX2tlU1JBWGJxbjlhUFE4cWhyZmJfOVFuMG5iWEw0",
+      "title": "全台唯一觀光亮點 苗栗火車頭園區盛大開幕 - miaoli.gov.tw",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBKcEJyNHA4YkJEZmN4UzVxekxEMUtQNm1UXzY5ZS1FMk5ZUmhoRmdKT19MdjdwRm1jOFZDUUg0V05WdnVxM3dHaVBnbEZJX2tlU1JBWGJxbjlhUFE4cWhyZmJfOVFuMG5iWEw0?oc=5",
+      "publishedAt": "Thu, 01 May 2025 18:38:29 GMT",
+      "summary": "全台唯一觀光亮點 苗栗火車頭園區盛大開幕 &nbsp;&nbsp; miaoli.gov.tw",
+      "publisher": "miaoli.gov.tw",
+      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
+      "sourceGroup": "苗栗縣政府",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "開幕"
+      ],
+      "id": "4c194f92cfd89cc8ab4eaff5"
+    },
+    {
+      "sourceItemId": "CBMia0FVX3lxTE5GblZfdDhYeHNibUZpWERSa3d3bTQ1eUJTZEtzYlREQlVpRWNSU09uWG8tcGhXekFlMlBvekZqeFp6QVlhUWw3NkdqVVh0V0xwQ3J5dVhyQjBsNExvZDBldW1RSGJqV0FnT2Yw",
+      "title": "苗栗火車頭園區願景館試營運開幕 - miaoli.gov.tw",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5GblZfdDhYeHNibUZpWERSa3d3bTQ1eUJTZEtzYlREQlVpRWNSU09uWG8tcGhXekFlMlBvekZqeFp6QVlhUWw3NkdqVVh0V0xwQ3J5dVhyQjBsNExvZDBldW1RSGJqV0FnT2Yw?oc=5",
+      "publishedAt": "Thu, 23 Jun 2022 11:33:39 GMT",
+      "summary": "苗栗火車頭園區願景館試營運開幕 &nbsp;&nbsp; miaoli.gov.tw",
+      "publisher": "miaoli.gov.tw",
+      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
+      "sourceGroup": "苗栗縣政府",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "開幕"
+      ],
+      "id": "fe9acea7294e3d58a74c9bbb"
+    },
+    {
+      "sourceItemId": "CBMia0FVX3lxTFB0NGFzVFJFWmMwc0Z2Z2lPUy1HS3ptRU1uNDJEU3BQaVBuNzAzdmE0OU5iaDNYUlJ3b3ZybTFHanRKaVlDanBaZ1ExR0JHbVZ0cWk5TlA0V01STGIzZHJLX3o0V3dMVHZhSkVF",
+      "title": "藝術家現身鐵路一村 創作苗栗鐵道新地景 - miaoli.gov.tw",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB0NGFzVFJFWmMwc0Z2Z2lPUy1HS3ptRU1uNDJEU3BQaVBuNzAzdmE0OU5iaDNYUlJ3b3ZybTFHanRKaVlDanBaZ1ExR0JHbVZ0cWk5TlA0V01STGIzZHJLX3o0V3dMVHZhSkVF?oc=5",
+      "publishedAt": "Mon, 10 Aug 2020 12:25:40 GMT",
+      "summary": "藝術家現身鐵路一村 創作苗栗鐵道新地景 &nbsp;&nbsp; miaoli.gov.tw",
+      "publisher": "miaoli.gov.tw",
+      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
+      "sourceGroup": "苗栗縣政府",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "鐵路一村"
+      ],
+      "id": "e19c62e9a1e182e1bd3fa0b9"
+    },
+    {
+      "sourceItemId": "CBMia0FVX3lxTE9tM3lrSGZVRU90cUkwaHJGLTM5RWN1eWpwTE9MQXFPSmJ1eWRNRFhoR1NKNVhhdS05WmZzc09GOGUtc1hScThhQ0lTMlJVTzVuSTc3YzZmWlE4MVpWM3Q5MmtBQkpaNzJGSUpr",
+      "title": "鐵路一村與建築學大師跨域對談 - miaoli.gov.tw",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9tM3lrSGZVRU90cUkwaHJGLTM5RWN1eWpwTE9MQXFPSmJ1eWRNRFhoR1NKNVhhdS05WmZzc09GOGUtc1hScThhQ0lTMlJVTzVuSTc3YzZmWlE4MVpWM3Q5MmtBQkpaNzJGSUpr?oc=5",
+      "publishedAt": "Mon, 10 Aug 2020 13:53:31 GMT",
+      "summary": "鐵路一村與建築學大師跨域對談 &nbsp;&nbsp; miaoli.gov.tw",
+      "publisher": "miaoli.gov.tw",
+      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
+      "sourceGroup": "苗栗縣政府",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "鐵路一村"
+      ],
+      "id": "dc914494d79565b3ab8d79ce"
+    },
+    {
+      "sourceItemId": "CBMia0FVX3lxTE9ZcktJUG02LUc2LUtydE5xQTItMGxBWTYtRTgyelRRUUdieFp1ZUJRT3lkZ0kyYTZYUUN2RHdQNlctUWlJUlJZaTNOSzNmVnlhdHVQUTFLbS12SHI3RmtaLVVWUXBRQTlBQ2V3",
+      "title": "聯合大學2025台日都市區域發展規劃工作坊成果發表會 8/31苗栗火車頭園區舉辦 - miaoli.gov.tw",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9ZcktJUG02LUc2LUtydE5xQTItMGxBWTYtRTgyelRRUUdieFp1ZUJRT3lkZ0kyYTZYUUN2RHdQNlctUWlJUlJZaTNOSzNmVnlhdHVQUTFLbS12SHI3RmtaLVVWUXBRQTlBQ2V3?oc=5",
+      "publishedAt": "Sun, 31 Aug 2025 05:09:28 GMT",
+      "summary": "聯合大學2025台日都市區域發展規劃工作坊成果發表會 8/31苗栗火車頭園區舉辦 &nbsp;&nbsp; miaoli.gov.tw",
+      "publisher": "miaoli.gov.tw",
+      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
+      "sourceGroup": "苗栗縣政府",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "4d634681d1f78ff3f5575027"
+    },
+    {
+      "sourceItemId": "CBMiYEFVX3lxTE5CUjJDOUZyVjZGZi00NzgtQ054V0lyN1hCbTJ0cnJuZW0zYy1VVVRkaVhrMnJ5QTB5dFNpS3V4NmZ3c2VUVEF6ZkNsNjlmeFVxQWRLTE9IVlpUT2FfYXhWNdIBZkFVX3lxTE1zQklvb2k1YUdSSkpCVnZyZnlqQmZnc0g0RHRtR0hrODQwdDA2SzhWanJPT0VrUzNXWjRUa2UxOUVRcjRBV0FFVE1Yb3I4QlltenhnRkMyRWRUYUFGMWRSVWVZMFNhQQ",
+      "title": "苗栗火車頭園區將分二階段營運 文創小舖、火車主題餐廳預計暑假前開幕 - 自由藝文網",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5CUjJDOUZyVjZGZi00NzgtQ054V0lyN1hCbTJ0cnJuZW0zYy1VVVRkaVhrMnJ5QTB5dFNpS3V4NmZ3c2VUVEF6ZkNsNjlmeFVxQWRLTE9IVlpUT2FfYXhWNdIBZkFVX3lxTE1zQklvb2k1YUdSSkpCVnZyZnlqQmZnc0g0RHRtR0hrODQwdDA2SzhWanJPT0VrUzNXWjRUa2UxOUVRcjRBV0FFVE1Yb3I4QlltenhnRkMyRWRUYUFGMWRSVWVZMFNhQQ?oc=5",
+      "publishedAt": "Tue, 31 Jan 2023 08:00:00 GMT",
+      "summary": "苗栗火車頭園區將分二階段營運 文創小舖、火車主題餐廳預計暑假前開幕 &nbsp;&nbsp; 自由藝文網",
+      "publisher": "自由藝文網",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:udn.com OR site:ltn.com.tw OR site:chinatimes.com OR site:ettoday.net)",
+      "sourceGroup": "地方新聞",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "開幕"
+      ],
+      "id": "a789b9e69b99e85e88e09c4f"
+    },
+    {
+      "sourceItemId": "CBMiUEFVX3lxTE5RN1RjSFZMUmpOcUdSbC1SbGJuaHBxa2xaZlRNWUdNZ21TU2sySUQ5UkJnTE1rR19vV2tqTVUyWWZMakJkWDVpYmVINzZYWTFN",
+      "title": "「苗栗火車頭園區」開幕免費入園！朝聖「12台火車頭+貓咪咖啡車」 還有美食、文創加持進駐一站式玩到翻 - UDN",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5RN1RjSFZMUmpOcUdSbC1SbGJuaHBxa2xaZlRNWUdNZ21TU2sySUQ5UkJnTE1rR19vV2tqTVUyWWZMakJkWDVpYmVINzZYWTFN?oc=5",
+      "publishedAt": "Tue, 22 Apr 2025 07:00:00 GMT",
+      "summary": "「苗栗火車頭園區」開幕免費入園！朝聖「12台火車頭+貓咪咖啡車」 還有美食、文創加持進駐一站式玩到翻 &nbsp;&nbsp; UDN",
+      "publisher": "UDN",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:udn.com OR site:ltn.com.tw OR site:chinatimes.com OR site:ettoday.net)",
+      "sourceGroup": "地方新聞",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "開幕"
+      ],
+      "id": "ddab8d19e086a51157667422"
+    },
+    {
+      "sourceItemId": "CBMiV0FVX3lxTE9laEhaUUMxNjBPNDJYcjRvbmw3bG9KSGFDclEyWVJMeWd4c2FITU9fSWRWazNjT0hpSTJXS1gzcTRYNU9BbEFwVzZOb0Zxc2FOMkRGTEFsdw",
+      "title": "要4500萬給10億苗栗火車頭園區從廢墟華麗轉身| 地方脈動 - 聯合報數位版",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9laEhaUUMxNjBPNDJYcjRvbmw3bG9KSGFDclEyWVJMeWd4c2FITU9fSWRWazNjT0hpSTJXS1gzcTRYNU9BbEFwVzZOb0Zxc2FOMkRGTEFsdw?oc=5",
+      "publishedAt": "Fri, 01 Aug 2025 07:00:00 GMT",
+      "summary": "要4500萬給10億苗栗火車頭園區從廢墟華麗轉身| 地方脈動 &nbsp;&nbsp; 聯合報數位版",
+      "publisher": "聯合報數位版",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:udn.com OR site:ltn.com.tw OR site:chinatimes.com OR site:ettoday.net)",
+      "sourceGroup": "地方新聞",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "eeea41ebea6ef55de3b40322"
+    },
+    {
+      "sourceItemId": "CBMiUEFVX3lxTE93TXBzM2V0aHc3MUw5NUdSZENWZFIySy1RVG05NE1jaHFNWXpBcFdGdnpDRlhldlptNjhMdmhGVnQxdGJJS2Rhc1NWazdNT2pa",
+      "title": "20251103苗栗火車頭園區彷彿貓咪文創園區.台鐵喵務處透明玻璃屋引人注目 - udn部落格",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE93TXBzM2V0aHc3MUw5NUdSZENWZFIySy1RVG05NE1jaHFNWXpBcFdGdnpDRlhldlptNjhMdmhGVnQxdGJJS2Rhc1NWazdNT2pa?oc=5",
+      "publishedAt": "Wed, 12 Nov 2025 08:00:00 GMT",
+      "summary": "20251103苗栗火車頭園區彷彿貓咪文創園區.台鐵喵務處透明玻璃屋引人注目 &nbsp;&nbsp; udn部落格",
+      "publisher": "udn部落格",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:udn.com OR site:ltn.com.tw OR site:chinatimes.com OR site:ettoday.net)",
+      "sourceGroup": "地方新聞",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "391dd8e5cbf3aaf7525ed9bc"
+    },
+    {
+      "sourceItemId": "CBMiUEFVX3lxTE1QeWhUdXh1XzRmQ3pLbUwxeUZVVlk0THZ4N1VaQkYtS1RUdDJ5NEJTYlJETFlETDhNd2NUeE5meXZFMzd4emtzbThNcmhXa0RN0gFWQVVfeXFMTjF6dmVNNnNTdUcxYWcxLUVWQThzYkJqYVpjQlZwOVYxd3F0TVpaLXRkdzhSVTRtSXRpWUNXcXd4WDZ0Yk1NOFF6YVhHandWd3JpdWFadXc",
+      "title": "「豐味苗栗」進駐苗栗火車頭園區 4日起消費滿600元送限量迴力車 - UDN",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1QeWhUdXh1XzRmQ3pLbUwxeUZVVlk0THZ4N1VaQkYtS1RUdDJ5NEJTYlJETFlETDhNd2NUeE5meXZFMzd4emtzbThNcmhXa0RN0gFWQVVfeXFMTjF6dmVNNnNTdUcxYWcxLUVWQThzYkJqYVpjQlZwOVYxd3F0TVpaLXRkdzhSVTRtSXRpWUNXcXd4WDZ0Yk1NOFF6YVhHandWd3JpdWFadXc?oc=5",
+      "publishedAt": "Thu, 02 Oct 2025 07:00:00 GMT",
+      "summary": "「豐味苗栗」進駐苗栗火車頭園區 4日起消費滿600元送限量迴力車 &nbsp;&nbsp; UDN",
+      "publisher": "UDN",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:udn.com OR site:ltn.com.tw OR site:chinatimes.com OR site:ettoday.net)",
+      "sourceGroup": "地方新聞",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "efcb59a2dca8870fb212a526"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE1jS0N2blZmMkZtZmtBelo2eXp2dWl6cDZ6cGw1R01WZjVERnhNeG94NGtGSTduM05TampKY0ZaSkhqVHV4djhNWWNsRFJ0ZDItX2dWX2dR",
+      "title": "台鐵 苗栗鐵道文物展示館 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1jS0N2blZmMkZtZmtBelo2eXp2dWl6cDZ6cGw1R01WZjVERnhNeG94NGtGSTduM05TampKY0ZaSkhqVHV4djhNWWNsRFJ0ZDItX2dWX2dR?oc=5",
+      "publishedAt": "Mon, 11 May 2020 10:37:12 GMT",
+      "summary": "台鐵 苗栗鐵道文物展示館 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "81b74cd614e01a494d9699d3"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE1yeFh5bDhhdVJMRnZWS0hKQWlFeUJfa3VmOU9wekZaZmFnR1VacFBYX1Z0ZWNrNkxuZGxSUF9QSVhkZkFTM1ZSc0g2cE4zNGxXeTVyNE9n",
+      "title": "苗栗火車頭園區 打造貓咪萌寵樂園 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1yeFh5bDhhdVJMRnZWS0hKQWlFeUJfa3VmOU9wekZaZmFnR1VacFBYX1Z0ZWNrNkxuZGxSUF9QSVhkZkFTM1ZSc0g2cE4zNGxXeTVyNE9n?oc=5",
+      "publishedAt": "Thu, 17 Apr 2025 10:01:36 GMT",
+      "summary": "苗栗火車頭園區 打造貓咪萌寵樂園 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "0b50841bbaa1c180106e9f77"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE94dTN2WnNDb3NHOHB6bHZqNE1HX1Z0S25pYkFleWVhOER2b2hOM3dhNWN5NnRUTXdGd1JQVHhtMUVuWldqTERNYUxQS3V1SHlzOFMyRzdn",
+      "title": "火車控貓奴必去 10億苗栗火車頭園區「撸貓」｜TVBS新聞 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE94dTN2WnNDb3NHOHB6bHZqNE1HX1Z0S25pYkFleWVhOER2b2hOM3dhNWN5NnRUTXdGd1JQVHhtMUVuWldqTERNYUxQS3V1SHlzOFMyRzdn?oc=5",
+      "publishedAt": "Fri, 25 Apr 2025 12:15:45 GMT",
+      "summary": "火車控貓奴必去 10億苗栗火車頭園區「撸貓」｜TVBS新聞 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "d89da3d465e2c0ee2393c568"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE9iMlJRa1ZhQmJFOUZsbHF6ZFJDZEpNUW4zSnQxSzM0U2FxWlJQSktoSGpVTkdVVUZ0Y01hdUhMMkpTUlpmdEU1V1RTUDBRT1BiRTFIRHN3",
+      "title": "苗栗景點/走跳最新的打卡點\"苗栗火車頭園區\"，再去吃苗栗必吃水晶餃！半日遊很不錯！ - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9iMlJRa1ZhQmJFOUZsbHF6ZFJDZEpNUW4zSnQxSzM0U2FxWlJQSktoSGpVTkdVVUZ0Y01hdUhMMkpTUlpmdEU1V1RTUDBRT1BiRTFIRHN3?oc=5",
+      "publishedAt": "Sat, 07 Jun 2025 01:16:03 GMT",
+      "summary": "苗栗景點/走跳最新的打卡點\"苗栗火車頭園區\"，再去吃苗栗必吃水晶餃！半日遊很不錯！ &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "打卡"
+      ],
+      "id": "eb12e338a42a4e0eff29608a"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE5ET0NPU3pwbkpYdm9FbE1BejdsQllGNUhhUzlESFRNVGdHM1ZvZ0tQTzNFQmZtZmM0OVdpdk5oNGZNamdFemN6WnhoeTYyNHhSUnk1bHR3",
+      "title": "斥資10億元一波三折 苗栗火車頭園區開幕 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5ET0NPU3pwbkpYdm9FbE1BejdsQllGNUhhUzlESFRNVGdHM1ZvZ0tQTzNFQmZtZmM0OVdpdk5oNGZNamdFemN6WnhoeTYyNHhSUnk1bHR3?oc=5",
+      "publishedAt": "Fri, 25 Apr 2025 13:11:31 GMT",
+      "summary": "斥資10億元一波三折 苗栗火車頭園區開幕 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "開幕"
+      ],
+      "id": "d3c1d68245444eff7d6d89b9"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE0tTnUtRkFRcXJNV0NTYVdOVmFwenlHcDd5VjhoTVNvOUpuMXZZdThiYXgxbEVscER3M0l6aVZCZnBaZDBZX1J3N3JHeW8xNDBxS0p6T2lB",
+      "title": "台鐵公司 苗栗火車頭園區 「鐵客之緣 苗栗火車頭園區竣工典禮」 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE0tTnUtRkFRcXJNV0NTYVdOVmFwenlHcDd5VjhoTVNvOUpuMXZZdThiYXgxbEVscER3M0l6aVZCZnBaZDBZX1J3N3JHeW8xNDBxS0p6T2lB?oc=5",
+      "publishedAt": "Fri, 05 Jan 2024 12:43:32 GMT",
+      "summary": "台鐵公司 苗栗火車頭園區 「鐵客之緣 苗栗火車頭園區竣工典禮」 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "c20878bb5886c68c281b4ac3"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTFBCemxxWVloLUFXMkFLMVJPdzZqdjN0SjlvYlpFVTZQY1M4YWF1R1hULXdGdkZTTUs2bHFnZFk2MENxWUR5TUZIYWQxeGRhVElZTFdyR2VB",
+      "title": "台鐵 苗栗鐵道文物展示館 拆除改建中 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBCemxxWVloLUFXMkFLMVJPdzZqdjN0SjlvYlpFVTZQY1M4YWF1R1hULXdGdkZTTUs2bHFnZFk2MENxWUR5TUZIYWQxeGRhVElZTFdyR2VB?oc=5",
+      "publishedAt": "Sun, 09 Jan 2022 07:57:54 GMT",
+      "summary": "台鐵 苗栗鐵道文物展示館 拆除改建中 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "0d75506ec0e84fcfb3dfbd05"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTFBBMko2RWRUZGI4YkFYTnA4SEQ0ZXhmcUw0a1hvNERSUU9Vc0JWdTJIZ0R4MllDSGVVWVMxdnpFd1NtVll1c21QZ3JLRF9NdXNneE9wV3hR",
+      "title": "火車控貓奴必去 10億苗栗火車頭園區「撸貓」｜TVBS新聞 @TVBSNEWS01 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBBMko2RWRUZGI4YkFYTnA4SEQ0ZXhmcUw0a1hvNERSUU9Vc0JWdTJIZ0R4MllDSGVVWVMxdnpFd1NtVll1c21QZ3JLRF9NdXNneE9wV3hR?oc=5",
+      "publishedAt": "Fri, 25 Apr 2025 10:07:41 GMT",
+      "summary": "火車控貓奴必去 10億苗栗火車頭園區「撸貓」｜TVBS新聞 @TVBSNEWS01 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "41092f1b8c54bbe2524c9104"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTFA5UGp0bGJwQkZHSXVNZXhRQkpLTHhVNkZxRXJKYXUwekRxdURjV0VFYkpKLTl0cmdBQld4MVpfZ2hXNTB2QkpNaldaQVZLbW4xWDhxTnNn",
+      "title": "2025.4.27 「苗栗火車頭園區」開幕營運 遊園小火車 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA5UGp0bGJwQkZHSXVNZXhRQkpLTHhVNkZxRXJKYXUwekRxdURjV0VFYkpKLTl0cmdBQld4MVpfZ2hXNTB2QkpNaldaQVZLbW4xWDhxTnNn?oc=5",
+      "publishedAt": "Sun, 27 Apr 2025 08:09:20 GMT",
+      "summary": "2025.4.27 「苗栗火車頭園區」開幕營運 遊園小火車 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "開幕"
+      ],
+      "id": "1f1b0c39d49bd0b6cdc68dc8"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE5HMnJqdVdWUFg0eVVKUzBLRGtUWWJ3WkJvUC1DTzhpbkI4cDVzR291NmRwcEk2OWl4RThyYmxfUmt6azJmQXFYVVFDb3ZQZTMzZ2IxVUZ3",
+      "title": "火車控貓奴必去 苗栗火車頭園區 |【民生八方事】| 2025042609 @gtvnews27 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5HMnJqdVdWUFg0eVVKUzBLRGtUWWJ3WkJvUC1DTzhpbkI4cDVzR291NmRwcEk2OWl4RThyYmxfUmt6azJmQXFYVVFDb3ZQZTMzZ2IxVUZ3?oc=5",
+      "publishedAt": "Sat, 26 Apr 2025 10:33:47 GMT",
+      "summary": "火車控貓奴必去 苗栗火車頭園區 |【民生八方事】| 2025042609 @gtvnews27 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "7d4d3728b2c19a20fec8c9e8"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE5XZGhpU2drX3FDNjVtWENwT01ZYU9la0dfdEZlWHdWcjZGVEVjeE5jN3JLRlh2dnZTZ0xPa0JBZUltUEVrWlF2N05NaGpzdVI4ZER1azZR",
+      "title": "火車慢旅苗栗火車頭園區ep240『新開幕!苗栗火車頭園區,假日親子同樂好去處,鐵道迷,愛貓必訪!參觀轉車臺大廳蒸汽火車旋轉,懷舊的列車展示館』 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5XZGhpU2drX3FDNjVtWENwT01ZYU9la0dfdEZlWHdWcjZGVEVjeE5jN3JLRlh2dnZTZ0xPa0JBZUltUEVrWlF2N05NaGpzdVI4ZER1azZR?oc=5",
+      "publishedAt": "Sun, 11 May 2025 04:00:52 GMT",
+      "summary": "火車慢旅苗栗火車頭園區ep240『新開幕!苗栗火車頭園區,假日親子同樂好去處,鐵道迷,愛貓必訪!參觀轉車臺大廳蒸汽火車旋轉,懷舊的列車展示館』 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "開幕",
+        "參觀"
+      ],
+      "id": "edeecfedbacec34d1c2fb1eb"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE9jSG9SU3I4VHRHVnIyUlh0ZTJoX2ZoNGd3SUt5eXFIbXFMQnNOdWJpT1RMbkk4WjkwSE9KeXhaQ2d0UC1ETWxUanRPelF0SUtXWlZqdC1n",
+      "title": "【#CSNEWS​】鐵道迷必訪 苗栗火車頭園區經典火車頭現身/CS看正聲 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9jSG9SU3I4VHRHVnIyUlh0ZTJoX2ZoNGd3SUt5eXFIbXFMQnNOdWJpT1RMbkk4WjkwSE9KeXhaQ2d0UC1ETWxUanRPelF0SUtXWlZqdC1n?oc=5",
+      "publishedAt": "Thu, 23 Oct 2025 23:53:14 GMT",
+      "summary": "【#CSNEWS​】鐵道迷必訪 苗栗火車頭園區經典火車頭現身/CS看正聲 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "ea4b616c9569e11b84046024"
+    },
+    {
+      "sourceItemId": "CBMiZ0FVX3lxTE5KWFZmLUtzQTJHVVdfN015bmZNMDVxeFNpVHlWSmNDV204RGNibHJoWFR3aGhHV04zWWxkeHVILW5IX1J6LW9qS2RxakdSSkVaQnlYclJYRWgzYUtHSFk5WnBLbzEwajA",
+      "title": "【拾光博物】苗栗火車頭園區：全新翻新的臺鐵火車展示場 - milkyrailway.blogspot.com",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5KWFZmLUtzQTJHVVdfN015bmZNMDVxeFNpVHlWSmNDV204RGNibHJoWFR3aGhHV04zWWxkeHVILW5IX1J6LW9qS2RxakdSSkVaQnlYclJYRWgzYUtHSFk5WnBLbzEwajA?oc=5",
+      "publishedAt": "Tue, 08 Jul 2025 07:00:00 GMT",
+      "summary": "【拾光博物】苗栗火車頭園區：全新翻新的臺鐵火車展示場 &nbsp;&nbsp; milkyrailway.blogspot.com",
+      "publisher": "milkyrailway.blogspot.com",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)",
+      "sourceGroup": "地方部落格",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "9761f200849074307ed18a9d"
+    },
+    {
+      "sourceItemId": "CBMiZ0FVX3lxTE1VaWtsN19oQnpoOUt5a3pmX3A3eWNkYV9lb3ZmNTFFUThyZUowQm05S1hrOHBvdFZNODIta0ZZcEppRHlyMmhZeXpLa2FNQnJLX1hZMzhpcDUyeEJ2bTNMRVNqRmhzZ3c",
+      "title": "斥資11億的《苗栗火車頭園區》打造撸貓喵務處與火車邂逅市集主題園區 - tungbin.pixnet.net",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1VaWtsN19oQnpoOUt5a3pmX3A3eWNkYV9lb3ZmNTFFUThyZUowQm05S1hrOHBvdFZNODIta0ZZcEppRHlyMmhZeXpLa2FNQnJLX1hZMzhpcDUyeEJ2bTNMRVNqRmhzZ3c?oc=5",
+      "publishedAt": "Mon, 18 May 2026 07:00:00 GMT",
+      "summary": "斥資11億的《苗栗火車頭園區》打造撸貓喵務處與火車邂逅市集主題園區 &nbsp;&nbsp; tungbin.pixnet.net",
+      "publisher": "tungbin.pixnet.net",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)",
+      "sourceGroup": "地方部落格",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "7ed7997a3055088a6d399703"
+    },
+    {
+      "sourceItemId": "CBMiZ0FVX3lxTFBBdWF4UGhtTmh5WjN4TlRrc0p0ZWVuT2wzdURPczR3VHJxOVNIeUVYQWZVS3RrVUpRT2tHWENRQUcyaFVrU0JIZ1RxRHN1MEhicmx0SGN4VWsyOW9qUEROc0NKN0tlanM",
+      "title": "苗栗景點+1 苗栗火車頭園區 全台唯一火車頭主題園區 鐵道文化新地標 親子貓奴必訪 園區詳細攻略必看！ - ceciliafang1103.pixnet.net",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBBdWF4UGhtTmh5WjN4TlRrc0p0ZWVuT2wzdURPczR3VHJxOVNIeUVYQWZVS3RrVUpRT2tHWENRQUcyaFVrU0JIZ1RxRHN1MEhicmx0SGN4VWsyOW9qUEROc0NKN0tlanM?oc=5",
+      "publishedAt": "Wed, 10 Dec 2025 06:21:51 GMT",
+      "summary": "苗栗景點+1 苗栗火車頭園區 全台唯一火車頭主題園區 鐵道文化新地標 親子貓奴必訪 園區詳細攻略必看！ &nbsp;&nbsp; ceciliafang1103.pixnet.net",
+      "publisher": "ceciliafang1103.pixnet.net",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)",
+      "sourceGroup": "地方部落格",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "鐵道文化"
+      ],
+      "id": "ca1616ec9971e5314709528e"
+    },
     {
       "sourceItemId": "commons:39871207",
       "title": "Miaoli Station east 20150426.jpg",

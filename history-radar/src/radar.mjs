@@ -104,6 +104,10 @@ export function dedupe(items, priorIds = []) {
   return output;
 }
 
+export function mergeCandidateCache(prior = [], incoming = [], limit = 500) {
+  return dedupe(prior.concat(incoming), []).slice(-limit);
+}
+
 export function robotsAllows(text, pathname) {
   let applies = false;
   const disallowed = [];
@@ -314,20 +318,22 @@ export async function run({ configPath = DEFAULT_CONFIG, statePath = DEFAULT_STA
     warnings: [], matchedKeywords: []
   }));
   const allCandidates = dedupe(candidates.concat(brokenLinks), state.seenIds);
+  const candidateCache = mergeCandidateCache(state.candidateCache || [], allCandidates);
   const report = {
     schemaVersion: 1,
     run: {
       startedAt, finishedAt: new Date().toISOString(), timezone: config.timezone,
       status: news.errors.length === buildSearchFeeds(config).length ? '部分失敗' : '完成',
-      discovered: discovered.length, newCandidates: allCandidates.length
+      discovered: discovered.length, newCandidates: allCandidates.length,
+      availableCandidates: candidateCache.length
     },
-    candidates: allCandidates, linkChecks, errors: news.errors.concat(commons.errors, threads.errors)
+    candidates: candidateCache, linkChecks, errors: news.errors.concat(commons.errors, threads.errors)
   };
   if (!dryRun) {
     await mkdir(dirname(outputPath), { recursive: true });
     await writeFile(outputPath, JSON.stringify(report, null, 2) + '\n');
     const seenIds = [...new Set(state.seenIds.concat(allCandidates.map(item => item.id)))].slice(-10000);
-    await writeFile(statePath, JSON.stringify({ updatedAt: report.run.finishedAt, seenIds }, null, 2) + '\n');
+    await writeFile(statePath, JSON.stringify({ updatedAt: report.run.finishedAt, seenIds, candidateCache }, null, 2) + '\n');
   }
   return report;
 }

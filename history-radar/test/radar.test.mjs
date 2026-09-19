@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { archiveSnapshotFromJson, buildSearchFeeds, candidateId, classify, commonsRows, dedupe, normalizeUrl, parseRss, robotsAllows } from '../src/radar.mjs';
+import { archiveSnapshotFromJson, buildSearchFeeds, candidateId, classify, commonsRows, dedupe, mergeCandidateCache, normalizeUrl, parseRss, robotsAllows } from '../src/radar.mjs';
 
 const config = {
   subjects: { '園區': ['苗栗火車頭園區'], '5號店': ['文創五號店'] },
@@ -62,4 +62,12 @@ test('Wayback 回應轉成可用存檔線索', () => {
   const snapshot = archiveSnapshotFromJson({ archived_snapshots: { closest: { available: true, url: 'http://web.archive.org/web/20200101/https://example.com', timestamp: '20200101', status: '200' } } });
   assert.equal(snapshot.url.startsWith('https://'), true);
   assert.equal(snapshot.timestamp, '20200101');
+});
+
+test('候選佇列會保留前次結果並去重', () => {
+  const a = { sourceItemId: 'a', title: 'A', url: 'https://example.com/a' };
+  const b = { sourceItemId: 'b', title: 'B', url: 'https://example.com/b' };
+  const cache = mergeCandidateCache([a], [a, b]);
+  assert.equal(cache.length, 2);
+  assert.deepEqual(cache.map(row => row.sourceItemId), ['a', 'b']);
 });

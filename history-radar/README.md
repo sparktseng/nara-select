@@ -13,7 +13,7 @@ npm run dry-run
 npm run crawl
 ```
 
-正式結果寫入 `data/history-radar/latest.json`，永久去重索引寫入 `data/history-radar/state.json`。GitHub Actions 每日於台北時間 07:20 執行，也可手動觸發。
+正式結果寫入 `data/history-radar/latest.json`，永久去重索引與最近 500 筆候選佇列寫入 `data/history-radar/state.json`。即使短時間連續執行，前一批尚未匯入試算表的候選也不會被覆蓋。GitHub Actions 每日於台北時間 07:20 執行，也可手動觸發。
 
 ## 資料原則
 
