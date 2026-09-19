@@ -204,6 +204,7 @@ export function commonsRows(json, query) {
       query,
       sourceGroup: 'Wikimedia Commons',
       defaultCategory: '影像授權',
+      lookbackDays: 36500,
       subjectHints: ['園區'],
       mediaUrl: info.url || null,
       license,

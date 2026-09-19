@@ -53,6 +53,7 @@ test('Wikimedia Commons 影像保留作者與授權', () => {
   const [row] = commonsRows(json, '苗栗 鐵路');
   assert.equal(row.category, undefined);
   assert.equal(row.defaultCategory, '影像授權');
+  assert.equal(row.lookbackDays, 36500);
   assert.equal(row.license, 'CC BY-SA 4.0');
   assert.match(row.summary, /作者甲/);
 });
