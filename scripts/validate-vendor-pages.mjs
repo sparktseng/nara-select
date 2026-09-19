@@ -22,7 +22,12 @@ for (const vendor of vendors) {
       if (vendor.menu && !data.hasMenu) errors.push(`${page}: missing hasMenu JSON-LD`);
     } catch { errors.push(`${page}: invalid JSON-LD`); }
     if (vendor.menu) for (const required of ['data-menu-open','data-menu-dialog','foodpanda.com.tw/restaurant/ifkl/','rel="noopener sponsored"','class="vendor-gallery"','store-02-yakisoba-bread.webp','store-02-braised-pork-rice.webp','store-02-menu-overview.webp','store-02-shop-interior.webp','store-02-shiba-inu.webp','store-02-dining-room.webp','store-02-exterior-sign.webp','thai-green-tea.webp']) if (!html.includes(required)) errors.push(`${page}: missing ${required}`);
-    if (vendor.menu) for (const forbidden of ['maps.app.goo.gl','Google Maps','hasMap','telephone','tel:+886975041213','0975 041 213']) if (html.includes(forbidden)) errors.push(`${page}: obsolete map or phone data remains: ${forbidden}`);
+    if (vendor.menu) {
+      for (const forbidden of ['maps.app.goo.gl','telephone','tel:+886975041213','0975 041 213']) if (html.includes(forbidden)) errors.push(`${page}: obsolete map or phone data remains: ${forbidden}`);
+      const navigationLinks = html.match(/<a[^>]+href="https:\/\/www\.google\.com\/maps\/search\/\?api=1&query=[^"]+"/g) || [];
+      if (navigationLinks.length !== 1) errors.push(`${page}: expected one top Google Maps navigation link, found ${navigationLinks.length}`);
+      if (!html.includes('"hasMap":"https://www.google.com/maps/search/?api=1&query=')) errors.push(`${page}: missing corrected hasMap JSON-LD`);
+    }
     if (vendor.menu && html.includes('thai-milk-tea.webp')) errors.push(`${page}: Store No. 2 CTA must use Thai green tea, not Thai milk tea`);
     if ((await stat(page)).size > 20000) errors.push(`${page}: page too large`);
   }
