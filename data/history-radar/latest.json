@@ -1,14 +1,37 @@
 {
   "schemaVersion": 1,
   "run": {
-    "startedAt": null,
-    "finishedAt": null,
+    "startedAt": "2026-09-19T00:50:42.796Z",
+    "finishedAt": "2026-09-19T00:50:52.179Z",
     "timezone": "Asia/Taipei",
-    "status": "尚未執行",
+    "status": "完成",
     "discovered": 0,
     "newCandidates": 0
   },
   "candidates": [],
-  "linkChecks": [],
-  "errors": []
+  "linkChecks": [
+    {
+      "url": "https://www.facebook.com/miaolirailwaymuseum/",
+      "checkedAt": "2026-09-19T00:50:42.935Z",
+      "ok": false,
+      "httpStatus": 0,
+      "robotsStatus": "禁止",
+      "error": "robots.txt 禁止存取"
+    },
+    {
+      "url": "https://www.instagram.com/miaoli_railway_museum/",
+      "checkedAt": "2026-09-19T00:50:43.868Z",
+      "ok": false,
+      "httpStatus": 0,
+      "robotsStatus": "禁止",
+      "error": "robots.txt 禁止存取"
+    }
+  ],
+  "errors": [
+    {
+      "source": "Threads API",
+      "status": "API未取得",
+      "error": "未設定 THREADS_ACCESS_TOKEN"
+    }
+  ]
 }
