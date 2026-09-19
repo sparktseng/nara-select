@@ -1,0 +1,12 @@
+{
+  "name": "railway-history-radar",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "crawl": "node src/radar.mjs",
+    "dry-run": "node src/radar.mjs --dry-run",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=20" }
+}

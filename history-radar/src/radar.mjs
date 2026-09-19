@@ -1,0 +1,244 @@
+import { createHash } from 'node:crypto';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..', '..');
+const DEFAULT_CONFIG = resolve(ROOT, 'history-radar/config.json');
+const DEFAULT_STATE = resolve(ROOT, 'data/history-radar/state.json');
+const DEFAULT_OUTPUT = resolve(ROOT, 'data/history-radar/latest.json');
+const UA = 'RailwayHistoryRadar/1.0 (+https://github.com/sparktseng/nara-select)';
+
+export function decodeXml(value = '') {
+  return value.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
+    .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'")
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n))).trim();
+}
+
+export function stripHtml(value = '') {
+  return decodeXml(value.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' '));
+}
+
+export function normalizeUrl(raw = '') {
+  try {
+    const url = new URL(raw);
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid'].forEach(k => url.searchParams.delete(k));
+    url.hash = '';
+    url.hostname = url.hostname.toLowerCase().replace(/^www\./, '');
+    if (url.pathname !== '/') url.pathname = url.pathname.replace(/\/$/, '');
+    const params = [...url.searchParams.entries()].sort(([a], [b]) => a.localeCompare(b));
+    url.search = '';
+    params.forEach(([k, v]) => url.searchParams.append(k, v));
+    return url.toString();
+  } catch { return raw.trim(); }
+}
+
+function tag(block, name) {
+  const match = block.match(new RegExp(`<${name}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${name}>`, 'i'));
+  return match ? decodeXml(match[1]) : '';
+}
+
+export function parseRss(xml, query = '') {
+  return [...xml.matchAll(/<item(?:\s[^>]*)?>([\s\S]*?)<\/item>/gi)].map(match => {
+    const block = match[1];
+    const rawLink = tag(block, 'link');
+    return {
+      sourceItemId: tag(block, 'guid') || rawLink,
+      title: stripHtml(tag(block, 'title')),
+      url: normalizeUrl(rawLink),
+      publishedAt: tag(block, 'pubDate'),
+      summary: stripHtml(tag(block, 'description')),
+      publisher: stripHtml(tag(block, 'source')),
+      query
+    };
+  }).filter(item => item.title && item.url);
+}
+
+function hostnameAllowed(raw, allowedDomains) {
+  try {
+    const host = new URL(raw).hostname.toLowerCase();
+    return allowedDomains.some(domain => host === domain || host.endsWith(`.${domain}`));
+  } catch { return false; }
+}
+
+export function classify(item, config) {
+  const text = `${item.title} ${item.summary}`;
+  const lower = text.toLowerCase();
+  const subjects = Object.entries(config.subjects)
+    .filter(([, words]) => words.some(word => lower.includes(word.toLowerCase())))
+    .map(([name]) => name);
+  const warnings = config.misinformationRules
+    .filter(rule => new RegExp(rule.pattern, 'iu').test(text))
+    .map(rule => ({ ruleId: rule.id, note: rule.note }));
+  let category = warnings.length ? '資訊勘誤' : '網路聲量';
+  if (!warnings.length) {
+    for (const [name, words] of Object.entries(config.categories)) {
+      if (words.some(word => lower.includes(word.toLowerCase()))) { category = name; break; }
+    }
+  }
+  const matchedKeywords = [...new Set(Object.values(config.subjects).flat().concat(Object.values(config.categories).flat())
+    .filter(word => lower.includes(word.toLowerCase())))];
+  return { subjects, category, warnings, matchedKeywords };
+}
+
+export function candidateId(item) {
+  const basis = item.sourceItemId || item.url || `${item.title}|${item.publishedAt || ''}`;
+  return createHash('sha256').update(basis).digest('hex').slice(0, 24);
+}
+
+export function dedupe(items, priorIds = []) {
+  const ids = new Set(priorIds);
+  const urls = new Set();
+  const titleDates = new Set();
+  const output = [];
+  for (const item of items) {
+    const id = candidateId(item);
+    const url = normalizeUrl(item.url);
+    const titleDate = `${item.title.toLowerCase().replace(/\s+/g, '')}|${(item.publishedAt || '').slice(0, 16)}`;
+    if (ids.has(id) || urls.has(url) || titleDates.has(titleDate)) continue;
+    ids.add(id); urls.add(url); titleDates.add(titleDate);
+    output.push({ ...item, id, url });
+  }
+  return output;
+}
+
+export function robotsAllows(text, pathname) {
+  let applies = false;
+  const disallowed = [];
+  for (const raw of text.split(/\r?\n/)) {
+    const line = raw.replace(/#.*/, '').trim();
+    const [key, ...rest] = line.split(':');
+    const value = rest.join(':').trim();
+    if (key?.toLowerCase() === 'user-agent') applies = value === '*';
+    if (applies && key?.toLowerCase() === 'disallow' && value) disallowed.push(value);
+  }
+  return !disallowed.some(rule => pathname.startsWith(rule));
+}
+
+async function safeFetch(url, options, config, fetchImpl = fetch) {
+  const target = new URL(url);
+  let robotsStatus = '未檢查';
+  try {
+    const robots = await fetchImpl(`${target.protocol}//${target.host}/robots.txt`, {
+      signal: AbortSignal.timeout(config.requestTimeoutMs), headers: { 'User-Agent': UA }
+    });
+    if (robots.ok) {
+      if (!robotsAllows(await robots.text(), target.pathname)) return { ok: false, status: 0, error: 'robots.txt 禁止存取', robotsStatus: '禁止' };
+      robotsStatus = '允許';
+    } else robotsStatus = `未提供(${robots.status})`;
+  } catch { robotsStatus = '無法取得'; }
+  try {
+    const response = await fetchImpl(url, {
+      ...options, redirect: 'follow', signal: AbortSignal.timeout(config.requestTimeoutMs),
+      headers: { 'User-Agent': UA, ...(options?.headers || {}) }
+    });
+    return { ok: response.ok, status: response.status, response, robotsStatus };
+  } catch (error) {
+    return { ok: false, status: 0, error: error.message, robotsStatus };
+  }
+}
+
+async function fetchGoogleNews(config, fetchImpl = fetch) {
+  const results = [];
+  const errors = [];
+  for (const query of config.queries) {
+    const url = `https://news.google.com/rss/search?q=${encodeURIComponent(query)}&hl=zh-TW&gl=TW&ceid=TW:zh-Hant`;
+    try {
+      const response = await fetchImpl(url, { signal: AbortSignal.timeout(config.requestTimeoutMs), headers: { 'User-Agent': UA } });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      results.push(...parseRss(await response.text(), query).slice(0, config.maxItemsPerQuery));
+    } catch (error) {
+      errors.push({ source: 'Google News RSS', query, status: 'API未取得', error: error.message });
+    }
+    await new Promise(done => setTimeout(done, config.requestDelayMs));
+  }
+  return { results, errors };
+}
+
+async function fetchThreads(config, fetchImpl = fetch) {
+  const token = process.env.THREADS_ACCESS_TOKEN;
+  if (!token) return { results: [], errors: [{ source: 'Threads API', status: 'API未取得', error: '未設定 THREADS_ACCESS_TOKEN' }] };
+  const results = [];
+  const errors = [];
+  for (const query of config.queries.slice(0, 5)) {
+    const url = new URL('https://graph.threads.net/keyword_search');
+    url.searchParams.set('q', query);
+    url.searchParams.set('fields', 'id,text,permalink,timestamp,username,media_type');
+    url.searchParams.set('access_token', token);
+    try {
+      const response = await fetchImpl(url, { signal: AbortSignal.timeout(config.requestTimeoutMs) });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const json = await response.json();
+      for (const row of json.data || []) results.push({
+        sourceItemId: row.id, title: (row.text || '').slice(0, 120) || 'Threads 貼文',
+        url: row.permalink, publishedAt: row.timestamp, summary: row.text || '',
+        publisher: row.username ? `@${row.username}` : 'Threads', query
+      });
+    } catch (error) {
+      errors.push({ source: 'Threads API', query, status: 'API未取得', error: error.message });
+    }
+  }
+  return { results, errors };
+}
+
+async function checkLinks(config, fetchImpl = fetch) {
+  const checks = [];
+  for (const url of config.healthCheckUrls || []) {
+    const result = await safeFetch(url, { method: 'HEAD' }, config, fetchImpl);
+    checks.push({ url, checkedAt: new Date().toISOString(), ok: result.ok, httpStatus: result.status, robotsStatus: result.robotsStatus, error: result.error || null });
+    await new Promise(done => setTimeout(done, config.requestDelayMs));
+  }
+  return checks;
+}
+
+async function readJson(path, fallback) {
+  try { return JSON.parse(await readFile(path, 'utf8')); } catch { return fallback; }
+}
+
+export async function run({ configPath = DEFAULT_CONFIG, statePath = DEFAULT_STATE, outputPath = DEFAULT_OUTPUT, dryRun = false, fetchImpl = fetch } = {}) {
+  const startedAt = new Date().toISOString();
+  const config = await readJson(configPath, {});
+  const state = await readJson(statePath, { seenIds: [] });
+  const [news, threads, linkChecks] = await Promise.all([
+    fetchGoogleNews(config, fetchImpl), fetchThreads(config, fetchImpl), checkLinks(config, fetchImpl)
+  ]);
+  const cutoff = Date.now() - config.lookbackDays * 86400000;
+  const discovered = news.results.concat(threads.results)
+    .filter(item => hostnameAllowed(item.url, config.allowedDomains))
+    .filter(item => !item.publishedAt || Number.isNaN(Date.parse(item.publishedAt)) || Date.parse(item.publishedAt) >= cutoff)
+    .map(item => ({ ...item, ...classify(item, config) }))
+    .filter(item => item.subjects.length);
+  const candidates = dedupe(discovered, state.seenIds);
+  const brokenLinks = linkChecks.filter(check => !check.ok && check.robotsStatus !== '禁止').map(check => ({
+    id: candidateId({ sourceItemId: `link:${check.url}:${check.httpStatus}` }),
+    sourceItemId: `link:${check.url}`, title: `連結檢查異常：${check.url}`,
+    url: check.url, publishedAt: check.checkedAt, summary: check.error || `HTTP ${check.httpStatus}`,
+    publisher: '系統連結檢查', query: '', subjects: ['園區'], category: '失效網址',
+    warnings: [], matchedKeywords: []
+  }));
+  const allCandidates = dedupe(candidates.concat(brokenLinks), state.seenIds);
+  const report = {
+    schemaVersion: 1,
+    run: {
+      startedAt, finishedAt: new Date().toISOString(), timezone: config.timezone,
+      status: news.errors.length === config.queries.length ? '部分失敗' : '完成',
+      discovered: discovered.length, newCandidates: allCandidates.length
+    },
+    candidates: allCandidates, linkChecks, errors: news.errors.concat(threads.errors)
+  };
+  if (!dryRun) {
+    await mkdir(dirname(outputPath), { recursive: true });
+    await writeFile(outputPath, JSON.stringify(report, null, 2) + '\n');
+    const seenIds = [...new Set(state.seenIds.concat(allCandidates.map(item => item.id)))].slice(-10000);
+    await writeFile(statePath, JSON.stringify({ updatedAt: report.run.finishedAt, seenIds }, null, 2) + '\n');
+  }
+  return report;
+}
+
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  const report = await run({ dryRun: process.argv.includes('--dry-run') });
+  console.log(JSON.stringify(report.run));
+  if (report.errors.length) console.error(JSON.stringify(report.errors));
+  if (report.run.status === '部分失敗') process.exitCode = 2;
+}

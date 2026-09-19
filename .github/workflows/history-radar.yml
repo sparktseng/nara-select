@@ -1,0 +1,42 @@
+name: History Radar
+
+on:
+  schedule:
+    - cron: '20 23 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: history-radar
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Test
+        working-directory: history-radar
+        run: npm test
+      - name: Crawl public sources
+        working-directory: history-radar
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+        run: npm run crawl
+      - name: Commit updated radar data
+        run: |
+          if git diff --quiet -- data/history-radar; then
+            echo "No radar data changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/history-radar/latest.json data/history-radar/state.json
+          git commit -m "data: update history radar"
+          git push
