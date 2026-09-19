@@ -39,7 +39,7 @@ function tag(block, name) {
   return match ? decodeXml(match[1]) : '';
 }
 
-export function parseRss(xml, query = '') {
+export function parseRss(xml, query = '', metadata = {}) {
   return [...xml.matchAll(/<item(?:\s[^>]*)?>([\s\S]*?)<\/item>/gi)].map(match => {
     const block = match[1];
     const rawLink = tag(block, 'link');
@@ -50,7 +50,8 @@ export function parseRss(xml, query = '') {
       publishedAt: tag(block, 'pubDate'),
       summary: stripHtml(tag(block, 'description')),
       publisher: stripHtml(tag(block, 'source')),
-      query
+      query,
+      ...metadata
     };
   }).filter(item => item.title && item.url);
 }
@@ -65,14 +66,14 @@ function hostnameAllowed(raw, allowedDomains) {
 export function classify(item, config) {
   const text = `${item.title} ${item.summary}`;
   const lower = text.toLowerCase();
-  const subjects = Object.entries(config.subjects)
+  const subjects = [...new Set((item.subjectHints || []).concat(Object.entries(config.subjects)
     .filter(([, words]) => words.some(word => lower.includes(word.toLowerCase())))
-    .map(([name]) => name);
+    .map(([name]) => name)))];
   const warnings = config.misinformationRules
     .filter(rule => new RegExp(rule.pattern, 'iu').test(text))
     .map(rule => ({ ruleId: rule.id, note: rule.note }));
-  let category = warnings.length ? '資訊勘誤' : '網路聲量';
-  if (!warnings.length) {
+  let category = warnings.length ? '資訊勘誤' : (item.defaultCategory || '網路聲量');
+  if (!warnings.length && !item.defaultCategory) {
     for (const [name, words] of Object.entries(config.categories)) {
       if (words.some(word => lower.includes(word.toLowerCase()))) { category = name; break; }
     }
@@ -139,20 +140,99 @@ async function safeFetch(url, options, config, fetchImpl = fetch) {
   }
 }
 
+export function buildSearchFeeds(config) {
+  const monitoring = config.queries.map(query => ({
+    name: 'Google News RSS', query, lookbackDays: config.lookbackDays
+  }));
+  return monitoring.concat(config.historySearchFeeds || []);
+}
+
+async function mapLimit(items, limit, worker) {
+  const output = new Array(items.length);
+  let cursor = 0;
+  async function runWorker() {
+    while (cursor < items.length) {
+      const index = cursor++;
+      output[index] = await worker(items[index], index);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, runWorker));
+  return output;
+}
+
 async function fetchGoogleNews(config, fetchImpl = fetch) {
   const results = [];
   const errors = [];
-  for (const query of config.queries) {
+  const feeds = buildSearchFeeds(config);
+  await mapLimit(feeds, 3, async feed => {
+    const query = feed.query;
     const url = `https://news.google.com/rss/search?q=${encodeURIComponent(query)}&hl=zh-TW&gl=TW&ceid=TW:zh-Hant`;
     try {
       const response = await fetchImpl(url, { signal: AbortSignal.timeout(config.requestTimeoutMs), headers: { 'User-Agent': UA } });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      results.push(...parseRss(await response.text(), query).slice(0, config.maxItemsPerQuery));
+      results.push(...parseRss(await response.text(), query, {
+        sourceGroup: feed.name,
+        defaultCategory: feed.category || null,
+        lookbackDays: feed.lookbackDays ?? config.lookbackDays
+      }).slice(0, config.maxItemsPerQuery));
     } catch (error) {
       errors.push({ source: 'Google News RSS', query, status: 'API未取得', error: error.message });
     }
     await new Promise(done => setTimeout(done, config.requestDelayMs));
-  }
+  });
+  return { results, errors };
+}
+
+function cleanCommonsText(value = '') {
+  return stripHtml(String(value).replace(/\{\{[^{}]*\}\}/g, ' ')).slice(0, 1200);
+}
+
+export function commonsRows(json, query) {
+  return Object.values(json?.query?.pages || {}).map(page => {
+    const info = page.imageinfo?.[0] || {};
+    const meta = info.extmetadata || {};
+    const license = meta.LicenseShortName?.value || meta.UsageTerms?.value || '授權待核對';
+    const artist = cleanCommonsText(meta.Artist?.value || '');
+    const description = cleanCommonsText(meta.ImageDescription?.value || meta.ObjectName?.value || '');
+    return {
+      sourceItemId: `commons:${page.pageid}`,
+      title: page.title?.replace(/^File:/, '') || 'Wikimedia Commons 影像',
+      url: page.fullurl || info.descriptionurl || '',
+      publishedAt: info.timestamp || '',
+      summary: [description, artist && `作者：${artist}`, `授權：${license}`].filter(Boolean).join('；'),
+      publisher: 'Wikimedia Commons',
+      query,
+      sourceGroup: 'Wikimedia Commons',
+      defaultCategory: '影像授權',
+      subjectHints: ['園區'],
+      mediaUrl: info.url || null,
+      license,
+      artist: artist || null
+    };
+  }).filter(item => item.url);
+}
+
+async function fetchWikimediaCommons(config, fetchImpl = fetch) {
+  const settings = config.wikimediaCommons || {};
+  if (!settings.enabled) return { results: [], errors: [] };
+  const results = [];
+  const errors = [];
+  await mapLimit(settings.queries || [], 2, async query => {
+    const url = new URL('https://commons.wikimedia.org/w/api.php');
+    Object.entries({
+      action: 'query', generator: 'search', gsrsearch: query, gsrnamespace: '6',
+      gsrlimit: String(settings.maxItemsPerQuery || 20), prop: 'imageinfo|info',
+      iiprop: 'url|timestamp|extmetadata', inprop: 'url', format: 'json', origin: '*'
+    }).forEach(([key, value]) => url.searchParams.set(key, value));
+    try {
+      const response = await fetchImpl(url, { signal: AbortSignal.timeout(config.requestTimeoutMs), headers: { 'User-Agent': UA } });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      results.push(...commonsRows(await response.json(), query));
+    } catch (error) {
+      errors.push({ source: 'Wikimedia Commons API', query, status: 'API未取得', error: error.message });
+    }
+    await new Promise(done => setTimeout(done, config.requestDelayMs));
+  });
   return { results, errors };
 }
 
@@ -183,13 +263,24 @@ async function fetchThreads(config, fetchImpl = fetch) {
 }
 
 async function checkLinks(config, fetchImpl = fetch) {
-  const checks = [];
-  for (const url of config.healthCheckUrls || []) {
+  return mapLimit(config.healthCheckUrls || [], 4, async url => {
     const result = await safeFetch(url, { method: 'HEAD' }, config, fetchImpl);
-    checks.push({ url, checkedAt: new Date().toISOString(), ok: result.ok, httpStatus: result.status, robotsStatus: result.robotsStatus, error: result.error || null });
-    await new Promise(done => setTimeout(done, config.requestDelayMs));
-  }
-  return checks;
+    let archivedSnapshot = null;
+    if (!result.ok && result.robotsStatus !== '禁止') {
+      try {
+        const archiveUrl = `https://archive.org/wayback/available?url=${encodeURIComponent(url)}`;
+        const archiveResponse = await fetchImpl(archiveUrl, { signal: AbortSignal.timeout(config.requestTimeoutMs), headers: { 'User-Agent': UA } });
+        if (archiveResponse.ok) archivedSnapshot = archiveSnapshotFromJson(await archiveResponse.json());
+      } catch {}
+    }
+    return { url, checkedAt: new Date().toISOString(), ok: result.ok, httpStatus: result.status, robotsStatus: result.robotsStatus, error: result.error || null, archivedSnapshot };
+  });
+}
+
+export function archiveSnapshotFromJson(json) {
+  const closest = json?.archived_snapshots?.closest;
+  if (!closest?.available || !closest.url) return null;
+  return { url: closest.url.replace(/^http:/, 'https:'), timestamp: closest.timestamp || null, status: closest.status || null };
 }
 
 async function readJson(path, fallback) {
@@ -200,20 +291,24 @@ export async function run({ configPath = DEFAULT_CONFIG, statePath = DEFAULT_STA
   const startedAt = new Date().toISOString();
   const config = await readJson(configPath, {});
   const state = await readJson(statePath, { seenIds: [] });
-  const [news, threads, linkChecks] = await Promise.all([
-    fetchGoogleNews(config, fetchImpl), fetchThreads(config, fetchImpl), checkLinks(config, fetchImpl)
+  const [news, commons, threads, linkChecks] = await Promise.all([
+    fetchGoogleNews(config, fetchImpl), fetchWikimediaCommons(config, fetchImpl),
+    fetchThreads(config, fetchImpl), checkLinks(config, fetchImpl)
   ]);
-  const cutoff = Date.now() - config.lookbackDays * 86400000;
-  const discovered = news.results.concat(threads.results)
+  const discovered = news.results.concat(commons.results, threads.results)
     .filter(item => hostnameAllowed(item.url, config.allowedDomains))
-    .filter(item => !item.publishedAt || Number.isNaN(Date.parse(item.publishedAt)) || Date.parse(item.publishedAt) >= cutoff)
+    .filter(item => {
+      const itemCutoff = Date.now() - (item.lookbackDays ?? config.lookbackDays) * 86400000;
+      return !item.publishedAt || Number.isNaN(Date.parse(item.publishedAt)) || Date.parse(item.publishedAt) >= itemCutoff;
+    })
     .map(item => ({ ...item, ...classify(item, config) }))
     .filter(item => item.subjects.length);
   const candidates = dedupe(discovered, state.seenIds);
-  const brokenLinks = linkChecks.filter(check => !check.ok && check.robotsStatus !== '禁止').map(check => ({
+  const brokenLinks = linkChecks.filter(check => [404, 410].includes(check.httpStatus)).map(check => ({
     id: candidateId({ sourceItemId: `link:${check.url}:${check.httpStatus}` }),
     sourceItemId: `link:${check.url}`, title: `連結檢查異常：${check.url}`,
-    url: check.url, publishedAt: check.checkedAt, summary: check.error || `HTTP ${check.httpStatus}`,
+    url: check.url, publishedAt: check.checkedAt,
+    summary: [check.error || `HTTP ${check.httpStatus}`, check.archivedSnapshot?.url && `歷史快照：${check.archivedSnapshot.url}`].filter(Boolean).join('；'),
     publisher: '系統連結檢查', query: '', subjects: ['園區'], category: '失效網址',
     warnings: [], matchedKeywords: []
   }));
@@ -222,10 +317,10 @@ export async function run({ configPath = DEFAULT_CONFIG, statePath = DEFAULT_STA
     schemaVersion: 1,
     run: {
       startedAt, finishedAt: new Date().toISOString(), timezone: config.timezone,
-      status: news.errors.length === config.queries.length ? '部分失敗' : '完成',
+      status: news.errors.length === buildSearchFeeds(config).length ? '部分失敗' : '完成',
       discovered: discovered.length, newCandidates: allCandidates.length
     },
-    candidates: allCandidates, linkChecks, errors: news.errors.concat(threads.errors)
+    candidates: allCandidates, linkChecks, errors: news.errors.concat(commons.errors, threads.errors)
   };
   if (!dryRun) {
     await mkdir(dirname(outputPath), { recursive: true });

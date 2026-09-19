@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { candidateId, classify, dedupe, normalizeUrl, parseRss, robotsAllows } from '../src/radar.mjs';
+import { archiveSnapshotFromJson, buildSearchFeeds, candidateId, classify, commonsRows, dedupe, normalizeUrl, parseRss, robotsAllows } from '../src/radar.mjs';
 
 const config = {
   subjects: { '園區': ['苗栗火車頭園區'], '5號店': ['文創五號店'] },
@@ -39,4 +39,26 @@ test('依來源 ID、網址與標題日期去重', () => {
 test('robots.txt disallow 規則會生效', () => {
   assert.equal(robotsAllows('User-agent: *\nDisallow: /private', '/private/a'), false);
   assert.equal(robotsAllows('User-agent: *\nDisallow: /private', '/public'), true);
+});
+
+test('第二批史料來源會併入搜尋清單', () => {
+  const feeds = buildSearchFeeds({ queries: ['園區'], lookbackDays: 14, historySearchFeeds: [{ name: '國家文化記憶庫', query: '鐵路', lookbackDays: 36500 }] });
+  assert.equal(feeds.length, 2);
+  assert.equal(feeds[1].name, '國家文化記憶庫');
+  assert.equal(feeds[1].lookbackDays, 36500);
+});
+
+test('Wikimedia Commons 影像保留作者與授權', () => {
+  const json = { query: { pages: { 1: { pageid: 1, title: 'File:Miaoli.jpg', fullurl: 'https://commons.wikimedia.org/wiki/File:Miaoli.jpg', imageinfo: [{ timestamp: '2020-01-01T00:00:00Z', url: 'https://upload.wikimedia.org/a.jpg', extmetadata: { Artist: { value: '作者甲' }, LicenseShortName: { value: 'CC BY-SA 4.0' }, ImageDescription: { value: '苗栗鐵路影像' } } }] } } } };
+  const [row] = commonsRows(json, '苗栗 鐵路');
+  assert.equal(row.category, undefined);
+  assert.equal(row.defaultCategory, '影像授權');
+  assert.equal(row.license, 'CC BY-SA 4.0');
+  assert.match(row.summary, /作者甲/);
+});
+
+test('Wayback 回應轉成可用存檔線索', () => {
+  const snapshot = archiveSnapshotFromJson({ archived_snapshots: { closest: { available: true, url: 'http://web.archive.org/web/20200101/https://example.com', timestamp: '20200101', status: '200' } } });
+  assert.equal(snapshot.url.startsWith('https://'), true);
+  assert.equal(snapshot.timestamp, '20200101');
 });

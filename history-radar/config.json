@@ -1,7 +1,7 @@
 {
   "timezone": "Asia/Taipei",
   "lookbackDays": 14,
-  "requestTimeoutMs": 15000,
+  "requestTimeoutMs": 8000,
   "requestDelayMs": 800,
   "maxItemsPerQuery": 30,
   "queries": [
@@ -9,6 +9,22 @@
     "文創五號店 苗栗", "\"5號店\" 苗栗 鐵道",
     "苗栗火車頭園區 停車", "苗栗火車頭園區 導覽", "苗栗火車頭園區 營業時間"
   ],
+  "historySearchFeeds": [
+    {"name":"國家文化記憶庫","query":"(苗栗 鐵路 OR 苗栗 火車站 OR 鐵路一村) site:memory.culture.tw","category":"史料線索","lookbackDays":36500},
+    {"name":"國家圖書館","query":"(苗栗 鐵路 OR 苗栗 火車站 OR 苗栗 機關庫) site:ncl.edu.tw","category":"史料線索","lookbackDays":36500},
+    {"name":"政府資料開放平臺","query":"(苗栗 鐵路 OR 苗栗 火車站) site:data.gov.tw","category":"史料線索","lookbackDays":36500},
+    {"name":"臺灣鐵路公司","query":"(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 機關庫) site:railway.gov.tw","category":"史料線索","lookbackDays":36500},
+    {"name":"客家委員會","query":"(苗栗 鐵路一村 OR 苗栗 火車頭園區) site:hakka.gov.tw","category":"史料線索","lookbackDays":36500},
+    {"name":"苗栗縣政府","query":"(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw","category":"史料線索","lookbackDays":36500},
+    {"name":"地方新聞","query":"(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:udn.com OR site:ltn.com.tw OR site:chinatimes.com OR site:ettoday.net)","category":"史料線索","lookbackDays":36500},
+    {"name":"地方部落格","query":"(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)","category":"史料線索","lookbackDays":36500},
+    {"name":"影音平台","query":"(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com","category":"史料線索","lookbackDays":36500}
+  ],
+  "wikimediaCommons": {
+    "enabled": true,
+    "queries": ["苗栗 火車站", "苗栗 鐵路", "苗栗 機關庫", "Miaoli railway"],
+    "maxItemsPerQuery": 20
+  },
   "subjects": {
     "園區": ["苗栗火車頭園區", "苗栗鐵道文物展示館", "苗栗鐵路一村", "鐵路一村"],
     "5號店": ["文創五號店", "文創5號店", "五號店", "5號店"]
@@ -25,6 +41,12 @@
     {"id": "tour-provided", "pattern": "(園區|館方).{0,12}(提供|備有).{0,8}(免費)?導覽", "note": "疑似宣稱園區提供導覽，需核對預約與服務條件。"}
   ],
   "healthCheckUrls": [
+    "https://memory.culture.tw/",
+    "https://www.ncl.edu.tw/",
+    "https://data.gov.tw/",
+    "https://www.railway.gov.tw/",
+    "https://www.hakka.gov.tw/",
+    "https://www.miaoli.gov.tw/",
     "https://www.facebook.com/miaolirailwaymuseum/",
     "https://www.instagram.com/miaoli_railway_museum/"
   ],
@@ -32,6 +54,8 @@
     "gov.tw", "railway.gov.tw", "facebook.com", "instagram.com", "threads.net",
     "youtube.com", "wikipedia.org", "wikimedia.org", "udn.com", "ltn.com.tw",
     "chinatimes.com", "ettoday.net", "yahoo.com", "pixnet.net", "blogspot.com",
-    "travel.yahoo.com.tw", "news.google.com"
+    "travel.yahoo.com.tw", "news.google.com", "memory.culture.tw", "ncl.edu.tw",
+    "data.gov.tw", "hakka.gov.tw", "miaoli.gov.tw", "commons.wikimedia.org",
+    "wikimedia.org", "web.archive.org", "archive.org"
   ]
 }
