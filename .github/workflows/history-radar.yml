@@ -1,6 +1,10 @@
 name: History Radar
 
 on:
+  push:
+    paths:
+      - 'history-radar/**'
+      - '.github/workflows/history-radar.yml'
   schedule:
     - cron: '20 23 * * *'
   workflow_dispatch:
