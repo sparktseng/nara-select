@@ -1,678 +1,1849 @@
 {
   "schemaVersion": 1,
   "run": {
-    "startedAt": "2026-09-19T01:15:38.907Z",
-    "finishedAt": "2026-09-19T01:15:45.631Z",
+    "startedAt": "2026-09-19T01:17:44.971Z",
+    "finishedAt": "2026-09-19T01:17:51.985Z",
     "timezone": "Asia/Taipei",
     "status": "完成",
-    "discovered": 30,
-    "newCandidates": 30
+    "discovered": 106,
+    "newCandidates": 70
   },
   "candidates": [
     {
-      "sourceItemId": "CBMi_gJBVV95cUxQMUhiRTZqX3loRkhyQ0lzcXFFYU12eVRFc0NBeFZBZzNsOUFVdnlrR25LcndLYVF2d1ZYRkN2bGE5dWMyR2VGU1o1cjdTV2YtNGVTOFloVkcyMUhQYURNM3lyQU9sOVVDMC1WazlDV28wc3U3eGhsaUFKamptSmJnNHFyUFAtODRyRlBzRldBaWJQa0VXekhLMnpVdDFfSFFZcHlfXzhOcXRIQXNMM0NLc05EZ0IxcDRpZUNlckJFRFE5Z0JPTG1vRVN5TFZaUHViVllPaXVONmxobWdkZ3U3clNLX1k4dy1EUmh0TXh6Y19jUlh5MTlheG1wcUxFUFFiZlFOSWVsdy0yczJueDZDcXBOUXBmWngwRlJiWDA5ZkRTR0dsbEJXeUlocWg5WWZTQmZua2YzZzN4bkRIbGE2VzdqOER1UWFUUE0yUVU3WlRyUS1DMDY5RkJTcHZLRy1XbWh0VXFlOC1Rc09SSHdiaE5JMVdiMURncmZOR2d3",
-      "title": "【客華雙語】火車迷、貓奴注意！假日必訪新景點 客委會投近11億「苗栗火車頭園區」盛大開幕 - hakka.gov.tw",
-      "url": "https://news.google.com/rss/articles/CBMi_gJBVV95cUxQMUhiRTZqX3loRkhyQ0lzcXFFYU12eVRFc0NBeFZBZzNsOUFVdnlrR25LcndLYVF2d1ZYRkN2bGE5dWMyR2VGU1o1cjdTV2YtNGVTOFloVkcyMUhQYURNM3lyQU9sOVVDMC1WazlDV28wc3U3eGhsaUFKamptSmJnNHFyUFAtODRyRlBzRldBaWJQa0VXekhLMnpVdDFfSFFZcHlfXzhOcXRIQXNMM0NLc05EZ0IxcDRpZUNlckJFRFE5Z0JPTG1vRVN5TFZaUHViVllPaXVONmxobWdkZ3U3clNLX1k4dy1EUmh0TXh6Y19jUlh5MTlheG1wcUxFUFFiZlFOSWVsdy0yczJueDZDcXBOUXBmWngwRlJiWDA5ZkRTR0dsbEJXeUlocWg5WWZTQmZua2YzZzN4bkRIbGE2VzdqOER1UWFUUE0yUVU3WlRyUS1DMDY5RkJTcHZLRy1XbWh0VXFlOC1Rc09SSHdiaE5JMVdiMURncmZOR2d3?oc=5",
-      "publishedAt": "Fri, 25 Apr 2025 07:00:00 GMT",
-      "summary": "【客華雙語】火車迷、貓奴注意！假日必訪新景點 客委會投近11億「苗栗火車頭園區」盛大開幕 &nbsp;&nbsp; hakka.gov.tw",
-      "publisher": "hakka.gov.tw",
-      "query": "(苗栗 鐵路一村 OR 苗栗 火車頭園區) site:hakka.gov.tw",
-      "sourceGroup": "客家委員會",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:39871207",
+      "title": "Miaoli Station east 20150426.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Miaoli_Station_east_20150426.jpg",
+      "publishedAt": "2015-04-30T09:59:04Z",
+      "summary": "台鉄・苗栗駅 東口；作者：Rsa；授權：CC BY-SA 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/Miaoli_Station_east_20150426.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "artist": "Rsa",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區",
-        "開幕"
-      ],
-      "id": "70f9690ea1a30aecb8df4a54"
+      "matchedKeywords": [],
+      "id": "b862889942169a748f11ec75"
     },
     {
-      "sourceItemId": "CBMirgFBVV95cUxOM0loQ3lDLXpzWmREVjBkdlZjWnhYVGx3VjZHUzFtem9KNWpJNGVEZ2t2Q1dtVmk3OFU4dlRnNE5tMUJFVDFVT29mbldSQmd6UUpvdHhnQThicFVseXVUZ1BXZm9BclJucTVNaFc2ZWQ3cEtqLS0zWldsM2Y2QnBXTzdRclpyZFl1aGdWa1duNGh2YXNzc3ZVUVJDZWcwMmdlU1ZTam41NnZKZ3ZtaXc",
-      "title": "火車迷、貓奴注意！假日必訪新景點 客委會投近11億「苗栗火車頭園區」盛大開幕 - hakka.gov.tw",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOM0loQ3lDLXpzWmREVjBkdlZjWnhYVGx3VjZHUzFtem9KNWpJNGVEZ2t2Q1dtVmk3OFU4dlRnNE5tMUJFVDFVT29mbldSQmd6UUpvdHhnQThicFVseXVUZ1BXZm9BclJucTVNaFc2ZWQ3cEtqLS0zWldsM2Y2QnBXTzdRclpyZFl1aGdWa1duNGh2YXNzc3ZVUVJDZWcwMmdlU1ZTam41NnZKZ3ZtaXc?oc=5",
-      "publishedAt": "Fri, 02 May 2025 07:00:00 GMT",
-      "summary": "火車迷、貓奴注意！假日必訪新景點 客委會投近11億「苗栗火車頭園區」盛大開幕 &nbsp;&nbsp; hakka.gov.tw",
-      "publisher": "hakka.gov.tw",
-      "query": "(苗栗 鐵路一村 OR 苗栗 火車頭園區) site:hakka.gov.tw",
-      "sourceGroup": "客家委員會",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:46612283",
+      "title": "臺鐵苗栗貨運服務站 2008-02-07.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%87%BA%E9%90%B5%E8%8B%97%E6%A0%97%E8%B2%A8%E9%81%8B%E6%9C%8D%E5%8B%99%E7%AB%99_2008-02-07.jpg",
+      "publishedAt": "2016-01-26T08:29:20Z",
+      "summary": "Miaoli Service Station, Taichung Freight Service Office, Department of Freight Service, Taiwan Railways Administration.；作者：Tianmu peter；授權：CC BY 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/%E8%87%BA%E9%90%B5%E8%8B%97%E6%A0%97%E8%B2%A8%E9%81%8B%E6%9C%8D%E5%8B%99%E7%AB%99_2008-02-07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "artist": "Tianmu peter",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區",
-        "開幕"
-      ],
-      "id": "74ab318ef3ebc9ad80eefb8b"
+      "matchedKeywords": [],
+      "id": "6b51da2a577ef94f53e8bb95"
     },
     {
-      "sourceItemId": "CBMidkFVX3lxTE5SYjJyRVRhWWZGQk44VnFlZEllaVhFcHdFdjYzLVZIb05FeTlkb3lTYlNZbzBKcURBcm54aUZhQ0ZGSXFDX1hJdEE0RmRqVmNQUG5CUWlIUkYyZzg1TFlMYVp1WS1vU1JjaWJkN1dId3NrcE5FdlE",
-      "title": "行政處發包科-苗栗鐵路一村復甦計劃-火車頭園區願景館新建工程 - miaoli.gov.tw",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5SYjJyRVRhWWZGQk44VnFlZEllaVhFcHdFdjYzLVZIb05FeTlkb3lTYlNZbzBKcURBcm54aUZhQ0ZGSXFDX1hJdEE0RmRqVmNQUG5CUWlIUkYyZzg1TFlMYVp1WS1vU1JjaWJkN1dId3NrcE5FdlE?oc=5",
-      "publishedAt": "Thu, 10 Oct 2019 23:38:22 GMT",
-      "summary": "行政處發包科-苗栗鐵路一村復甦計劃-火車頭園區願景館新建工程 &nbsp;&nbsp; miaoli.gov.tw",
-      "publisher": "miaoli.gov.tw",
-      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
-      "sourceGroup": "苗栗縣政府",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:51462910",
+      "title": "豐富車站20160916.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%B1%90%E5%AF%8C%E8%BB%8A%E7%AB%9920160916.jpg",
+      "publishedAt": "2016-09-17T02:35:37Z",
+      "summary": "​配合高鐵苗栗站新建的豐富車站新站體；作者：F0153820；授權：CC BY-SA 4.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/%E8%B1%90%E5%AF%8C%E8%BB%8A%E7%AB%9920160916.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "artist": "F0153820",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
-      "matchedKeywords": [
-        "苗栗鐵路一村",
-        "鐵路一村"
-      ],
-      "id": "5d6feeb7640c97f21619457f"
+      "matchedKeywords": [],
+      "id": "1570d2e1c0a653f581ede427"
     },
     {
-      "sourceItemId": "CBMia0FVX3lxTE96U19xTjNMM0lpRlU1MFZDV2FkczRkUHdoUndtRFVKSjJ4eVRUeVhsWXBSbkdfdE04czVFckk4NlVWSDI1dl8waDEzdDhkYWc5RW5hWnh2bzRONlpmQVp0azgxWDlOcThhQmZ3",
-      "title": "苗栗火車頭園區願景館春節活動不停歇 - miaoli.gov.tw",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE96U19xTjNMM0lpRlU1MFZDV2FkczRkUHdoUndtRFVKSjJ4eVRUeVhsWXBSbkdfdE04czVFckk4NlVWSDI1dl8waDEzdDhkYWc5RW5hWnh2bzRONlpmQVp0azgxWDlOcThhQmZ3?oc=5",
-      "publishedAt": "Fri, 28 Jan 2022 05:57:18 GMT",
-      "summary": "苗栗火車頭園區願景館春節活動不停歇 &nbsp;&nbsp; miaoli.gov.tw",
-      "publisher": "miaoli.gov.tw",
-      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
-      "sourceGroup": "苗栗縣政府",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:55137739",
+      "title": "苗栗市苗栗火車站Miaoli City, Miaoli Station - panoramio.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City,_Miaoli_Station_-_panoramio.jpg",
+      "publishedAt": "2017-01-19T08:21:45Z",
+      "summary": "苗栗市苗栗火車站Miaoli City, Miaoli Station；作者：susan curry；授權：CC BY 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City%2C_Miaoli_Station_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "artist": "susan curry",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區",
-        "活動"
-      ],
-      "id": "40b35dba3e6aed28489dc672"
+      "matchedKeywords": [],
+      "id": "d80ce1f802b49717b0224151"
     },
     {
-      "sourceItemId": "CBMia0FVX3lxTE1pZnV0V1JaakZJdjVaRFB0eVMtVHgzRHlEM0VxOGIyeDVtZmw0QV9HMkhiOHh2d3kxZDQ2Yy1SSC1WVlV1UGZKSmJWRE5JQ2ZVZExJNE1PaHI1YkZ2OXRWSF9XQXB6aEV3RC1J",
-      "title": "苗栗火車頭園區竣工將結合客家文化打造成為觀光旅遊亮點 - miaoli.gov.tw",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1pZnV0V1JaakZJdjVaRFB0eVMtVHgzRHlEM0VxOGIyeDVtZmw0QV9HMkhiOHh2d3kxZDQ2Yy1SSC1WVlV1UGZKSmJWRE5JQ2ZVZExJNE1PaHI1YkZ2OXRWSF9XQXB6aEV3RC1J?oc=5",
-      "publishedAt": "Sat, 17 Feb 2024 18:53:22 GMT",
-      "summary": "苗栗火車頭園區竣工將結合客家文化打造成為觀光旅遊亮點 &nbsp;&nbsp; miaoli.gov.tw",
-      "publisher": "miaoli.gov.tw",
-      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
-      "sourceGroup": "苗栗縣政府",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:55137748",
+      "title": "苗栗市苗栗火車站Miaoli City, Miaoli Station - panoramio (2).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City,_Miaoli_Station_-_panoramio_(2).jpg",
+      "publishedAt": "2017-01-19T08:22:25Z",
+      "summary": "苗栗市苗栗火車站Miaoli City, Miaoli Station；作者：susan curry；授權：CC BY 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City%2C_Miaoli_Station_-_panoramio_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "artist": "susan curry",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區"
-      ],
-      "id": "6b1f1f682027ca4ccb6fc64c"
+      "matchedKeywords": [],
+      "id": "dc6f5858a8cf4f820240e6e4"
     },
     {
-      "sourceItemId": "CBMia0FVX3lxTFBKcEJyNHA4YkJEZmN4UzVxekxEMUtQNm1UXzY5ZS1FMk5ZUmhoRmdKT19MdjdwRm1jOFZDUUg0V05WdnVxM3dHaVBnbEZJX2tlU1JBWGJxbjlhUFE4cWhyZmJfOVFuMG5iWEw0",
-      "title": "全台唯一觀光亮點 苗栗火車頭園區盛大開幕 - miaoli.gov.tw",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBKcEJyNHA4YkJEZmN4UzVxekxEMUtQNm1UXzY5ZS1FMk5ZUmhoRmdKT19MdjdwRm1jOFZDUUg0V05WdnVxM3dHaVBnbEZJX2tlU1JBWGJxbjlhUFE4cWhyZmJfOVFuMG5iWEw0?oc=5",
-      "publishedAt": "Thu, 01 May 2025 18:38:29 GMT",
-      "summary": "全台唯一觀光亮點 苗栗火車頭園區盛大開幕 &nbsp;&nbsp; miaoli.gov.tw",
-      "publisher": "miaoli.gov.tw",
-      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
-      "sourceGroup": "苗栗縣政府",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:55137754",
+      "title": "苗栗市苗栗火車站Miaoli City, Miaoli Station - panoramio (3).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City,_Miaoli_Station_-_panoramio_(3).jpg",
+      "publishedAt": "2017-01-19T08:22:45Z",
+      "summary": "苗栗市苗栗火車站Miaoli City, Miaoli Station；作者：susan curry；授權：CC BY 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City%2C_Miaoli_Station_-_panoramio_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "artist": "susan curry",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區",
-        "開幕"
-      ],
-      "id": "4c194f92cfd89cc8ab4eaff5"
+      "matchedKeywords": [],
+      "id": "a99eefba26d8e7c473f1d6ed"
     },
     {
-      "sourceItemId": "CBMia0FVX3lxTE5GblZfdDhYeHNibUZpWERSa3d3bTQ1eUJTZEtzYlREQlVpRWNSU09uWG8tcGhXekFlMlBvekZqeFp6QVlhUWw3NkdqVVh0V0xwQ3J5dVhyQjBsNExvZDBldW1RSGJqV0FnT2Yw",
-      "title": "苗栗火車頭園區願景館試營運開幕 - miaoli.gov.tw",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5GblZfdDhYeHNibUZpWERSa3d3bTQ1eUJTZEtzYlREQlVpRWNSU09uWG8tcGhXekFlMlBvekZqeFp6QVlhUWw3NkdqVVh0V0xwQ3J5dVhyQjBsNExvZDBldW1RSGJqV0FnT2Yw?oc=5",
-      "publishedAt": "Thu, 23 Jun 2022 11:33:39 GMT",
-      "summary": "苗栗火車頭園區願景館試營運開幕 &nbsp;&nbsp; miaoli.gov.tw",
-      "publisher": "miaoli.gov.tw",
-      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
-      "sourceGroup": "苗栗縣政府",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:55137772",
+      "title": "苗栗市苗栗火車站Miaoli City, Miaoli Station - panoramio (5).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City,_Miaoli_Station_-_panoramio_(5).jpg",
+      "publishedAt": "2017-01-19T08:23:25Z",
+      "summary": "苗栗市苗栗火車站Miaoli City, Miaoli Station；作者：susan curry；授權：CC BY 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City%2C_Miaoli_Station_-_panoramio_%285%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "artist": "susan curry",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區",
-        "開幕"
-      ],
-      "id": "fe9acea7294e3d58a74c9bbb"
+      "matchedKeywords": [],
+      "id": "0bc97343ed0c8e4f8023553f"
     },
     {
-      "sourceItemId": "CBMia0FVX3lxTFB0NGFzVFJFWmMwc0Z2Z2lPUy1HS3ptRU1uNDJEU3BQaVBuNzAzdmE0OU5iaDNYUlJ3b3ZybTFHanRKaVlDanBaZ1ExR0JHbVZ0cWk5TlA0V01STGIzZHJLX3o0V3dMVHZhSkVF",
-      "title": "藝術家現身鐵路一村 創作苗栗鐵道新地景 - miaoli.gov.tw",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB0NGFzVFJFWmMwc0Z2Z2lPUy1HS3ptRU1uNDJEU3BQaVBuNzAzdmE0OU5iaDNYUlJ3b3ZybTFHanRKaVlDanBaZ1ExR0JHbVZ0cWk5TlA0V01STGIzZHJLX3o0V3dMVHZhSkVF?oc=5",
-      "publishedAt": "Mon, 10 Aug 2020 12:25:40 GMT",
-      "summary": "藝術家現身鐵路一村 創作苗栗鐵道新地景 &nbsp;&nbsp; miaoli.gov.tw",
-      "publisher": "miaoli.gov.tw",
-      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
-      "sourceGroup": "苗栗縣政府",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:55137824",
+      "title": "苗栗市苗栗火車站Miaoli City, Miaoli Station - panoramio (14).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City,_Miaoli_Station_-_panoramio_(14).jpg",
+      "publishedAt": "2017-01-19T08:26:26Z",
+      "summary": "苗栗市苗栗火車站Miaoli City, Miaoli Station；作者：susan curry；授權：CC BY 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City%2C_Miaoli_Station_-_panoramio_%2814%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "artist": "susan curry",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
-      "matchedKeywords": [
-        "鐵路一村"
-      ],
-      "id": "e19c62e9a1e182e1bd3fa0b9"
+      "matchedKeywords": [],
+      "id": "de3f64630de99253732fdaa2"
     },
     {
-      "sourceItemId": "CBMia0FVX3lxTE9tM3lrSGZVRU90cUkwaHJGLTM5RWN1eWpwTE9MQXFPSmJ1eWRNRFhoR1NKNVhhdS05WmZzc09GOGUtc1hScThhQ0lTMlJVTzVuSTc3YzZmWlE4MVpWM3Q5MmtBQkpaNzJGSUpr",
-      "title": "鐵路一村與建築學大師跨域對談 - miaoli.gov.tw",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9tM3lrSGZVRU90cUkwaHJGLTM5RWN1eWpwTE9MQXFPSmJ1eWRNRFhoR1NKNVhhdS05WmZzc09GOGUtc1hScThhQ0lTMlJVTzVuSTc3YzZmWlE4MVpWM3Q5MmtBQkpaNzJGSUpr?oc=5",
-      "publishedAt": "Mon, 10 Aug 2020 13:53:31 GMT",
-      "summary": "鐵路一村與建築學大師跨域對談 &nbsp;&nbsp; miaoli.gov.tw",
-      "publisher": "miaoli.gov.tw",
-      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
-      "sourceGroup": "苗栗縣政府",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:55137835",
+      "title": "苗栗市苗栗火車站Miaoli City, Miaoli Station - panoramio (16).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City,_Miaoli_Station_-_panoramio_(16).jpg",
+      "publishedAt": "2017-01-19T08:27:06Z",
+      "summary": "苗栗市苗栗火車站Miaoli City, Miaoli Station；作者：susan curry；授權：CC BY 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City%2C_Miaoli_Station_-_panoramio_%2816%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "artist": "susan curry",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
-      "matchedKeywords": [
-        "鐵路一村"
-      ],
-      "id": "dc914494d79565b3ab8d79ce"
+      "matchedKeywords": [],
+      "id": "fb95ea68120f83ae9250b6c1"
     },
     {
-      "sourceItemId": "CBMia0FVX3lxTE9ZcktJUG02LUc2LUtydE5xQTItMGxBWTYtRTgyelRRUUdieFp1ZUJRT3lkZ0kyYTZYUUN2RHdQNlctUWlJUlJZaTNOSzNmVnlhdHVQUTFLbS12SHI3RmtaLVVWUXBRQTlBQ2V3",
-      "title": "聯合大學2025台日都市區域發展規劃工作坊成果發表會 8/31苗栗火車頭園區舉辦 - miaoli.gov.tw",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9ZcktJUG02LUc2LUtydE5xQTItMGxBWTYtRTgyelRRUUdieFp1ZUJRT3lkZ0kyYTZYUUN2RHdQNlctUWlJUlJZaTNOSzNmVnlhdHVQUTFLbS12SHI3RmtaLVVWUXBRQTlBQ2V3?oc=5",
-      "publishedAt": "Sun, 31 Aug 2025 05:09:28 GMT",
-      "summary": "聯合大學2025台日都市區域發展規劃工作坊成果發表會 8/31苗栗火車頭園區舉辦 &nbsp;&nbsp; miaoli.gov.tw",
-      "publisher": "miaoli.gov.tw",
-      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
-      "sourceGroup": "苗栗縣政府",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:55137912",
+      "title": "苗栗市苗栗火車站Miaoli City, Miaoli Station - panoramio (28).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City,_Miaoli_Station_-_panoramio_(28).jpg",
+      "publishedAt": "2017-01-19T08:31:48Z",
+      "summary": "苗栗市苗栗火車站Miaoli City, Miaoli Station；作者：susan curry；授權：CC BY 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City%2C_Miaoli_Station_-_panoramio_%2828%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "artist": "susan curry",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區"
-      ],
-      "id": "4d634681d1f78ff3f5575027"
+      "matchedKeywords": [],
+      "id": "72e576ba27b39a456798761f"
     },
     {
-      "sourceItemId": "CBMiYEFVX3lxTE5CUjJDOUZyVjZGZi00NzgtQ054V0lyN1hCbTJ0cnJuZW0zYy1VVVRkaVhrMnJ5QTB5dFNpS3V4NmZ3c2VUVEF6ZkNsNjlmeFVxQWRLTE9IVlpUT2FfYXhWNdIBZkFVX3lxTE1zQklvb2k1YUdSSkpCVnZyZnlqQmZnc0g0RHRtR0hrODQwdDA2SzhWanJPT0VrUzNXWjRUa2UxOUVRcjRBV0FFVE1Yb3I4QlltenhnRkMyRWRUYUFGMWRSVWVZMFNhQQ",
-      "title": "苗栗火車頭園區將分二階段營運 文創小舖、火車主題餐廳預計暑假前開幕 - 自由藝文網",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5CUjJDOUZyVjZGZi00NzgtQ054V0lyN1hCbTJ0cnJuZW0zYy1VVVRkaVhrMnJ5QTB5dFNpS3V4NmZ3c2VUVEF6ZkNsNjlmeFVxQWRLTE9IVlpUT2FfYXhWNdIBZkFVX3lxTE1zQklvb2k1YUdSSkpCVnZyZnlqQmZnc0g0RHRtR0hrODQwdDA2SzhWanJPT0VrUzNXWjRUa2UxOUVRcjRBV0FFVE1Yb3I4QlltenhnRkMyRWRUYUFGMWRSVWVZMFNhQQ?oc=5",
-      "publishedAt": "Tue, 31 Jan 2023 08:00:00 GMT",
-      "summary": "苗栗火車頭園區將分二階段營運 文創小舖、火車主題餐廳預計暑假前開幕 &nbsp;&nbsp; 自由藝文網",
-      "publisher": "自由藝文網",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:udn.com OR site:ltn.com.tw OR site:chinatimes.com OR site:ettoday.net)",
-      "sourceGroup": "地方新聞",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:55137917",
+      "title": "苗栗市苗栗火車站Miaoli City, Miaoli Station - panoramio (29).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City,_Miaoli_Station_-_panoramio_(29).jpg",
+      "publishedAt": "2017-01-19T08:32:08Z",
+      "summary": "苗栗市王府商務大飯店；作者：susan curry；授權：CC BY 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City%2C_Miaoli_Station_-_panoramio_%2829%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "artist": "susan curry",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區",
-        "開幕"
-      ],
-      "id": "a789b9e69b99e85e88e09c4f"
+      "matchedKeywords": [],
+      "id": "b23c236850fb94d8b8fcb8eb"
     },
     {
-      "sourceItemId": "CBMiUEFVX3lxTE5RN1RjSFZMUmpOcUdSbC1SbGJuaHBxa2xaZlRNWUdNZ21TU2sySUQ5UkJnTE1rR19vV2tqTVUyWWZMakJkWDVpYmVINzZYWTFN",
-      "title": "「苗栗火車頭園區」開幕免費入園！朝聖「12台火車頭+貓咪咖啡車」 還有美食、文創加持進駐一站式玩到翻 - UDN",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5RN1RjSFZMUmpOcUdSbC1SbGJuaHBxa2xaZlRNWUdNZ21TU2sySUQ5UkJnTE1rR19vV2tqTVUyWWZMakJkWDVpYmVINzZYWTFN?oc=5",
-      "publishedAt": "Tue, 22 Apr 2025 07:00:00 GMT",
-      "summary": "「苗栗火車頭園區」開幕免費入園！朝聖「12台火車頭+貓咪咖啡車」 還有美食、文創加持進駐一站式玩到翻 &nbsp;&nbsp; UDN",
-      "publisher": "UDN",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:udn.com OR site:ltn.com.tw OR site:chinatimes.com OR site:ettoday.net)",
-      "sourceGroup": "地方新聞",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:55137928",
+      "title": "苗栗市苗栗火車站Miaoli City, Miaoli Station - panoramio (31).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City,_Miaoli_Station_-_panoramio_(31).jpg",
+      "publishedAt": "2017-01-19T08:32:48Z",
+      "summary": "苗栗市苗栗火車站Miaoli City, Miaoli Station；作者：susan curry；授權：CC BY 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City%2C_Miaoli_Station_-_panoramio_%2831%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "artist": "susan curry",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區",
-        "開幕"
-      ],
-      "id": "ddab8d19e086a51157667422"
+      "matchedKeywords": [],
+      "id": "21ca8b2e4f4ba408fb6502f5"
     },
     {
-      "sourceItemId": "CBMiV0FVX3lxTE9laEhaUUMxNjBPNDJYcjRvbmw3bG9KSGFDclEyWVJMeWd4c2FITU9fSWRWazNjT0hpSTJXS1gzcTRYNU9BbEFwVzZOb0Zxc2FOMkRGTEFsdw",
-      "title": "要4500萬給10億苗栗火車頭園區從廢墟華麗轉身| 地方脈動 - 聯合報數位版",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9laEhaUUMxNjBPNDJYcjRvbmw3bG9KSGFDclEyWVJMeWd4c2FITU9fSWRWazNjT0hpSTJXS1gzcTRYNU9BbEFwVzZOb0Zxc2FOMkRGTEFsdw?oc=5",
-      "publishedAt": "Fri, 01 Aug 2025 07:00:00 GMT",
-      "summary": "要4500萬給10億苗栗火車頭園區從廢墟華麗轉身| 地方脈動 &nbsp;&nbsp; 聯合報數位版",
-      "publisher": "聯合報數位版",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:udn.com OR site:ltn.com.tw OR site:chinatimes.com OR site:ettoday.net)",
-      "sourceGroup": "地方新聞",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:55137968",
+      "title": "苗栗市苗栗火車站Miaoli City, Miaoli Station - panoramio (40).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City,_Miaoli_Station_-_panoramio_(40).jpg",
+      "publishedAt": "2017-01-19T08:35:48Z",
+      "summary": "苗栗市苗栗火車站Miaoli City, Miaoli Station；作者：susan curry；授權：CC BY 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City%2C_Miaoli_Station_-_panoramio_%2840%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "artist": "susan curry",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區"
-      ],
-      "id": "eeea41ebea6ef55de3b40322"
+      "matchedKeywords": [],
+      "id": "c12cab60b70c4373930b013b"
     },
     {
-      "sourceItemId": "CBMiUEFVX3lxTE93TXBzM2V0aHc3MUw5NUdSZENWZFIySy1RVG05NE1jaHFNWXpBcFdGdnpDRlhldlptNjhMdmhGVnQxdGJJS2Rhc1NWazdNT2pa",
-      "title": "20251103苗栗火車頭園區彷彿貓咪文創園區.台鐵喵務處透明玻璃屋引人注目 - udn部落格",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE93TXBzM2V0aHc3MUw5NUdSZENWZFIySy1RVG05NE1jaHFNWXpBcFdGdnpDRlhldlptNjhMdmhGVnQxdGJJS2Rhc1NWazdNT2pa?oc=5",
-      "publishedAt": "Wed, 12 Nov 2025 08:00:00 GMT",
-      "summary": "20251103苗栗火車頭園區彷彿貓咪文創園區.台鐵喵務處透明玻璃屋引人注目 &nbsp;&nbsp; udn部落格",
-      "publisher": "udn部落格",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:udn.com OR site:ltn.com.tw OR site:chinatimes.com OR site:ettoday.net)",
-      "sourceGroup": "地方新聞",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:55137972",
+      "title": "苗栗市苗栗火車站Miaoli City, Miaoli Station - panoramio (41).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City,_Miaoli_Station_-_panoramio_(41).jpg",
+      "publishedAt": "2017-01-19T08:36:09Z",
+      "summary": "苗栗市苗栗火車站Miaoli City, Miaoli Station；作者：susan curry；授權：CC BY 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City%2C_Miaoli_Station_-_panoramio_%2841%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "artist": "susan curry",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區"
-      ],
-      "id": "391dd8e5cbf3aaf7525ed9bc"
+      "matchedKeywords": [],
+      "id": "643d0d68da1ce0c9d4fa08eb"
     },
     {
-      "sourceItemId": "CBMiUEFVX3lxTE1QeWhUdXh1XzRmQ3pLbUwxeUZVVlk0THZ4N1VaQkYtS1RUdDJ5NEJTYlJETFlETDhNd2NUeE5meXZFMzd4emtzbThNcmhXa0RN0gFWQVVfeXFMTjF6dmVNNnNTdUcxYWcxLUVWQThzYkJqYVpjQlZwOVYxd3F0TVpaLXRkdzhSVTRtSXRpWUNXcXd4WDZ0Yk1NOFF6YVhHandWd3JpdWFadXc",
-      "title": "「豐味苗栗」進駐苗栗火車頭園區 4日起消費滿600元送限量迴力車 - UDN",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1QeWhUdXh1XzRmQ3pLbUwxeUZVVlk0THZ4N1VaQkYtS1RUdDJ5NEJTYlJETFlETDhNd2NUeE5meXZFMzd4emtzbThNcmhXa0RN0gFWQVVfeXFMTjF6dmVNNnNTdUcxYWcxLUVWQThzYkJqYVpjQlZwOVYxd3F0TVpaLXRkdzhSVTRtSXRpWUNXcXd4WDZ0Yk1NOFF6YVhHandWd3JpdWFadXc?oc=5",
-      "publishedAt": "Thu, 02 Oct 2025 07:00:00 GMT",
-      "summary": "「豐味苗栗」進駐苗栗火車頭園區 4日起消費滿600元送限量迴力車 &nbsp;&nbsp; UDN",
-      "publisher": "UDN",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:udn.com OR site:ltn.com.tw OR site:chinatimes.com OR site:ettoday.net)",
-      "sourceGroup": "地方新聞",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:55137974",
+      "title": "苗栗市苗栗火車站Miaoli City, Miaoli Station - panoramio (42).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City,_Miaoli_Station_-_panoramio_(42).jpg",
+      "publishedAt": "2017-01-19T08:36:29Z",
+      "summary": "苗栗市苗栗火車站Miaoli City, Miaoli Station；作者：susan curry；授權：CC BY 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City%2C_Miaoli_Station_-_panoramio_%2842%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "artist": "susan curry",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區"
-      ],
-      "id": "efcb59a2dca8870fb212a526"
+      "matchedKeywords": [],
+      "id": "846de0ad7125685554b9e37a"
     },
     {
-      "sourceItemId": "CBMiVkFVX3lxTE1jS0N2blZmMkZtZmtBelo2eXp2dWl6cDZ6cGw1R01WZjVERnhNeG94NGtGSTduM05TampKY0ZaSkhqVHV4djhNWWNsRFJ0ZDItX2dWX2dR",
-      "title": "台鐵 苗栗鐵道文物展示館 - YouTube",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1jS0N2blZmMkZtZmtBelo2eXp2dWl6cDZ6cGw1R01WZjVERnhNeG94NGtGSTduM05TampKY0ZaSkhqVHV4djhNWWNsRFJ0ZDItX2dWX2dR?oc=5",
-      "publishedAt": "Mon, 11 May 2020 10:37:12 GMT",
-      "summary": "台鐵 苗栗鐵道文物展示館 &nbsp;&nbsp; YouTube",
-      "publisher": "YouTube",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
-      "sourceGroup": "影音平台",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:55137991",
+      "title": "苗栗市苗栗火車站Miaoli City, Miaoli Station - panoramio (45).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City,_Miaoli_Station_-_panoramio_(45).jpg",
+      "publishedAt": "2017-01-19T08:37:29Z",
+      "summary": "苗栗市苗栗火車站Miaoli City, Miaoli Station；作者：susan curry；授權：CC BY 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City%2C_Miaoli_Station_-_panoramio_%2845%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "artist": "susan curry",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "5dff53e89fafacb40bb3682e"
+    },
+    {
+      "sourceItemId": "commons:58574517",
+      "title": "苗栗火車站.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99.jpg",
+      "publishedAt": "2017-05-07T13:07:29Z",
+      "summary": "​苗栗火車站；作者：Yuriy kosygin；授權：CC BY-SA 4.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "artist": "Yuriy kosygin",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "a0fa4327d3e492415413cf0f"
+    },
+    {
+      "sourceItemId": "commons:68673028",
+      "title": "Fengfu Station with mountains in the background.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Fengfu_Station_with_mountains_in_the_background.jpg",
+      "publishedAt": "2018-04-30T16:00:19Z",
+      "summary": "Fengfu Station with mountains in the background. Photo taken from the Miaoli HSR station.；作者：飛翔天際一片羽；授權：CC BY 2.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Fengfu_Station_with_mountains_in_the_background.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "artist": "飛翔天際一片羽",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "0da585952bf6d37f8a2f8858"
+    },
+    {
+      "sourceItemId": "commons:68673155",
+      "title": "Fengfu Station on a cloudy afternoon in March.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Fengfu_Station_on_a_cloudy_afternoon_in_March.jpg",
+      "publishedAt": "2018-04-30T16:05:34Z",
+      "summary": "Fengfu Station on a cloudy afternoon in March.；作者：飛翔天際一片羽；授權：CC BY 2.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Fengfu_Station_on_a_cloudy_afternoon_in_March.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "artist": "飛翔天際一片羽",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "de89482bc08cbd55ee7b9644"
+    },
+    {
+      "sourceItemId": "commons:80220130",
+      "title": "苗栗客運887-U7 新竹前火車站 20190706.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E5%AE%A2%E9%81%8B887-U7_%E6%96%B0%E7%AB%B9%E5%89%8D%E7%81%AB%E8%BB%8A%E7%AB%99_20190706.jpg",
+      "publishedAt": "2019-07-07T05:20:05Z",
+      "summary": "​苗栗客運日野RK8JRSA大客車887-U7，原新店客運大客車008-FW，行駛5807A線，雨中停靠新竹前火車站。；作者：Jeffhuang0627；授權：CC BY-SA 4.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/%E8%8B%97%E6%A0%97%E5%AE%A2%E9%81%8B887-U7_%E6%96%B0%E7%AB%B9%E5%89%8D%E7%81%AB%E8%BB%8A%E7%AB%99_20190706.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "artist": "Jeffhuang0627",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "8fa1ceb3d790ce7d6dffd05b"
+    },
+    {
+      "sourceItemId": "commons:81918795",
+      "title": "苗栗勝興車站的「台灣鐵路最高點」紀念碑.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E5%8B%9D%E8%88%88%E8%BB%8A%E7%AB%99%E7%9A%84%E3%80%8C%E5%8F%B0%E7%81%A3%E9%90%B5%E8%B7%AF%E6%9C%80%E9%AB%98%E9%BB%9E%E3%80%8D%E7%B4%80%E5%BF%B5%E7%A2%91.jpg",
+      "publishedAt": "2019-09-06T09:37:04Z",
+      "summary": "​勝興火車站是西部縱貫鐵路的最高點，站內月台有一座紀念碑，標高 402.326公尺，為西部縱貫鐵路中最險峻、自然景觀最特殊的一段。；作者：張欽嵐；授權：CC BY-SA 4.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ae/%E8%8B%97%E6%A0%97%E5%8B%9D%E8%88%88%E8%BB%8A%E7%AB%99%E7%9A%84%E3%80%8C%E5%8F%B0%E7%81%A3%E9%90%B5%E8%B7%AF%E6%9C%80%E9%AB%98%E9%BB%9E%E3%80%8D%E7%B4%80%E5%BF%B5%E7%A2%91.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "artist": "張欽嵐",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "6efcbf42b9afe0640bf1ed10"
+    },
+    {
+      "sourceItemId": "commons:113439096",
+      "title": "阿里山森林鐵路11403-1柴油機車運出苗栗鐵道文物展示館.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E9%98%BF%E9%87%8C%E5%B1%B1%E6%A3%AE%E6%9E%97%E9%90%B5%E8%B7%AF11403-1%E6%9F%B4%E6%B2%B9%E6%A9%9F%E8%BB%8A%E9%81%8B%E5%87%BA%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8.jpg",
+      "publishedAt": "2021-12-17T16:31:55Z",
+      "summary": "​阿里山森林鐵路11403-1柴油機車；作者：行政院農業委員會林務局阿里山林業鐵路及文化資產管理處；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/%E9%98%BF%E9%87%8C%E5%B1%B1%E6%A3%AE%E6%9E%97%E9%90%B5%E8%B7%AF11403-1%E6%9F%B4%E6%B2%B9%E6%A9%9F%E8%BB%8A%E9%81%8B%E5%87%BA%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "行政院農業委員會林務局阿里山林業鐵路及文化資產管理處",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物",
+        "柴油機車"
+      ],
+      "id": "3c3ede296aada961904db193"
+    },
+    {
+      "sourceItemId": "commons:113439243",
+      "title": "阿里山森林鐵路11403-5柴油機車運出苗栗鐵道文物展示館.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E9%98%BF%E9%87%8C%E5%B1%B1%E6%A3%AE%E6%9E%97%E9%90%B5%E8%B7%AF11403-5%E6%9F%B4%E6%B2%B9%E6%A9%9F%E8%BB%8A%E9%81%8B%E5%87%BA%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8.jpg",
+      "publishedAt": "2021-12-17T16:38:35Z",
+      "summary": "​阿里山森林鐵路11403-5柴油機車；作者：行政院農業委員會林務局阿里山林業鐵路及文化資產管理處；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/%E9%98%BF%E9%87%8C%E5%B1%B1%E6%A3%AE%E6%9E%97%E9%90%B5%E8%B7%AF11403-5%E6%9F%B4%E6%B2%B9%E6%A9%9F%E8%BB%8A%E9%81%8B%E5%87%BA%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "行政院農業委員會林務局阿里山林業鐵路及文化資產管理處",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物",
+        "柴油機車"
+      ],
+      "id": "354c439b902f07b4184b4919"
+    },
+    {
+      "sourceItemId": "commons:113439452",
+      "title": "阿里山森林鐵路11403-5柴油機車運出苗栗鐵道文物展示館-2.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E9%98%BF%E9%87%8C%E5%B1%B1%E6%A3%AE%E6%9E%97%E9%90%B5%E8%B7%AF11403-5%E6%9F%B4%E6%B2%B9%E6%A9%9F%E8%BB%8A%E9%81%8B%E5%87%BA%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8-2.jpg",
+      "publishedAt": "2021-12-17T16:48:30Z",
+      "summary": "​阿里山森林鐵路11403-5柴油機車運出苗栗鐵道文物展示館；作者：行政院農業委員會林務局阿里山林業鐵路及文化資產管理處；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/%E9%98%BF%E9%87%8C%E5%B1%B1%E6%A3%AE%E6%9E%97%E9%90%B5%E8%B7%AF11403-5%E6%9F%B4%E6%B2%B9%E6%A9%9F%E8%BB%8A%E9%81%8B%E5%87%BA%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "行政院農業委員會林務局阿里山林業鐵路及文化資產管理處",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物",
+        "柴油機車"
+      ],
+      "id": "97ec0a7091b575235512dbe3"
+    },
+    {
+      "sourceItemId": "commons:117689323",
+      "title": "苗栗鐵道文物展示館改建示意圖-1.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8%E6%94%B9%E5%BB%BA%E7%A4%BA%E6%84%8F%E5%9C%96-1.jpg",
+      "publishedAt": "2022-05-05T02:01:11Z",
+      "summary": "​苗栗鐵道文物展示館改建示意圖；作者：臺灣鐵路管理局；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2a/%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8%E6%94%B9%E5%BB%BA%E7%A4%BA%E6%84%8F%E5%9C%96-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "臺灣鐵路管理局",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
       "warnings": [],
       "matchedKeywords": [
         "苗栗鐵道文物展示館",
         "文物"
       ],
-      "id": "81b74cd614e01a494d9699d3"
+      "id": "5688df09d6888e72a6949257"
     },
     {
-      "sourceItemId": "CBMiVkFVX3lxTE1yeFh5bDhhdVJMRnZWS0hKQWlFeUJfa3VmOU9wekZaZmFnR1VacFBYX1Z0ZWNrNkxuZGxSUF9QSVhkZkFTM1ZSc0g2cE4zNGxXeTVyNE9n",
-      "title": "苗栗火車頭園區 打造貓咪萌寵樂園 - YouTube",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1yeFh5bDhhdVJMRnZWS0hKQWlFeUJfa3VmOU9wekZaZmFnR1VacFBYX1Z0ZWNrNkxuZGxSUF9QSVhkZkFTM1ZSc0g2cE4zNGxXeTVyNE9n?oc=5",
-      "publishedAt": "Thu, 17 Apr 2025 10:01:36 GMT",
-      "summary": "苗栗火車頭園區 打造貓咪萌寵樂園 &nbsp;&nbsp; YouTube",
-      "publisher": "YouTube",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
-      "sourceGroup": "影音平台",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:117689346",
+      "title": "苗栗鐵道文物展示館改建示意圖-2.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8%E6%94%B9%E5%BB%BA%E7%A4%BA%E6%84%8F%E5%9C%96-2.jpg",
+      "publishedAt": "2022-05-05T02:02:47Z",
+      "summary": "​苗栗鐵道文物展示館改建示意圖；作者：臺灣鐵路管理局；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8%E6%94%B9%E5%BB%BA%E7%A4%BA%E6%84%8F%E5%9C%96-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "臺灣鐵路管理局",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
-      "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區"
-      ],
-      "id": "0b50841bbaa1c180106e9f77"
-    },
-    {
-      "sourceItemId": "CBMiVkFVX3lxTE94dTN2WnNDb3NHOHB6bHZqNE1HX1Z0S25pYkFleWVhOER2b2hOM3dhNWN5NnRUTXdGd1JQVHhtMUVuWldqTERNYUxQS3V1SHlzOFMyRzdn",
-      "title": "火車控貓奴必去 10億苗栗火車頭園區「撸貓」｜TVBS新聞 - YouTube",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE94dTN2WnNDb3NHOHB6bHZqNE1HX1Z0S25pYkFleWVhOER2b2hOM3dhNWN5NnRUTXdGd1JQVHhtMUVuWldqTERNYUxQS3V1SHlzOFMyRzdn?oc=5",
-      "publishedAt": "Fri, 25 Apr 2025 12:15:45 GMT",
-      "summary": "火車控貓奴必去 10億苗栗火車頭園區「撸貓」｜TVBS新聞 &nbsp;&nbsp; YouTube",
-      "publisher": "YouTube",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
-      "sourceGroup": "影音平台",
-      "defaultCategory": "史料線索",
-      "lookbackDays": 36500,
-      "subjects": [
-        "園區"
-      ],
-      "category": "史料線索",
-      "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區"
-      ],
-      "id": "d89da3d465e2c0ee2393c568"
-    },
-    {
-      "sourceItemId": "CBMiVkFVX3lxTE9iMlJRa1ZhQmJFOUZsbHF6ZFJDZEpNUW4zSnQxSzM0U2FxWlJQSktoSGpVTkdVVUZ0Y01hdUhMMkpTUlpmdEU1V1RTUDBRT1BiRTFIRHN3",
-      "title": "苗栗景點/走跳最新的打卡點\"苗栗火車頭園區\"，再去吃苗栗必吃水晶餃！半日遊很不錯！ - YouTube",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9iMlJRa1ZhQmJFOUZsbHF6ZFJDZEpNUW4zSnQxSzM0U2FxWlJQSktoSGpVTkdVVUZ0Y01hdUhMMkpTUlpmdEU1V1RTUDBRT1BiRTFIRHN3?oc=5",
-      "publishedAt": "Sat, 07 Jun 2025 01:16:03 GMT",
-      "summary": "苗栗景點/走跳最新的打卡點\"苗栗火車頭園區\"，再去吃苗栗必吃水晶餃！半日遊很不錯！ &nbsp;&nbsp; YouTube",
-      "publisher": "YouTube",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
-      "sourceGroup": "影音平台",
-      "defaultCategory": "史料線索",
-      "lookbackDays": 36500,
-      "subjects": [
-        "園區"
-      ],
-      "category": "史料線索",
-      "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區",
-        "打卡"
-      ],
-      "id": "eb12e338a42a4e0eff29608a"
-    },
-    {
-      "sourceItemId": "CBMiVkFVX3lxTE5ET0NPU3pwbkpYdm9FbE1BejdsQllGNUhhUzlESFRNVGdHM1ZvZ0tQTzNFQmZtZmM0OVdpdk5oNGZNamdFemN6WnhoeTYyNHhSUnk1bHR3",
-      "title": "斥資10億元一波三折 苗栗火車頭園區開幕 - YouTube",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5ET0NPU3pwbkpYdm9FbE1BejdsQllGNUhhUzlESFRNVGdHM1ZvZ0tQTzNFQmZtZmM0OVdpdk5oNGZNamdFemN6WnhoeTYyNHhSUnk1bHR3?oc=5",
-      "publishedAt": "Fri, 25 Apr 2025 13:11:31 GMT",
-      "summary": "斥資10億元一波三折 苗栗火車頭園區開幕 &nbsp;&nbsp; YouTube",
-      "publisher": "YouTube",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
-      "sourceGroup": "影音平台",
-      "defaultCategory": "史料線索",
-      "lookbackDays": 36500,
-      "subjects": [
-        "園區"
-      ],
-      "category": "史料線索",
-      "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區",
-        "開幕"
-      ],
-      "id": "d3c1d68245444eff7d6d89b9"
-    },
-    {
-      "sourceItemId": "CBMiVkFVX3lxTE0tTnUtRkFRcXJNV0NTYVdOVmFwenlHcDd5VjhoTVNvOUpuMXZZdThiYXgxbEVscER3M0l6aVZCZnBaZDBZX1J3N3JHeW8xNDBxS0p6T2lB",
-      "title": "台鐵公司 苗栗火車頭園區 「鐵客之緣 苗栗火車頭園區竣工典禮」 - YouTube",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE0tTnUtRkFRcXJNV0NTYVdOVmFwenlHcDd5VjhoTVNvOUpuMXZZdThiYXgxbEVscER3M0l6aVZCZnBaZDBZX1J3N3JHeW8xNDBxS0p6T2lB?oc=5",
-      "publishedAt": "Fri, 05 Jan 2024 12:43:32 GMT",
-      "summary": "台鐵公司 苗栗火車頭園區 「鐵客之緣 苗栗火車頭園區竣工典禮」 &nbsp;&nbsp; YouTube",
-      "publisher": "YouTube",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
-      "sourceGroup": "影音平台",
-      "defaultCategory": "史料線索",
-      "lookbackDays": 36500,
-      "subjects": [
-        "園區"
-      ],
-      "category": "史料線索",
-      "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區"
-      ],
-      "id": "c20878bb5886c68c281b4ac3"
-    },
-    {
-      "sourceItemId": "CBMiVkFVX3lxTFBCemxxWVloLUFXMkFLMVJPdzZqdjN0SjlvYlpFVTZQY1M4YWF1R1hULXdGdkZTTUs2bHFnZFk2MENxWUR5TUZIYWQxeGRhVElZTFdyR2VB",
-      "title": "台鐵 苗栗鐵道文物展示館 拆除改建中 - YouTube",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBCemxxWVloLUFXMkFLMVJPdzZqdjN0SjlvYlpFVTZQY1M4YWF1R1hULXdGdkZTTUs2bHFnZFk2MENxWUR5TUZIYWQxeGRhVElZTFdyR2VB?oc=5",
-      "publishedAt": "Sun, 09 Jan 2022 07:57:54 GMT",
-      "summary": "台鐵 苗栗鐵道文物展示館 拆除改建中 &nbsp;&nbsp; YouTube",
-      "publisher": "YouTube",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
-      "sourceGroup": "影音平台",
-      "defaultCategory": "史料線索",
-      "lookbackDays": 36500,
-      "subjects": [
-        "園區"
-      ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
       "matchedKeywords": [
         "苗栗鐵道文物展示館",
         "文物"
       ],
-      "id": "0d75506ec0e84fcfb3dfbd05"
+      "id": "c6615333c41037de63fa7fd7"
     },
     {
-      "sourceItemId": "CBMiVkFVX3lxTFBBMko2RWRUZGI4YkFYTnA4SEQ0ZXhmcUw0a1hvNERSUU9Vc0JWdTJIZ0R4MllDSGVVWVMxdnpFd1NtVll1c21QZ3JLRF9NdXNneE9wV3hR",
-      "title": "火車控貓奴必去 10億苗栗火車頭園區「撸貓」｜TVBS新聞 @TVBSNEWS01 - YouTube",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBBMko2RWRUZGI4YkFYTnA4SEQ0ZXhmcUw0a1hvNERSUU9Vc0JWdTJIZ0R4MllDSGVVWVMxdnpFd1NtVll1c21QZ3JLRF9NdXNneE9wV3hR?oc=5",
-      "publishedAt": "Fri, 25 Apr 2025 10:07:41 GMT",
-      "summary": "火車控貓奴必去 10億苗栗火車頭園區「撸貓」｜TVBS新聞 @TVBSNEWS01 &nbsp;&nbsp; YouTube",
-      "publisher": "YouTube",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
-      "sourceGroup": "影音平台",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:117689405",
+      "title": "苗栗鐵道文物展示館改建示意圖-3.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8%E6%94%B9%E5%BB%BA%E7%A4%BA%E6%84%8F%E5%9C%96-3.jpg",
+      "publishedAt": "2022-05-05T02:05:19Z",
+      "summary": "​苗栗鐵道文物展示館改建示意圖；作者：臺灣鐵路管理局；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8%E6%94%B9%E5%BB%BA%E7%A4%BA%E6%84%8F%E5%9C%96-3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "臺灣鐵路管理局",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "32ee635d03df0b00cac6a46a"
+    },
+    {
+      "sourceItemId": "commons:117689441",
+      "title": "苗栗鐵道文物展示館改建示意圖-4.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8%E6%94%B9%E5%BB%BA%E7%A4%BA%E6%84%8F%E5%9C%96-4.jpg",
+      "publishedAt": "2022-05-05T02:06:51Z",
+      "summary": "​苗栗鐵道文物展示館改建示意圖；作者：臺灣鐵路管理局；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8%E6%94%B9%E5%BB%BA%E7%A4%BA%E6%84%8F%E5%9C%96-4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "臺灣鐵路管理局",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "bf8df7dc0057a61dd5f502ac"
+    },
+    {
+      "sourceItemId": "commons:117689463",
+      "title": "苗栗鐵道文物展示館改建示意圖-5.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8%E6%94%B9%E5%BB%BA%E7%A4%BA%E6%84%8F%E5%9C%96-5.jpg",
+      "publishedAt": "2022-05-05T02:08:02Z",
+      "summary": "​苗栗鐵道文物展示館改建示意圖；作者：臺灣鐵路管理局；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8%E6%94%B9%E5%BB%BA%E7%A4%BA%E6%84%8F%E5%9C%96-5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "臺灣鐵路管理局",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "867d7e668b88571685c4a18f"
+    },
+    {
+      "sourceItemId": "commons:117689512",
+      "title": "苗栗鐵道文物展示館改建計劃.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8%E6%94%B9%E5%BB%BA%E8%A8%88%E5%8A%83.jpg",
+      "publishedAt": "2022-05-05T02:10:12Z",
+      "summary": "​苗栗鐵道文物展示館改建示計劃；作者：臺灣鐵路管理局；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8%E6%94%B9%E5%BB%BA%E8%A8%88%E5%8A%83.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "臺灣鐵路管理局",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "b08f2a86901965d6db95c374"
+    },
+    {
+      "sourceItemId": "commons:165836502",
+      "title": "苗栗火車頭園區開業典禮-新聞照片 頁面 1 影像 0002.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_1_%E5%BD%B1%E5%83%8F_0002.jpg",
+      "publishedAt": "2025-05-23T02:40:18Z",
+      "summary": "​苗栗火車頭園區開業典禮-新聞照片；作者：臺灣鐵路公司；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_1_%E5%BD%B1%E5%83%8F_0002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "臺灣鐵路公司",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
       "warnings": [],
       "matchedKeywords": [
         "苗栗火車頭園區"
       ],
-      "id": "41092f1b8c54bbe2524c9104"
+      "id": "6b26e70b310aad30407b1309"
     },
     {
-      "sourceItemId": "CBMiVkFVX3lxTFA5UGp0bGJwQkZHSXVNZXhRQkpLTHhVNkZxRXJKYXUwekRxdURjV0VFYkpKLTl0cmdBQld4MVpfZ2hXNTB2QkpNaldaQVZLbW4xWDhxTnNn",
-      "title": "2025.4.27 「苗栗火車頭園區」開幕營運 遊園小火車 - YouTube",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA5UGp0bGJwQkZHSXVNZXhRQkpLTHhVNkZxRXJKYXUwekRxdURjV0VFYkpKLTl0cmdBQld4MVpfZ2hXNTB2QkpNaldaQVZLbW4xWDhxTnNn?oc=5",
-      "publishedAt": "Sun, 27 Apr 2025 08:09:20 GMT",
-      "summary": "2025.4.27 「苗栗火車頭園區」開幕營運 遊園小火車 &nbsp;&nbsp; YouTube",
-      "publisher": "YouTube",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
-      "sourceGroup": "影音平台",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:165836503",
+      "title": "苗栗火車頭園區開業典禮-新聞照片 頁面 1 影像 0001.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_1_%E5%BD%B1%E5%83%8F_0001.jpg",
+      "publishedAt": "2025-05-23T02:40:18Z",
+      "summary": "​臺灣鐵路管理局EMU100型電聯車於苗栗火車頭園區；作者：臺灣鐵路公司；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_1_%E5%BD%B1%E5%83%8F_0001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "臺灣鐵路公司",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "460a46ca3babcfc3d1df219d"
+    },
+    {
+      "sourceItemId": "commons:165836506",
+      "title": "苗栗火車頭園區開業典禮-新聞照片.pdf",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87.pdf",
+      "publishedAt": "2025-05-23T02:40:19Z",
+      "summary": "​苗栗火車頭園區開業典禮-新聞照片；作者：臺灣鐵路公司；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "臺灣鐵路公司",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "96e8f613c1ce50d47f553282"
+    },
+    {
+      "sourceItemId": "commons:165836508",
+      "title": "苗栗火車頭園區開業典禮-新聞照片 頁面 2 影像 0001.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_2_%E5%BD%B1%E5%83%8F_0001.jpg",
+      "publishedAt": "2025-05-23T02:40:22Z",
+      "summary": "​苗栗火車頭園區開幕典禮；作者：​臺灣鐵路公司；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/8/81/%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_2_%E5%BD%B1%E5%83%8F_0001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "​臺灣鐵路公司",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
       "warnings": [],
       "matchedKeywords": [
         "苗栗火車頭園區",
         "開幕"
       ],
-      "id": "1f1b0c39d49bd0b6cdc68dc8"
+      "id": "0c939e1bde50ef646a6f655c"
     },
     {
-      "sourceItemId": "CBMiVkFVX3lxTE5HMnJqdVdWUFg0eVVKUzBLRGtUWWJ3WkJvUC1DTzhpbkI4cDVzR291NmRwcEk2OWl4RThyYmxfUmt6azJmQXFYVVFDb3ZQZTMzZ2IxVUZ3",
-      "title": "火車控貓奴必去 苗栗火車頭園區 |【民生八方事】| 2025042609 @gtvnews27 - YouTube",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5HMnJqdVdWUFg0eVVKUzBLRGtUWWJ3WkJvUC1DTzhpbkI4cDVzR291NmRwcEk2OWl4RThyYmxfUmt6azJmQXFYVVFDb3ZQZTMzZ2IxVUZ3?oc=5",
-      "publishedAt": "Sat, 26 Apr 2025 10:33:47 GMT",
-      "summary": "火車控貓奴必去 苗栗火車頭園區 |【民生八方事】| 2025042609 @gtvnews27 &nbsp;&nbsp; YouTube",
-      "publisher": "YouTube",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
-      "sourceGroup": "影音平台",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:165836509",
+      "title": "苗栗火車頭園區開業典禮-新聞照片 頁面 2 影像 0002.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_2_%E5%BD%B1%E5%83%8F_0002.jpg",
+      "publishedAt": "2025-05-23T02:40:23Z",
+      "summary": "​苗栗火車頭園區開業典禮-新聞照片；作者：臺灣鐵路公司；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_2_%E5%BD%B1%E5%83%8F_0002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "臺灣鐵路公司",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
       "matchedKeywords": [
         "苗栗火車頭園區"
       ],
-      "id": "7d4d3728b2c19a20fec8c9e8"
+      "id": "fa6215dee60316c6d7d3f216"
     },
     {
-      "sourceItemId": "CBMiVkFVX3lxTE5XZGhpU2drX3FDNjVtWENwT01ZYU9la0dfdEZlWHdWcjZGVEVjeE5jN3JLRlh2dnZTZ0xPa0JBZUltUEVrWlF2N05NaGpzdVI4ZER1azZR",
-      "title": "火車慢旅苗栗火車頭園區ep240『新開幕!苗栗火車頭園區,假日親子同樂好去處,鐵道迷,愛貓必訪!參觀轉車臺大廳蒸汽火車旋轉,懷舊的列車展示館』 - YouTube",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5XZGhpU2drX3FDNjVtWENwT01ZYU9la0dfdEZlWHdWcjZGVEVjeE5jN3JLRlh2dnZTZ0xPa0JBZUltUEVrWlF2N05NaGpzdVI4ZER1azZR?oc=5",
-      "publishedAt": "Sun, 11 May 2025 04:00:52 GMT",
-      "summary": "火車慢旅苗栗火車頭園區ep240『新開幕!苗栗火車頭園區,假日親子同樂好去處,鐵道迷,愛貓必訪!參觀轉車臺大廳蒸汽火車旋轉,懷舊的列車展示館』 &nbsp;&nbsp; YouTube",
-      "publisher": "YouTube",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
-      "sourceGroup": "影音平台",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:165836510",
+      "title": "苗栗火車頭園區開業典禮-新聞照片 頁面 3 影像 0001.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_3_%E5%BD%B1%E5%83%8F_0001.jpg",
+      "publishedAt": "2025-05-23T02:40:23Z",
+      "summary": "​苗栗火車頭園區開業典禮-新聞照片；作者：臺灣鐵路公司；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_3_%E5%BD%B1%E5%83%8F_0001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "臺灣鐵路公司",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
       "matchedKeywords": [
-        "苗栗火車頭園區",
-        "開幕",
+        "苗栗火車頭園區"
+      ],
+      "id": "2f27656b80200845d76a673a"
+    },
+    {
+      "sourceItemId": "commons:165836516",
+      "title": "苗栗火車頭園區開業典禮-新聞照片 頁面 4 影像 0001.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_4_%E5%BD%B1%E5%83%8F_0001.jpg",
+      "publishedAt": "2025-05-23T02:40:30Z",
+      "summary": "​苗栗火車頭園區開業典禮-新聞照片；作者：臺灣鐵路公司；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2d/%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_4_%E5%BD%B1%E5%83%8F_0001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "臺灣鐵路公司",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "fa296625bf4ddc99b87ec882"
+    },
+    {
+      "sourceItemId": "commons:165836517",
+      "title": "苗栗火車頭園區開業典禮-新聞照片 頁面 4 影像 0002.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_4_%E5%BD%B1%E5%83%8F_0002.jpg",
+      "publishedAt": "2025-05-23T02:40:31Z",
+      "summary": "​苗栗火車頭園區開業典禮-新聞照片；作者：臺灣鐵路公司；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_4_%E5%BD%B1%E5%83%8F_0002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "臺灣鐵路公司",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "05e1f8d4051f8cb1db24d2ff"
+    },
+    {
+      "sourceItemId": "commons:165836520",
+      "title": "苗栗火車頭園區開業典禮-新聞照片 頁面 5 影像 0001.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_5_%E5%BD%B1%E5%83%8F_0001.jpg",
+      "publishedAt": "2025-05-23T02:40:34Z",
+      "summary": "​苗栗火車頭園區開業典禮-新聞照片；作者：臺灣鐵路公司；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ef/%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_5_%E5%BD%B1%E5%83%8F_0001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "臺灣鐵路公司",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "38e2ce0ef7722b327f8a7fdc"
+    },
+    {
+      "sourceItemId": "commons:165836521",
+      "title": "苗栗火車頭園區開業典禮-新聞照片 頁面 5 影像 0002.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_5_%E5%BD%B1%E5%83%8F_0002.jpg",
+      "publishedAt": "2025-05-23T02:40:35Z",
+      "summary": "​苗栗火車頭園區開業典禮-新聞照片；作者：臺灣鐵路公司；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_5_%E5%BD%B1%E5%83%8F_0002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "臺灣鐵路公司",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "5b34d2226ce578910a757335"
+    },
+    {
+      "sourceItemId": "commons:88701547",
+      "title": "ROC2015-02-04總統府公報7179中華民國104年度中央政府總預算案審查總報告修正本（上冊）.pdf",
+      "url": "https://commons.wikimedia.org/wiki/File:ROC2015-02-04%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B17179%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B104%E5%B9%B4%E5%BA%A6%E4%B8%AD%E5%A4%AE%E6%94%BF%E5%BA%9C%E7%B8%BD%E9%A0%90%E7%AE%97%E6%A1%88%E5%AF%A9%E6%9F%A5%E7%B8%BD%E5%A0%B1%E5%91%8A%E4%BF%AE%E6%AD%A3%E6%9C%AC%EF%BC%88%E4%B8%8A%E5%86%8A%EF%BC%89.pdf",
+      "publishedAt": "2020-03-31T02:08:08Z",
+      "summary": "Presidential Office Gazette , No. 7179 attachment；作者：Office of the President, Republic of China (Taiwan)；授權：Public domain",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 機關庫",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/ROC2015-02-04%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B17179%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B104%E5%B9%B4%E5%BA%A6%E4%B8%AD%E5%A4%AE%E6%94%BF%E5%BA%9C%E7%B8%BD%E9%A0%90%E7%AE%97%E6%A1%88%E5%AF%A9%E6%9F%A5%E7%B8%BD%E5%A0%B1%E5%91%8A%E4%BF%AE%E6%AD%A3%E6%9C%AC%EF%BC%88%E4%B8%8A%E5%86%8A%EF%BC%89.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "artist": "Office of the President, Republic of China (Taiwan)",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "a8b345b23490a1f5914902db"
+    },
+    {
+      "sourceItemId": "commons:125417464",
+      "title": "ROC2005-04-20總統府公報6627.pdf",
+      "url": "https://commons.wikimedia.org/wiki/File:ROC2005-04-20%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B16627.pdf",
+      "publishedAt": "2022-11-14T04:47:12Z",
+      "summary": "Presidential Office Gazette , No. 6627；作者：Office of the President, Republic of China (Taiwan)；授權：Public domain",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 機關庫",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/ROC2005-04-20%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B16627.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "artist": "Office of the President, Republic of China (Taiwan)",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "e6e3b2e07e2e8d2525bb758f"
+    },
+    {
+      "sourceItemId": "commons:126122103",
+      "title": "CADAL07004637 台灣省經濟調查初稿.djvu",
+      "url": "https://commons.wikimedia.org/wiki/File:CADAL07004637_%E5%8F%B0%E7%81%A3%E7%9C%81%E7%B6%93%E6%BF%9F%E8%AA%BF%E6%9F%A5%E5%88%9D%E7%A8%BF.djvu",
+      "publishedAt": "2022-11-30T03:52:43Z",
+      "summary": "本书据台湾省工业研究所技术室1946年05月影印；作者：台湾省工业研究所技术室编；《民国丛书》编辑委员会；授權：Public domain",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 機關庫",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/CADAL07004637_%E5%8F%B0%E7%81%A3%E7%9C%81%E7%B6%93%E6%BF%9F%E8%AA%BF%E6%9F%A5%E5%88%9D%E7%A8%BF.djvu?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "artist": "台湾省工业研究所技术室编；《民国丛书》编辑委员会",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "8bf4f68e4e4f31126811ccbb"
+    },
+    {
+      "sourceItemId": "commons:126250082",
+      "title": "ROC2008-05-07總統府公報6797.pdf",
+      "url": "https://commons.wikimedia.org/wiki/File:ROC2008-05-07%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B16797.pdf",
+      "publishedAt": "2022-12-03T05:02:18Z",
+      "summary": "Presidential Office Gazette , No. 6797；作者：Office of the President, Republic of China (Taiwan)；授權：Public domain",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 機關庫",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/ROC2008-05-07%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B16797.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "artist": "Office of the President, Republic of China (Taiwan)",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "6d55921ae8e778bf4fa276bf"
+    },
+    {
+      "sourceItemId": "commons:126250527",
+      "title": "ROC2008-05-19總統府公報6800.pdf",
+      "url": "https://commons.wikimedia.org/wiki/File:ROC2008-05-19%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B16800.pdf",
+      "publishedAt": "2022-12-03T05:21:57Z",
+      "summary": "Presidential Office Gazette , No. 6800；作者：Office of the President, Republic of China (Taiwan)；授權：Public domain",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 機關庫",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/ROC2008-05-19%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B16800.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "artist": "Office of the President, Republic of China (Taiwan)",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "c417aa2c4a889a7f9d40f044"
+    },
+    {
+      "sourceItemId": "commons:126543817",
+      "title": "ROC2008-10-22總統府公報6827.pdf",
+      "url": "https://commons.wikimedia.org/wiki/File:ROC2008-10-22%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B16827.pdf",
+      "publishedAt": "2022-12-12T05:02:51Z",
+      "summary": "Presidential Office Gazette , No. 6827；作者：Office of the President, Republic of China (Taiwan)；授權：Public domain",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 機關庫",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8b/ROC2008-10-22%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B16827.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "artist": "Office of the President, Republic of China (Taiwan)",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "8ba06399b310455047eeaf3c"
+    },
+    {
+      "sourceItemId": "commons:126544308",
+      "title": "ROC2008-12-10總統府公報6835.pdf",
+      "url": "https://commons.wikimedia.org/wiki/File:ROC2008-12-10%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B16835.pdf",
+      "publishedAt": "2022-12-12T05:44:14Z",
+      "summary": "Presidential Office Gazette , No. 6835；作者：Office of the President, Republic of China (Taiwan)；授權：Public domain",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 機關庫",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/ROC2008-12-10%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B16835.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "artist": "Office of the President, Republic of China (Taiwan)",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "f362fa498c05cd203520a131"
+    },
+    {
+      "sourceItemId": "commons:126769188",
+      "title": "ROC2010-04-14總統府公報6916.pdf",
+      "url": "https://commons.wikimedia.org/wiki/File:ROC2010-04-14%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B16916.pdf",
+      "publishedAt": "2022-12-19T02:39:53Z",
+      "summary": "Presidential Office Gazette , No. 6916；作者：Office of the President, Republic of China (Taiwan)；授權：Public domain",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 機關庫",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/ROC2010-04-14%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B16916.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "artist": "Office of the President, Republic of China (Taiwan)",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "52fa309a9c7aecc5e6b9cd4c"
+    },
+    {
+      "sourceItemId": "commons:128446379",
+      "title": "ROC2011-05-18總統府公報6975.pdf",
+      "url": "https://commons.wikimedia.org/wiki/File:ROC2011-05-18%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B16975.pdf",
+      "publishedAt": "2023-02-06T01:16:55Z",
+      "summary": "Presidential Office Gazette , No. 6975；作者：Office of the President, Republic of China (Taiwan)；授權：Public domain",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 機關庫",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/ROC2011-05-18%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B16975.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "artist": "Office of the President, Republic of China (Taiwan)",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "ce7fc7fc59c4b687f575eb5b"
+    },
+    {
+      "sourceItemId": "commons:129098996",
+      "title": "ROC2012-09-12總統府公報7049.pdf",
+      "url": "https://commons.wikimedia.org/wiki/File:ROC2012-09-12%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B17049.pdf",
+      "publishedAt": "2023-02-27T02:56:15Z",
+      "summary": "Presidential Office Gazette , No. 7049；作者：Office of the President, Republic of China (Taiwan)；授權：Public domain",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 機關庫",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/ROC2012-09-12%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B17049.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "artist": "Office of the President, Republic of China (Taiwan)",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "c1f5f3b56cb9cb97fdc2e293"
+    },
+    {
+      "sourceItemId": "commons:129395771",
+      "title": "ROC2013-07-24總統府公報7096.pdf",
+      "url": "https://commons.wikimedia.org/wiki/File:ROC2013-07-24%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B17096.pdf",
+      "publishedAt": "2023-03-08T04:52:11Z",
+      "summary": "Presidential Office Gazette , No. 7096；作者：Office of the President, Republic of China (Taiwan)；授權：Public domain",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 機關庫",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/8/83/ROC2013-07-24%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B17096.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "artist": "Office of the President, Republic of China (Taiwan)",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "6446164b1d894dbe661997bd"
+    },
+    {
+      "sourceItemId": "commons:130170403",
+      "title": "ROC2014-04-16總統府公報7135.pdf",
+      "url": "https://commons.wikimedia.org/wiki/File:ROC2014-04-16%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B17135.pdf",
+      "publishedAt": "2023-03-30T03:43:39Z",
+      "summary": "Presidential Office Gazette , No. 7135；作者：Office of the President, Republic of China (Taiwan)；授權：Public domain",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 機關庫",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/ROC2014-04-16%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B17135.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "artist": "Office of the President, Republic of China (Taiwan)",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "91ba314292705f0812c8fe12"
+    },
+    {
+      "sourceItemId": "commons:132265668",
+      "title": "ROC2018-06-27總統府公報7371.pdf",
+      "url": "https://commons.wikimedia.org/wiki/File:ROC2018-06-27%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B17371.pdf",
+      "publishedAt": "2023-05-24T04:02:31Z",
+      "summary": "Presidential Office Gazette , No. 7371；作者：Office of the President, Republic of China (Taiwan)；授權：Public domain",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 機關庫",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/ROC2018-06-27%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B17371.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "artist": "Office of the President, Republic of China (Taiwan)",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "83d627a13fa8625e73f2abe8"
+    },
+    {
+      "sourceItemId": "commons:138421492",
+      "title": "ROC2022-12-28總統府公報7636.pdf",
+      "url": "https://commons.wikimedia.org/wiki/File:ROC2022-12-28%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B17636.pdf",
+      "publishedAt": "2023-10-03T04:32:38Z",
+      "summary": "Presidential Office Gazette , No. 7636；作者：Office of the President, Republic of China (Taiwan)；授權：Public domain",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 機關庫",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/ROC2022-12-28%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B17636.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "artist": "Office of the President, Republic of China (Taiwan)",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "e089b246bf12515af1f19ae5"
+    },
+    {
+      "sourceItemId": "commons:162635649",
+      "title": "ROC2025-03-21總統府公報7777附件3.pdf",
+      "url": "https://commons.wikimedia.org/wiki/File:ROC2025-03-21%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B17777%E9%99%84%E4%BB%B63.pdf",
+      "publishedAt": "2025-03-22T18:14:05Z",
+      "summary": "Presidential Office Gazette , No. 7777: attachment 3；作者：Office of the President, Republic of China (Taiwan)；授權：Public domain",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 機關庫",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/ROC2025-03-21%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B17777%E9%99%84%E4%BB%B63.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "artist": "Office of the President, Republic of China (Taiwan)",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "2be1dbda18050fedfc3336d8"
+    },
+    {
+      "sourceItemId": "commons:165358664",
+      "title": "ROC2025-05-14總統府公報7787.pdf",
+      "url": "https://commons.wikimedia.org/wiki/File:ROC2025-05-14%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B17787.pdf",
+      "publishedAt": "2025-05-16T03:52:17Z",
+      "summary": "Presidential Office Gazette , No. 7787；作者：Office of the President, Republic of China (Taiwan)；授權：Public domain",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 機關庫",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/ROC2025-05-14%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B17787.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "artist": "Office of the President, Republic of China (Taiwan)",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "5c004db9ab651ee5be5e243c"
+    },
+    {
+      "sourceItemId": "commons:2357468",
+      "title": "TRA LDH101 at Miaoli Railway Museum 20050226.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:TRA_LDH101_at_Miaoli_Railway_Museum_20050226.jpg",
+      "publishedAt": "2007-07-06T16:43:20Z",
+      "summary": "​臺灣鐵路管理局已退役的柴液機車LDH101，展示於苗栗鐵道文物展示館。；作者：Cheng-en Cheng；授權：CC BY-SA 2.0 tw",
+      "publisher": "Wikimedia Commons",
+      "query": "Miaoli railway",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/TRA_LDH101_at_Miaoli_Railway_Museum_20050226.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0 tw",
+      "artist": "Cheng-en Cheng",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "06acd8cb15d92f04e999d2bd"
+    },
+    {
+      "sourceItemId": "commons:12764295",
+      "title": "Taiwan MiaoliCity MiaoliRailwayMuseum.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Taiwan_MiaoliCity_MiaoliRailwayMuseum.jpg",
+      "publishedAt": "2011-01-21T11:38:21Z",
+      "summary": "​苗栗鉄道文物展示館。；作者：zh:User::大山城之心苗栗市民；授權：Public domain",
+      "publisher": "Wikimedia Commons",
+      "query": "Miaoli railway",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Taiwan_MiaoliCity_MiaoliRailwayMuseum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "artist": "zh:User::大山城之心苗栗市民",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "文物"
+      ],
+      "id": "d4f03e97aad266880d6245a6"
+    },
+    {
+      "sourceItemId": "commons:12764361",
+      "title": "Taiwan MiaoliCity MiaoliRailwayMuseum2.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Taiwan_MiaoliCity_MiaoliRailwayMuseum2.jpg",
+      "publishedAt": "2011-01-21T11:47:58Z",
+      "summary": "​苗栗鉄道文物展示館，苗栗駅構内撮影；作者：大山城之心苗栗市民；授權：Public domain",
+      "publisher": "Wikimedia Commons",
+      "query": "Miaoli railway",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Taiwan_MiaoliCity_MiaoliRailwayMuseum2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "artist": "大山城之心苗栗市民",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "文物"
+      ],
+      "id": "446e19e5dff56c0a3fcda3a1"
+    },
+    {
+      "sourceItemId": "commons:23549013",
+      "title": "TRA S305 at Miaoli Railway Museum 20120608.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:TRA_S305_at_Miaoli_Railway_Museum_20120608.jpg",
+      "publishedAt": "2013-01-03T05:25:42Z",
+      "summary": "​修復後在苗栗鐵道文物展示館展示的台鐵S305柴電機車。；作者：SSR2000；授權：CC BY-SA 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "Miaoli railway",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/TRA_S305_at_Miaoli_Railway_Museum_20120608.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "artist": "SSR2000",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "66390e254c78e9daf66fdb79"
+    },
+    {
+      "sourceItemId": "commons:24246563",
+      "title": "投煤練習場.JPG",
+      "url": "https://commons.wikimedia.org/wiki/File:%E6%8A%95%E7%85%A4%E7%B7%B4%E7%BF%92%E5%A0%B4.JPG",
+      "publishedAt": "2013-01-27T04:45:01Z",
+      "summary": "​苗栗鐵道文物展示館投煤練習場。；作者：SSR2000；授權：CC BY-SA 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "Miaoli railway",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/%E6%8A%95%E7%85%A4%E7%B7%B4%E7%BF%92%E5%A0%B4.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "artist": "SSR2000",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "444c91043c36052304ebd39d"
+    },
+    {
+      "sourceItemId": "commons:41262450",
+      "title": "TRA R6 at Miaoli Railway Museum 20141022.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:TRA_R6_at_Miaoli_Railway_Museum_20141022.jpg",
+      "publishedAt": "2015-06-29T10:10:37Z",
+      "summary": "Dieselloc TRA R6 in het museum；作者：Smiley.toerist；授權：CC BY-SA 4.0",
+      "publisher": "Wikimedia Commons",
+      "query": "Miaoli railway",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/TRA_R6_at_Miaoli_Railway_Museum_20141022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "artist": "Smiley.toerist",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "03a51968144b2ae41f8e67b7"
+    },
+    {
+      "sourceItemId": "commons:41262455",
+      "title": "Miaoli Railway Museum 2014 07.JPG",
+      "url": "https://commons.wikimedia.org/wiki/File:Miaoli_Railway_Museum_2014_07.JPG",
+      "publishedAt": "2015-06-29T10:10:39Z",
+      "summary": "Grondsein bij het museum；作者：Smiley.toerist；授權：CC BY-SA 4.0",
+      "publisher": "Wikimedia Commons",
+      "query": "Miaoli railway",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Miaoli_Railway_Museum_2014_07.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "artist": "Smiley.toerist",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "c4c07a72e3715cc9917e66de"
+    },
+    {
+      "sourceItemId": "commons:47616407",
+      "title": "TRA-EMU300-14TWNSB.png",
+      "url": "https://commons.wikimedia.org/wiki/File:TRA-EMU300-14TWNSB.png",
+      "publishedAt": "2016-03-19T17:15:49Z",
+      "summary": "​EMU300型自強號第一代轉向架14TWNSB型(軸距2410mm)；作者：Es327；授權：CC BY-SA 4.0",
+      "publisher": "Wikimedia Commons",
+      "query": "Miaoli railway",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/TRA-EMU300-14TWNSB.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "artist": "Es327",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "d712dbfce2d0642720b72303"
+    },
+    {
+      "sourceItemId": "commons:47616412",
+      "title": "Miaoli Rolling Stock Exhibition visitors should pay attentions to the followings 20160316.png",
+      "url": "https://commons.wikimedia.org/wiki/File:Miaoli_Rolling_Stock_Exhibition_visitors_should_pay_attentions_to_the_followings_20160316.png",
+      "publishedAt": "2016-03-19T17:15:53Z",
+      "summary": "​苗栗鐵道文物展示館參觀注意事項告示牌，2003年（中華民國92年）11月30日立。；作者：Es327；授權：CC BY-SA 4.0",
+      "publisher": "Wikimedia Commons",
+      "query": "Miaoli railway",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Miaoli_Rolling_Stock_Exhibition_visitors_should_pay_attentions_to_the_followings_20160316.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "artist": "Es327",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物",
         "參觀"
       ],
-      "id": "edeecfedbacec34d1c2fb1eb"
+      "id": "3aae0347974e5360507b4b44"
     },
     {
-      "sourceItemId": "CBMiVkFVX3lxTE9jSG9SU3I4VHRHVnIyUlh0ZTJoX2ZoNGd3SUt5eXFIbXFMQnNOdWJpT1RMbkk4WjkwSE9KeXhaQ2d0UC1ETWxUanRPelF0SUtXWlZqdC1n",
-      "title": "【#CSNEWS​】鐵道迷必訪 苗栗火車頭園區經典火車頭現身/CS看正聲 - YouTube",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9jSG9SU3I4VHRHVnIyUlh0ZTJoX2ZoNGd3SUt5eXFIbXFMQnNOdWJpT1RMbkk4WjkwSE9KeXhaQ2d0UC1ETWxUanRPelF0SUtXWlZqdC1n?oc=5",
-      "publishedAt": "Thu, 23 Oct 2025 23:53:14 GMT",
-      "summary": "【#CSNEWS​】鐵道迷必訪 苗栗火車頭園區經典火車頭現身/CS看正聲 &nbsp;&nbsp; YouTube",
-      "publisher": "YouTube",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
-      "sourceGroup": "影音平台",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:47616415",
+      "title": "TRA-TR12.png",
+      "url": "https://commons.wikimedia.org/wiki/File:TRA-TR12.png",
+      "publishedAt": "2016-03-19T17:15:56Z",
+      "summary": "​TR12型客車用轉向架(軸距2134mm)；作者：Es327；授權：CC BY-SA 4.0",
+      "publisher": "Wikimedia Commons",
+      "query": "Miaoli railway",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/TRA-TR12.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "artist": "Es327",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區"
-      ],
-      "id": "ea4b616c9569e11b84046024"
+      "matchedKeywords": [],
+      "id": "6a24436efa7f8b60f5b9a9cc"
     },
     {
-      "sourceItemId": "CBMiZ0FVX3lxTE5KWFZmLUtzQTJHVVdfN015bmZNMDVxeFNpVHlWSmNDV204RGNibHJoWFR3aGhHV04zWWxkeHVILW5IX1J6LW9qS2RxakdSSkVaQnlYclJYRWgzYUtHSFk5WnBLbzEwajA",
-      "title": "【拾光博物】苗栗火車頭園區：全新翻新的臺鐵火車展示場 - milkyrailway.blogspot.com",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5KWFZmLUtzQTJHVVdfN015bmZNMDVxeFNpVHlWSmNDV204RGNibHJoWFR3aGhHV04zWWxkeHVILW5IX1J6LW9qS2RxakdSSkVaQnlYclJYRWgzYUtHSFk5WnBLbzEwajA?oc=5",
-      "publishedAt": "Tue, 08 Jul 2025 07:00:00 GMT",
-      "summary": "【拾光博物】苗栗火車頭園區：全新翻新的臺鐵火車展示場 &nbsp;&nbsp; milkyrailway.blogspot.com",
-      "publisher": "milkyrailway.blogspot.com",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)",
-      "sourceGroup": "地方部落格",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:47616416",
+      "title": "TRA-TR11.png",
+      "url": "https://commons.wikimedia.org/wiki/File:TRA-TR11.png",
+      "publishedAt": "2016-03-19T17:15:57Z",
+      "summary": "​TR11型客車用轉向架(軸距1829mm)；作者：Es327；授權：CC BY-SA 4.0",
+      "publisher": "Wikimedia Commons",
+      "query": "Miaoli railway",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/TRA-TR11.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "artist": "Es327",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區"
-      ],
-      "id": "9761f200849074307ed18a9d"
+      "matchedKeywords": [],
+      "id": "a7a90c7ba6d6eb37212eecee"
     },
     {
-      "sourceItemId": "CBMiZ0FVX3lxTE1VaWtsN19oQnpoOUt5a3pmX3A3eWNkYV9lb3ZmNTFFUThyZUowQm05S1hrOHBvdFZNODIta0ZZcEppRHlyMmhZeXpLa2FNQnJLX1hZMzhpcDUyeEJ2bTNMRVNqRmhzZ3c",
-      "title": "斥資11億的《苗栗火車頭園區》打造撸貓喵務處與火車邂逅市集主題園區 - tungbin.pixnet.net",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1VaWtsN19oQnpoOUt5a3pmX3A3eWNkYV9lb3ZmNTFFUThyZUowQm05S1hrOHBvdFZNODIta0ZZcEppRHlyMmhZeXpLa2FNQnJLX1hZMzhpcDUyeEJ2bTNMRVNqRmhzZ3c?oc=5",
-      "publishedAt": "Mon, 18 May 2026 07:00:00 GMT",
-      "summary": "斥資11億的《苗栗火車頭園區》打造撸貓喵務處與火車邂逅市集主題園區 &nbsp;&nbsp; tungbin.pixnet.net",
-      "publisher": "tungbin.pixnet.net",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)",
-      "sourceGroup": "地方部落格",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:47616417",
+      "title": "苗栗電力機車庫.png",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E9%9B%BB%E5%8A%9B%E6%A9%9F%E8%BB%8A%E5%BA%AB.png",
+      "publishedAt": "2016-03-19T17:15:59Z",
+      "summary": "​苗栗電力機車庫，現為工程車之車庫與工廠；作者：Es327；授權：CC BY-SA 4.0",
+      "publisher": "Wikimedia Commons",
+      "query": "Miaoli railway",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/0/03/%E8%8B%97%E6%A0%97%E9%9B%BB%E5%8A%9B%E6%A9%9F%E8%BB%8A%E5%BA%AB.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "artist": "Es327",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
-      "matchedKeywords": [
-        "苗栗火車頭園區"
-      ],
-      "id": "7ed7997a3055088a6d399703"
+      "matchedKeywords": [],
+      "id": "a93c06551c82e9264f30989a"
     },
     {
-      "sourceItemId": "CBMiZ0FVX3lxTFBBdWF4UGhtTmh5WjN4TlRrc0p0ZWVuT2wzdURPczR3VHJxOVNIeUVYQWZVS3RrVUpRT2tHWENRQUcyaFVrU0JIZ1RxRHN1MEhicmx0SGN4VWsyOW9qUEROc0NKN0tlanM",
-      "title": "苗栗景點+1 苗栗火車頭園區 全台唯一火車頭主題園區 鐵道文化新地標 親子貓奴必訪 園區詳細攻略必看！ - ceciliafang1103.pixnet.net",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBBdWF4UGhtTmh5WjN4TlRrc0p0ZWVuT2wzdURPczR3VHJxOVNIeUVYQWZVS3RrVUpRT2tHWENRQUcyaFVrU0JIZ1RxRHN1MEhicmx0SGN4VWsyOW9qUEROc0NKN0tlanM?oc=5",
-      "publishedAt": "Wed, 10 Dec 2025 06:21:51 GMT",
-      "summary": "苗栗景點+1 苗栗火車頭園區 全台唯一火車頭主題園區 鐵道文化新地標 親子貓奴必訪 園區詳細攻略必看！ &nbsp;&nbsp; ceciliafang1103.pixnet.net",
-      "publisher": "ceciliafang1103.pixnet.net",
-      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)",
-      "sourceGroup": "地方部落格",
-      "defaultCategory": "史料線索",
+      "sourceItemId": "commons:58574515",
+      "title": "苗栗鐵道文物展示館.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8.jpg",
+      "publishedAt": "2017-05-07T13:07:27Z",
+      "summary": "​苗栗鐵道文物展示館；作者：Yuriy kosygin；授權：CC BY-SA 4.0",
+      "publisher": "Wikimedia Commons",
+      "query": "Miaoli railway",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
       "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/%E8%8B%97%E6%A0%97%E9%90%B5%E9%81%93%E6%96%87%E7%89%A9%E5%B1%95%E7%A4%BA%E9%A4%A8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "artist": "Yuriy kosygin",
       "subjects": [
         "園區"
       ],
-      "category": "史料線索",
+      "category": "影像授權",
       "warnings": [],
       "matchedKeywords": [
-        "苗栗火車頭園區",
-        "鐵道文化"
+        "苗栗鐵道文物展示館",
+        "文物"
       ],
-      "id": "ca1616ec9971e5314709528e"
+      "id": "02158d555e6b624cf8e50dea"
+    },
+    {
+      "sourceItemId": "commons:131686848",
+      "title": "Miaoli Railway Museum 1999-06-18.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Miaoli_Railway_Museum_1999-06-18.jpg",
+      "publishedAt": "2023-05-09T03:34:24Z",
+      "summary": "Miaoli Railway Museum；作者：Dquai；授權：CC BY-SA 4.0",
+      "publisher": "Wikimedia Commons",
+      "query": "Miaoli railway",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Miaoli_Railway_Museum_1999-06-18.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "artist": "Dquai",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "d230a02bda98c63a4576ca1c"
     }
   ],
   "linkChecks": [
     {
       "url": "https://memory.culture.tw/",
-      "checkedAt": "2026-09-19T01:15:39.808Z",
+      "checkedAt": "2026-09-19T01:17:50.913Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
       "error": "fetch failed",
-      "archivedSnapshot": {
-        "url": "https://web.archive.org/web/20260224162126/https://memory.culture.tw/",
-        "timestamp": "20260224162126",
-        "status": "200"
-      }
+      "archivedSnapshot": null
     },
     {
       "url": "https://www.ncl.edu.tw/",
-      "checkedAt": "2026-09-19T01:15:41.100Z",
+      "checkedAt": "2026-09-19T01:17:51.977Z",
       "ok": false,
       "httpStatus": 403,
       "robotsStatus": "未提供(302)",
@@ -685,7 +1856,7 @@
     },
     {
       "url": "https://data.gov.tw/",
-      "checkedAt": "2026-09-19T01:15:41.770Z",
+      "checkedAt": "2026-09-19T01:17:47.507Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -694,7 +1865,7 @@
     },
     {
       "url": "https://www.railway.gov.tw/",
-      "checkedAt": "2026-09-19T01:15:41.449Z",
+      "checkedAt": "2026-09-19T01:17:47.829Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -703,7 +1874,7 @@
     },
     {
       "url": "https://www.hakka.gov.tw/",
-      "checkedAt": "2026-09-19T01:15:43.036Z",
+      "checkedAt": "2026-09-19T01:17:50.091Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "允許",
@@ -712,7 +1883,7 @@
     },
     {
       "url": "https://www.miaoli.gov.tw/",
-      "checkedAt": "2026-09-19T01:15:42.657Z",
+      "checkedAt": "2026-09-19T01:17:49.762Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -721,7 +1892,7 @@
     },
     {
       "url": "https://www.facebook.com/miaolirailwaymuseum/",
-      "checkedAt": "2026-09-19T01:15:41.568Z",
+      "checkedAt": "2026-09-19T01:17:49.841Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -730,7 +1901,7 @@
     },
     {
       "url": "https://www.instagram.com/miaoli_railway_museum/",
-      "checkedAt": "2026-09-19T01:15:41.865Z",
+      "checkedAt": "2026-09-19T01:17:49.997Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
