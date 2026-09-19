@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "run": {
-    "startedAt": "2026-09-19T01:17:44.971Z",
-    "finishedAt": "2026-09-19T01:17:51.985Z",
+    "startedAt": "2026-09-19T01:19:42.054Z",
+    "finishedAt": "2026-09-19T01:19:53.336Z",
     "timezone": "Asia/Taipei",
     "status": "完成",
     "discovered": 106,
-    "newCandidates": 70,
-    "availableCandidates": 100
+    "newCandidates": 3,
+    "availableCandidates": 103
   },
   "candidates": [
     {
@@ -2476,12 +2476,89 @@
       "warnings": [],
       "matchedKeywords": [],
       "id": "d230a02bda98c63a4576ca1c"
+    },
+    {
+      "sourceItemId": "commons:55137790",
+      "title": "苗栗市苗栗火車站Miaoli City, Miaoli Station - panoramio (8).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City,_Miaoli_Station_-_panoramio_(8).jpg",
+      "publishedAt": "2017-01-19T08:24:26Z",
+      "summary": "​苗栗縣苗栗市觀光導覽地圖，苗栗市公所製。；作者：susan curry；授權：CC BY 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City%2C_Miaoli_Station_-_panoramio_%288%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "artist": "susan curry",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "5957f6a723777d21ce9c9fac"
+    },
+    {
+      "sourceItemId": "commons:165836515",
+      "title": "苗栗火車頭園區開業典禮-新聞照片 頁面 3 影像 0002.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_3_%E5%BD%B1%E5%83%8F_0002.jpg",
+      "publishedAt": "2025-05-23T02:40:29Z",
+      "summary": "​苗栗火車頭園區開業典禮-新聞照片；作者：臺灣鐵路公司；授權：Attribution",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 鐵路",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E9%A0%AD%E5%9C%92%E5%8D%80%E9%96%8B%E6%A5%AD%E5%85%B8%E7%A6%AE-%E6%96%B0%E8%81%9E%E7%85%A7%E7%89%87_%E9%A0%81%E9%9D%A2_3_%E5%BD%B1%E5%83%8F_0002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Attribution",
+      "artist": "臺灣鐵路公司",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "cb92117f4b655485e52b6558"
+    },
+    {
+      "sourceItemId": "commons:41262456",
+      "title": "Miaoli Railway Museum 2014 08.JPG",
+      "url": "https://commons.wikimedia.org/wiki/File:Miaoli_Railway_Museum_2014_08.JPG",
+      "publishedAt": "2015-06-29T10:10:40Z",
+      "summary": "Grondsein bij het museum；作者：Smiley.toerist；授權：CC BY-SA 4.0",
+      "publisher": "Wikimedia Commons",
+      "query": "Miaoli railway",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Miaoli_Railway_Museum_2014_08.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "artist": "Smiley.toerist",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "d7709f583850f58353d2ff30"
     }
   ],
   "linkChecks": [
     {
       "url": "https://memory.culture.tw/",
-      "checkedAt": "2026-09-19T01:17:50.913Z",
+      "checkedAt": "2026-09-19T01:19:42.925Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
@@ -2490,7 +2567,7 @@
     },
     {
       "url": "https://www.ncl.edu.tw/",
-      "checkedAt": "2026-09-19T01:17:51.977Z",
+      "checkedAt": "2026-09-19T01:19:44.453Z",
       "ok": false,
       "httpStatus": 403,
       "robotsStatus": "未提供(302)",
@@ -2503,7 +2580,7 @@
     },
     {
       "url": "https://data.gov.tw/",
-      "checkedAt": "2026-09-19T01:17:47.507Z",
+      "checkedAt": "2026-09-19T01:19:44.548Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2512,7 +2589,7 @@
     },
     {
       "url": "https://www.railway.gov.tw/",
-      "checkedAt": "2026-09-19T01:17:47.829Z",
+      "checkedAt": "2026-09-19T01:19:45.178Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2521,7 +2598,7 @@
     },
     {
       "url": "https://www.hakka.gov.tw/",
-      "checkedAt": "2026-09-19T01:17:50.091Z",
+      "checkedAt": "2026-09-19T01:19:53.321Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "允許",
@@ -2530,7 +2607,7 @@
     },
     {
       "url": "https://www.miaoli.gov.tw/",
-      "checkedAt": "2026-09-19T01:17:49.762Z",
+      "checkedAt": "2026-09-19T01:19:46.490Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2539,7 +2616,7 @@
     },
     {
       "url": "https://www.facebook.com/miaolirailwaymuseum/",
-      "checkedAt": "2026-09-19T01:17:49.841Z",
+      "checkedAt": "2026-09-19T01:19:44.622Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -2548,7 +2625,7 @@
     },
     {
       "url": "https://www.instagram.com/miaoli_railway_museum/",
-      "checkedAt": "2026-09-19T01:17:49.997Z",
+      "checkedAt": "2026-09-19T01:19:45.134Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
