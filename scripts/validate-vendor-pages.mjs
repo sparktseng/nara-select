@@ -39,10 +39,8 @@ for (const vendor of vendors) {
       const pandaLinks = html.match(/<a[^>]+href="https:\/\/www\.foodpanda\.com\.tw\/restaurant\/dn1x\/hei-xin-tang[^\"]*"/g) || [];
       if (pandaLinks.length !== 2) errors.push(`${page}: expected foodpanda links in hero and menu, found ${pandaLinks.length}`);
       const galleryAssets = ['store-06-exterior.webp','store-06-mixed-ice.webp','store-06-interior.webp','store-06-dessert-close.webp','store-06-tofu-jelly.webp','store-06-brown-sugar-ice.webp','store-06-entrance.webp','store-06-window-dessert.webp'];
-      if (lang === '') {
-        if (!html.includes('class="vendor-gallery"')) errors.push(`${page}: missing Chinese gallery`);
-        for (const asset of galleryAssets) if (!html.includes(asset)) errors.push(`${page}: missing ${asset}`);
-      } else if (html.includes('class="vendor-gallery"')) errors.push(`${page}: gallery should only appear on Chinese page`);
+      if (!html.includes('class="vendor-gallery"')) errors.push(`${page}: missing gallery`);
+      for (const asset of galleryAssets) if (!html.includes(asset)) errors.push(`${page}: missing ${asset}`);
     }
     if ((await stat(page)).size > 20000) errors.push(`${page}: page too large`);
   }

@@ -139,10 +139,13 @@ const sourceTexts = {
   vi:'Địa chỉ, điện thoại và giờ mở cửa thường lệ được kiểm tra theo Google Maps mới nhất. Thông tin cửa hàng dựa trên Facebook, Instagram chính thức và đăng ký kinh doanh; thực đơn lấy từ foodpanda và không hiển thị giá.',
   id:'Alamat, telepon, dan jam reguler diperiksa dari Google Maps terbaru. Informasi toko mengacu pada Facebook, Instagram resmi, dan pendaftaran usaha; menu dirangkum dari foodpanda tanpa harga.'
 };
-const gallery = {
-  title: '店家與甜品照片',
-  intro: '看看黑心糖的店面、用餐空間與招牌古早味甜品。',
-  captions: ['黑心糖店面外觀', '黑糖粉粿綜合冰', '店內用餐空間', '黑糖粉粿、芋圓與米苔目', '豆花與黑糖粉粿', '黑糖剉冰與配料', '黑心糖店面入口', '窗邊古早味綜合冰']
+const galleries = {
+  'zh-Hant':{title:'店家與甜品照片',intro:'看看黑心糖的店面、用餐空間與招牌古早味甜品。',captions:['黑心糖店面外觀','黑糖粉粿綜合冰','店內用餐空間','黑糖粉粿、芋圓與米苔目','豆花與黑糖粉粿','黑糖剉冰與配料','黑心糖店面入口','窗邊古早味綜合冰']},
+  en:{title:'Shop & dessert gallery',intro:'Take a look at Hei Xin Tang’s storefront, seating area and signature traditional desserts.',captions:['Hei Xin Tang storefront','Brown-sugar starch-jelly mixed shaved ice','Shop seating area','Brown-sugar starch jelly, taro balls and rice noodles','Tofu pudding with brown-sugar starch jelly','Brown-sugar shaved ice with toppings','Hei Xin Tang entrance','Traditional mixed shaved ice by the window']},
+  ja:{title:'店舗・スイーツ写真',intro:'黑心糖の外観、店内スペース、看板の昔ながらのスイーツをご覧ください。',captions:['黑心糖の店舗外観','黒糖粉粿ミックスかき氷','店内のイートインスペース','黒糖粉粿・芋圓・米苔目','豆花と黒糖粉粿','黒糖かき氷とトッピング','黑心糖の入口','窓辺の昔ながらのミックスかき氷']},
+  th:{title:'ภาพร้านและของหวาน',intro:'ชมหน้าร้าน พื้นที่นั่ง และของหวานแบบดั้งเดิมเมนูเด่นของ黑心糖',captions:['หน้าร้าน黑心糖','น้ำแข็งไสน้ำตาลทรายแดงรวมแป้งหนึบ','พื้นที่นั่งภายในร้าน','แป้งหนึบน้ำตาลทรายแดง บัวลอยเผือก และเส้นข้าว','เต้าฮวยกับแป้งหนึบน้ำตาลทรายแดง','น้ำแข็งไสน้ำตาลทรายแดงพร้อมท็อปปิง','ทางเข้าร้าน黑心糖','น้ำแข็งไสรวมแบบดั้งเดิมริมหน้าต่าง']},
+  vi:{title:'Hình ảnh cửa hàng và món ngọt',intro:'Khám phá mặt tiền, khu vực ngồi và các món ngọt truyền thống đặc trưng của Hei Xin Tang.',captions:['Mặt tiền Hei Xin Tang','Đá bào đường đen thạch bột tổng hợp','Khu vực ngồi trong cửa hàng','Thạch bột đường đen, viên khoai môn và bánh gạo sợi','Tàu hũ với thạch bột đường đen','Đá bào đường đen cùng topping','Lối vào Hei Xin Tang','Đá bào tổng hợp truyền thống bên cửa sổ']},
+  id:{title:'Galeri toko & hidangan manis',intro:'Lihat bagian depan toko, area duduk, dan hidangan manis tradisional khas Hei Xin Tang.',captions:['Bagian depan Hei Xin Tang','Es serut gula merah campur jeli pati','Area duduk di dalam toko','Jeli pati gula merah, bola talas, dan mi beras','Puding tahu dengan jeli pati gula merah','Es serut gula merah dengan topping','Pintu masuk Hei Xin Tang','Es serut campur tradisional di dekat jendela']}
 };
 const galleryImages = [
   {file:'store-06-exterior.webp',width:812,height:612,featured:true},
@@ -165,13 +168,13 @@ for (const l of Object.values(langs)) {
   const path = `${l.dir}${slug}`;
   const url = `https://nara5.tw/${path}`;
   const menuHtml = l.menu.categories.map(([category, items]) => `<section class="menu-group"><h3>${category}</h3><ul>${items.map(item => `<li>${item}</li>`).join('')}</ul></section>`).join('');
-  const hasGallery = l.code === 'zh-Hant';
-  const galleryHtml = hasGallery ? galleryImages.map((image, index) => `<figure class="photo-card${image.featured?' featured':''}${image.portrait?' portrait':''}"><a href="/assets/${image.file}?v=20260921-store06" target="_blank" rel="noopener"><img src="/assets/${image.file}?v=20260921-store06" width="${image.width}" height="${image.height}" loading="lazy" decoding="async" alt="${gallery.captions[index]}｜黑心糖古早味剉冰店 6號店"></a><figcaption>${gallery.captions[index]}</figcaption></figure>`).join('') : '';
-  const gallerySection = hasGallery ? `<section class="section gallery-section"><div class="wrap"><div class="gallery-heading"><h2>${gallery.title}</h2><p>${gallery.intro}</p></div><div class="vendor-gallery">${galleryHtml}</div></div></section>` : '';
+  const gallery = galleries[l.code];
+  const galleryHtml = galleryImages.map((image, index) => `<figure class="photo-card${image.featured?' featured':''}${image.portrait?' portrait':''}"><a href="/assets/${image.file}?v=20260921-store06" target="_blank" rel="noopener"><img src="/assets/${image.file}?v=20260921-store06" width="${image.width}" height="${image.height}" loading="lazy" decoding="async" alt="${gallery.captions[index]}｜黑心糖古早味剉冰店 6號店"></a><figcaption>${gallery.captions[index]}</figcaption></figure>`).join('');
+  const gallerySection = `<section class="section gallery-section"><div class="wrap"><div class="gallery-heading"><h2>${gallery.title}</h2><p>${gallery.intro}</p></div><div class="vendor-gallery">${galleryHtml}</div></div></section>`;
   const json = JSON.stringify({
     '@context': 'https://schema.org', '@type': 'IceCreamShop', name: '黑心糖古早味剉冰店', url,
     description: l.desc, telephone: '+886-910-793-039', hasMap: map, hasMenu: `${url}#menu`, sameAs: [instagram, facebook, foodpanda],
-    ...(hasGallery ? {image: galleryImages.map(image => `https://nara5.tw/assets/${image.file}`)} : {}),
+    image: galleryImages.map(image => `https://nara5.tw/assets/${image.file}`),
     address: {'@type':'PostalAddress',streetAddress:'鐵路一村38號',addressLocality:'苗栗市',addressRegion:'苗栗縣',postalCode:'360',addressCountry:'TW'},
     openingHoursSpecification: [
       {'@type':'OpeningHoursSpecification',dayOfWeek:['Wednesday','Thursday','Friday'],opens:'12:30',closes:'20:30'},
