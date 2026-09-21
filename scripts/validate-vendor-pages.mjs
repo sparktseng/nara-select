@@ -42,11 +42,11 @@ for (const vendor of vendors) {
       if (!html.includes('class="vendor-gallery"')) errors.push(`${page}: missing gallery`);
       for (const asset of galleryAssets) if (!html.includes(asset)) errors.push(`${page}: missing ${asset}`);
     }
-    if ((await stat(page)).size > 26000) errors.push(`${page}: page too large`);
+    if ((await stat(page)).size > 32000) errors.push(`${page}: page too large`);
   }
 }
 
-for (const file of ['assets/vendor-page.css','assets/vendor-language.js','assets/nambo-wan-share.svg','assets/hei-xin-tang-share.svg','assets/thai-milk-tea.webp','assets/store-02-yakisoba-bread.webp','assets/store-02-braised-pork-rice.webp','assets/store-02-menu-overview.webp','assets/store-02-shop-interior.webp','assets/store-02-shiba-inu.webp','assets/store-02-dining-room.webp','assets/store-02-exterior-sign.webp','assets/store-06-exterior.webp','assets/store-06-mixed-ice.webp','assets/store-06-interior.webp','assets/store-06-dessert-close.webp','assets/store-06-tofu-jelly.webp','assets/store-06-brown-sugar-ice.webp','assets/store-06-entrance.webp','assets/store-06-window-dessert.webp','404.html']) {
+for (const file of ['assets/vendor-page.css','assets/vendor-story.css','assets/vendor-language.js','assets/nambo-wan-share.svg','assets/hei-xin-tang-share.svg','assets/thai-milk-tea.webp','assets/store-02-yakisoba-bread.webp','assets/store-02-braised-pork-rice.webp','assets/store-02-menu-overview.webp','assets/store-02-shop-interior.webp','assets/store-02-shiba-inu.webp','assets/store-02-dining-room.webp','assets/store-02-exterior-sign.webp','assets/store-06-exterior.webp','assets/store-06-mixed-ice.webp','assets/store-06-interior.webp','assets/store-06-dessert-close.webp','assets/store-06-tofu-jelly.webp','assets/store-06-brown-sugar-ice.webp','assets/store-06-entrance.webp','assets/store-06-window-dessert.webp','404.html']) {
   try { await access(file); } catch { errors.push(`missing ${file}`); }
 }
 const sitemap = await readFile('sitemap.xml', 'utf8');

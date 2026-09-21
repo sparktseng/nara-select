@@ -1,0 +1,22 @@
+.hero-story-hook{max-width:760px;margin-top:34px;padding:22px 24px;border:1px solid rgba(52,40,33,.22);border-radius:20px;background:rgba(255,250,243,.68);backdrop-filter:blur(8px)}
+.hero-story-hook strong{display:block;font-size:clamp(22px,4vw,32px);line-height:1.3}
+.hero-story-hook p{margin:6px 0 16px;color:#654f43;font-size:17px}
+.story-link{display:inline-flex;align-items:center;padding:10px 16px;border-radius:999px;background:#342821;color:#fff;text-decoration:none;font-weight:800}
+.story-section{background:linear-gradient(180deg,#fffaf3 0%,#f4e4d2 100%)}
+.story-journey{display:grid;gap:24px}
+.story-slice{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;overflow:hidden;border:1px solid #eadbcf;border-radius:24px;background:#fff;box-shadow:0 14px 36px rgba(66,43,28,.08)}
+.story-slice:nth-child(even) .story-photo{order:2}
+.story-photo{width:100%;height:100%;min-height:360px;object-fit:cover}
+.story-copy{padding:clamp(24px,5vw,48px)}
+.story-copy .eyebrow{margin:0 0 8px;color:#9a6037;font-size:12px;font-weight:900;letter-spacing:2px}
+.story-copy h2{margin:0 0 16px;font-size:clamp(28px,5vw,44px);line-height:1.25}
+.story-copy p{margin:0;color:#67564c}
+.story-copy p+p{margin-top:14px}
+.story-stat-panel{padding:clamp(30px,6vw,62px);background:#3a2a22;color:#fff;text-align:center}
+.story-stat-panel strong{display:block;font-size:clamp(58px,12vw,112px);line-height:1;font-weight:950;color:#f2c689}
+.story-stat-panel span{display:block;margin-top:12px;font-size:clamp(16px,3vw,22px);font-weight:800}
+.story-emotion{position:relative;max-width:760px;margin:8px auto 0;overflow:hidden;border-radius:26px;box-shadow:0 20px 48px rgba(66,43,28,.16)}
+.story-emotion img{display:block;width:100%;height:auto}
+.story-ending{position:absolute;right:24px;bottom:24px;left:24px;margin:0;padding:20px 22px;border-radius:18px;background:rgba(255,248,235,.9);color:#342821;font-size:clamp(22px,4.6vw,38px);font-weight:900;line-height:1.45;backdrop-filter:blur(8px)}
+.story-caption{padding:8px 14px 12px;background:#fffaf3;color:#79675d;font-size:12px;text-align:center}
+@media(max-width:700px){.hero-story-hook{padding:18px}.story-slice{grid-template-columns:1fr}.story-slice:nth-child(even) .story-photo{order:0}.story-photo{min-height:0;height:auto}.story-stat-panel{padding:36px 20px}.story-ending{position:static;border-radius:0;background:#fff8eb}.story-emotion{border-radius:20px}}
