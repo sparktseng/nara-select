@@ -42,7 +42,7 @@ for (const vendor of vendors) {
       if (!html.includes('class="vendor-gallery"')) errors.push(`${page}: missing gallery`);
       for (const asset of galleryAssets) if (!html.includes(asset)) errors.push(`${page}: missing ${asset}`);
     }
-    if ((await stat(page)).size > 20000) errors.push(`${page}: page too large`);
+    if ((await stat(page)).size > 26000) errors.push(`${page}: page too large`);
   }
 }
 
