@@ -169,6 +169,14 @@ const stories = {
     'Toko No. 6 dipilih karena Railway Village masih mempertahankan suasana permukiman keluarga militer dan rumah-rumah lama. Menikmati es serut tradisional di dekat halaman kecil terasa seperti kembali pada kebahagiaan sederhana masa kecil.'
   ]}
 };
+const storyVisualCaptions = {
+  'zh-Hant':'童年吃冰情境示意，非店家實際販售商品。',
+  en:'A childhood shaved-ice memory scene; not an actual product sold by the shop.',
+  ja:'子どもの頃のかき氷をイメージした情景です。店舗の実際の商品ではありません。',
+  th:'ภาพจำลองบรรยากาศการกินน้ำแข็งไสในวัยเด็ก ไม่ใช่สินค้าที่ร้านจำหน่ายจริง',
+  vi:'Hình ảnh mô phỏng ký ức ăn đá bào thời thơ ấu, không phải món bán thực tế của quán.',
+  id:'Ilustrasi suasana menikmati es serut di masa kecil, bukan produk yang benar-benar dijual toko.'
+};
 const seoDescriptions = {
   'zh-Hant':'苗栗火車頭園區鐵路一村6號店「黑心糖古早味剉冰店」，以自製黑糖粉粿與古早味剉冰，分享店名由來、兩個月調整配方的故事、菜單及導航。',
   en:'Meet Hei Xin Tang at Railway Village Store No. 6: house-made brown-sugar starch jelly, its family name story, menu, hours and Google Maps directions.',
@@ -223,13 +231,13 @@ for (const l of Object.values(langs)) {
   const url = `https://nara5.tw/${path}`;
   const menuHtml = l.menu.categories.map(([category, items]) => `<section class="menu-group"><h3>${category}</h3><ul>${items.map(item => `<li>${item}</li>`).join('')}</ul></section>`).join('');
   const gallery = galleries[l.code];
-  const storyHtml = `<section class="section"><div class="wrap"><article class="card story-card"><p><strong>${l.story.pull}</strong></p><h2>${l.story.title}</h2>${l.story.paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('')}</article></div></section>`;
+  const storyHtml = `<section class="section story-section" style="background:linear-gradient(180deg,#fffaf3 0%,#f8ecdd 100%)"><div class="wrap"><figure class="story-visual" style="max-width:720px;margin:0 auto 24px"><img src="/assets/store-06-childhood-memory.webp?v=20260921-story" width="1122" height="1402" loading="lazy" decoding="async" alt="${storyVisualCaptions[l.code]}" style="display:block;width:100%;height:auto;border-radius:24px;box-shadow:0 18px 42px rgba(91,59,37,.14)"><figcaption style="margin-top:8px;color:#79675d;font-size:12px;text-align:center">${storyVisualCaptions[l.code]}</figcaption></figure><article class="card story-card" style="max-width:820px;margin:auto"><p><strong>${l.story.pull}</strong></p><h2>${l.story.title}</h2>${l.story.paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('')}</article></div></section>`;
   const galleryHtml = galleryImages.map((image, index) => `<figure class="photo-card${image.featured?' featured':''}${image.portrait?' portrait':''}"><a href="/assets/${image.file}?v=20260921-store06" target="_blank" rel="noopener"><img src="/assets/${image.file}?v=20260921-store06" width="${image.width}" height="${image.height}" loading="lazy" decoding="async" alt="${gallery.captions[index]}｜黑心糖古早味剉冰店 6號店"></a><figcaption>${gallery.captions[index]}</figcaption></figure>`).join('');
   const gallerySection = `<section class="section gallery-section"><div class="wrap"><div class="gallery-heading"><h2>${gallery.title}</h2><p>${gallery.intro}</p></div><div class="vendor-gallery">${galleryHtml}</div></div></section>`;
   const json = JSON.stringify({
     '@context': 'https://schema.org', '@type': 'IceCreamShop', name: '黑心糖古早味剉冰店', url,
     description: l.desc, telephone: '+886-910-793-039', hasMap: map, hasMenu: `${url}#menu`, sameAs: [instagram, facebook, foodpanda],
-    image: galleryImages.map(image => `https://nara5.tw/assets/${image.file}`),
+    image: ['https://nara5.tw/assets/store-06-childhood-memory.webp', ...galleryImages.map(image => `https://nara5.tw/assets/${image.file}`)],
     address: {'@type':'PostalAddress',streetAddress:'鐵路一村38號',addressLocality:'苗栗市',addressRegion:'苗栗縣',postalCode:'360',addressCountry:'TW'},
     openingHoursSpecification: [
       {'@type':'OpeningHoursSpecification',dayOfWeek:['Wednesday','Thursday','Friday'],opens:'12:30',closes:'20:30'},
