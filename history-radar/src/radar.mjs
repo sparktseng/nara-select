@@ -252,8 +252,20 @@ async function fetchThreads(config, fetchImpl = fetch) {
     url.searchParams.set('fields', 'id,text,permalink,timestamp,username,media_type');
     url.searchParams.set('access_token', token);
     try {
-      const response = await fetchImpl(url, { signal: AbortSignal.timeout(config.requestTimeoutMs) });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      let response;
+      let lastError;
+      const timeoutMs = Math.max(config.requestTimeoutMs, 30000);
+      for (let attempt = 1; attempt <= 3; attempt++) {
+        try {
+          response = await fetchImpl(url, { signal: AbortSignal.timeout(timeoutMs) });
+          if (response.ok || response.status < 500) break;
+          lastError = new Error(`HTTP ${response.status}`);
+        } catch (error) {
+          lastError = error;
+        }
+        if (attempt < 3) await new Promise(done => setTimeout(done, attempt * 1000));
+      }
+      if (!response?.ok) throw lastError || new Error(`HTTP ${response?.status || 0}`);
       const json = await response.json();
       for (const row of json.data || []) results.push({
         sourceItemId: row.id, title: (row.text || '').slice(0, 120) || 'Threads 貼文',
