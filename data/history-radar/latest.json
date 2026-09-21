@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "run": {
-    "startedAt": "2026-09-21T01:11:34.313Z",
-    "finishedAt": "2026-09-21T01:11:42.137Z",
+    "startedAt": "2026-09-21T01:51:23.849Z",
+    "finishedAt": "2026-09-21T01:51:34.812Z",
     "timezone": "Asia/Taipei",
     "status": "完成",
     "discovered": 102,
-    "newCandidates": 0,
-    "availableCandidates": 109
+    "newCandidates": 1,
+    "availableCandidates": 110
   },
   "candidates": [
     {
@@ -2688,12 +2688,37 @@
       "warnings": [],
       "matchedKeywords": [],
       "id": "6f07a1ce0b4dae53b862819f"
+    },
+    {
+      "sourceItemId": "commons:55137867",
+      "title": "苗栗市苗栗火車站Miaoli City, Miaoli Station - panoramio (22).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City,_Miaoli_Station_-_panoramio_(22).jpg",
+      "publishedAt": "2017-01-19T08:29:07Z",
+      "summary": "​苗栗縣苗栗市中正路，雄獅旅行社苗栗分公司、明星婦產科診所。；作者：susan curry；授權：CC BY 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City%2C_Miaoli_Station_-_panoramio_%2822%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "artist": "susan curry",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "e93a8069ab116a11ead83119"
     }
   ],
   "linkChecks": [
     {
       "url": "https://memory.culture.tw/",
-      "checkedAt": "2026-09-21T01:11:35.639Z",
+      "checkedAt": "2026-09-21T01:51:24.715Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
@@ -2706,16 +2731,20 @@
     },
     {
       "url": "https://www.ncl.edu.tw/",
-      "checkedAt": "2026-09-21T01:11:42.127Z",
+      "checkedAt": "2026-09-21T01:51:26.218Z",
       "ok": false,
       "httpStatus": 403,
       "robotsStatus": "未提供(302)",
       "error": null,
-      "archivedSnapshot": null
+      "archivedSnapshot": {
+        "url": "https://web.archive.org/web/20260906125030/https://www.ncl.edu.tw/",
+        "timestamp": "20260906125030",
+        "status": "200"
+      }
     },
     {
       "url": "https://data.gov.tw/",
-      "checkedAt": "2026-09-21T01:11:37.029Z",
+      "checkedAt": "2026-09-21T01:51:27.130Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2724,7 +2753,7 @@
     },
     {
       "url": "https://www.railway.gov.tw/",
-      "checkedAt": "2026-09-21T01:11:37.351Z",
+      "checkedAt": "2026-09-21T01:51:26.673Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2733,7 +2762,7 @@
     },
     {
       "url": "https://www.hakka.gov.tw/",
-      "checkedAt": "2026-09-21T01:11:40.624Z",
+      "checkedAt": "2026-09-21T01:51:27.752Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "允許",
@@ -2742,7 +2771,7 @@
     },
     {
       "url": "https://www.miaoli.gov.tw/",
-      "checkedAt": "2026-09-21T01:11:38.535Z",
+      "checkedAt": "2026-09-21T01:51:27.775Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2751,7 +2780,7 @@
     },
     {
       "url": "https://www.facebook.com/miaolirailwaymuseum/",
-      "checkedAt": "2026-09-21T01:11:37.411Z",
+      "checkedAt": "2026-09-21T01:51:26.802Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -2760,7 +2789,7 @@
     },
     {
       "url": "https://www.instagram.com/miaoli_railway_museum/",
-      "checkedAt": "2026-09-21T01:11:37.567Z",
+      "checkedAt": "2026-09-21T01:51:26.994Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -2768,11 +2797,5 @@
       "archivedSnapshot": null
     }
   ],
-  "errors": [
-    {
-      "source": "Threads API",
-      "status": "API未取得",
-      "error": "未設定 THREADS_ACCESS_TOKEN"
-    }
-  ]
+  "errors": []
 }

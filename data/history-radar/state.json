@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T01:11:42.137Z",
+  "updatedAt": "2026-09-21T01:51:34.812Z",
   "seenIds": [
     "70f9690ea1a30aecb8df4a54",
     "74ab318ef3ebc9ad80eefb8b",
@@ -109,7 +109,8 @@
     "a5c0e5876fd13a3e7819a8d6",
     "b7f6a4ef724ea1fceec19c59",
     "03e47b8fe584820c7fd4f1ba",
-    "6f07a1ce0b4dae53b862819f"
+    "6f07a1ce0b4dae53b862819f",
+    "e93a8069ab116a11ead83119"
   ],
   "candidateCache": [
     {
@@ -2790,6 +2791,31 @@
       "warnings": [],
       "matchedKeywords": [],
       "id": "6f07a1ce0b4dae53b862819f"
+    },
+    {
+      "sourceItemId": "commons:55137867",
+      "title": "苗栗市苗栗火車站Miaoli City, Miaoli Station - panoramio (22).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City,_Miaoli_Station_-_panoramio_(22).jpg",
+      "publishedAt": "2017-01-19T08:29:07Z",
+      "summary": "​苗栗縣苗栗市中正路，雄獅旅行社苗栗分公司、明星婦產科診所。；作者：susan curry；授權：CC BY 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City%2C_Miaoli_Station_-_panoramio_%2822%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "artist": "susan curry",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "e93a8069ab116a11ead83119"
     }
   ]
 }
