@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T01:51:34.812Z",
+  "updatedAt": "2026-09-22T01:38:11.625Z",
   "seenIds": [
     "70f9690ea1a30aecb8df4a54",
     "74ab318ef3ebc9ad80eefb8b",
@@ -110,7 +110,9 @@
     "b7f6a4ef724ea1fceec19c59",
     "03e47b8fe584820c7fd4f1ba",
     "6f07a1ce0b4dae53b862819f",
-    "e93a8069ab116a11ead83119"
+    "e93a8069ab116a11ead83119",
+    "a3f7ab8313520120fcb4df41",
+    "d4a2204926f91e26f2e7ca41"
   ],
   "candidateCache": [
     {
@@ -2816,6 +2818,50 @@
       "warnings": [],
       "matchedKeywords": [],
       "id": "e93a8069ab116a11ead83119"
+    },
+    {
+      "sourceItemId": "CBMib0FVX3lxTFBTOUNIV29PSU12RVNHRHZERHJNQ2pxa2M0VzQ5bndWR2ppTGtvZ2xKRnlOam44U0pYNkFZUHhoRWtZMFg4Wm5HTnV1c1RRUHNMZE5DZUVzUEZPZGFhMnJIUS05M19oWFlJZlRDUkVpOA",
+      "title": "苗栗鐵道文物展示館 | 大象愛吃愛玩愛分享相簿分享 | 痞客邦 | PIXNET - tenshain.pixnet.net",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBTOUNIV29PSU12RVNHRHZERHJNQ2pxa2M0VzQ5bndWR2ppTGtvZ2xKRnlOam44U0pYNkFZUHhoRWtZMFg4Wm5HTnV1c1RRUHNMZE5DZUVzUEZPZGFhMnJIUS05M19oWFlJZlRDUkVpOA?oc=5",
+      "publishedAt": "Sat, 14 Mar 2026 16:12:31 GMT",
+      "summary": "苗栗鐵道文物展示館 | 大象愛吃愛玩愛分享相簿分享 | 痞客邦 | PIXNET &nbsp;&nbsp; tenshain.pixnet.net",
+      "publisher": "tenshain.pixnet.net",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)",
+      "sourceGroup": "地方部落格",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "a3f7ab8313520120fcb4df41"
+    },
+    {
+      "sourceItemId": "CBMia0FVX3lxTE9RQTBZMmFHQmY4SWJENnl0U3NXdkY4UDBaa0tQX1Axcnl5WkQ4OVQ3XzZaQ1lpUlBCMm0wd1lsdzJwZTQ4UThvMlJJemZPN2JMTzVFOXpOZUk2TUZBVzl1d0h2VDJReFU2ZFQw",
+      "title": "【拾光博物】苗栗鐵道文物展示館大改造：火車頭園區的轉型期待 - 時光土場",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9RQTBZMmFHQmY4SWJENnl0U3NXdkY4UDBaa0tQX1Axcnl5WkQ4OVQ3XzZaQ1lpUlBCMm0wd1lsdzJwZTQ4UThvMlJJemZPN2JMTzVFOXpOZUk2TUZBVzl1d0h2VDJReFU2ZFQw?oc=5",
+      "publishedAt": "Sun, 24 Apr 2022 07:00:00 GMT",
+      "summary": "【拾光博物】苗栗鐵道文物展示館大改造：火車頭園區的轉型期待 &nbsp;&nbsp; 時光土場",
+      "publisher": "時光土場",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)",
+      "sourceGroup": "地方部落格",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "d4a2204926f91e26f2e7ca41"
     }
   ]
 }

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "run": {
-    "startedAt": "2026-09-21T01:51:23.849Z",
-    "finishedAt": "2026-09-21T01:51:34.812Z",
+    "startedAt": "2026-09-22T01:37:59.227Z",
+    "finishedAt": "2026-09-22T01:38:11.625Z",
     "timezone": "Asia/Taipei",
     "status": "完成",
-    "discovered": 102,
-    "newCandidates": 1,
-    "availableCandidates": 110
+    "discovered": 103,
+    "newCandidates": 2,
+    "availableCandidates": 112
   },
   "candidates": [
     {
@@ -2713,12 +2713,56 @@
       "warnings": [],
       "matchedKeywords": [],
       "id": "e93a8069ab116a11ead83119"
+    },
+    {
+      "sourceItemId": "CBMib0FVX3lxTFBTOUNIV29PSU12RVNHRHZERHJNQ2pxa2M0VzQ5bndWR2ppTGtvZ2xKRnlOam44U0pYNkFZUHhoRWtZMFg4Wm5HTnV1c1RRUHNMZE5DZUVzUEZPZGFhMnJIUS05M19oWFlJZlRDUkVpOA",
+      "title": "苗栗鐵道文物展示館 | 大象愛吃愛玩愛分享相簿分享 | 痞客邦 | PIXNET - tenshain.pixnet.net",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBTOUNIV29PSU12RVNHRHZERHJNQ2pxa2M0VzQ5bndWR2ppTGtvZ2xKRnlOam44U0pYNkFZUHhoRWtZMFg4Wm5HTnV1c1RRUHNMZE5DZUVzUEZPZGFhMnJIUS05M19oWFlJZlRDUkVpOA?oc=5",
+      "publishedAt": "Sat, 14 Mar 2026 16:12:31 GMT",
+      "summary": "苗栗鐵道文物展示館 | 大象愛吃愛玩愛分享相簿分享 | 痞客邦 | PIXNET &nbsp;&nbsp; tenshain.pixnet.net",
+      "publisher": "tenshain.pixnet.net",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)",
+      "sourceGroup": "地方部落格",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "a3f7ab8313520120fcb4df41"
+    },
+    {
+      "sourceItemId": "CBMia0FVX3lxTE9RQTBZMmFHQmY4SWJENnl0U3NXdkY4UDBaa0tQX1Axcnl5WkQ4OVQ3XzZaQ1lpUlBCMm0wd1lsdzJwZTQ4UThvMlJJemZPN2JMTzVFOXpOZUk2TUZBVzl1d0h2VDJReFU2ZFQw",
+      "title": "【拾光博物】苗栗鐵道文物展示館大改造：火車頭園區的轉型期待 - 時光土場",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9RQTBZMmFHQmY4SWJENnl0U3NXdkY4UDBaa0tQX1Axcnl5WkQ4OVQ3XzZaQ1lpUlBCMm0wd1lsdzJwZTQ4UThvMlJJemZPN2JMTzVFOXpOZUk2TUZBVzl1d0h2VDJReFU2ZFQw?oc=5",
+      "publishedAt": "Sun, 24 Apr 2022 07:00:00 GMT",
+      "summary": "【拾光博物】苗栗鐵道文物展示館大改造：火車頭園區的轉型期待 &nbsp;&nbsp; 時光土場",
+      "publisher": "時光土場",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)",
+      "sourceGroup": "地方部落格",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "d4a2204926f91e26f2e7ca41"
     }
   ],
   "linkChecks": [
     {
       "url": "https://memory.culture.tw/",
-      "checkedAt": "2026-09-21T01:51:24.715Z",
+      "checkedAt": "2026-09-22T01:38:00.914Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
@@ -2731,20 +2775,20 @@
     },
     {
       "url": "https://www.ncl.edu.tw/",
-      "checkedAt": "2026-09-21T01:51:26.218Z",
+      "checkedAt": "2026-09-22T01:38:04.994Z",
       "ok": false,
       "httpStatus": 403,
       "robotsStatus": "未提供(302)",
       "error": null,
       "archivedSnapshot": {
-        "url": "https://web.archive.org/web/20260906125030/https://www.ncl.edu.tw/",
-        "timestamp": "20260906125030",
+        "url": "https://web.archive.org/web/20260921143226/https://www.ncl.edu.tw/",
+        "timestamp": "20260921143226",
         "status": "200"
       }
     },
     {
       "url": "https://data.gov.tw/",
-      "checkedAt": "2026-09-21T01:51:27.130Z",
+      "checkedAt": "2026-09-22T01:38:01.595Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2753,7 +2797,7 @@
     },
     {
       "url": "https://www.railway.gov.tw/",
-      "checkedAt": "2026-09-21T01:51:26.673Z",
+      "checkedAt": "2026-09-22T01:38:01.645Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2762,7 +2806,7 @@
     },
     {
       "url": "https://www.hakka.gov.tw/",
-      "checkedAt": "2026-09-21T01:51:27.752Z",
+      "checkedAt": "2026-09-22T01:38:04.793Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "允許",
@@ -2771,7 +2815,7 @@
     },
     {
       "url": "https://www.miaoli.gov.tw/",
-      "checkedAt": "2026-09-21T01:51:27.775Z",
+      "checkedAt": "2026-09-22T01:38:03.546Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2780,7 +2824,7 @@
     },
     {
       "url": "https://www.facebook.com/miaolirailwaymuseum/",
-      "checkedAt": "2026-09-21T01:51:26.802Z",
+      "checkedAt": "2026-09-22T01:38:01.796Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -2789,7 +2833,7 @@
     },
     {
       "url": "https://www.instagram.com/miaoli_railway_museum/",
-      "checkedAt": "2026-09-21T01:51:26.994Z",
+      "checkedAt": "2026-09-22T01:38:01.918Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
