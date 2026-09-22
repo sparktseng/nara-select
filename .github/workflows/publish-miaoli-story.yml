@@ -1,0 +1,45 @@
+name: Publish Miaoli name story
+
+on:
+  schedule:
+    - cron: '47 11 24 9 *'
+      timezone: 'Asia/Taipei'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-miaoli-name-story
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirm release date
+        id: gate
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(TZ=Asia/Taipei date +%F)" = "2026-09-24" ]; then
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check out the live site
+        if: steps.gate.outputs.publish == 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Publish reviewed story
+        if: steps.gate.outputs.publish == 'true'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin story/maoli-name-origin
+          git merge --no-ff --no-edit origin/story/maoli-name-origin
+          git push origin main
