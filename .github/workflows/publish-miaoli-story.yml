@@ -2,8 +2,8 @@ name: Publish Miaoli name story
 
 on:
   schedule:
-    - cron: '47 11 24 9 *'
-      timezone: 'Asia/Taipei'
+    # GitHub Actions cron uses UTC. 04:00 UTC = 12:00 Asia/Taipei.
+    - cron: '0 4 24 9 *'
   workflow_dispatch:
 
 permissions:
