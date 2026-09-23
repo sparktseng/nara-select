@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "run": {
-    "startedAt": "2026-09-22T01:37:59.227Z",
-    "finishedAt": "2026-09-22T01:38:11.625Z",
+    "startedAt": "2026-09-23T01:32:45.843Z",
+    "finishedAt": "2026-09-23T01:32:57.545Z",
     "timezone": "Asia/Taipei",
     "status": "完成",
-    "discovered": 103,
-    "newCandidates": 2,
-    "availableCandidates": 112
+    "discovered": 105,
+    "newCandidates": 4,
+    "availableCandidates": 116
   },
   "candidates": [
     {
@@ -2757,25 +2757,110 @@
         "文物"
       ],
       "id": "d4a2204926f91e26f2e7ca41"
+    },
+    {
+      "sourceItemId": "CBMiwwJBVV95cUxPMDdoUEpBT3ZnZ3NvOEJ6dldJdWhBbllkbkdTXzhtaUlXbjBzd2dVeUR4b3VUQzNlal9kVFRoODZmek1iQ0c2TTM5dV9ZTVhNZUcxbXF0OWFEbEx2eXpFbDlJZFp2MFhkaUczaW5XUmNXdDZjcy02ZFRTRjUwTHFCdEhydmRpb2F1WW5GNkJvdHJhaEhRLWZiVV9LRmthQ0ZUUGxhX1BEYm54amRtRGtqRUZqeGRkU0JCXzhua2NGRjRhaEhZdWZkdGtnM0QxUkFEdUJqU0haa2hRdHZlTWNhTEREOHVzbHhpY1VVZFl1Z18tQUdEcm9JRHEyQ1pnSUh6eW5pMm9iUFJacXhfWDVXOXFJVFhvOHRtMVpESzhVdjZvZ01tejNHUlMxUDM5QmdxNjZVR19BR2I3TEpiSGQ1VEVOVQ",
+      "title": "苗栗火車頭園區、鐵道故事館打造苗栗新地標 - Yahoo新聞",
+      "url": "https://news.google.com/rss/articles/CBMiwwJBVV95cUxPMDdoUEpBT3ZnZ3NvOEJ6dldJdWhBbllkbkdTXzhtaUlXbjBzd2dVeUR4b3VUQzNlal9kVFRoODZmek1iQ0c2TTM5dV9ZTVhNZUcxbXF0OWFEbEx2eXpFbDlJZFp2MFhkaUczaW5XUmNXdDZjcy02ZFRTRjUwTHFCdEhydmRpb2F1WW5GNkJvdHJhaEhRLWZiVV9LRmthQ0ZUUGxhX1BEYm54amRtRGtqRUZqeGRkU0JCXzhua2NGRjRhaEhZdWZkdGtnM0QxUkFEdUJqU0haa2hRdHZlTWNhTEREOHVzbHhpY1VVZFl1Z18tQUdEcm9JRHEyQ1pnSUh6eW5pMm9iUFJacXhfWDVXOXFJVFhvOHRtMVpESzhVdjZvZ01tejNHUlMxUDM5QmdxNjZVR19BR2I3TEpiSGQ1VEVOVQ?oc=5",
+      "publishedAt": "Tue, 22 Sep 2026 05:45:18 GMT",
+      "summary": "苗栗火車頭園區、鐵道故事館打造苗栗新地標 &nbsp;&nbsp; Yahoo新聞",
+      "publisher": "Yahoo新聞",
+      "query": "苗栗火車頭園區",
+      "sourceGroup": "Google News RSS",
+      "defaultCategory": null,
+      "lookbackDays": 14,
+      "subjects": [
+        "園區"
+      ],
+      "category": "網路聲量",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "22267894eadbaf0c1b5d6a1f"
+    },
+    {
+      "sourceItemId": "CBMidkFVX3lxTE90aTl2dGc2T25JODY1Y2NuNVNxdWNkNldjSW1zNnlWbDBYMHdncEFNUk9nNHl5cUYxQThOOXZ2QXdsMk5MWGlNX0ZTbFVXZklaMndubU1OZE53ZVNuUFNhMzRxUDFhd3FFakxUbktiQmh1OUwyWGc",
+      "title": "行政處發包科-苗栗鐵路一村復甦計劃-願景館策展執行委託專業服務案 - miaoli.gov.tw",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE90aTl2dGc2T25JODY1Y2NuNVNxdWNkNldjSW1zNnlWbDBYMHdncEFNUk9nNHl5cUYxQThOOXZ2QXdsMk5MWGlNX0ZTbFVXZklaMndubU1OZE53ZVNuUFNhMzRxUDFhd3FFakxUbktiQmh1OUwyWGc?oc=5",
+      "publishedAt": "Thu, 10 Oct 2019 15:15:49 GMT",
+      "summary": "行政處發包科-苗栗鐵路一村復甦計劃-願景館策展執行委託專業服務案 &nbsp;&nbsp; miaoli.gov.tw",
+      "publisher": "miaoli.gov.tw",
+      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
+      "sourceGroup": "苗栗縣政府",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵路一村",
+        "鐵路一村"
+      ],
+      "id": "5279d4de8c2d643108819f08"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTFAxMkUzd1BHNE9LbnlUZ0piU2FZdEZFTVJXV0hkNUF4N2N5ZjNEa0NRaUZCUWxHM3BwZlpEME5HcXJpSTNjT1JlVVozZUtLeVhQX1FZWmxR",
+      "title": "台鐵公司 苗栗火車頭園區 「鐵客之緣 苗栗火車頭園區竣工典禮」 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAxMkUzd1BHNE9LbnlUZ0piU2FZdEZFTVJXV0hkNUF4N2N5ZjNEa0NRaUZCUWxHM3BwZlpEME5HcXJpSTNjT1JlVVozZUtLeVhQX1FZWmxR?oc=5",
+      "publishedAt": "Sat, 06 Jan 2024 01:36:38 GMT",
+      "summary": "台鐵公司 苗栗火車頭園區 「鐵客之緣 苗栗火車頭園區竣工典禮」 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "8b930c91d6e69414abc9ede2"
+    },
+    {
+      "sourceItemId": "commons:55137902",
+      "title": "苗栗市苗栗火車站Miaoli City, Miaoli Station - panoramio (26).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City,_Miaoli_Station_-_panoramio_(26).jpg",
+      "publishedAt": "2017-01-19T08:31:08Z",
+      "summary": "苗栗市苗栗火車站Miaoli City, Miaoli Station；作者：susan curry；授權：CC BY 3.0",
+      "publisher": "Wikimedia Commons",
+      "query": "苗栗 火車站",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/%E8%8B%97%E6%A0%97%E5%B8%82%E8%8B%97%E6%A0%97%E7%81%AB%E8%BB%8A%E7%AB%99Miaoli_City%2C_Miaoli_Station_-_panoramio_%2826%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "artist": "susan curry",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "907350fcd9b0962304b7de7c"
     }
   ],
   "linkChecks": [
     {
       "url": "https://memory.culture.tw/",
-      "checkedAt": "2026-09-22T01:38:00.914Z",
+      "checkedAt": "2026-09-23T01:32:52.046Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
       "error": "fetch failed",
-      "archivedSnapshot": {
-        "url": "https://web.archive.org/web/20260224162126/https://memory.culture.tw/",
-        "timestamp": "20260224162126",
-        "status": "200"
-      }
+      "archivedSnapshot": null
     },
     {
       "url": "https://www.ncl.edu.tw/",
-      "checkedAt": "2026-09-22T01:38:04.994Z",
+      "checkedAt": "2026-09-23T01:32:51.702Z",
       "ok": false,
       "httpStatus": 403,
       "robotsStatus": "未提供(302)",
@@ -2788,7 +2873,7 @@
     },
     {
       "url": "https://data.gov.tw/",
-      "checkedAt": "2026-09-22T01:38:01.595Z",
+      "checkedAt": "2026-09-23T01:32:48.710Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2797,7 +2882,7 @@
     },
     {
       "url": "https://www.railway.gov.tw/",
-      "checkedAt": "2026-09-22T01:38:01.645Z",
+      "checkedAt": "2026-09-23T01:32:49.002Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2806,16 +2891,16 @@
     },
     {
       "url": "https://www.hakka.gov.tw/",
-      "checkedAt": "2026-09-22T01:38:04.793Z",
+      "checkedAt": "2026-09-23T01:32:57.528Z",
       "ok": true,
       "httpStatus": 200,
-      "robotsStatus": "允許",
+      "robotsStatus": "無法取得",
       "error": null,
       "archivedSnapshot": null
     },
     {
       "url": "https://www.miaoli.gov.tw/",
-      "checkedAt": "2026-09-22T01:38:03.546Z",
+      "checkedAt": "2026-09-23T01:32:50.847Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2824,7 +2909,7 @@
     },
     {
       "url": "https://www.facebook.com/miaolirailwaymuseum/",
-      "checkedAt": "2026-09-22T01:38:01.796Z",
+      "checkedAt": "2026-09-23T01:32:51.173Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -2833,7 +2918,7 @@
     },
     {
       "url": "https://www.instagram.com/miaoli_railway_museum/",
-      "checkedAt": "2026-09-22T01:38:01.918Z",
+      "checkedAt": "2026-09-23T01:32:51.580Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
