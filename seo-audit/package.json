@@ -1,0 +1,14 @@
+{
+  "name": "nara-select-seo-audit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "audit": "node src/audit.mjs --root .. --baseline baseline.json --output reports",
+    "baseline": "node src/audit.mjs --root .. --write-baseline baseline.json --output reports",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

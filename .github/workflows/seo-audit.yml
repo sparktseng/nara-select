@@ -1,0 +1,54 @@
+name: SEO audit
+
+on:
+  pull_request:
+    paths:
+      - '**/*.html'
+      - 'assets/**'
+      - 'robots.txt'
+      - 'sitemap.xml'
+      - 'seo-audit/**'
+      - '.github/workflows/seo-audit.yml'
+  push:
+    branches: [main]
+    paths:
+      - '**/*.html'
+      - 'assets/**'
+      - 'robots.txt'
+      - 'sitemap.xml'
+      - 'seo-audit/**'
+      - '.github/workflows/seo-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seo-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Test audit engine
+        working-directory: seo-audit
+        run: npm test
+      - name: Audit static site
+        working-directory: seo-audit
+        run: npm run audit
+      - name: Add report to job summary
+        if: always()
+        run: cat seo-audit/reports/seo-audit.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-audit-${{ github.run_number }}
+          path: seo-audit/reports/
+          retention-days: 30
