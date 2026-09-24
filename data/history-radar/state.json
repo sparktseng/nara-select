@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T01:32:57.545Z",
+  "updatedAt": "2026-09-24T01:28:41.910Z",
   "seenIds": [
     "70f9690ea1a30aecb8df4a54",
     "74ab318ef3ebc9ad80eefb8b",
@@ -116,7 +116,8 @@
     "22267894eadbaf0c1b5d6a1f",
     "5279d4de8c2d643108819f08",
     "8b930c91d6e69414abc9ede2",
-    "907350fcd9b0962304b7de7c"
+    "907350fcd9b0962304b7de7c",
+    "23f00e0d58cddf03147e8bcd"
   ],
   "candidateCache": [
     {
@@ -2955,6 +2956,27 @@
       "warnings": [],
       "matchedKeywords": [],
       "id": "907350fcd9b0962304b7de7c"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE4zY2FlR0N4MlBPY01xdmNfZ3RYcjhHSjdsdlB0T2pwVlpKaUdHZlpRdlpSd2NQZzVwZGlrOWwzV2xrREl5eHNhNHpMSG04UDh4Sk1FZlh3",
+      "title": "苗栗「鐵路一村」不拆了 規劃客家鐵道園區－民視新聞 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4zY2FlR0N4MlBPY01xdmNfZ3RYcjhHSjdsdlB0T2pwVlpKaUdHZlpRdlpSd2NQZzVwZGlrOWwzV2xrREl5eHNhNHpMSG04UDh4Sk1FZlh3?oc=5",
+      "publishedAt": "Fri, 09 Dec 2016 04:47:57 GMT",
+      "summary": "苗栗「鐵路一村」不拆了 規劃客家鐵道園區－民視新聞 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "鐵路一村"
+      ],
+      "id": "23f00e0d58cddf03147e8bcd"
     }
   ]
 }

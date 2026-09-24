@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "run": {
-    "startedAt": "2026-09-23T01:32:45.843Z",
-    "finishedAt": "2026-09-23T01:32:57.545Z",
+    "startedAt": "2026-09-24T01:28:24.728Z",
+    "finishedAt": "2026-09-24T01:28:41.910Z",
     "timezone": "Asia/Taipei",
     "status": "完成",
     "discovered": 105,
-    "newCandidates": 4,
-    "availableCandidates": 116
+    "newCandidates": 1,
+    "availableCandidates": 117
   },
   "candidates": [
     {
@@ -2846,12 +2846,33 @@
       "warnings": [],
       "matchedKeywords": [],
       "id": "907350fcd9b0962304b7de7c"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE4zY2FlR0N4MlBPY01xdmNfZ3RYcjhHSjdsdlB0T2pwVlpKaUdHZlpRdlpSd2NQZzVwZGlrOWwzV2xrREl5eHNhNHpMSG04UDh4Sk1FZlh3",
+      "title": "苗栗「鐵路一村」不拆了 規劃客家鐵道園區－民視新聞 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4zY2FlR0N4MlBPY01xdmNfZ3RYcjhHSjdsdlB0T2pwVlpKaUdHZlpRdlpSd2NQZzVwZGlrOWwzV2xrREl5eHNhNHpMSG04UDh4Sk1FZlh3?oc=5",
+      "publishedAt": "Fri, 09 Dec 2016 04:47:57 GMT",
+      "summary": "苗栗「鐵路一村」不拆了 規劃客家鐵道園區－民視新聞 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "鐵路一村"
+      ],
+      "id": "23f00e0d58cddf03147e8bcd"
     }
   ],
   "linkChecks": [
     {
       "url": "https://memory.culture.tw/",
-      "checkedAt": "2026-09-23T01:32:52.046Z",
+      "checkedAt": "2026-09-24T01:28:30.898Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
@@ -2860,20 +2881,16 @@
     },
     {
       "url": "https://www.ncl.edu.tw/",
-      "checkedAt": "2026-09-23T01:32:51.702Z",
+      "checkedAt": "2026-09-24T01:28:33.342Z",
       "ok": false,
       "httpStatus": 403,
       "robotsStatus": "未提供(302)",
       "error": null,
-      "archivedSnapshot": {
-        "url": "https://web.archive.org/web/20260921143226/https://www.ncl.edu.tw/",
-        "timestamp": "20260921143226",
-        "status": "200"
-      }
+      "archivedSnapshot": null
     },
     {
       "url": "https://data.gov.tw/",
-      "checkedAt": "2026-09-23T01:32:48.710Z",
+      "checkedAt": "2026-09-24T01:28:27.486Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2882,7 +2899,7 @@
     },
     {
       "url": "https://www.railway.gov.tw/",
-      "checkedAt": "2026-09-23T01:32:49.002Z",
+      "checkedAt": "2026-09-24T01:28:27.698Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2891,16 +2908,16 @@
     },
     {
       "url": "https://www.hakka.gov.tw/",
-      "checkedAt": "2026-09-23T01:32:57.528Z",
+      "checkedAt": "2026-09-24T01:28:31.176Z",
       "ok": true,
       "httpStatus": 200,
-      "robotsStatus": "無法取得",
+      "robotsStatus": "允許",
       "error": null,
       "archivedSnapshot": null
     },
     {
       "url": "https://www.miaoli.gov.tw/",
-      "checkedAt": "2026-09-23T01:32:50.847Z",
+      "checkedAt": "2026-09-24T01:28:29.504Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2909,7 +2926,7 @@
     },
     {
       "url": "https://www.facebook.com/miaolirailwaymuseum/",
-      "checkedAt": "2026-09-23T01:32:51.173Z",
+      "checkedAt": "2026-09-24T01:28:29.546Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -2918,7 +2935,7 @@
     },
     {
       "url": "https://www.instagram.com/miaoli_railway_museum/",
-      "checkedAt": "2026-09-23T01:32:51.580Z",
+      "checkedAt": "2026-09-24T01:28:29.723Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
