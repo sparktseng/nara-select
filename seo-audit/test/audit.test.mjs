@@ -22,6 +22,16 @@ test('finds missing internal targets without network access', async () => {
   assert.ok(report.findings.some(item => item.code === 'INTERNAL_TARGET_MISSING'));
 });
 
+test('rejects injected content before the head element', async () => {
+  const root = await mkdtemp(join(tmpdir(), 'seo-audit-'));
+  await mkdir(join(root, 'assets'));
+  await writeFile(join(root, 'assets/site-tracking.js'), '');
+  await writeFile(join(root, 'sitemap.xml'), '<urlset><url><loc>https://nara5.tw/</loc></url></urlset>');
+  await writeFile(join(root, 'index.html'), '<html lang="zh-Hant"><div aria-hidden="true"></div><head><title>Home</title><meta name="description" content="Description"><link rel="canonical" href="https://nara5.tw/"></head><body><h1>Home</h1><script src="/assets/site-tracking.js"></script></body></html>');
+  const report = await auditSite({ root });
+  assert.ok(report.findings.some(item => item.code === 'CONTENT_BEFORE_HEAD'));
+});
+
 test('accepts a minimal valid static site', async () => {
   const root = await mkdtemp(join(tmpdir(), 'seo-audit-'));
   await mkdir(join(root, 'assets'));

@@ -104,6 +104,16 @@ function isIndexable(page) {
   return page.path !== '404.html' && !page.robots.includes('noindex');
 }
 
+function contentBeforeHead(html) {
+  const htmlTag = html.match(/<html\b[^>]*>/i);
+  const headTag = html.match(/<head\b[^>]*>/i);
+  if (!htmlTag || !headTag || headTag.index < htmlTag.index) return null;
+  return html
+    .slice(htmlTag.index + htmlTag[0].length, headTag.index)
+    .replace(/<!--[\s\S]*?-->/g, '')
+    .trim();
+}
+
 function resolveInternalRef(page, raw) {
   if (/^(?:mailto:|tel:|javascript:|data:)/i.test(raw) || raw.startsWith('#')) return null;
   let url;
@@ -139,6 +149,9 @@ export async function auditSite({ root = DEFAULT_ROOT } = {}) {
   for (const page of pages.values()) {
     const indexable = isIndexable(page);
     const expectedCanonical = pageUrl(page.path);
+    const beforeHead = contentBeforeHead(page.html);
+    if (beforeHead === null) add(findings, 'error', 'DOCUMENT_STRUCTURE', 'Page must contain <html> followed by <head>.', page.path);
+    else if (beforeHead) add(findings, 'error', 'CONTENT_BEFORE_HEAD', 'HTML content must not appear between <html> and <head>.', page.path);
     if (!page.title) add(findings, 'error', 'TITLE_MISSING', 'Page has no title.', page.path);
     if (!page.description && indexable) add(findings, 'error', 'DESCRIPTION_MISSING', 'Indexable page has no meta description.', page.path);
     if (!page.canonical && indexable) add(findings, 'error', 'CANONICAL_MISSING', 'Indexable page has no canonical URL.', page.path);
