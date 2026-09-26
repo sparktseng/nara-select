@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "run": {
-    "startedAt": "2026-09-25T01:35:44.847Z",
-    "finishedAt": "2026-09-25T01:36:12.578Z",
+    "startedAt": "2026-09-26T01:38:45.210Z",
+    "finishedAt": "2026-09-26T01:39:16.896Z",
     "timezone": "Asia/Taipei",
     "status": "完成",
-    "discovered": 107,
-    "newCandidates": 0,
-    "availableCandidates": 117
+    "discovered": 104,
+    "newCandidates": 1,
+    "availableCandidates": 118
   },
   "candidates": [
     {
@@ -2867,12 +2867,33 @@
         "鐵路一村"
       ],
       "id": "23f00e0d58cddf03147e8bcd"
+    },
+    {
+      "sourceItemId": "CBMia0FVX3lxTE9GbTE3bm5DZzlDN1Q4aXZsVlFqNGJwUnd4eGpnU2NiX1JRZjNZQzAyeUtlR2FGS3hRb04wNGNSRjZmLWlnaUNvUG94dndqQl9HREV3aGpod1JYZS1CLVpYTWtzWVozMllrZ2dv",
+      "title": "苗栗稅務局辦理「畫中尋稅-答題揭開畫中謎」租稅作品展覽即日起於苗栗火車頭園區展出 - miaoli.gov.tw",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9GbTE3bm5DZzlDN1Q4aXZsVlFqNGJwUnd4eGpnU2NiX1JRZjNZQzAyeUtlR2FGS3hRb04wNGNSRjZmLWlnaUNvUG94dndqQl9HREV3aGpod1JYZS1CLVpYTWtzWVozMllrZ2dv?oc=5",
+      "publishedAt": "Mon, 13 Oct 2025 11:20:45 GMT",
+      "summary": "苗栗稅務局辦理「畫中尋稅-答題揭開畫中謎」租稅作品展覽即日起於苗栗火車頭園區展出 &nbsp;&nbsp; miaoli.gov.tw",
+      "publisher": "miaoli.gov.tw",
+      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
+      "sourceGroup": "苗栗縣政府",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "6a10ce5771d4640f69e8717d"
     }
   ],
   "linkChecks": [
     {
       "url": "https://memory.culture.tw/",
-      "checkedAt": "2026-09-25T01:35:46.897Z",
+      "checkedAt": "2026-09-26T01:38:47.589Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
@@ -2885,20 +2906,20 @@
     },
     {
       "url": "https://www.ncl.edu.tw/",
-      "checkedAt": "2026-09-25T01:35:47.796Z",
+      "checkedAt": "2026-09-26T01:38:51.942Z",
       "ok": false,
       "httpStatus": 403,
       "robotsStatus": "未提供(302)",
       "error": null,
       "archivedSnapshot": {
-        "url": "https://web.archive.org/web/20260921143226/https://www.ncl.edu.tw/",
-        "timestamp": "20260921143226",
+        "url": "https://web.archive.org/web/20260922072514/https://www.ncl.edu.tw/",
+        "timestamp": "20260922072514",
         "status": "200"
       }
     },
     {
       "url": "https://data.gov.tw/",
-      "checkedAt": "2026-09-25T01:35:47.697Z",
+      "checkedAt": "2026-09-26T01:38:48.319Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2907,7 +2928,7 @@
     },
     {
       "url": "https://www.railway.gov.tw/",
-      "checkedAt": "2026-09-25T01:35:47.499Z",
+      "checkedAt": "2026-09-26T01:38:47.857Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2916,7 +2937,7 @@
     },
     {
       "url": "https://www.hakka.gov.tw/",
-      "checkedAt": "2026-09-25T01:35:50.189Z",
+      "checkedAt": "2026-09-26T01:38:51.412Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "允許",
@@ -2925,7 +2946,7 @@
     },
     {
       "url": "https://www.miaoli.gov.tw/",
-      "checkedAt": "2026-09-25T01:35:49.165Z",
+      "checkedAt": "2026-09-26T01:38:49.392Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2934,7 +2955,7 @@
     },
     {
       "url": "https://www.facebook.com/miaolirailwaymuseum/",
-      "checkedAt": "2026-09-25T01:35:47.844Z",
+      "checkedAt": "2026-09-26T01:38:48.419Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -2943,7 +2964,7 @@
     },
     {
       "url": "https://www.instagram.com/miaoli_railway_museum/",
-      "checkedAt": "2026-09-25T01:35:48.012Z",
+      "checkedAt": "2026-09-26T01:38:48.597Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",

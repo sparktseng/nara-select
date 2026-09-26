@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T01:36:12.578Z",
+  "updatedAt": "2026-09-26T01:39:16.896Z",
   "seenIds": [
     "70f9690ea1a30aecb8df4a54",
     "74ab318ef3ebc9ad80eefb8b",
@@ -117,7 +117,8 @@
     "5279d4de8c2d643108819f08",
     "8b930c91d6e69414abc9ede2",
     "907350fcd9b0962304b7de7c",
-    "23f00e0d58cddf03147e8bcd"
+    "23f00e0d58cddf03147e8bcd",
+    "6a10ce5771d4640f69e8717d"
   ],
   "candidateCache": [
     {
@@ -2977,6 +2978,27 @@
         "鐵路一村"
       ],
       "id": "23f00e0d58cddf03147e8bcd"
+    },
+    {
+      "sourceItemId": "CBMia0FVX3lxTE9GbTE3bm5DZzlDN1Q4aXZsVlFqNGJwUnd4eGpnU2NiX1JRZjNZQzAyeUtlR2FGS3hRb04wNGNSRjZmLWlnaUNvUG94dndqQl9HREV3aGpod1JYZS1CLVpYTWtzWVozMllrZ2dv",
+      "title": "苗栗稅務局辦理「畫中尋稅-答題揭開畫中謎」租稅作品展覽即日起於苗栗火車頭園區展出 - miaoli.gov.tw",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9GbTE3bm5DZzlDN1Q4aXZsVlFqNGJwUnd4eGpnU2NiX1JRZjNZQzAyeUtlR2FGS3hRb04wNGNSRjZmLWlnaUNvUG94dndqQl9HREV3aGpod1JYZS1CLVpYTWtzWVozMllrZ2dv?oc=5",
+      "publishedAt": "Mon, 13 Oct 2025 11:20:45 GMT",
+      "summary": "苗栗稅務局辦理「畫中尋稅-答題揭開畫中謎」租稅作品展覽即日起於苗栗火車頭園區展出 &nbsp;&nbsp; miaoli.gov.tw",
+      "publisher": "miaoli.gov.tw",
+      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
+      "sourceGroup": "苗栗縣政府",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "6a10ce5771d4640f69e8717d"
     }
   ]
 }
