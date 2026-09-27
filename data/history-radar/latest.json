@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "run": {
-    "startedAt": "2026-09-26T01:38:45.210Z",
-    "finishedAt": "2026-09-26T01:39:16.896Z",
+    "startedAt": "2026-09-27T01:32:27.037Z",
+    "finishedAt": "2026-09-27T01:32:58.232Z",
     "timezone": "Asia/Taipei",
     "status": "完成",
-    "discovered": 104,
-    "newCandidates": 1,
+    "discovered": 106,
+    "newCandidates": 0,
     "availableCandidates": 118
   },
   "candidates": [
@@ -2893,7 +2893,7 @@
   "linkChecks": [
     {
       "url": "https://memory.culture.tw/",
-      "checkedAt": "2026-09-26T01:38:47.589Z",
+      "checkedAt": "2026-09-27T01:32:29.707Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
@@ -2906,20 +2906,20 @@
     },
     {
       "url": "https://www.ncl.edu.tw/",
-      "checkedAt": "2026-09-26T01:38:51.942Z",
+      "checkedAt": "2026-09-27T01:32:30.711Z",
       "ok": false,
       "httpStatus": 403,
       "robotsStatus": "未提供(302)",
       "error": null,
       "archivedSnapshot": {
-        "url": "https://web.archive.org/web/20260922072514/https://www.ncl.edu.tw/",
-        "timestamp": "20260922072514",
+        "url": "https://web.archive.org/web/20260925093245/https://www.ncl.edu.tw/",
+        "timestamp": "20260925093245",
         "status": "200"
       }
     },
     {
       "url": "https://data.gov.tw/",
-      "checkedAt": "2026-09-26T01:38:48.319Z",
+      "checkedAt": "2026-09-27T01:32:29.695Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2928,7 +2928,7 @@
     },
     {
       "url": "https://www.railway.gov.tw/",
-      "checkedAt": "2026-09-26T01:38:47.857Z",
+      "checkedAt": "2026-09-27T01:32:29.803Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2937,7 +2937,7 @@
     },
     {
       "url": "https://www.hakka.gov.tw/",
-      "checkedAt": "2026-09-26T01:38:51.412Z",
+      "checkedAt": "2026-09-27T01:32:32.237Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "允許",
@@ -2946,7 +2946,7 @@
     },
     {
       "url": "https://www.miaoli.gov.tw/",
-      "checkedAt": "2026-09-26T01:38:49.392Z",
+      "checkedAt": "2026-09-27T01:32:31.424Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2955,7 +2955,7 @@
     },
     {
       "url": "https://www.facebook.com/miaolirailwaymuseum/",
-      "checkedAt": "2026-09-26T01:38:48.419Z",
+      "checkedAt": "2026-09-27T01:32:30.155Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -2964,7 +2964,7 @@
     },
     {
       "url": "https://www.instagram.com/miaoli_railway_museum/",
-      "checkedAt": "2026-09-26T01:38:48.597Z",
+      "checkedAt": "2026-09-27T01:32:30.268Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
