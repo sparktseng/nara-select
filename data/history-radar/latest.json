@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "run": {
-    "startedAt": "2026-09-29T02:36:30.871Z",
-    "finishedAt": "2026-09-29T02:37:08.655Z",
+    "startedAt": "2026-09-30T02:10:04.231Z",
+    "finishedAt": "2026-09-30T02:10:26.678Z",
     "timezone": "Asia/Taipei",
     "status": "完成",
     "discovered": 106,
-    "newCandidates": 0,
-    "availableCandidates": 118
+    "newCandidates": 4,
+    "availableCandidates": 121
   },
   "candidates": [
     {
@@ -2888,12 +2888,77 @@
         "苗栗火車頭園區"
       ],
       "id": "6a10ce5771d4640f69e8717d"
+    },
+    {
+      "sourceItemId": "CBMiXEFVX3lxTFBzYV9SeU5nbTNJbXQ2WlVxaHFvamlsbTR6T3ZzQkg4M1VVb19OaEpLWUtyVkdzd2ZjMUhxUzY4YndzQnJVQkFNVkYzYjdVYkMxbFlkSTNQSXM5YVN60gFiQVVfeXFMT0x2S1NVelVqbGZhUWZBeWY0VTAxQW40NThmQ3pjc3hLSjRKNFpYaFBMMF93S1pCQ1FRUDdwaXVWTDhuaktuNVpyak50RlJ1RHd6M3JpRVM0M3F4bnRMaXduRkE",
+      "title": "「豐味苗栗」進駐苗栗火車頭園區 4日起消費滿600元送限量迴力車 - 經濟日報",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBzYV9SeU5nbTNJbXQ2WlVxaHFvamlsbTR6T3ZzQkg4M1VVb19OaEpLWUtyVkdzd2ZjMUhxUzY4YndzQnJVQkFNVkYzYjdVYkMxbFlkSTNQSXM5YVN60gFiQVVfeXFMT0x2S1NVelVqbGZhUWZBeWY0VTAxQW40NThmQ3pjc3hLSjRKNFpYaFBMMF93S1pCQ1FRUDdwaXVWTDhuaktuNVpyak50RlJ1RHd6M3JpRVM0M3F4bnRMaXduRkE?oc=5",
+      "publishedAt": "Thu, 02 Oct 2025 07:00:00 GMT",
+      "summary": "「豐味苗栗」進駐苗栗火車頭園區 4日起消費滿600元送限量迴力車 &nbsp;&nbsp; 經濟日報",
+      "publisher": "經濟日報",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:udn.com OR site:ltn.com.tw OR site:chinatimes.com OR site:ettoday.net)",
+      "sourceGroup": "地方新聞",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "5400171609323773a64d056a"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTFBBU2JncGkzWWtvZHltV3l6c1dPaGNIaDdSM3NMUHRSYzlpZ0VRdGk0dTNkUTNvdXdHY3pCMmhRclZmR2thUGg1dnVQY01BQWt5UVR3SUFB",
+      "title": "【從動工被罵到開幕後的】苗栗火車頭園區 開箱 親子景點 擼貓景點 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBBU2JncGkzWWtvZHltV3l6c1dPaGNIaDdSM3NMUHRSYzlpZ0VRdGk0dTNkUTNvdXdHY3pCMmhRclZmR2thUGg1dnVQY01BQWt5UVR3SUFB?oc=5",
+      "publishedAt": "Sat, 21 Jun 2025 05:05:51 GMT",
+      "summary": "【從動工被罵到開幕後的】苗栗火車頭園區 開箱 親子景點 擼貓景點 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "開幕"
+      ],
+      "id": "60acbc2e578b0eb3b3934806"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE9SMFA1Rk5oNnpCbjB3RF9NcUJWRDI2LWFoRXRCQ1FERDhwTU1KNC1XRGN6dDRkamRHTU02aWNXWjVvWldmN1lzcUdDckwyUlZtandvNTlB",
+      "title": "2009.7.8 台鐵 苗栗鐵道文物展示館 投煤練習場 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9SMFA1Rk5oNnpCbjB3RF9NcUJWRDI2LWFoRXRCQ1FERDhwTU1KNC1XRGN6dDRkamRHTU02aWNXWjVvWldmN1lzcUdDckwyUlZtandvNTlB?oc=5",
+      "publishedAt": "Sun, 28 Feb 2021 04:20:01 GMT",
+      "summary": "2009.7.8 台鐵 苗栗鐵道文物展示館 投煤練習場 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "bc67bea0ef2e6d8239a28cc1"
     }
   ],
   "linkChecks": [
     {
       "url": "https://memory.culture.tw/",
-      "checkedAt": "2026-09-29T02:36:32.247Z",
+      "checkedAt": "2026-09-30T02:10:06.958Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
@@ -2906,10 +2971,10 @@
     },
     {
       "url": "https://www.ncl.edu.tw/",
-      "checkedAt": "2026-09-29T02:36:41.443Z",
+      "checkedAt": "2026-09-30T02:10:07.998Z",
       "ok": false,
       "httpStatus": 403,
-      "robotsStatus": "無法取得",
+      "robotsStatus": "未提供(302)",
       "error": null,
       "archivedSnapshot": {
         "url": "https://web.archive.org/web/20260927092524/https://www.ncl.edu.tw/",
@@ -2919,7 +2984,7 @@
     },
     {
       "url": "https://data.gov.tw/",
-      "checkedAt": "2026-09-29T02:36:35.684Z",
+      "checkedAt": "2026-09-30T02:10:07.274Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2928,7 +2993,7 @@
     },
     {
       "url": "https://www.railway.gov.tw/",
-      "checkedAt": "2026-09-29T02:36:33.305Z",
+      "checkedAt": "2026-09-30T02:10:06.850Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2937,16 +3002,20 @@
     },
     {
       "url": "https://www.hakka.gov.tw/",
-      "checkedAt": "2026-09-29T02:36:40.849Z",
-      "ok": true,
-      "httpStatus": 200,
+      "checkedAt": "2026-09-30T02:10:09.408Z",
+      "ok": false,
+      "httpStatus": 0,
       "robotsStatus": "無法取得",
-      "error": null,
-      "archivedSnapshot": null
+      "error": "fetch failed",
+      "archivedSnapshot": {
+        "url": "https://web.archive.org/web/20220905062318/http://www.hakka.gov.tw/",
+        "timestamp": "20220905062318",
+        "status": "200"
+      }
     },
     {
       "url": "https://www.miaoli.gov.tw/",
-      "checkedAt": "2026-09-29T02:36:34.776Z",
+      "checkedAt": "2026-09-30T02:10:08.655Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -2955,7 +3024,7 @@
     },
     {
       "url": "https://www.facebook.com/miaolirailwaymuseum/",
-      "checkedAt": "2026-09-29T02:36:34.964Z",
+      "checkedAt": "2026-09-30T02:10:07.521Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -2964,7 +3033,7 @@
     },
     {
       "url": "https://www.instagram.com/miaoli_railway_museum/",
-      "checkedAt": "2026-09-29T02:36:35.343Z",
+      "checkedAt": "2026-09-30T02:10:07.756Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",

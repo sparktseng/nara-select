@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T02:37:08.655Z",
+  "updatedAt": "2026-09-30T02:10:26.678Z",
   "seenIds": [
     "70f9690ea1a30aecb8df4a54",
     "74ab318ef3ebc9ad80eefb8b",
@@ -119,7 +119,11 @@
     "907350fcd9b0962304b7de7c",
     "23f00e0d58cddf03147e8bcd",
     "6a10ce5771d4640f69e8717d",
-    "f54a1afccbd1d5b2b75b5353"
+    "f54a1afccbd1d5b2b75b5353",
+    "5400171609323773a64d056a",
+    "9b9c25028e6bb46ea7540001",
+    "60acbc2e578b0eb3b3934806",
+    "bc67bea0ef2e6d8239a28cc1"
   ],
   "candidateCache": [
     {
@@ -3000,6 +3004,71 @@
         "苗栗火車頭園區"
       ],
       "id": "6a10ce5771d4640f69e8717d"
+    },
+    {
+      "sourceItemId": "CBMiXEFVX3lxTFBzYV9SeU5nbTNJbXQ2WlVxaHFvamlsbTR6T3ZzQkg4M1VVb19OaEpLWUtyVkdzd2ZjMUhxUzY4YndzQnJVQkFNVkYzYjdVYkMxbFlkSTNQSXM5YVN60gFiQVVfeXFMT0x2S1NVelVqbGZhUWZBeWY0VTAxQW40NThmQ3pjc3hLSjRKNFpYaFBMMF93S1pCQ1FRUDdwaXVWTDhuaktuNVpyak50RlJ1RHd6M3JpRVM0M3F4bnRMaXduRkE",
+      "title": "「豐味苗栗」進駐苗栗火車頭園區 4日起消費滿600元送限量迴力車 - 經濟日報",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBzYV9SeU5nbTNJbXQ2WlVxaHFvamlsbTR6T3ZzQkg4M1VVb19OaEpLWUtyVkdzd2ZjMUhxUzY4YndzQnJVQkFNVkYzYjdVYkMxbFlkSTNQSXM5YVN60gFiQVVfeXFMT0x2S1NVelVqbGZhUWZBeWY0VTAxQW40NThmQ3pjc3hLSjRKNFpYaFBMMF93S1pCQ1FRUDdwaXVWTDhuaktuNVpyak50RlJ1RHd6M3JpRVM0M3F4bnRMaXduRkE?oc=5",
+      "publishedAt": "Thu, 02 Oct 2025 07:00:00 GMT",
+      "summary": "「豐味苗栗」進駐苗栗火車頭園區 4日起消費滿600元送限量迴力車 &nbsp;&nbsp; 經濟日報",
+      "publisher": "經濟日報",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:udn.com OR site:ltn.com.tw OR site:chinatimes.com OR site:ettoday.net)",
+      "sourceGroup": "地方新聞",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "5400171609323773a64d056a"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTFBBU2JncGkzWWtvZHltV3l6c1dPaGNIaDdSM3NMUHRSYzlpZ0VRdGk0dTNkUTNvdXdHY3pCMmhRclZmR2thUGg1dnVQY01BQWt5UVR3SUFB",
+      "title": "【從動工被罵到開幕後的】苗栗火車頭園區 開箱 親子景點 擼貓景點 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBBU2JncGkzWWtvZHltV3l6c1dPaGNIaDdSM3NMUHRSYzlpZ0VRdGk0dTNkUTNvdXdHY3pCMmhRclZmR2thUGg1dnVQY01BQWt5UVR3SUFB?oc=5",
+      "publishedAt": "Sat, 21 Jun 2025 05:05:51 GMT",
+      "summary": "【從動工被罵到開幕後的】苗栗火車頭園區 開箱 親子景點 擼貓景點 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "開幕"
+      ],
+      "id": "60acbc2e578b0eb3b3934806"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE9SMFA1Rk5oNnpCbjB3RF9NcUJWRDI2LWFoRXRCQ1FERDhwTU1KNC1XRGN6dDRkamRHTU02aWNXWjVvWldmN1lzcUdDckwyUlZtandvNTlB",
+      "title": "2009.7.8 台鐵 苗栗鐵道文物展示館 投煤練習場 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9SMFA1Rk5oNnpCbjB3RF9NcUJWRDI2LWFoRXRCQ1FERDhwTU1KNC1XRGN6dDRkamRHTU02aWNXWjVvWldmN1lzcUdDckwyUlZtandvNTlB?oc=5",
+      "publishedAt": "Sun, 28 Feb 2021 04:20:01 GMT",
+      "summary": "2009.7.8 台鐵 苗栗鐵道文物展示館 投煤練習場 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "bc67bea0ef2e6d8239a28cc1"
     }
   ]
 }
