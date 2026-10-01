@@ -3,11 +3,12 @@
 Learn actual same-day running seconds between Miaoli and every station that
 co-occurs with Miaoli on stopping trains, grouped by direction/car class.
 For a non-stop train, estimate from its nearest listed anchor with a learned
-travel time. Prefer same car class; fallback to all classes only with enough
-samples. This avoids mixing arbitrary long anchor spans.
+travel time. Require the same car class and nearby corridor anchors; abstain
+when evidence is sparse or the two sides disagree.
 """
 from collections import defaultdict
 from statistics import median
+from math import ceil
 
 MIAOLI="3160"
 def sec(t):
@@ -39,25 +40,32 @@ def estimate(train,pools,generic):
     if str(train.get("Line"))!="1":return None
     st=ordered(train); direction=str(train["LineDir"])
     candidates=[]
-    # Each listed stop can independently predict Miaoli.
+    # Only nearby mountain-corridor anchors; remote low dispersion is misleading.
+    local={'1250','3140','3150','3170','3180','3190','3210','3220','3230'}
     for s in st:
+        if s['Station'] not in local:continue
         for rel in ("before","after"):
             vals=pools.get((direction,train.get("CarClass"),s["Station"],rel),[])
             basis="same-class-local"
-            if len(vals)<2:
-                vals=generic.get((direction,s["Station"],rel),[])
-                basis="all-class-local"
             if len(vals)<4:continue
             run=median(vals)
             if rel=="before": center=sec(s["DEPTime"])+run
             else: center=sec(s["ARRTime"])-run
             dev=median([abs(v-run) for v in vals])
-            candidates.append((dev,-len(vals),center,s["Station"],rel,len(vals),basis,run))
+            candidates.append((run,dev,-len(vals),center,s["Station"],rel,len(vals),basis))
     if not candidates:return None
-    # smallest observed dispersion, then largest sample count
+    # Shortest learned running time first, then dispersion and sample count.
     candidates.sort()
-    dev,neg,center,station,rel,n,basis,run=candidates[0]
-    span=max(120,dev*2)
+    run,dev,neg,center,station,rel,n,basis=candidates[0]
+    # A second nearby anchor is a consistency check, never a reason to narrow
+    # the interval. Reject exceptional local waits instead of hiding them.
+    opposite=[c for c in candidates if c[5]!=rel]
+    if opposite and abs((opposite[0][3]-center+43200)%86400-43200)>180:
+        return None
+    vals=pools[(direction,train.get('CarClass'),station,rel)]
+    residuals=sorted(abs(v-run) for v in vals)
+    # Empirical 90th-percentile spread, rather than twice the median deviation.
+    span=max(120,residuals[min(len(residuals)-1,ceil(.9*len(residuals))-1)])
     return {"center":clock(center),"from":clock(center-span),"to":clock(center+span),
             "basis":basis,"samples":n,"anchor":station,"relation":rel,
             "medianRunSec":round(run),"madSec":round(dev)}
