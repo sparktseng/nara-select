@@ -6,6 +6,7 @@ from urllib.request import Request,urlopen
 from zoneinfo import ZoneInfo
 from build_stopping_table import station_rows,render
 from pokemon_services import mark_rows,charter_rows,PDF
+from build_pass_through_beta import beta_rows
 BASE='https://ods.railway.gov.tw'
 INDEX=BASE+'/tra-ods-web/ods/download/dataResource/railway_schedule/JSON/list'
 def read(url):
@@ -17,6 +18,7 @@ def collect():
     today=datetime.now(ZoneInfo('Asia/Taipei')).date()
     days={}
     special_days={}
+    pass_through_days={}
     for offset in range(7):
         day=today+timedelta(days=offset)
         try:
@@ -25,10 +27,11 @@ def collect():
             if not rows: raise ValueError('Empty station timetable')
             days[day.isoformat()]=mark_rows(rows,day.isoformat())
             special_days[day.isoformat()]=charter_rows(payload,day.isoformat())
+            pass_through_days[day.isoformat()]=beta_rows(payload,day.isoformat())
         except Exception:
             if offset==0: raise
         time.sleep(.3)
-    return {'updatedAt':datetime.now(ZoneInfo('Asia/Taipei')).isoformat(),'days':days,'specialDays':special_days}
+    return {'updatedAt':datetime.now(ZoneInfo('Asia/Taipei')).isoformat(),'days':days,'specialDays':special_days,'passThroughDays':pass_through_days}
 def public_page(data):
     today=next(iter(data['days']))
     page=render(data['days'][today],today)
