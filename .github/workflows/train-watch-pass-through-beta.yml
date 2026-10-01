@@ -28,7 +28,8 @@ jobs:
       - name: Validate conservative model invariants
         run: |
           python - <<'PY'
-          import importlib.util, pathlib
+          import importlib.util, pathlib, sys
+          sys.path.insert(0,'train-watch')
           p=pathlib.Path('train-watch/build_pass_through_beta.py')
           spec=importlib.util.spec_from_file_location('beta',p)
           m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
@@ -45,7 +46,8 @@ jobs:
       - name: Integration test against TRA official ODS
         run: |
           python - <<'PY'
-          import importlib.util, json, pathlib, re, urllib.request
+          import importlib.util, json, pathlib, re, urllib.request, sys
+          sys.path.insert(0,'train-watch')
           spec=importlib.util.spec_from_file_location('beta','train-watch/build_pass_through_beta.py')
           m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
           base='https://ods.railway.gov.tw'
