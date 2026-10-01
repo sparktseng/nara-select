@@ -14,7 +14,7 @@ def read(url):
         return res.read().decode('utf-8-sig')
 def collect():
     index=read(INDEX)
-    links=dict((d,u) for u,d in re.findall(r'<a\s+href="([^"]+)">(\d{8})\.json</a>',index))
+    links=dict((d,u) for u,d in re.findall(r'<a\\s+href="([^"]+)"[^>]*>\\s*(\\d{8})\\.json\\s*</a>',index,re.I|re.S))
     today=datetime.now(ZoneInfo('Asia/Taipei')).date()
     days={}
     special_days={}
