@@ -8,6 +8,7 @@ Conservative first version:
 """
 from dataclasses import dataclass
 from datetime import datetime, timedelta
+from local_passage_model import learn as learn_local, estimate as estimate_local
 
 MIAOLI = "3160"
 
@@ -64,6 +65,9 @@ def proven_mountain_candidate(train):
     coast = {"2110","2120","2130","2140","2150","2160","2170","2180","2190","2200"}
     return bool(set(ids) & north) and bool(set(ids) & south) and not bool(set(ids) & coast)
 
+def sec(t):
+    h,m,s=map(int,t.split(':'));return h*3600+m*60+s
+
 def hm(t):
     return datetime.strptime(t, "%H:%M:%S")
 
@@ -89,6 +93,7 @@ def special_estimate(train_no, service_date):
 
 def beta_rows(payload, service_date):
     rows = []
+    local_pools, local_generic = learn_local(payload)
     for train in payload["TrainInfos"]:
         if not proven_mountain_candidate(train):
             continue
@@ -112,6 +117,17 @@ def beta_rows(payload, service_date):
             row["confidence"] = "A｜當日現場實測校正"
             row["timeGrade"] = "A"
             row["calibrationNote"] = CALIBRATION[(row["train"], service_date)]["note"]
+        # Same-day self-calibrating local model. It may promote a C row to B,
+        # but only when its empirical interval is no wider than 6 minutes.
+        if not row["estimate"]:
+            loc = estimate_local(train, local_pools, local_generic)
+            if loc:
+                width = sec(loc["to"]) - sec(loc["from"])
+                if 0 <= width <= 360:
+                    row["estimate"] = {k:loc[k] for k in ("from","to","center","basis","samples","anchor","madSec")}
+                    row["estimateKind"] = "臺鐵當日停靠列車局部模型"
+                    row["confidence"] = f"B｜當日官方排點自我校正，樣本{loc['samples']}筆"
+                    row["timeGrade"] = "B"
         ref = SPECIAL_REFERENCE.get((row["train"], service_date))
         if ref:
             row["externalReference"] = ref
