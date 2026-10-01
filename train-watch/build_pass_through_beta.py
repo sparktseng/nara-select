@@ -101,14 +101,16 @@ def beta_rows(payload, service_date):
             **info,
             "estimate": None,
             "estimateKind": "尚未校正",
-            "confidence": "待驗證",
+            "confidence": "C｜僅確認經苗栗不停",
+            "timeGrade": "C",
             "source": "TRA ODS route/stop sequence",
         }
         est = calibrated_estimate(row["train"], service_date)
         if est:
             row["estimate"] = est
             row["estimateKind"] = "現場觀測校正區間"
-            row["confidence"] = "實測樣本1筆"
+            row["confidence"] = "A｜當日現場實測校正"
+            row["timeGrade"] = "A"
             row["calibrationNote"] = CALIBRATION[(row["train"], service_date)]["note"]
         ref = SPECIAL_REFERENCE.get((row["train"], service_date))
         if ref:
@@ -116,6 +118,7 @@ def beta_rows(payload, service_date):
             if not row["estimate"]:
                 row["estimate"] = special_estimate(row["train"], service_date)
                 row["estimateKind"] = "外部參考保守區間"
-                row["confidence"] = "待10/3現場驗證"
+                row["confidence"] = "B｜外部通過時刻參考，待現場驗證"
+                row["timeGrade"] = "B"
         rows.append(row)
     return rows
