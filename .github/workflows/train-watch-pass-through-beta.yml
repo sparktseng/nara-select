@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - 'train-watch/build_pass_through_beta.py'
+      - 'train-watch/local_passage_model.py'
+      - 'train-watch/validate_local_passage.py'
       - 'train-watch/publish_timetable.py'
       - 'train-watch/pass-through-beta.html'
       - '.github/workflows/train-watch-pass-through-beta.yml'
@@ -104,5 +106,7 @@ jobs:
           assert statistics.median(vals)<=2.0
           assert p90<=5.0
           PY
-      - name: Safety note
+      - name: Validate B intervals and abstentions on two official dates
+        run: python train-watch/validate_local_passage.py
+      - name: Deployment safety note
         run: echo "Validation only; this workflow does not deploy or modify main."
