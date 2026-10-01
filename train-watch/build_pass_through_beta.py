@@ -12,6 +12,14 @@ from local_passage_model import learn as learn_local, estimate as estimate_local
 
 MIAOLI = "3160"
 
+# User-provided APP readings are comparisons, never calibration or live data.
+APP_COMPARISON = {
+    ("137", "2026-10-02"): "13:37",
+    ("164", "2026-10-02"): "12:41",
+    ("193", "2026-10-02"): "11:02",
+    ("194", "2026-10-02"): "17:47",
+}
+
 # Calibration from 2026-10-01 field observations.
 # These are not official passage times. Keep the raw observation and uncertainty.
 CALIBRATION = {
@@ -136,5 +144,12 @@ def beta_rows(payload, service_date):
                 row["estimateKind"] = "外部參考保守區間"
                 row["confidence"] = "B｜外部通過時刻參考，待現場驗證"
                 row["timeGrade"] = "B"
+        app_time = APP_COMPARISON.get((row["train"], service_date))
+        if app_time:
+            row["appComparison"] = {
+                "date": service_date, "time": app_time, "source": "TransTaiwan",
+                "providedBy": "user", "precision": "minute",
+                "includesDelay": None, "isObservation": False,
+            }
         rows.append(row)
     return rows
