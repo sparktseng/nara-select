@@ -1,0 +1,44 @@
+name: Miaoli Timetable - Delay Preview
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: miaoli-train-watch
+  cancel-in-progress: false
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout reviewed preview code
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: 3975c8eec572ba7eb4d62b430fb045c038d07ed2
+          persist-credentials: false
+          sparse-checkout: train-watch
+      - name: Load October 1 official timetable
+        env:
+          SCHEDULE_PATH: ${{ runner.temp }}/schedule.json
+        run: curl --fail --silent --show-error --max-time 30 --output "$SCHEDULE_PATH" 'https://ods.railway.gov.tw/tra-ods-web/ods/download/dataResource/exceptionDataResource/8ae4c981a0f2e7d601a0f3d4ceaf1c89'
+      - name: Fetch one TDX snapshot
+        env:
+          TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
+          TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
+          SAMPLE_OUTPUT: ${{ runner.temp }}/sample.jsonl
+        run: python3 train-watch/collect.py --samples 1 --interval 60 --output "$SAMPLE_OUTPUT"
+      - name: Build dated timetable with delay snapshot
+        env:
+          PREVIEW_DIR: ${{ runner.temp }}/preview
+          SAMPLE_OUTPUT: ${{ runner.temp }}/sample.jsonl
+          SCHEDULE_PATH: ${{ runner.temp }}/schedule.json
+        run: |
+          mkdir -p "$PREVIEW_DIR"
+          python3 train-watch/build_stopping_table.py --source "$SCHEDULE_PATH" --date 2026-10-01 --snapshot "$SAMPLE_OUTPUT" --output "$PREVIEW_DIR/miaoli-timetable.html"
+      - name: Save preview
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: miaoli-delay-preview-${{ github.run_id }}
+          path: ${{ runner.temp }}/preview/miaoli-timetable.html
+          if-no-files-found: error
+          retention-days: 7
