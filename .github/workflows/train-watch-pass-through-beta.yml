@@ -42,5 +42,37 @@ jobs:
           assert m.car_info({'CarClass':'110G'})['traction'] is None
           print('static invariants OK')
           PY
+      - name: Integration test against TRA official ODS
+        run: |
+          python - <<'PY'
+          import importlib.util, json, pathlib, re, urllib.request
+          spec=importlib.util.spec_from_file_location('beta','train-watch/build_pass_through_beta.py')
+          m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+          base='https://ods.railway.gov.tw'
+          index=urllib.request.urlopen(base+'/tra-ods-web/ods/download/dataResource/railway_schedule/JSON/list',timeout=30).read().decode('utf-8-sig')
+          links=dict((d,u) for u,d in re.findall(r'<a\\s+href="([^"]+)">(\\d{8})\\.json</a>',index))
+          def payload(day):
+              key=day.replace('-','')
+              assert key in links, f'ODS missing {day}'
+              req=urllib.request.Request(base+links[key],headers={'User-Agent':'NaraSelect-BetaValidation/1.0'})
+              return json.loads(urllib.request.urlopen(req,timeout=40).read().decode('utf-8-sig'))
+          d1=m.beta_rows(payload('2026-10-01'),'2026-10-01')
+          by1={r['train']:r for r in d1}
+          assert '111' in by1, '111 mountain non-stop missing'
+          assert '110' in by1, '110 mountain non-stop missing'
+          assert by1['111']['vehicleType']=='EMU3000'
+          assert by1['111']['kind']=='通過不停'
+          # Known coastal Pokemon services must never appear as Miaoli-station pass-through.
+          for no in ('1038','2013'):
+              assert no not in by1, f'coastal train {no} leaked into Miaoli'
+          d3=m.beta_rows(payload('2026-10-03'),'2026-10-03')
+          by3={r['train']:r for r in d3}
+          assert '6725' in by3, '6725 mountain charter missing'
+          assert by3['6725']['kind']=='通過不停'
+          assert by3['6725']['externalReference']['official'] is False
+          assert by3['6725']['estimate']['from']=='12:35:00'
+          assert by3['6725']['estimate']['to']=='12:41:00'
+          print('TRA ODS integration OK',len(d1),len(d3))
+          PY
       - name: Safety note
         run: echo "Validation only; this workflow does not deploy or modify main."
