@@ -3,7 +3,8 @@ import argparse
 import html
 import json
 from collections import Counter
-from datetime import date
+from datetime import date, datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 
@@ -26,7 +27,7 @@ def station_rows(payload):
     return sorted(rows, key=lambda r: (r['sortTime'], r['train']))
 
 
-def render(rows, service_date):
+def render(rows, service_date, live_sample=None):
     counts = Counter(r['kind'] for r in rows)
     body = []
     for r in rows:
@@ -61,6 +62,7 @@ def render(rows, service_date):
 <div class="table-wrap"><table><caption style="text-align:left;padding:12px">苗栗站表定到站／發車時間（臺灣時間）</caption><thead><tr><th scope="col">方向</th><th scope="col">車次／車種</th><th scope="col">抵達</th><th scope="col">發車</th><th scope="col">誤點／預估</th><th scope="col">本站角色</th></tr></thead><tbody>__ROWS__</tbody></table><p id="empty" hidden>這個條件下沒有列車，請調整篩選。</p></div>
 <footer><p>資料來源：<a href="https://ods.railway.gov.tw/tra-ods-web/ods/download/dataResource/railway_schedule/JSON/list">臺鐵官方每日時刻表 __DATE__</a>。車種未細分的對號列車，不推定實際車型。</p><p>同一編組可能在終到後改車次折返；本表按各車次獨立標示，不推定編組接續。</p><p>等車空檔，來鐵路一村37號的 <a href="https://nara5.tw/">5號店</a> 坐坐。</p></footer>
 </main><script>
+const initialLive=__SNAPSHOT__;
 let live=new Map(),confirmedEvents=new Map();
 const date='__DATE__',trains=[...document.querySelectorAll('tbody tr')];
 const direction=document.getElementById('direction'),kind=document.getElementById('kind'),period=document.getElementById('period');
@@ -76,14 +78,15 @@ function visibility(kind,scheduled,now,delay,event){
 function filter(){const current=taipei(),same=current.date===date;document.getElementById('expired').hidden=same;document.getElementById('now').disabled=!same;period.querySelector('[value="upcoming"]').disabled=!same;if(!same&&period.value==='upcoming')period.value='';let count=0;for(const row of trains){const base=row.dataset.departure==='—'?row.dataset.arrival:row.dataset.departure;const h=Number(base.slice(0,2));const status=visibility(row.dataset.kind,base,current.time,live.get(row.dataset.train),confirmedEvents.get(row.dataset.train));row.querySelector('.state').textContent=status.state;let show=same&&!status.hidden&&(!direction.value||row.dataset.direction===direction.value)&&(!kind.value||row.dataset.kind===kind.value);if(period.value==='morning')show=show&&h<12;if(period.value==='afternoon')show=show&&h>=12&&h<18;if(period.value==='evening')show=show&&h>=18;row.hidden=!show;if(show)count++;}document.getElementById('count').textContent='顯示 '+count+' 班（已確認離站／終到抵達的列車已隱藏）';document.getElementById('empty').hidden=count!==0;}
 
 for(const x of [direction,kind,period])x.addEventListener('change',filter);document.getElementById('now').addEventListener('click',()=>{period.value='upcoming';filter();});document.getElementById('reset').addEventListener('click',()=>{direction.value='';kind.value='';period.value='';filter();});filter();setInterval(filter,30000);
+function applyLive(data){const age=(Date.now()-Date.parse(data.receivedAt))/1000;if(data.serviceDate!==date||!Number.isFinite(age)||age>180||age< -60||!Array.isArray(data.trains))throw Error('stale');for(const e of data.stationEvents||[]){const at=Date.parse(e.occurredAt);if(e.StationID==='3160'&&e.verified===true&&['arrived','departed'].includes(e.event)&&Number.isFinite(at)&&at<=Date.now()&&new Date(at).toLocaleDateString('en-CA',{timeZone:'Asia/Taipei'})===date){const key=String(e.TrainNo);if(confirmedEvents.get(key)!=='departed')confirmedEvents.set(key,e.event);}}live.clear();for(const r of data.trains){const a=(Date.now()-Date.parse(r.UpdateTime))/1000;if(Number.isFinite(a)&&a>=-60&&a<=180&&Number.isFinite(r.DelayTime)&&r.DelayTime>=0)live.set(String(r.TrainNo),r.DelayTime);}for(const row of trains){const d=live.get(row.dataset.train),cell=row.querySelector('.delay');cell.replaceChildren();cell.append(document.createTextNode(d===undefined?'未取得':d===0?'準點':'誤點 '+d+' 分'));const note=document.createElement('small');if(d!==undefined){const add=t=>{if(t==='—')return '—';let x=t.split(':').map(Number);let m=x[0]*60+x[1]+d;return String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0')+(x[2]?':'+String(x[2]).padStart(2,'0'):'');};note.textContent='預估到 '+add(row.dataset.arrival)+'／開 '+add(row.dataset.departure);}else note.textContent='預估時間待更新';cell.append(note);}document.getElementById('liveStatus').textContent='誤點資料更新：'+new Date(data.receivedAt).toLocaleTimeString('zh-TW',{timeZone:'Asia/Taipei'})+'；預估時間依誤點推算。';filter();}
 async function refreshLive(){
-try{const res=await fetch('./train-watch-live.json',{cache:'no-store'});if(!res.ok)throw Error('unavailable');const data=await res.json();const age=(Date.now()-Date.parse(data.receivedAt))/1000;if(data.serviceDate!==date||!Number.isFinite(age)||age>180||age< -60||!Array.isArray(data.trains))throw Error('stale');for(const e of data.stationEvents||[]){const at=Date.parse(e.occurredAt);if(e.StationID==='3160'&&e.verified===true&&['arrived','departed'].includes(e.event)&&Number.isFinite(at)&&at<=Date.now()&&new Date(at).toLocaleDateString('en-CA',{timeZone:'Asia/Taipei'})===date){const key=String(e.TrainNo);if(confirmedEvents.get(key)!=='departed')confirmedEvents.set(key,e.event);}}live.clear();for(const r of data.trains){const a=(Date.now()-Date.parse(r.UpdateTime))/1000;if(Number.isFinite(a)&&a>=-60&&a<=180&&Number.isFinite(r.DelayTime)&&r.DelayTime>=0)live.set(String(r.TrainNo),r.DelayTime);}for(const row of trains){const d=live.get(row.dataset.train),cell=row.querySelector('.delay');cell.replaceChildren();cell.append(document.createTextNode(d===undefined?'未取得':d===0?'準點':'誤點 '+d+' 分'));const note=document.createElement('small');if(d!==undefined){const add=t=>{if(t==='—')return '—';let x=t.split(':').map(Number);let m=x[0]*60+x[1]+d;return String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0')+(x[2]?':'+String(x[2]).padStart(2,'0'):'');};note.textContent='預估到 '+add(row.dataset.arrival)+'／開 '+add(row.dataset.departure);}else note.textContent='預估時間待更新';cell.append(note);}document.getElementById('liveStatus').textContent='誤點資料更新：'+new Date(data.receivedAt).toLocaleTimeString('zh-TW',{timeZone:'Asia/Taipei'})+'；預估時間依誤點推算。';filter();}
-catch{live.clear();for(const row of trains){row.querySelector('.delay').textContent='未取得';}document.getElementById('liveStatus').textContent='即時資料未取得或已過期；超過表定時間但尚未確認完成的列車會保留，標示狀態待確認。';filter();}}
+try{const res=await fetch('./train-watch-live.json',{cache:'no-store'});if(!res.ok)throw Error('unavailable');applyLive(await res.json());}
+catch{try{if(!initialLive)throw Error('no_snapshot');applyLive(initialLive);document.getElementById('liveStatus').textContent+='（單次快照，尚未持續更新）';}catch{live.clear();for(const row of trains){row.querySelector('.delay').textContent='未取得';}document.getElementById('liveStatus').textContent='即時資料未取得或已過期；超過表定時間但尚未確認完成的列車會保留，標示狀態待確認。';filter();}}}
 refreshLive();setInterval(refreshLive,60000);
 
 </script></body></html>'''
     for key,value in {'DATE':service_date,'TOTAL':len(rows),'ORIGIN':counts['苗栗始發'],
-                      'TERMINAL':counts['苗栗終到'],'STOP':counts['中途停靠'],'ROWS':''.join(body)}.items():
+                      'TERMINAL':counts['苗栗終到'],'STOP':counts['中途停靠'],'ROWS':''.join(body),'SNAPSHOT':json.dumps(live_sample,ensure_ascii=False).replace('<','\\u003c')}.items():
         template = template.replace('__'+key+'__',str(value))
     return template
 
@@ -93,7 +96,18 @@ if __name__ == '__main__':
     p.add_argument('--source',type=Path,required=True)
     p.add_argument('--date',required=True)
     p.add_argument('--output',type=Path,required=True)
+    p.add_argument('--snapshot',type=Path)
     a=p.parse_args();date.fromisoformat(a.date)
     rows=station_rows(json.loads(a.source.read_text()))
-    a.output.write_text(render(rows,a.date),encoding='utf-8')
+    sample=None
+    if a.snapshot:
+        raw=json.loads(a.snapshot.read_text().splitlines()[-1])
+        if raw.get('error') or not isinstance(raw.get('trains'),list):
+            p.error('Snapshot is not a successful train response')
+        received=datetime.fromisoformat(raw['receivedAt'])
+        if received.tzinfo is None or received.astimezone(ZoneInfo('Asia/Taipei')).date().isoformat()!=a.date:
+            p.error('Snapshot date does not match timetable date')
+        sample={'serviceDate':a.date,'receivedAt':raw['receivedAt'],
+            'trains':[{k:r[k] for k in ('TrainNo','DelayTime','UpdateTime') if k in r} for r in raw['trains']]}
+    a.output.write_text(render(rows,a.date,sample),encoding='utf-8')
     print(len(rows), dict(Counter(r['kind'] for r in rows)))
