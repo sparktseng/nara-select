@@ -77,37 +77,30 @@ jobs:
           print('2026-10-01 PASS',[(r['train'],r['direction'],r['serviceType'],r['vehicleType']) for r in d1])
           print('2026-10-03 PASS',[(r['train'],r['direction'],r['serviceType'],r['vehicleType']) for r in d3])
           PY
-      - name: Backtest empirical passage model on official Miaoli stops
+      - name: Backtest local passage model on official Miaoli stops
         run: |
           python - <<'PY'
           import importlib.util,json,urllib.request,statistics
-          def load(path,name):
-              s=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
-          m=load('train-watch/empirical_passage_model.py','emp')
-          base='https://ods.railway.gov.tw'
-          url=base+'/tra-ods-web/ods/download/dataResource/exceptionDataResource/8ae4c981a0f2e7d601a0f3d4ceaf1c89'
+          s=importlib.util.spec_from_file_location('m','train-watch/local_passage_model.py');m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
+          url='https://ods.railway.gov.tw/tra-ods-web/ods/download/dataResource/exceptionDataResource/8ae4c981a0f2e7d601a0f3d4ceaf1c89'
           p=json.loads(urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'NaraSelect-Backtest/1.0'}),timeout=40).read().decode('utf-8-sig'))
           errs=[]
-          # Leave-one-out: remove each target train from controls, then create a synthetic
-          # non-stop version by removing Miaoli and ask model to reconstruct its time.
           for target in p['TrainInfos']:
-              stops=m.ordered(target)
-              mi=next((s for s in stops if s['Station']=='3160'),None)
+              stops=m.ordered(target);mi=next((x for x in stops if x['Station']=='3160'),None)
               if not mi or str(target.get('Line'))!='1':continue
               controls={'TrainInfos':[t for t in p['TrainInfos'] if t is not target]}
-              ex,rel=m.learn(controls)
-              synthetic=dict(target);synthetic['TimeInfos']=[s for s in target['TimeInfos'] if s['Station']!='3160']
-              est=m.empirical_estimate(synthetic,ex,rel)
+              pools,generic=m.learn(controls)
+              synthetic=dict(target);synthetic['TimeInfos']=[x for x in target['TimeInfos'] if x['Station']!='3160']
+              est=m.estimate(synthetic,pools,generic)
               if not est:continue
               err=abs(m.sec(est['center'])-m.sec(mi['ARRTime']))/60
-              errs.append((err,str(target['Train']),target.get('CarClass'),est['center'],mi['ARRTime'],est['samples'],est['basis']))
-          assert len(errs)>=20, f'not enough backtests {len(errs)}'
-          vals=[x[0] for x in errs]
-          print('BACKTEST n',len(vals),'median',round(statistics.median(vals),2),'p90',round(sorted(vals)[int(.9*(len(vals)-1))],2),'max',round(max(vals),2))
-          print('WORST',sorted(errs,reverse=True)[:10])
-          # Beta quality gate: median <=2 min and p90 <=5 min.
+              errs.append((err,str(target['Train']),target.get('CarClass'),est['center'],mi['ARRTime'],est['anchor'],est['samples'],est['basis']))
+          assert len(errs)>=30,f'not enough backtests {len(errs)}'
+          vals=[x[0] for x in errs];p90=sorted(vals)[int(.9*(len(vals)-1))]
+          print('LOCAL BACKTEST n',len(vals),'median',round(statistics.median(vals),2),'p90',round(p90,2),'max',round(max(vals),2))
+          print('LOCAL WORST',sorted(errs,reverse=True)[:10])
           assert statistics.median(vals)<=2.0
-          assert sorted(vals)[int(.9*(len(vals)-1))]<=5.0
+          assert p90<=5.0
           PY
       - name: Safety note
         run: echo "Validation only; this workflow does not deploy or modify main."
