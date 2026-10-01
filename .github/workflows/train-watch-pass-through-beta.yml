@@ -50,20 +50,11 @@ jobs:
           m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
           base='https://ods.railway.gov.tw'
           index=urllib.request.urlopen(base+'/tra-ods-web/ods/download/dataResource/railway_schedule/JSON/list',timeout=30).read().decode('utf-8-sig')
+          links=dict((d,u) for u,d in re.findall(r'<a\\s+href="([^"]+)"[^>]*>\\s*(\\d{8})\\.json\\s*</a>',index,re.I|re.S))
           def payload(day):
               key=day.replace('-','')
-              # TRA index markup can wrap the filename in nested tags; locate the href
-              # from the date token instead of assuming exact anchor innerHTML.
-              pats=[
-                  rf'href="([^"]*{key}\\.json[^"]*)"',
-                  rf'href="([^"]+)"[^>]*>[^<]*{key}\\.json',
-              ]
-              url=None
-              for pat in pats:
-                  hit=re.search(pat,index,re.I|re.S)
-                  if hit:
-                      url=hit.group(1).replace('&amp;','&');break
-              assert url, f'ODS missing {day}'
+              assert key in links, f'ODS missing {day}; parsed={len(links)}'
+              url=links[key].replace('&amp;','&')
               if not url.startswith('http'):
                   url=base+(url if url.startswith('/') else '/'+url)
               req=urllib.request.Request(url,headers={'User-Agent':'NaraSelect-BetaValidation/1.0'})
