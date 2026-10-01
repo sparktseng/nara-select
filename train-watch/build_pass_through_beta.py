@@ -64,6 +64,29 @@ def proven_mountain_candidate(train):
     coast = {"2110","2120","2130","2140","2150","2160","2170","2180","2190","2200"}
     return bool(set(ids) & north) and bool(set(ids) & south) and not bool(set(ids) & coast)
 
+def hm(t):
+    return datetime.strptime(t, "%H:%M:%S")
+
+def fmt(t):
+    return t.strftime("%H:%M:%S")
+
+def calibrated_estimate(train_no, service_date):
+    cal = CALIBRATION.get((str(train_no), service_date))
+    if not cal:
+        return None
+    t = hm(cal["observed"])
+    w = timedelta(minutes=cal["window_min"])
+    return {"from": fmt(t-w), "to": fmt(t+w), "basis": "field-calibrated"}
+
+def special_estimate(train_no, service_date):
+    ref = SPECIAL_REFERENCE.get((str(train_no), service_date))
+    if not ref:
+        return None
+    # Beta deliberately exposes a window, not a fake exact minute.
+    t = hm(ref["reference"])
+    return {"from": fmt(t-timedelta(minutes=4)), "to": fmt(t+timedelta(minutes=2)),
+            "basis": "external-reference-window", "reference": ref["reference"]}
+
 def beta_rows(payload, service_date):
     rows = []
     for train in payload["TrainInfos"]:
@@ -81,19 +104,18 @@ def beta_rows(payload, service_date):
             "confidence": "待驗證",
             "source": "TRA ODS route/stop sequence",
         }
-        cal = CALIBRATION.get((row["train"], service_date))
-        if cal:
-            t = datetime.strptime(cal["observed"], "%H:%M:%S")
-            w = timedelta(minutes=cal["window_min"])
-            row["estimate"] = {
-                "from": (t-w).strftime("%H:%M:%S"),
-                "to": (t+w).strftime("%H:%M:%S"),
-            }
+        est = calibrated_estimate(row["train"], service_date)
+        if est:
+            row["estimate"] = est
             row["estimateKind"] = "現場觀測校正區間"
             row["confidence"] = "實測樣本1筆"
-            row["calibrationNote"] = cal["note"]
+            row["calibrationNote"] = CALIBRATION[(row["train"], service_date)]["note"]
         ref = SPECIAL_REFERENCE.get((row["train"], service_date))
         if ref:
             row["externalReference"] = ref
+            if not row["estimate"]:
+                row["estimate"] = special_estimate(row["train"], service_date)
+                row["estimateKind"] = "外部參考保守區間"
+                row["confidence"] = "待10/3現場驗證"
         rows.append(row)
     return rows
