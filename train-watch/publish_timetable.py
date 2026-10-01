@@ -6,6 +6,7 @@ from urllib.request import Request,urlopen
 from zoneinfo import ZoneInfo
 from build_stopping_table import station_rows,render
 from pokemon_services import mark_rows,charter_rows,PDF
+from build_pass_through_beta import beta_rows
 BASE='https://ods.railway.gov.tw'
 INDEX=BASE+'/tra-ods-web/ods/download/dataResource/railway_schedule/JSON/list'
 def read(url):
@@ -13,10 +14,11 @@ def read(url):
         return res.read().decode('utf-8-sig')
 def collect():
     index=read(INDEX)
-    links=dict((d,u) for u,d in re.findall(r'<a\s+href="([^"]+)">(\d{8})\.json</a>',index))
+    links=dict((d,u) for u,d in re.findall(r'<a\s+href="([^"]+)"[^>]*>\s*(\d{8})\.json\s*</a>',index,re.I|re.S))
     today=datetime.now(ZoneInfo('Asia/Taipei')).date()
     days={}
     special_days={}
+    pass_through_days={}
     for offset in range(7):
         day=today+timedelta(days=offset)
         try:
@@ -25,10 +27,11 @@ def collect():
             if not rows: raise ValueError('Empty station timetable')
             days[day.isoformat()]=mark_rows(rows,day.isoformat())
             special_days[day.isoformat()]=charter_rows(payload,day.isoformat())
+            pass_through_days[day.isoformat()]=beta_rows(payload,day.isoformat())
         except Exception:
             if offset==0: raise
         time.sleep(.3)
-    return {'updatedAt':datetime.now(ZoneInfo('Asia/Taipei')).isoformat(),'days':days,'specialDays':special_days}
+    return {'updatedAt':datetime.now(ZoneInfo('Asia/Taipei')).isoformat(),'days':days,'specialDays':special_days,'passThroughDays':pass_through_days}
 def public_page(data):
     today=next(iter(data['days']))
     page=render(data['days'][today],today)
@@ -94,6 +97,6 @@ function renderPokemon(){
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--page',type=Path);p.add_argument('--data',type=Path,required=True);a=p.parse_args()
-    data=collect();a.data.parent.mkdir(parents=True,exist_ok=True);a.data.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')))
-    if a.page:a.page.write_text(public_page(data))
+    data=collect();a.data.parent.mkdir(parents=True,exist_ok=True);a.data.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
+    if a.page:a.page.write_text(public_page(data),encoding='utf-8')
     print('Updated',len(data['days']),'days; today',len(next(iter(data['days'].values()))),'station rows')
