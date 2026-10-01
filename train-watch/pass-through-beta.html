@@ -7,10 +7,10 @@
 <p class="sub">把停靠與過站不停放在同一條時間軸。這個版本只驗收呈現方式，預估通過時間不是臺鐵官方時刻。</p>
 <div class="notice"><b>時間怎麼看？</b><br>「官方停靠」＝臺鐵表定苗栗時間；「預估通過」＝依路線、班表與實測資料推估。拍不停靠列車請提早到拍攝位置。</div>
 <div class="filters"><button class="on" data-f="all">全部</button><button data-f="pass">只看過站不停</button><button data-f="special">特殊列車</button></div>
-<section class="list" id="list"><p class="sub">載入每日資料中…</p></section>
+<section class="list" id="list"><p class="sub">載入每日資料中…</p></section><h2 id="pendingTitle" hidden>今天還有這些過站列車｜時間校正中</h2><section class="list" id="pending"></section>
 <p class="sub" style="margin-top:20px">Beta規則：沒有可靠當日證據，不標E500等牽引機車；海線列車不會因經苗栗縣而列入苗栗站時間軸。</p>
 <script>
-const list=document.getElementById('list');
+const list=document.getElementById('list'),pending=document.getElementById('pending'),pendingTitle=document.getElementById('pendingTitle');
 const pad=n=>String(n).padStart(2,'0');
 function nowTW(){const p=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).formatToParts(new Date());const o=Object.fromEntries(p.map(x=>[x.type,x.value]));return {date:o.year+'-'+o.month+'-'+o.day,time:o.hour+':'+o.minute+':'+o.second};}
 function sortTime(x){if(x.kind==='通過不停')return x.estimate?.from||'99:99:99';return x.arrival||x.departure||'99:99:99';}
@@ -34,9 +34,12 @@ async function load(){
  try{
   const r=await fetch('./schedule-days.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('schedule');
   const d=await r.json(),n=nowTW(),stops=d.days?.[n.date]||[],passes=d.passThroughDays?.[n.date]||[];
-  const rows=[...stops,...passes].filter(x=>sortTime(x)>=n.time).sort((a,b)=>sortTime(a).localeCompare(sortTime(b)));
-  list.replaceChildren();if(!rows.length){const p=document.createElement('p');p.className='sub';p.textContent='目前沒有可顯示的後續列車。';list.append(p);}
-  else rows.forEach(x=>list.append(card(x)));
+  const timedPasses=passes.filter(x=>x.timeGrade!=='C'&&x.estimate);
+  const pendingPasses=passes.filter(x=>x.timeGrade==='C'||!x.estimate);
+  const rows=[...stops,...timedPasses].filter(x=>sortTime(x)>=n.time).sort((a,b)=>sortTime(a).localeCompare(sortTime(b)));
+  list.replaceChildren();if(!rows.length){const p=document.createElement('p');p.className='sub';p.textContent='目前沒有可顯示的後續列車。';list.append(p);} else rows.forEach(x=>list.append(card(x)));
+  pending.replaceChildren();pendingTitle.hidden=!pendingPasses.length;
+  for(const x of pendingPasses){const a=card(x);a.querySelector('.time').textContent='待校正';a.querySelector('.kind').textContent='通過不停';pending.append(a);}
  }catch(e){list.innerHTML='<p class="notice">Beta每日資料尚未產生或載入失敗；正式時刻表不受影響。</p>';}
 }
 document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('on'));b.classList.add('on');const f=b.dataset.f;document.querySelectorAll('.train').forEach(x=>x.hidden=f!=='all'&&!x.dataset.kind.split(' ').includes(f));});
