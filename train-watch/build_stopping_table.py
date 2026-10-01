@@ -34,7 +34,7 @@ def render(rows, service_date):
             return html.escape(value) if value is not None else '—'
         note = {'苗栗始發': '看出站；本站為起點', '苗栗終到': '看進站；無本車次續行發車', '中途停靠': '可看進站及發車'}[r['kind']]
         color = {'苗栗始發': 'origin', '苗栗終到': 'terminal', '中途停靠': 'stop'}[r['kind']]
-        body.append('<tr data-direction="{direction}" data-kind="{kind}" data-time="{sortTime}" data-departure="{departure}" data-arrival="{arrival}" data-train="{train}"><td>{direction}</td><td><b>{train}</b><small>{type}</small></td><td>{arrival}</td><td>{departure}</td><td class="delay">未取得<small>預估時間待更新</small></td><td><span class="badge {color}">{kind}</span><small>{note}</small></td></tr>'.format(
+        body.append('<tr data-direction="{direction}" data-kind="{kind}" data-time="{sortTime}" data-departure="{departure}" data-arrival="{arrival}" data-train="{train}"><td>{direction}</td><td><b>{train}</b><small>{type}</small></td><td>{arrival}</td><td>{departure}</td><td class="delay">未取得<small>預估時間待更新</small></td><td><span class="badge {color}">{kind}</span><small>{note}</small><small class="state"></small></td></tr>'.format(
             **{k: cell(v) for k, v in r.items()}, color=color, note=note))
     template = '''<!doctype html>
 <html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -46,7 +46,7 @@ def render(rows, service_date):
 <h1>想看進站，還是看出發？</h1>
 <p><strong>__DATE__ 停靠苗栗站的列車</strong>｜共 __TOTAL__ 班</p>
 <p>按方向和停靠方式找車，先看清楚這一班從哪裡開始、在哪裡結束。</p>
-<div class="notice"><strong>表定時間，尚未套用即時誤點。</strong><br><span id="liveStatus">誤點資料尚未連線。</span><br>這是指定日期的時刻表；車站時間與園區拍攝點看到的時間可能不同。通過不停的列車另行製作。</div>
+<div class="notice"><strong>確認離站後隱藏；苗栗終到列車確認抵達後隱藏。</strong><br><span id="liveStatus">誤點資料尚未連線。</span><br>這是指定日期的時刻表；車站時間與園區拍攝點看到的時間可能不同。通過不停的列車另行製作。</div>
 <div id="expired" class="notice" hidden>這份時刻表日期與今天不同，請勿當作今天班次使用。</div>
 <section class="legend" aria-label="停靠方式說明">
 <div><span class="badge origin">苗栗始發</span><p>看出站；本站為起點</p><small>__ORIGIN__ 班，不顯示進站時間</small></div>
@@ -55,21 +55,30 @@ def render(rows, service_date):
 <section class="filters" aria-label="篩選列車">
 <label>方向<select id="direction"><option value="">全部方向</option>南下</option>北上</option></select></label>
 <label>停靠方式<select id="kind"><option value="">全部方式</option>苗栗始發</option>苗栗終到</option>中途停靠</option></select></label>
-<label>時段<select id="period"><option value="">接下來全部時段</option><option value="morning">上午 00:00–11:59</option><option value="afternoon">下午 12:00–17:59</option><option value="evening">晚上 18:00–23:59</option><option value="upcoming" selected>現在起的班次</option></select></label>
-<button id="now" type="button">看接下來的班次</button><button id="reset" type="button">重設</button></section>
+<label>時段<select id="period"><option value="">全部未完成時段</option><option value="morning">上午 00:00–11:59</option><option value="afternoon">下午 12:00–17:59</option><option value="evening">晚上 18:00–23:59</option><option value="upcoming" selected>尚未確認完成的班次</option></select></label>
+<button id="now" type="button">看尚未完成的班次</button><button id="reset" type="button">重設</button></section>
 <p class="count" id="count" aria-live="polite">顯示 __TOTAL__ 班</p>
 <div class="table-wrap"><table><caption style="text-align:left;padding:12px">苗栗站表定到站／發車時間（臺灣時間）</caption><thead><tr><th scope="col">方向</th><th scope="col">車次／車種</th><th scope="col">抵達</th><th scope="col">發車</th><th scope="col">誤點／預估</th><th scope="col">本站角色</th></tr></thead><tbody>__ROWS__</tbody></table><p id="empty" hidden>這個條件下沒有列車，請調整篩選。</p></div>
 <footer><p>資料來源：<a href="https://ods.railway.gov.tw/tra-ods-web/ods/download/dataResource/railway_schedule/JSON/list">臺鐵官方每日時刻表 __DATE__</a>。車種未細分的對號列車，不推定實際車型。</p><p>同一編組可能在終到後改車次折返；本表按各車次獨立標示，不推定編組接續。</p><p>等車空檔，來鐵路一村37號的 <a href="https://nara5.tw/">5號店</a> 坐坐。</p></footer>
 </main><script>
-let live=new Map();
+let live=new Map(),confirmedEvents=new Map();
 const date='__DATE__',trains=[...document.querySelectorAll('tbody tr')];
 const direction=document.getElementById('direction'),kind=document.getElementById('kind'),period=document.getElementById('period');
 function taipei(){const p=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).formatToParts(new Date());const v=Object.fromEntries(p.map(x=>[x.type,x.value]));return {date:v.year+'-'+v.month+'-'+v.day,time:v.hour+':'+v.minute+':'+v.second};}
-function filter(){const current=taipei(),same=current.date===date;document.getElementById('expired').hidden=same;document.getElementById('now').disabled=!same;period.querySelector('[value="upcoming"]').disabled=!same;if(!same&&period.value==='upcoming')period.value='';let count=0;for(const row of trains){const base=row.dataset.departure==='—'?row.dataset.arrival:row.dataset.departure;const minutes=live.get(row.dataset.train);const t=base,h=Number(t.slice(0,2));const sec=x=>x.split(':').reduce((a,b)=>a*60+Number(b),0);const effective=sec(base)+(minutes===undefined?0:minutes*60);let show=same&&effective>=sec(current.time)&&(!direction.value||row.dataset.direction===direction.value)&&(!kind.value||row.dataset.kind===kind.value);if(period.value==='morning')show=show&&h<12;if(period.value==='afternoon')show=show&&h>=12&&h<18;if(period.value==='evening')show=show&&h>=18;if(period.value==='upcoming')show=show&&effective>=sec(current.time);row.hidden=!show;if(show)count++;}document.getElementById('count').textContent='顯示 '+count+' 班';document.getElementById('empty').hidden=count!==0;}
+function visibility(kind,scheduled,now,delay,event){
+ const needed=kind==='苗栗終到'?'arrived':'departed';
+ if(event===needed)return {hidden:true,state:needed==='arrived'?'已抵達終點':'已離站'};
+ const sec=x=>x.split(':').reduce((a,b)=>a*60+Number(b),0);
+ const late=delay!==undefined&&delay>0;
+ const past=sec(scheduled)<=sec(now);
+ return {hidden:false,state:past?'狀態待確認'+(late?'・誤點 '+delay+' 分':''):late?'誤點 '+delay+' 分':'尚未到表定時間'};
+}
+function filter(){const current=taipei(),same=current.date===date;document.getElementById('expired').hidden=same;document.getElementById('now').disabled=!same;period.querySelector('[value="upcoming"]').disabled=!same;if(!same&&period.value==='upcoming')period.value='';let count=0;for(const row of trains){const base=row.dataset.departure==='—'?row.dataset.arrival:row.dataset.departure;const h=Number(base.slice(0,2));const status=visibility(row.dataset.kind,base,current.time,live.get(row.dataset.train),confirmedEvents.get(row.dataset.train));row.querySelector('.state').textContent=status.state;let show=same&&!status.hidden&&(!direction.value||row.dataset.direction===direction.value)&&(!kind.value||row.dataset.kind===kind.value);if(period.value==='morning')show=show&&h<12;if(period.value==='afternoon')show=show&&h>=12&&h<18;if(period.value==='evening')show=show&&h>=18;row.hidden=!show;if(show)count++;}document.getElementById('count').textContent='顯示 '+count+' 班（已確認離站／終到抵達的列車已隱藏）';document.getElementById('empty').hidden=count!==0;}
+
 for(const x of [direction,kind,period])x.addEventListener('change',filter);document.getElementById('now').addEventListener('click',()=>{period.value='upcoming';filter();});document.getElementById('reset').addEventListener('click',()=>{direction.value='';kind.value='';period.value='';filter();});filter();setInterval(filter,30000);
 async function refreshLive(){
-try{const res=await fetch('./train-watch-live.json',{cache:'no-store'});if(!res.ok)throw Error('unavailable');const data=await res.json();const age=(Date.now()-Date.parse(data.receivedAt))/1000;if(data.serviceDate!==date||!Number.isFinite(age)||age>180||age< -60||!Array.isArray(data.trains))throw Error('stale');live.clear();for(const r of data.trains){const a=(Date.now()-Date.parse(r.UpdateTime))/1000;if(Number.isFinite(a)&&a>=-60&&a<=180&&Number.isFinite(r.DelayTime)&&r.DelayTime>=0)live.set(String(r.TrainNo),r.DelayTime);}for(const row of trains){const d=live.get(row.dataset.train),cell=row.querySelector('.delay');cell.replaceChildren();cell.append(document.createTextNode(d===undefined?'未取得':d===0?'準點':'誤點 '+d+' 分'));const note=document.createElement('small');if(d!==undefined){const add=t=>{if(t==='—')return '—';let x=t.split(':').map(Number);let m=x[0]*60+x[1]+d;return String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0')+(x[2]?':'+String(x[2]).padStart(2,'0'):'');};note.textContent='預估到 '+add(row.dataset.arrival)+'／開 '+add(row.dataset.departure);}else note.textContent='預估時間待更新';cell.append(note);}document.getElementById('liveStatus').textContent='誤點資料更新：'+new Date(data.receivedAt).toLocaleTimeString('zh-TW',{timeZone:'Asia/Taipei'})+'；預估時間依誤點推算。';filter();}
-catch{live.clear();for(const row of trains){row.querySelector('.delay').textContent='未取得';}document.getElementById('liveStatus').textContent='誤點資料未取得或已過期；目前依表定時間篩選，已過表定時間的誤點列車可能未列出。';filter();}}
+try{const res=await fetch('./train-watch-live.json',{cache:'no-store'});if(!res.ok)throw Error('unavailable');const data=await res.json();const age=(Date.now()-Date.parse(data.receivedAt))/1000;if(data.serviceDate!==date||!Number.isFinite(age)||age>180||age< -60||!Array.isArray(data.trains))throw Error('stale');for(const e of data.stationEvents||[]){const at=Date.parse(e.occurredAt);if(e.StationID==='3160'&&e.verified===true&&['arrived','departed'].includes(e.event)&&Number.isFinite(at)&&at<=Date.now()&&new Date(at).toLocaleDateString('en-CA',{timeZone:'Asia/Taipei'})===date){const key=String(e.TrainNo);if(confirmedEvents.get(key)!=='departed')confirmedEvents.set(key,e.event);}}live.clear();for(const r of data.trains){const a=(Date.now()-Date.parse(r.UpdateTime))/1000;if(Number.isFinite(a)&&a>=-60&&a<=180&&Number.isFinite(r.DelayTime)&&r.DelayTime>=0)live.set(String(r.TrainNo),r.DelayTime);}for(const row of trains){const d=live.get(row.dataset.train),cell=row.querySelector('.delay');cell.replaceChildren();cell.append(document.createTextNode(d===undefined?'未取得':d===0?'準點':'誤點 '+d+' 分'));const note=document.createElement('small');if(d!==undefined){const add=t=>{if(t==='—')return '—';let x=t.split(':').map(Number);let m=x[0]*60+x[1]+d;return String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0')+(x[2]?':'+String(x[2]).padStart(2,'0'):'');};note.textContent='預估到 '+add(row.dataset.arrival)+'／開 '+add(row.dataset.departure);}else note.textContent='預估時間待更新';cell.append(note);}document.getElementById('liveStatus').textContent='誤點資料更新：'+new Date(data.receivedAt).toLocaleTimeString('zh-TW',{timeZone:'Asia/Taipei'})+'；預估時間依誤點推算。';filter();}
+catch{live.clear();for(const row of trains){row.querySelector('.delay').textContent='未取得';}document.getElementById('liveStatus').textContent='即時資料未取得或已過期；超過表定時間但尚未確認完成的列車會保留，標示狀態待確認。';filter();}}
 refreshLive();setInterval(refreshLive,60000);
 
 </script></body></html>'''
