@@ -1,48 +1,31 @@
 <!doctype html>
-<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><title>苗栗站看火車 Beta｜5號店</title>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>苗栗站看火車 Beta｜5號店</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:#f6f4ed;color:#263b35;font-family:system-ui,-apple-system,sans-serif}main{max-width:760px;margin:auto;padding:22px 16px 48px}a{color:#20594d}h1{font-size:30px;margin:8px 0}.sub{color:#68776f}.notice{background:#fff1d8;border-left:4px solid #b77a1d;padding:12px 14px;border-radius:8px;margin:16px 0}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.filters button{border:1px solid #cdd5cf;background:white;border-radius:999px;padding:8px 12px}.filters button.on{background:#263b35;color:white}.list{display:grid;gap:10px}.train{background:white;border:1px solid #dce2dd;border-radius:14px;padding:14px;display:grid;grid-template-columns:90px 1fr;gap:12px}.time{font-size:20px;font-weight:800;font-variant-numeric:tabular-nums}.kind{font-size:12px;font-weight:700;padding:3px 8px;border-radius:999px;display:inline-block}.official{background:#dcefe5;color:#245b40}.estimate{background:#fff0cf;color:#7b5411}.special{background:#fff5bd;color:#675000}.meta{font-size:14px;color:#66746c;margin-top:4px}.name{font-weight:800}.confidence{font-size:12px;color:#7b6a45;margin-top:6px}.traction{font-size:12px;color:#66746c}.beta{font-size:12px;letter-spacing:.08em;color:#8b6322;font-weight:800}@media(max-width:520px){.train{grid-template-columns:82px 1fr}.time{font-size:18px}h1{font-size:27px}}</style></head>
-<body><main><a href="../miaoli-trains.html">← 返回目前正式時刻表</a><p class="beta">BETA · 尚未公開</p><h1>苗栗站｜今天看什麼火車？</h1>
-<p class="sub">把停靠與過站不停放在同一條時間軸。這個版本只驗收呈現方式，預估通過時間不是臺鐵官方時刻。</p>
-<div class="notice"><b>時間怎麼看？</b><br>「官方停靠」＝臺鐵表定苗栗時間；「預估通過」＝依路線、班表與實測資料推估。拍不停靠列車請提早到拍攝位置。</div>
-<div class="filters"><button class="on" data-f="all">全部</button><button data-f="pass">只看過站不停</button><button data-f="special">特殊列車</button></div>
-<section class="list" id="list"><p class="sub">載入每日資料中…</p></section><h2 id="pendingTitle" hidden>今天還有這些過站列車｜時間校正中</h2><section class="list" id="pending"></section>
-<p class="sub" style="margin-top:20px">Beta規則：沒有可靠當日證據，不標E500等牽引機車；海線列車不會因經苗栗縣而列入苗栗站時間軸。</p>
+:root{font-family:system-ui,-apple-system,sans-serif;color:#263b35;background:#f6f4ed}*{box-sizing:border-box}body{margin:0}main{max-width:880px;margin:auto;padding:28px 20px 50px}a{color:#20594d}h1{font-size:clamp(26px,5vw,38px);margin:10px 0}h2{font-size:21px;margin:26px 0 12px}.sub,.meta{color:#586960;line-height:1.6}.beta{font-size:12px;letter-spacing:.12em;font-weight:800;color:#8b6322}.notice{background:#fff1d8;border-left:4px solid #b77a1d;padding:14px 16px;border-radius:8px;line-height:1.7}.controls,.filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:18px 0}button,select{font:inherit;border:1px solid #bbc8bf;background:white;border-radius:8px;padding:9px 12px;color:inherit}button{cursor:pointer}.filters button{border-radius:999px}button[aria-pressed=true]{background:#263b35;color:white}button:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #b77a1d;outline-offset:3px}.list{display:grid;gap:10px}.train{background:white;border:1px solid #dce2dd;border-radius:14px;padding:17px;display:grid;grid-template-columns:145px 1fr;gap:14px}.time{font-size:21px;font-weight:800;font-variant-numeric:tabular-nums}.kind{font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px;display:inline-block;margin:6px 4px 0 0}.official{background:#dcefe5;color:#245b40}.estimate{background:#fff0cf;color:#79500d}.pending{background:#eef0ee;color:#586960}.special{background:#fff5bd;color:#675000}.name{font-weight:800;font-size:17px}.confidence{font-size:13px;color:#79500d;line-height:1.6;margin-top:7px}.meta{font-size:14px;margin-top:4px}.status{font-size:13px;color:#586960;line-height:1.6}details{background:white;border:1px solid #dce2dd;padding:16px;border-radius:12px;margin:22px 0}summary{cursor:pointer;font-weight:700}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:14px;white-space:nowrap}th,td{text-align:left;padding:10px;border-bottom:1px solid #e4e9e5}th{background:#f2f5f2}[hidden]{display:none!important}@media(max-width:540px){main{padding:20px 14px}.train{grid-template-columns:1fr;gap:6px}.time{font-size:23px}.controls label{width:100%}}
+</style></head><body><main>
+<a href="https://nara5.tw/miaoli-trains.html">← 查看正式停靠時刻表</a><p class="beta">BETA · 預估通過時間試用版</p>
+<h1>苗栗站｜看火車時刻表</h1><p class="sub">停靠班次看官方表定時間；不停靠班次有足夠資料時，顯示預估通過區間。</p>
+<div class="notice"><b>預估通過仍待實測驗證</b><br>區間依當日班表推算，未套用即時誤點。資料不足的班次標示「時間待校正」。停靠、通過與臨時調度請以臺鐵資訊及現場狀況為準。</div>
+<div class="controls"><label for="day">查看日期</label><select id="day"></select><button id="scope" aria-pressed="false">只看接下來班次</button><button id="refresh">重新整理</button></div>
+<p id="status" class="status" role="status" aria-live="polite">載入每日班表中…</p>
+<div class="filters" role="group" aria-label="列車篩選"><button data-f="all" aria-pressed="true">全部</button><button data-f="pass" aria-pressed="false">過站不停</button><button data-f="special" aria-pressed="false">特殊列車</button></div>
+<section class="list" id="list" aria-label="有時間的班次"></section><h2 id="pendingTitle" hidden>過站不停｜時間待校正</h2><section class="list" id="pending" aria-label="時間待校正班次"></section>
+<details id="comparison"><summary>10／2 TransTaiwan比對紀錄</summary><p class="sub">由使用者提供當日APP分鐘讀值，是否包含誤點尚未確認。這是兩種預測的比較，不是實際通過紀錄；不套用到其他日期。</p><div class="table-wrap"><table><thead><tr><th>車次</th><th>模型中心</th><th>APP讀值</th><th>差距</th></tr></thead><tbody><tr><td>137</td><td>13:35</td><td>13:37</td><td>2分鐘</td></tr><tr><td>164</td><td>12:41:30</td><td>12:41</td><td>30秒</td></tr><tr><td>193</td><td>11:01</td><td>11:02</td><td>1分鐘</td></tr><tr><td>194</td><td>17:47:30</td><td>17:47</td><td>30秒</td></tr></tbody></table></div><p class="status">四筆分鐘讀值均在模型區間內；137次位於上界，分鐘顯示的秒數精度未知。</p></details>
+<p class="status">列車是否經苗栗站依官方停靠順序與路線核對。車型與牽引機車僅在有依據時標示。</p>
+<script id="embedded-data" type="application/json">null</script>
 <script>
-const list=document.getElementById('list'),pending=document.getElementById('pending'),pendingTitle=document.getElementById('pendingTitle');
-const pad=n=>String(n).padStart(2,'0');
-function nowTW(){const p=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).formatToParts(new Date());const o=Object.fromEntries(p.map(x=>[x.type,x.value]));return {date:o.year+'-'+o.month+'-'+o.day,time:o.hour+':'+o.minute+':'+o.second};}
-function sortTime(x){if(x.kind==='通過不停')return x.estimate?.from||'99:99:99';return x.arrival||x.departure||'99:99:99';}
-function card(x){
- const pass=x.kind==='通過不停',special=!!(x.special||x.externalReference?.special);
- const a=document.createElement('article');a.className='train';a.dataset.kind=(pass?'pass ':'')+(special?'special':'official');
- const left=document.createElement('div'),right=document.createElement('div');
- const time=document.createElement('div');time.className='time';
- if(pass&&x.estimate)time.textContent=x.estimate.from.slice(0,5)+'–'+x.estimate.to.slice(0,5);
- else time.textContent=(x.arrival||x.departure||'—').slice(0,5);
- left.append(time);
- const badge=document.createElement('span');badge.className='kind '+(pass?'estimate':'official');badge.textContent=pass?'預估通過':'官方停靠';left.append(badge);
- if(special){const b=document.createElement('span');b.className='kind special';b.textContent='特殊列車';left.append(document.createTextNode(' '),b);}
- const name=document.createElement('div');name.className='name';name.textContent=x.train+'次 · '+(x.vehicleType||x.type||x.serviceType||'車型未確認');right.append(name);
- const meta=document.createElement('div');meta.className='meta';meta.textContent=x.direction+'｜'+(pass?'苗栗不停靠':(x.arrival?'到 '+x.arrival.slice(0,5):'')+(x.departure?'／開 '+x.departure.slice(0,5):''));right.append(meta);
- const tr=document.createElement('div');tr.className='traction';tr.textContent='牽引機車：'+(x.traction||((x.vehicleType||'').startsWith('EMU')?'不適用（電聯車）':'未確認'));right.append(tr);
- const conf=document.createElement('div');conf.className='confidence';conf.textContent=pass?(x.confidence||'模型預估；尚待驗證'):'臺鐵官方苗栗站表定時間';right.append(conf);
- a.append(left,right);return a;
-}
-async function load(){
- try{
-  const r=await fetch('./schedule-days.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('schedule');
-  const d=await r.json(),n=nowTW(),stops=d.days?.[n.date]||[],passes=d.passThroughDays?.[n.date]||[];
-  const timedPasses=passes.filter(x=>x.timeGrade!=='C'&&x.estimate);
-  const pendingPasses=passes.filter(x=>x.timeGrade==='C'||!x.estimate);
-  const rows=[...stops,...timedPasses].filter(x=>sortTime(x)>=n.time).sort((a,b)=>sortTime(a).localeCompare(sortTime(b)));
-  list.replaceChildren();if(!rows.length){const p=document.createElement('p');p.className='sub';p.textContent='目前沒有可顯示的後續列車。';list.append(p);} else rows.forEach(x=>list.append(card(x)));
-  pending.replaceChildren();pendingTitle.hidden=!pendingPasses.length;
-  for(const x of pendingPasses){const a=card(x);a.querySelector('.time').textContent='待校正';a.querySelector('.kind').textContent='通過不停';pending.append(a);}
- }catch(e){list.innerHTML='<p class="notice">Beta每日資料尚未產生或載入失敗；正式時刻表不受影響。</p>';}
-}
-document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('on'));b.classList.add('on');const f=b.dataset.f;document.querySelectorAll('.train').forEach(x=>x.hidden=f!=='all'&&!x.dataset.kind.split(' ').includes(f));});
-load();
-</script>
-</main></body></html>
+const $=id=>document.getElementById(id);let data=null,filter='all',upcoming=false,selected=null,busy=false;
+function nowTW(){const parts=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).formatToParts(new Date());const o=Object.fromEntries(parts.map(p=>[p.type,p.value]));return {date:`${o.year}-${o.month}-${o.day}`,time:`${o.hour}:${o.minute}:${o.second}`};}
+function sec(t){const [h,m,s]=t.split(':').map(Number);return h*3600+m*60+s;}
+function minute(t,ceil=false){const n=(ceil?Math.ceil:Math.floor)(sec(t)/60)%1440;return String(Math.floor(n/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0');}
+function isSpecial(x){return !!(x.special||x.externalReference?.special);}
+function matches(x){return filter==='all'||(filter==='pass'?x.kind==='通過不停':isSpecial(x));}
+function sortTime(x){return x.kind==='通過不停'?(x.estimate?.center||x.estimate?.from||'99:99:99'):(x.arrival||x.departure||'99:99:99');}
+function endTime(x){return x.kind==='通過不停'?x.estimate?.to:(x.departure||x.arrival);}
+function text(tag,value,cls){const el=document.createElement(tag);el.textContent=value;if(cls)el.className=cls;return el;}
+function card(x){const pass=x.kind==='通過不停',e=x.estimate;const a=document.createElement('article');a.className='train';a.dataset.train=x.train;const left=document.createElement('div'),right=document.createElement('div');left.append(text('div',pass?(e?minute(e.from)+'–'+minute(e.to,true):'時間待校正'):(x.arrival||x.departure||'—').slice(0,5),'time'));left.append(text('span',pass?(e?'預估通過':'通過不停'):'官方停靠','kind '+(pass?(e?'estimate':'pending'):'official')));if(isSpecial(x))left.append(text('span','特殊列車','kind special'));right.append(text('div',x.train+'次 · '+(x.vehicleType||x.type||x.serviceType||'車型未確認'),'name'));right.append(text('div',x.direction+'｜'+(pass?'苗栗不停靠':(x.arrival?'到 '+x.arrival.slice(0,5):'')+(x.departure?'／開 '+x.departure.slice(0,5):'')),'meta'));if(pass){right.append(text('div',!e?'資料不足，暫不提供通過時間':e.basis==='field-calibrated'?'當日現場觀測校正':e.basis==='external-reference-window'?'外部APP參考｜尚待實測驗證':'模型預估｜尚待實測驗證','confidence'));if(x.appComparison?.date===selected)right.append(text('div','10／2 TransTaiwan '+x.appComparison.time+'｜當日比較紀錄','meta'));}if(x.traction)right.append(text('div','牽引機車：'+x.traction,'meta'));a.append(left,right);return a;}
+function render(){if(!data)return;const n=nowTW(),stops=data.days?.[selected],passes=data.passThroughDays?.[selected];$('list').replaceChildren();$('pending').replaceChildren();$('pendingTitle').hidden=true;const haveStops=Array.isArray(stops),havePasses=Array.isArray(passes);if(!haveStops&&!havePasses){$('status').textContent=selected+' 的班表尚未取得。';$('list').append(text('p','請重新整理或選擇已取得的日期。','notice'));return;}const timed=[...(stops||[]),...(passes||[]).filter(x=>x.estimate&&x.timeGrade!=='C')].filter(matches).filter(x=>!upcoming||selected!==n.date||endTime(x)>=n.time).sort((a,b)=>sortTime(a).localeCompare(sortTime(b)));const wait=(passes||[]).filter(x=>!x.estimate||x.timeGrade==='C').filter(matches);timed.forEach(x=>$('list').append(card(x)));if(!timed.length)$('list').append(text('p','這個篩選條件下沒有可顯示時間的班次。','sub'));wait.forEach(x=>$('pending').append(card({...x,estimate:null})));$('pendingTitle').hidden=!wait.length;$('status').textContent=selected+'｜'+timed.length+'班有時間 · '+wait.length+'班待校正'+(!havePasses?'｜過站資料尚未取得':'')+'｜資料更新 '+(data.updatedAt||'未記錄')+(selected!==n.date?'｜所選日期，非今天':'');}
+function adopt(d){if(!d||typeof d.days!=='object')throw Error('data');data=d;const today=nowTW().date;selected=selected||today;const dates=[...new Set([today,selected,...Object.keys(d.days||{}),...Object.keys(d.passThroughDays||{})])].sort();$('day').replaceChildren(...dates.map(day=>{const o=document.createElement('option');o.value=day;o.textContent=day+(day===today?'（今天）':'');return o;}));$('day').value=selected;render();}
+async function load(){if(busy)return;busy=true;$('refresh').disabled=true;try{const r=await fetch('./schedule-days.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('schedule');adopt(await r.json());}catch{if(!data){try{const embedded=JSON.parse($('embedded-data').textContent);if(!embedded)throw Error('empty');adopt(embedded);}catch{$('status').textContent='每日班表載入失敗，請重新整理。';}}else{$('status').textContent+='｜重新整理失敗，仍顯示先前快照';}}finally{busy=false;$('refresh').disabled=false;}}
+$('day').onchange=()=>{selected=$('day').value;render();};$('scope').onclick=()=>{upcoming=!upcoming;$('scope').setAttribute('aria-pressed',String(upcoming));render();};$('refresh').onclick=load;document.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{filter=b.dataset.f;document.querySelectorAll('[data-f]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));render();});load();setInterval(render,30000);setInterval(load,300000);
+</script></main></body></html>
