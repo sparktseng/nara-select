@@ -1,0 +1,46 @@
+name: Miaoli pass-through beta validation
+
+on:
+  pull_request:
+    paths:
+      - 'train-watch/build_pass_through_beta.py'
+      - 'train-watch/publish_timetable.py'
+      - 'train-watch/pass-through-beta.html'
+      - '.github/workflows/train-watch-pass-through-beta.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax check
+        run: |
+          python -m py_compile train-watch/build_pass_through_beta.py
+          python -m py_compile train-watch/publish_timetable.py
+      - name: Validate conservative model invariants
+        run: |
+          python - <<'PY'
+          import importlib.util, pathlib
+          p=pathlib.Path('train-watch/build_pass_through_beta.py')
+          spec=importlib.util.spec_from_file_location('beta',p)
+          m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+          assert m.CALIBRATION[('111','2026-10-01')]['observed']=='09:21:00'
+          assert m.CALIBRATION[('110','2026-10-01')]['observed']=='09:36:00'
+          assert m.SPECIAL_REFERENCE[('6725','2026-10-03')]['reference']=='12:39:00'
+          assert m.SPECIAL_REFERENCE[('6725','2026-10-03')]['official'] is False
+          e=m.special_estimate('6725','2026-10-03')
+          assert e['from']=='12:35:00' and e['to']=='12:41:00'
+          assert m.car_info({'CarClass':'110G'})['vehicleType']=='EMU3000'
+          assert m.car_info({'CarClass':'110G'})['traction'] is None
+          print('static invariants OK')
+          PY
+      - name: Safety note
+        run: echo "Validation only; this workflow does not deploy or modify main."
