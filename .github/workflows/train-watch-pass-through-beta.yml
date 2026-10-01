@@ -74,6 +74,8 @@ jobs:
           assert by3['6725']['estimate']['from']=='12:35:00'
           assert by3['6725']['estimate']['to']=='12:41:00'
           print('TRA ODS integration OK',len(d1),len(d3))
+          print('2026-10-01 PASS',[(r['train'],r['direction'],r['serviceType'],r['vehicleType']) for r in d1])
+          print('2026-10-03 PASS',[(r['train'],r['direction'],r['serviceType'],r['vehicleType']) for r in d3])
           PY
       - name: Safety note
         run: echo "Validation only; this workflow does not deploy or modify main."
