@@ -14,7 +14,7 @@ jobs:
       - name: Checkout reviewed preview code
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
-          ref: 3975c8eec572ba7eb4d62b430fb045c038d07ed2
+          ref: 059220d8163f585e26a7a059a83ccae985f78dd6
           persist-credentials: false
           sparse-checkout: train-watch
       - name: Load October 1 official timetable
