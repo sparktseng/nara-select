@@ -1,7 +1,16 @@
-name: Miaoli Train Watch - Connection Test
+name: Miaoli Train Watch - Sampling
 
 on:
   workflow_dispatch:
+    inputs:
+      samples:
+        description: 'TDX data requests: 1 = connection test; 30 = about 29 minutes, one per minute'
+        required: true
+        type: choice
+        default: '1'
+        options:
+          - '1'
+          - '30'
 
 permissions:
   contents: read
@@ -13,7 +22,7 @@ concurrency:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 35
     steps:
       - name: Checkout reviewed sampling program
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
@@ -23,12 +32,18 @@ jobs:
           sparse-checkout: train-watch
       - name: Check Python
         run: python3 --version
-      - name: Fetch one TDX snapshot
+      - name: Fetch bounded TDX snapshots
         env:
           TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
           TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
+          SAMPLE_COUNT: ${{ inputs.samples }}
           SAMPLE_OUTPUT: ${{ runner.temp }}/train-watch/connection-test.jsonl
-        run: python3 train-watch/collect.py --samples 1 --interval 60 --output "$SAMPLE_OUTPUT"
+        run: |
+          case "$SAMPLE_COUNT" in
+            1|30) ;;
+            *) echo "Unsupported sample count"; exit 1 ;;
+          esac
+          python3 train-watch/collect.py --samples "$SAMPLE_COUNT" --interval 60 --output "$SAMPLE_OUTPUT"
       - name: Save sample for review
         if: ${{ always() }}
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
