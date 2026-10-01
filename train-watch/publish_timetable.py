@@ -97,6 +97,6 @@ function renderPokemon(){
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--page',type=Path);p.add_argument('--data',type=Path,required=True);a=p.parse_args()
-    data=collect();a.data.parent.mkdir(parents=True,exist_ok=True);a.data.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')))
-    if a.page:a.page.write_text(public_page(data))
+    data=collect();a.data.parent.mkdir(parents=True,exist_ok=True);a.data.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
+    if a.page:a.page.write_text(public_page(data),encoding='utf-8')
     print('Updated',len(data['days']),'days; today',len(next(iter(data['days'].values()))),'station rows')
