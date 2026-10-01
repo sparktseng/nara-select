@@ -49,15 +49,13 @@ jobs:
           spec=importlib.util.spec_from_file_location('beta','train-watch/build_pass_through_beta.py')
           m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
           base='https://ods.railway.gov.tw'
-          index=urllib.request.urlopen(base+'/tra-ods-web/ods/download/dataResource/railway_schedule/JSON/list',timeout=30).read().decode('utf-8-sig')
-          links=dict((d,u) for u,d in re.findall(r'<a\\s+href="([^"]+)"[^>]*>\\s*(\\d{8})\\.json\\s*</a>',index,re.I|re.S))
+          resources={
+              '2026-10-01':'/tra-ods-web/ods/download/dataResource/exceptionDataResource/8ae4c981a0f2e7d601a0f3d4ceaf1c89',
+              '2026-10-03':'/tra-ods-web/ods/download/dataResource/exceptionDataResource/8ae4c981a0f2e7d601a0f3d4cf361c8b',
+          }
           def payload(day):
-              key=day.replace('-','')
-              assert key in links, f'ODS missing {day}; parsed={len(links)}'
-              url=links[key].replace('&amp;','&')
-              if not url.startswith('http'):
-                  url=base+(url if url.startswith('/') else '/'+url)
-              req=urllib.request.Request(url,headers={'User-Agent':'NaraSelect-BetaValidation/1.0'})
+              assert day in resources
+              req=urllib.request.Request(base+resources[day],headers={'User-Agent':'NaraSelect-BetaValidation/1.0'})
               return json.loads(urllib.request.urlopen(req,timeout=40).read().decode('utf-8-sig'))
           d1=m.beta_rows(payload('2026-10-01'),'2026-10-01')
           by1={r['train']:r for r in d1}
