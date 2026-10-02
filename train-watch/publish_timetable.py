@@ -70,7 +70,7 @@ function hydrate(data){
  trains=[...body.rows];document.getElementById('dayTitle').textContent=date+' 停靠苗栗站的列車';document.getElementById('dayTotal').textContent='共 '+rows.length+' 班';
  for(const [id,k,note] of [['ORIGIN','苗栗始發','，不顯示進站時間'],['TERMINAL','苗栗終到','，不顯示發車時間'],['STOP','中途停靠','']])document.getElementById('legend'+id).textContent=rows.filter(r=>r.kind===k).length+' 班'+note;
 }
-async function refreshSchedule(){try{const r=await fetch('https://raw.githubusercontent.com/sparktseng/nara-select/main/train-watch/schedule-days.json?v='+Math.floor(Date.now()/300000),{cache:'no-store'});if(!r.ok)throw Error('schedule');const d=await r.json();if(!Array.isArray(d.days?.[date])||!d.days[date].length)throw Error('missing_date');scheduleData.days=d.days;scheduleData.specialDays=d.specialDays||{};hydrate(scheduleData);filter();refreshLive();}catch{filter();}}
+async function refreshSchedule(){try{const r=await fetch('https://raw.githubusercontent.com/sparktseng/nara-select/main/train-watch/schedule-days.json?v='+Math.floor(Date.now()/300000),{cache:'no-store'});if(!r.ok)throw Error('schedule');const d=await r.json();if(!Array.isArray(d.days?.[date])||!d.days[date].length)throw Error('missing_date');if(Date.parse(d.updatedAt)<Date.parse(scheduleData.updatedAt))return;scheduleData.days=d.days;scheduleData.specialDays=d.specialDays||{};hydrate(scheduleData);filter();refreshLive();}catch{filter();}}
 '''
 
 POKEMON_JS=r'''

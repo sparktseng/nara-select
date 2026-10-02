@@ -38,5 +38,5 @@ renderSpecialWatch();refreshSpecialMonitor();setInterval(refreshSpecialMonitor,3
 def add_special_panel(page):
  page=page.replace('<section class="train-guide"',HTML+'<section class="train-guide"',1)
  page=page.replace('</style>',CSS+'</style>',1)
- page=page.replace('scheduleData.specialDays=d.specialDays||{};','scheduleData.specialDays=d.specialDays||{};scheduleData.observedSpecial=d.observedSpecial||[];scheduleData.updatedAt=d.updatedAt;')
+ page=page.replace('scheduleData.specialDays=d.specialDays||{};','scheduleData.specialDays=d.specialDays||{};scheduleData.observedSpecial=Array.isArray(d.observedSpecial)?d.observedSpecial:(scheduleData.observedSpecial||[]);scheduleData.updatedAt=d.updatedAt;')
  return page.replace('</script>',JS+'\n</script>',1)
