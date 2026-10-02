@@ -8,7 +8,7 @@ function specialServices(){
  for(const r of scheduleData.observedSpecial||[])if(r.verified===true)map.set(r.date+'|'+r.train,r);
  // Already verified Pokemon assignments remain the authority for their names.
  for(const [day,rows] of Object.entries(scheduleData.days||{}))for(const r of rows)if(r.special)map.set(day+'|'+r.train,{...r,date:day,label:r.special.label,source:r.special.source,verified:true,endTime:r.departure||r.arrival});
- for(const [day,rows] of Object.entries(scheduleData.specialDays||{}))for(const r of rows)map.set(day+'|'+r.train,{...(map.get(day+'|'+r.train)||{}),...r,date:day,verified:true,endTime:(map.get(day+'|'+r.train)||{}).endTime});
+ for(const [day,rows] of Object.entries(scheduleData.specialDays||{}))for(const r of rows)map.set(day+'|'+r.train,{...(map.get(day+'|'+r.train)||{}),...r,date:day,verified:true,nameConfirmed:true,endTime:(map.get(day+'|'+r.train)||{}).endTime});
  return [...map.values()];
 }
 function renderSpecialWatch(){
