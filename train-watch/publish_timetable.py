@@ -85,7 +85,7 @@ function renderPokemon(){
  for(const x of items.sort((a,b)=>a.day.localeCompare(b.day)||String(a.time||'').localeCompare(String(b.time||''))).slice(0,6)){
   const card=document.createElement('div');card.className='pokemon-card';const title=document.createElement('strong');title.textContent=x.day+' · '+x.r.direction+' '+x.r.train+'次';card.append(title);
   const label=document.createElement('span');label.className='pokemon-label';label.textContent=x.r.special?.label||x.r.label;card.append(label);
-  const note=document.createElement('p');note.textContent=x.time?'停靠苗栗｜到站 '+(x.r.arrival||'—')+'／發車 '+(x.r.departure||'—'):x.r.kind+(x.r.expectedPassTime?'｜預計 '+x.r.expectedPassTime+' 通過苗栗站（營運主管提供，非臺鐵公告）':'｜通過時間未公布');card.append(note);
+  const note=document.createElement('p');note.textContent=x.time?'停靠苗栗｜到站 '+(x.r.arrival||'—')+'／發車 '+(x.r.departure||'—'):x.r.kind+(x.r.expectedPassTime?'｜預計 '+x.r.expectedPassTime+' 通過苗栗站（參考 TransTaiwan App，非臺鐵公告）':'｜通過時間未公布');card.append(note);
   if(!x.time){const extra=document.createElement('small');extra.textContent=x.r.note;card.append(extra);}box.append(card);
  }
  if(!items.length){const p=document.createElement('p');p.textContent='目前已取得的日期內沒有後續已核實班次，請查看官方公告。';box.append(p);}
