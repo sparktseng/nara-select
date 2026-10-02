@@ -17,4 +17,11 @@ class SpecialServicesTest(unittest.TestCase):
  def test_name_only_from_official_note(self):self.assertEqual(self.scan(self.train(note='環島之星觀光列車'))[0]['label'],'環島之星')
  def test_reverse_bracket_is_northbound(self):
   t=self.train();t['TimeInfos'][0]['Station']='3300';t['TimeInfos'][1]['Station']='1080';self.assertEqual(self.scan(t)[0]['direction'],'北上')
+ def test_sparsely_stopping_charter_crosses_miaoli(self):
+  t=self.train(code='1134',note='民國115年10月3日行駛。',stops=[dict(Station='1040',Order='1',ARRTime='06:22:00',DEPTime='06:22:00'),dict(Station='1070',Order='2',ARRTime='06:30:00',DEPTime='06:33:00'),dict(Station='3430',Order='3',ARRTime='09:20:00',DEPTime='09:20:00')]);t['Train']='6501'
+  r=self.scan(t)[0];self.assertEqual(r['train'],'6501');self.assertEqual(r['bracket']['beforeStation'],'鶯歌');self.assertEqual(r['bracket']['afterStation'],'二水');self.assertEqual(r['expectedPassTime'],'07:55')
+ def test_dated_trans_taiwan_reference_time(self):
+  t=self.train(code='1134');t['Train']='6501';r=self.scan(t)[0]
+  self.assertEqual(r['expectedPassTime'],'07:55');self.assertIn('TransTaiwan',r['expectedPassSource'])
+  self.assertNotIn('expectedPassTime',special_services(dict(TrainInfos=[t]),'2026-10-04','https://official.example')[0])
 if __name__=='__main__':unittest.main()
