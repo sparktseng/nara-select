@@ -5,10 +5,9 @@ from pathlib import Path
 from urllib.request import Request,urlopen
 from zoneinfo import ZoneInfo
 from build_stopping_table import station_rows,render
-from pokemon_services import mark_rows,charter_rows,PDF
+from pokemon_services import mark_rows,charter_rows
 from train_guide import add_train_guide
 from special_services import special_services
-from special_panel import add_special_panel
 BASE='https://ods.railway.gov.tw'
 INDEX=BASE+'/tra-ods-web/ods/download/dataResource/railway_schedule/JSON/list'
 def read(url):
@@ -47,54 +46,47 @@ def public_page(data):
         page=page.replace('<small>'+old+'</small>','<small id="legend'+key+'"></small>',1)
     page=page.replace('這份時刻表日期與今天不同，請勿當作今天班次使用。','今天的時刻表暫未取得，請查看臺鐵官方資訊；不會顯示其他日期的班次。')
     page=page.replace('臺鐵官方每日時刻表 '+today,'臺鐵官方每日時刻表')
+    page=page.replace('<option value="中途停靠">中途停靠</option>','<option value="中途停靠">中途停靠</option><option value="通過不停">特殊列車・通過不停</option>',1)
+    page=page.replace('苗栗站表定到站／發車時間（臺灣時間）','苗栗站列車時間（臺灣時間）')
+    page=page.replace('本表只列停靠苗栗站的列車；','停靠與已核實經過苗栗站的列車；')
     page=page.replace("const date='"+today+"',trains=[...document.querySelectorAll('tbody tr')];","let date=taipei().date,trains=[];\nconst scheduleData="+json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')+";\n"+HYDRATE)
     page=page.replace('const current=taipei(),same=current.date===date;','const current=taipei();if(current.date!==date){date=current.date;live.clear();confirmedEvents.clear();hydrate(scheduleData);}const same=current.date===date&&trains.length>0;')
     page=page.replace('});filter();setInterval(filter,15000);','});hydrate(scheduleData);filter();setInterval(filter,15000);\nrefreshSchedule();setInterval(refreshSchedule,300000);')
-    page=page.replace('</style>', '.pokemon-row{background:#fff8cf}.pokemon-row td:first-child{border-left:4px solid #e53935}.pokemon-label{display:inline-flex;align-items:center;gap:6px;max-width:100%;background:#ffde3b;color:#283c73;border:1px solid #e4ba18;padding:3px 7px;border-radius:8px;margin-top:5px;font-size:12px;font-weight:750;white-space:normal;line-height:1.45}.pokemon-label::before,.pokemon-panel h2::before{content:"";display:inline-block;flex:0 0 16px;width:16px;height:16px;border:2px solid #27313b;border-radius:50%;background:radial-gradient(circle at center,#fff 0 2px,#27313b 2px 4px,transparent 4px),linear-gradient(to bottom,#ef4141 0 43%,#27313b 43% 57%,#fff 57%);vertical-align:middle}.pokemon-row td:nth-child(2) .pokemon-label{display:flex;width:fit-content;max-width:120px}.pokemon-panel{background:#fffbea;border:1px solid #edcf50;border-top:4px solid #e53935;border-radius:12px;padding:16px;margin:20px 0}.pokemon-panel h2{margin:0 0 8px;font-size:22px;color:#283c73}.pokemon-panel h2::before{width:22px;height:22px;margin-right:8px}.pokemon-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin:12px 0}.pokemon-card{padding:12px;background:#fff;border-radius:8px;border:1px solid #edcf50}.pokemon-card strong{display:block;color:#283c73}.pokemon-panel small{white-space:normal}</style>')
-    page=page.replace('<section class="legend"', '<section class="pokemon-panel" aria-labelledby="pokemon-title"><h2 id="pokemon-title">寶可夢列車，下一班在哪一天？</h2><p id="pokemon-today" aria-live="polite"></p><div id="pokemon-upcoming" class="pokemon-cards"></div><small>依臺鐵公告的彩繪編組運用標示，可能因檢修或調度更換車輛。日期未公告時不推定為寶可夢列車。</small><small><a href="'+PDF+'" target="_blank" rel="noopener">查看臺鐵官方彩繪列車運用表</a></small></section><section class="legend"',1)
-    page=page.replace("document.getElementById('empty').hidden=count!==0;}","document.getElementById('empty').hidden=count!==0;renderPokemon();}")
-    page=page.replace('通過不停的列車另行製作。','寶可夢專列通過不停的資訊另列於下方，未公布的通過時間不推算。')
-    page=page.replace('</script>', POKEMON_JS+'\n</script>')
-    return add_special_panel(add_train_guide(page))
+    page=page.replace("const status=visibility(row.dataset.kind,base,current.time,live.get(row.dataset.train),confirmedEvents.get(row.dataset.train));row.querySelector('.state').textContent=status.state;","const status=row.dataset.special==='1'?{hidden:row.dataset.passTime!=='?'&&row.dataset.passTime<current.time,state:''}:visibility(row.dataset.kind,base,current.time,live.get(row.dataset.train),confirmedEvents.get(row.dataset.train));if(row.querySelector('.state'))row.querySelector('.state').textContent=status.state;")
+    page=page.replace("const d=live.get(row.dataset.train),cell=row.querySelector('.delay');","if(row.dataset.special==='1')continue;const d=live.get(row.dataset.train),cell=row.querySelector('.delay');")
+    page=page.replace("row.querySelector('.delay').textContent='未取得';","if(row.dataset.special!=='1')row.querySelector('.delay').textContent='未取得';")
+    page=page.replace('</style>', '.pokemon-row{background:#fff8cf}.pokemon-row td:first-child{border-left:4px solid #e53935}.pokemon-label{display:block;width:fit-content;max-width:160px;background:#ffde3b;color:#283c73;border:1px solid #e4ba18;padding:3px 7px;border-radius:8px;margin-top:5px;font-size:12px;font-weight:750;white-space:normal;line-height:1.45}.special-row{background:#edf5f7}.special-row td:first-child{border-left:4px solid #287b8b}.special-label{display:block;width:fit-content;max-width:160px;background:#d1e9ed;color:#164957;padding:3px 7px;border-radius:8px;margin-top:5px;font-size:12px;font-weight:750;white-space:normal;line-height:1.45}.special-row .delay{font-weight:700;color:#164957}.special-row .delay small{font-weight:400}@media(max-width:680px){.table-wrap table{min-width:610px}}</style>')
+    page=page.replace('通過不停的列車另行製作。','已核實的特殊列車也標在時刻表；未公布的通過時間不推算。')
+    return add_train_guide(page)
 HYDRATE=r'''
+function confirmedSpecialRows(day){
+ const map=new Map();
+ for(const r of scheduleData.observedSpecial||[])if(r.date===day&&r.verified===true&&r.kind==='通過不停')map.set(String(r.train),r);
+ for(const r of scheduleData.specialDays?.[day]||[])if(r.kind==='通過不停')map.set(String(r.train),{...(map.get(String(r.train))||{}),...r});
+ return [...map.values()].filter(r=>r.direction&&r.train).map(r=>({...r,kind:'通過不停',type:r.label||'特殊列車',passTime:r.expectedPassTime?(r.expectedPassTime.length===5?r.expectedPassTime+':00':r.expectedPassTime):null}));
+}
 function hydrate(data){
- const rows=data.days?.[date]||[],body=document.querySelector('tbody');body.replaceChildren();
+ const stops=data.days?.[date]||[],specials=confirmedSpecialRows(date).filter(r=>!stops.some(s=>String(s.train)===String(r.train)));
+ const rows=[...stops,...specials].sort((a,b)=>(a.passTime||a.sortTime||a.arrival||a.departure||'99:99').localeCompare(b.passTime||b.sortTime||b.arrival||b.departure||'99:99')||String(a.train).localeCompare(String(b.train))),body=document.querySelector('tbody');body.replaceChildren();
  for(const r of rows){const row=document.createElement('tr');row.hidden=true;Object.assign(row.dataset,{direction:r.direction,kind:r.kind,train:r.train,arrival:r.arrival||'—',departure:r.departure||'—'});
  const values=[r.direction,r.train,r.arrival||'—',r.departure||'—','未取得',r.kind];
  for(const value of values){const td=document.createElement('td');td.textContent=value;row.append(td);}
  const type=document.createElement('small');type.textContent=r.type;row.cells[1].append(type);row.cells[4].className='delay';
+ if(r.kind==='通過不停'){
+  row.dataset.special='1';row.dataset.passTime=r.passTime||'?';row.className=r.special?.label?.includes('寶可夢')?'pokemon-row':'special-row';
+  const label=document.createElement('span');label.className=row.className==='pokemon-row'?'pokemon-label':'special-label';label.textContent=r.special?.label||r.label||'特殊列車';row.cells[1].append(label);
+  row.cells[4].textContent=r.passTime?'參考通過 '+r.passTime.slice(0,5):'通過時間待確認';
+  const source=document.createElement('small');source.textContent=r.passTime?'參考 TransTaiwan App，非臺鐵公告':'不推算時間';row.cells[4].append(source);
+  const badge=document.createElement('span');badge.className='badge stop';badge.textContent='通過不停';row.cells[5].replaceChildren(badge);body.append(row);continue;
+ }
  if(r.special){row.className='pokemon-row';const label=document.createElement('span');label.className='pokemon-label';label.textContent=r.special.label;row.cells[1].append(label);}
  const badge=document.createElement('span');badge.className='badge '+({'苗栗始發':'origin','苗栗終到':'terminal','中途停靠':'stop'}[r.kind]);badge.textContent=r.kind;row.cells[5].replaceChildren(badge);
  const note=document.createElement('small');note.textContent={'苗栗始發':'看出站；本站為起點','苗栗終到':'看進站；無本車次續行發車','中途停靠':'可看進站及發車'}[r.kind];row.cells[5].append(note);
  const state=document.createElement('small');state.className='state';row.cells[5].append(state);body.append(row);}
- trains=[...body.rows];document.getElementById('dayTitle').textContent=date+' 停靠苗栗站的列車';document.getElementById('dayTotal').textContent='共 '+rows.length+' 班';
+ trains=[...body.rows];document.getElementById('dayTitle').textContent=date+' 苗栗站列車';document.getElementById('dayTotal').textContent='停靠 '+stops.length+' 班・特殊通過 '+specials.length+' 班';
  for(const [id,k,note] of [['ORIGIN','苗栗始發','，不顯示進站時間'],['TERMINAL','苗栗終到','，不顯示發車時間'],['STOP','中途停靠','']])document.getElementById('legend'+id).textContent=rows.filter(r=>r.kind===k).length+' 班'+note;
 }
-async function refreshSchedule(){try{const r=await fetch('https://raw.githubusercontent.com/sparktseng/nara-select/main/train-watch/schedule-days.json?v='+Math.floor(Date.now()/300000),{cache:'no-store'});if(!r.ok)throw Error('schedule');const d=await r.json();if(!Array.isArray(d.days?.[date])||!d.days[date].length)throw Error('missing_date');if(Date.parse(d.updatedAt)<Date.parse(scheduleData.updatedAt))return;scheduleData.days=d.days;scheduleData.specialDays=d.specialDays||{};hydrate(scheduleData);filter();refreshLive();}catch{filter();}}
-'''
-
-POKEMON_JS=r'''
-function renderPokemon(){
- const current=taipei(),items=[];let totalToday=0;
- for(const day of Object.keys(scheduleData.days).sort()){
-  if(day<current.date)continue;
-  for(const r of scheduleData.days[day]){if(!r.special)continue;if(day===current.date)totalToday++;
-   const end=r.departure||r.arrival;
-   if(day===current.date&&visibility(r.kind,end,current.time,live.get(r.train),confirmedEvents.get(r.train)).hidden)continue;
-   items.push({day,r,time:r.arrival||r.departure});}
-  for(const r of scheduleData.specialDays?.[day]||[]){if(day===current.date){totalToday++;if(current.time>'13:23:00')continue;}items.push({day,r,time:null});}
- }
- const todayItems=items.filter(x=>x.day===current.date);
- document.getElementById('pokemon-today').textContent=todayItems.length?'今天還有 '+todayItems.length+' 班寶可夢列車資訊；停靠班次也在下方時刻表以黃色標示。':totalToday?'今天公告的寶可夢班次已過表定時段。':'今天沒有已核實經過苗栗站的寶可夢班次；下方列出接下來公告的日期。';
- const box=document.getElementById('pokemon-upcoming');box.replaceChildren();
- for(const x of items.sort((a,b)=>a.day.localeCompare(b.day)||String(a.time||'').localeCompare(String(b.time||''))).slice(0,6)){
-  const card=document.createElement('div');card.className='pokemon-card';const title=document.createElement('strong');title.textContent=x.day+' · '+x.r.direction+' '+x.r.train+'次';card.append(title);
-  const label=document.createElement('span');label.className='pokemon-label';label.textContent=x.r.special?.label||x.r.label;card.append(label);
-  const note=document.createElement('p');note.textContent=x.time?'停靠苗栗｜到站 '+(x.r.arrival||'—')+'／發車 '+(x.r.departure||'—'):x.r.kind+(x.r.expectedPassTime?'｜預計 '+x.r.expectedPassTime+' 通過苗栗站（參考 TransTaiwan App，非臺鐵公告）':'｜通過時間未公布');card.append(note);
-  if(!x.time){const extra=document.createElement('small');extra.textContent=x.r.note;card.append(extra);}box.append(card);
- }
- if(!items.length){const p=document.createElement('p');p.textContent='目前已取得的日期內沒有後續已核實班次，請查看官方公告。';box.append(p);}
-}
+async function refreshSchedule(){try{const r=await fetch('https://raw.githubusercontent.com/sparktseng/nara-select/main/train-watch/schedule-days.json?v='+Math.floor(Date.now()/300000),{cache:'no-store'});if(!r.ok)throw Error('schedule');const d=await r.json();if(!Array.isArray(d.days?.[date])||!d.days[date].length)throw Error('missing_date');if(Date.parse(d.updatedAt)<Date.parse(scheduleData.updatedAt))return;scheduleData.days=d.days;scheduleData.specialDays=d.specialDays||{};scheduleData.observedSpecial=Array.isArray(d.observedSpecial)?d.observedSpecial:[];scheduleData.updatedAt=d.updatedAt;hydrate(scheduleData);filter();refreshLive();}catch{filter();}}
 '''
 
 if __name__=='__main__':
