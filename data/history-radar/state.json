@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T02:12:48.913Z",
+  "updatedAt": "2026-10-02T02:19:08.222Z",
   "seenIds": [
     "70f9690ea1a30aecb8df4a54",
     "74ab318ef3ebc9ad80eefb8b",
@@ -124,7 +124,8 @@
     "9b9c25028e6bb46ea7540001",
     "60acbc2e578b0eb3b3934806",
     "bc67bea0ef2e6d8239a28cc1",
-    "bf1574053465a632b58c3dde"
+    "bf1574053465a632b58c3dde",
+    "0ab50a066edb8cb83a2f460e"
   ],
   "candidateCache": [
     {
@@ -3095,6 +3096,31 @@
       "warnings": [],
       "matchedKeywords": [],
       "id": "bf1574053465a632b58c3dde"
+    },
+    {
+      "sourceItemId": "commons:157818527",
+      "title": "A railway crossing Bagu Road, Sanyi, Miaoli (2).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:A_railway_crossing_Bagu_Road,_Sanyi,_Miaoli_(2).jpg",
+      "publishedAt": "2025-01-12T05:12:04Z",
+      "summary": "A railway crossing Bagu Road, Sanyi, Miaoli (2)；作者：Ralff Nestor Nacor；授權：CC BY-SA 4.0",
+      "publisher": "Wikimedia Commons",
+      "query": "Miaoli railway",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/A_railway_crossing_Bagu_Road%2C_Sanyi%2C_Miaoli_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "artist": "Ralff Nestor Nacor",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "0ab50a066edb8cb83a2f460e"
     }
   ]
 }

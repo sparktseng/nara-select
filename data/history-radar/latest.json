@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "run": {
-    "startedAt": "2026-10-01T02:12:15.434Z",
-    "finishedAt": "2026-10-01T02:12:48.913Z",
+    "startedAt": "2026-10-02T02:18:46.563Z",
+    "finishedAt": "2026-10-02T02:19:08.222Z",
     "timezone": "Asia/Taipei",
     "status": "完成",
-    "discovered": 103,
+    "discovered": 110,
     "newCandidates": 1,
-    "availableCandidates": 122
+    "availableCandidates": 123
   },
   "candidates": [
     {
@@ -2978,38 +2978,55 @@
       "warnings": [],
       "matchedKeywords": [],
       "id": "bf1574053465a632b58c3dde"
+    },
+    {
+      "sourceItemId": "commons:157818527",
+      "title": "A railway crossing Bagu Road, Sanyi, Miaoli (2).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:A_railway_crossing_Bagu_Road,_Sanyi,_Miaoli_(2).jpg",
+      "publishedAt": "2025-01-12T05:12:04Z",
+      "summary": "A railway crossing Bagu Road, Sanyi, Miaoli (2)；作者：Ralff Nestor Nacor；授權：CC BY-SA 4.0",
+      "publisher": "Wikimedia Commons",
+      "query": "Miaoli railway",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/A_railway_crossing_Bagu_Road%2C_Sanyi%2C_Miaoli_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "artist": "Ralff Nestor Nacor",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "0ab50a066edb8cb83a2f460e"
     }
   ],
   "linkChecks": [
     {
       "url": "https://memory.culture.tw/",
-      "checkedAt": "2026-10-01T02:12:17.676Z",
+      "checkedAt": "2026-10-02T02:18:52.883Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
       "error": "fetch failed",
-      "archivedSnapshot": {
-        "url": "https://web.archive.org/web/20260224162126/https://memory.culture.tw/",
-        "timestamp": "20260224162126",
-        "status": "200"
-      }
+      "archivedSnapshot": null
     },
     {
       "url": "https://www.ncl.edu.tw/",
-      "checkedAt": "2026-10-01T02:12:20.335Z",
+      "checkedAt": "2026-10-02T02:18:53.026Z",
       "ok": false,
       "httpStatus": 403,
       "robotsStatus": "未提供(302)",
       "error": null,
-      "archivedSnapshot": {
-        "url": "https://web.archive.org/web/20260929163931/https://www.ncl.edu.tw/",
-        "timestamp": "20260929163931",
-        "status": "200"
-      }
+      "archivedSnapshot": null
     },
     {
       "url": "https://data.gov.tw/",
-      "checkedAt": "2026-10-01T02:12:18.188Z",
+      "checkedAt": "2026-10-02T02:18:48.790Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3018,7 +3035,7 @@
     },
     {
       "url": "https://www.railway.gov.tw/",
-      "checkedAt": "2026-10-01T02:12:18.725Z",
+      "checkedAt": "2026-10-02T02:18:49.318Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3027,20 +3044,16 @@
     },
     {
       "url": "https://www.hakka.gov.tw/",
-      "checkedAt": "2026-10-01T02:12:19.002Z",
+      "checkedAt": "2026-10-02T02:18:58.805Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
       "error": "fetch failed",
-      "archivedSnapshot": {
-        "url": "https://web.archive.org/web/20220905062318/http://www.hakka.gov.tw/",
-        "timestamp": "20220905062318",
-        "status": "200"
-      }
+      "archivedSnapshot": null
     },
     {
       "url": "https://www.miaoli.gov.tw/",
-      "checkedAt": "2026-10-01T02:12:20.660Z",
+      "checkedAt": "2026-10-02T02:18:51.192Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3049,7 +3062,7 @@
     },
     {
       "url": "https://www.facebook.com/miaolirailwaymuseum/",
-      "checkedAt": "2026-10-01T02:12:18.784Z",
+      "checkedAt": "2026-10-02T02:18:51.227Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -3058,7 +3071,7 @@
     },
     {
       "url": "https://www.instagram.com/miaoli_railway_museum/",
-      "checkedAt": "2026-10-01T02:12:18.979Z",
+      "checkedAt": "2026-10-02T02:18:51.374Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
