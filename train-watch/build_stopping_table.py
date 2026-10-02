@@ -78,8 +78,8 @@ def render(rows, service_date, live_sample=None):
 <div><span class="badge terminal">苗栗終到</span><p>看進站；無本車次續行發車</p><small>__TERMINAL__ 班，不顯示發車時間</small></div>
 <div><span class="badge stop">中途停靠</span><p>可看進站及發車</p><small>__STOP__ 班</small></div></section>
 <section class="filters" aria-label="篩選列車">
-<label>方向<select id="direction"><option value="">全部方向</option>南下</option>北上</option></select></label>
-<label>停靠方式<select id="kind"><option value="">全部方式</option>苗栗始發</option>苗栗終到</option>中途停靠</option></select></label>
+<label>方向<select id="direction"><option value="">全部方向</option><option value="南下">南下</option><option value="北上">北上</option></select></label>
+<label>停靠方式<select id="kind"><option value="">全部方式</option><option value="苗栗始發">苗栗始發</option><option value="苗栗終到">苗栗終到</option><option value="中途停靠">中途停靠</option></select></label>
 <button id="reset" type="button">顯示全部方向</button></section>
 <p class="count" id="count" aria-live="polite">顯示 __TOTAL__ 班</p>
 <div class="table-wrap"><table><caption style="text-align:left;padding:12px">苗栗站表定到站／發車時間（臺灣時間）</caption><thead><tr><th scope="col">方向</th><th scope="col">車次／車種</th><th scope="col">抵達</th><th scope="col">發車</th><th scope="col">誤點／預估</th><th scope="col">本站角色</th></tr></thead><tbody>__ROWS__</tbody></table><p id="empty" hidden>目前沒有符合條件的後續列車。</p></div>
