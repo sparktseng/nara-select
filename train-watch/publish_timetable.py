@@ -6,6 +6,7 @@ from urllib.request import Request,urlopen
 from zoneinfo import ZoneInfo
 from build_stopping_table import station_rows,render
 from pokemon_services import mark_rows,charter_rows,PDF
+from train_guide import add_train_guide
 BASE='https://ods.railway.gov.tw'
 INDEX=BASE+'/tra-ods-web/ods/download/dataResource/railway_schedule/JSON/list'
 def read(url):
@@ -50,7 +51,7 @@ def public_page(data):
     page=page.replace("document.getElementById('empty').hidden=count!==0;}","document.getElementById('empty').hidden=count!==0;renderPokemon();}")
     page=page.replace('通過不停的列車另行製作。','寶可夢專列通過不停的資訊另列於下方，未公布的通過時間不推算。')
     page=page.replace('</script>', POKEMON_JS+'\n</script>')
-    return page
+    return add_train_guide(page)
 HYDRATE=r'''
 function hydrate(data){
  const rows=data.days?.[date]||[],body=document.querySelector('tbody');body.replaceChildren();
