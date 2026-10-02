@@ -1,0 +1,64 @@
+name: Monitor Miaoli special trains
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 23,9 * * *'
+  push:
+    paths:
+      - 'train-watch/monitor_special.py'
+      - 'train-watch/special_services.py'
+      - '.github/workflows/train-watch-special-monitor.yml'
+permissions:
+  contents: write
+concurrency:
+  group: miaoli-schedule-refresh
+  cancel-in-progress: false
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Test station and route safeguards
+        run: python3 -m unittest discover -s train-watch -p 'test_special_services.py'
+      - name: Refresh seven days of official station and special services
+        id: timetable
+        continue-on-error: true
+        run: python3 train-watch/publish_timetable.py --data train-watch/schedule-days.json
+      - name: Check public notices and tourism pages
+        id: sources
+        continue-on-error: true
+        run: python3 train-watch/monitor_special.py --output train-watch/special-monitor.json
+      - name: Record query status and review clues
+        if: always()
+        env:
+          TIMETABLE_RESULT: ${{ steps.timetable.outcome }}
+          SOURCE_RESULT: ${{ steps.sources.outcome }}
+        run: |
+          python3 - <<'PY'
+          import json,os
+          from pathlib import Path
+          p=Path('train-watch/special-monitor.json')
+          d=json.loads(p.read_text()) if p.exists() else {}
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
+              f.write('Official timetable: '+os.environ['TIMETABLE_RESULT']+'\n\nPublic sources: '+os.environ['SOURCE_RESULT']+'\n\n')
+              for s in d.get('pages',[]):
+                  f.write('- '+s['name']+': '+s['status']+'\n')
+              f.write('\nUnverified changes; do not publish as confirmed services:\n\n')
+              for c in d.get('candidates',[]):
+                  f.write('- '+c['title'].replace('\n',' ')+' — '+c['source']+'\n')
+          PY
+      - name: Save data without changing website code
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add train-watch/schedule-days.json
+          if test -f train-watch/special-monitor.json; then git add train-watch/special-monitor.json; fi
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Refresh verified special trains and public-source monitoring status'
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - name: Flag incomplete refresh
+        if: steps.timetable.outcome == 'failure' || steps.sources.outcome == 'failure'
+        run: exit 1

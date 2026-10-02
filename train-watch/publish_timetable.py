@@ -7,6 +7,8 @@ from zoneinfo import ZoneInfo
 from build_stopping_table import station_rows,render
 from pokemon_services import mark_rows,charter_rows,PDF
 from train_guide import add_train_guide
+from special_services import special_services
+from special_panel import add_special_panel
 BASE='https://ods.railway.gov.tw'
 INDEX=BASE+'/tra-ods-web/ods/download/dataResource/railway_schedule/JSON/list'
 def read(url):
@@ -18,10 +20,12 @@ def collect():
     today=datetime.now(ZoneInfo('Asia/Taipei')).date()
     days={}
     special_days={}
+    observed_special=[]
     for offset in range(7):
         day=today+timedelta(days=offset)
         try:
             payload=json.loads(read(BASE+links[day.strftime('%Y%m%d')]))
+            observed_special.extend(special_services(payload,day.isoformat(),BASE+links[day.strftime('%Y%m%d')]))
             rows=station_rows(payload)
             if not rows: raise ValueError('Empty station timetable')
             days[day.isoformat()]=mark_rows(rows,day.isoformat())
@@ -29,7 +33,7 @@ def collect():
         except Exception:
             if offset==0: raise
         time.sleep(.3)
-    return {'updatedAt':datetime.now(ZoneInfo('Asia/Taipei')).isoformat(),'days':days,'specialDays':special_days}
+    return {'updatedAt':datetime.now(ZoneInfo('Asia/Taipei')).isoformat(),'days':days,'specialDays':special_days,'observedSpecial':observed_special}
 def public_page(data):
     today=next(iter(data['days']))
     page=render(data['days'][today],today)
@@ -51,7 +55,7 @@ def public_page(data):
     page=page.replace("document.getElementById('empty').hidden=count!==0;}","document.getElementById('empty').hidden=count!==0;renderPokemon();}")
     page=page.replace('通過不停的列車另行製作。','寶可夢專列通過不停的資訊另列於下方，未公布的通過時間不推算。')
     page=page.replace('</script>', POKEMON_JS+'\n</script>')
-    return add_train_guide(page)
+    return add_special_panel(add_train_guide(page))
 HYDRATE=r'''
 function hydrate(data){
  const rows=data.days?.[date]||[],body=document.querySelector('tbody');body.replaceChildren();
