@@ -31,6 +31,6 @@ def charter_rows(payload,day):
         tc=next((s for s in stops if s['Station']=='3300'),None)
         if not tc or tc['ARRTime']!='13:23:00':continue
         return [{'train':'6725','direction':'南下','kind':'通過不停','label':'寶可夢主題專列',
-          'time':None,'note':'苗栗通過時間未公布；臺北10:37發車、臺中13:23抵達。車次依公開班次比對。',
+          'time':None,'expectedPassTime':'12:39' if day=='2026-10-03' else None,'note':'苗栗通過時間未公布；臺北10:37發車、臺中13:23抵達。車次依公開班次比對。',
           'source':'https://ods.railway.gov.tw/tra-ods-web/ods/download/dataResource/railway_schedule/JSON/list'}]
     return []
