@@ -1,0 +1,54 @@
+name: TRA Three Station Observations
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/three-station-monitor.yml]
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          sparse-checkout: train-watch
+      - name: Validate observer
+        working-directory: train-watch
+        run: python3 -m unittest test_station_monitor.py
+      - name: Verify immediate authenticated snapshot
+        env:
+          TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
+          TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
+        run: python3 train-watch/station_monitor.py --samples 1 --output "$RUNNER_TEMP/three-stations-start"
+      - name: Preserve immediate verification
+        if: ${{ always() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: tra-three-stations-start-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/three-stations-start
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Observe every minute for 65 samples
+        env:
+          TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
+          TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
+        run: python3 train-watch/station_monitor.py --samples 65 --interval 60 --output "$RUNNER_TEMP/three-stations"
+      - name: Preserve observations
+        if: ${{ always() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: tra-three-stations-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/three-stations
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Record collection health
+        if: ${{ always() }}
+        run: |
+          if [ -f "$RUNNER_TEMP/three-stations/summary.json" ]; then
+            cat "$RUNNER_TEMP/three-stations/summary.json" >> "$GITHUB_STEP_SUMMARY"
+          fi
