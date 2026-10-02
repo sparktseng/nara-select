@@ -20,7 +20,7 @@ def special_services(payload,day,source):
         if not row:
             from build_stopping_table import car_class_label
             label=names[0] if len(names)==1 else car_class_label(t['CarClass'])
-        base=dict(date=day,train=train,label=label,source=source,verified=True,nameConfirmed=len(names)==1,evidence='臺鐵每日班次資料',note=note)
+        base=dict(date=day,train=train,label=label,carClass=str(t.get('CarClass','')),source=source,verified=True,nameConfirmed=len(names)==1,evidence='臺鐵每日班次資料',note=note)
         if (day,train) in PASS_REFERENCES:
             base.update(expectedPassTime=PASS_REFERENCES[(day,train)],expectedPassSource='TransTaiwan App（使用者 2026-10-03 苗栗站截圖）')
         if row:
