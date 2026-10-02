@@ -71,9 +71,9 @@ function hydrate(data){
  for(const r of rows){const row=document.createElement('tr');row.hidden=true;Object.assign(row.dataset,{direction:r.direction,kind:r.kind,train:r.train,arrival:r.arrival||'—',departure:r.departure||'—'});
  const values=[r.direction,r.train,r.arrival||'—',r.departure||'—','未取得',r.kind];
  for(const value of values){const td=document.createElement('td');td.textContent=value;row.append(td);}
- const type=document.createElement('small');type.textContent=r.type;row.cells[1].append(type);row.cells[4].className='delay';
+ if(r.kind!=='通過不停'){const type=document.createElement('small');type.textContent=r.type;row.cells[1].append(type);}row.cells[4].className='delay';
  if(r.kind==='通過不停'){
-  row.dataset.special='1';row.dataset.passTime=r.passTime||'?';row.className=r.special?.label?.includes('寶可夢')?'pokemon-row':'special-row';
+  row.dataset.special='1';row.dataset.passTime=r.passTime||'?';row.className=(r.special?.label||r.label||'').includes('寶可夢')?'pokemon-row':'special-row';
   const label=document.createElement('span');label.className=row.className==='pokemon-row'?'pokemon-label':'special-label';label.textContent=r.special?.label||r.label||'特殊列車';row.cells[1].append(label);
   row.cells[4].textContent=r.passTime?'參考通過 '+r.passTime.slice(0,5):'通過時間待確認';
   const source=document.createElement('small');source.textContent=r.passTime?'參考 TransTaiwan App，非臺鐵公告':'不推算時間';row.cells[4].append(source);
