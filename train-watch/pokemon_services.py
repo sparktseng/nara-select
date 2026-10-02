@@ -26,7 +26,8 @@ def charter_rows(payload,day):
         if t['Train']!='6725' or t['Line']!='1' or t['LineDir']!='2':continue
         stops=sorted(t['TimeInfos'],key=lambda s:int(s['Order']))
         if any(s['Station']=='3160' for s in stops):continue
-        if stops[0]['Station']!='1000' or stops[0]['DEPTime']!='10:37:00':continue
+        taipei=next((s for s in stops if s['Station']=='1000'),None)
+        if not taipei or taipei['DEPTime']!='10:37:00':continue
         tc=next((s for s in stops if s['Station']=='3300'),None)
         if not tc or tc['ARRTime']!='13:23:00':continue
         return [{'train':'6725','direction':'南下','kind':'通過不停','label':'寶可夢主題專列',
