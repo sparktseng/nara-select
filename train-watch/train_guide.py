@@ -7,7 +7,7 @@ def photo(file, path, author, license='CC BY-SA 4.0'):
                 author=author, license=license)
 
 GUIDE = {
- 'emu700': dict(name='EMU700｜阿福號', hint='車頭下方突出', photos=[photo('EMU700 series.jpg','0/06/EMU700_series.jpg','Ffggss')], lines=[
+ 'emu700': dict(name='EMU700｜阿福號', hint='車頭下方突出', photos=[photo('Taiwan Railways Administration EMU700 near Shanjia Tunnel 20210820.jpg','1/19/Taiwan_Railways_Administration_EMU700_near_Shanjia_Tunnel_20210820.jpg','Subscriptshoe9')], lines=[
  '看看車頭下面，是不是有一塊向前突出的弧形造型？',
  '這款區間車叫「EMU700」，鐵道迷常叫它「阿福號」。',
  '通常八節車廂連在一起，陪大家上學、上班，也能出門玩。',
@@ -17,7 +17,7 @@ GUIDE = {
  '它叫「EMU800」，常被叫作「微笑號」；黃色車頭的版本，有些鐵道迷還叫它「小小兵」。',
  '寶可夢彩繪列車也是這個車型，只是換上了限定的新衣服！',
  '親子小任務：今天來的是藍色臉、黃色臉，還是穿著彩繪衣服的版本？']),
- 'emu900': dict(name='EMU900｜綠色腰帶', hint='銀色車身、綠色線條', photos=[photo('TRA EMU900.jpg','c/c0/TRA_EMU900.jpg','臺灣鐵路管理局','臺鐵開放資料授權')], lines=[
+ 'emu900': dict(name='EMU900｜綠色腰帶', hint='銀色車身、綠色線條', photos=[photo('TRA EMU900 at Shulin Marshalling Yard 04.jpg','b/b7/TRA_EMU900_at_Shulin_Marshalling_Yard_04.jpg','臺灣鐵路管理局','臺鐵開放資料授權')], lines=[
  '銀色車身、黑色車頭玻璃，再找找那條綠色的「腰帶」！',
  '它叫「EMU900」，曾被稱為「最美區間車」。',
  '通常十節車廂連在一起，是一列長長的通勤火車。',
