@@ -37,6 +37,12 @@ GUIDE = {
  'E500是電力機車，像力氣很大的領隊，負責帶著後面的客車前進。',
  '在推拉式自強號上，前後通常各有一台機車；看到「E5」開頭的編號，就找到E500家族了！',
  '親子小任務：如果整列火車後面還有一台車頭，跟前面的像不像？']),
+ 'e1000': dict(name='E1000｜備用的經典車頭', hint='圓潤流線車頭、橘白配色、E10開頭編號', photos=[dict(src='/assets/trains/e1000-pp.jpg',source='https://commons.wikimedia.org/wiki/File:E1000_推拉式自強號.jpg',author='Jason199567',license='CC BY-SA 4.0')], lines=[
+ '看看車頭，是不是和照片一樣，有著圓潤的流線外形與橘白配色？再找找「E10」開頭的編號。',
+ '這是E1000型電力機車，也是許多人記憶中的PP自強號車頭。過去列車前後各有一輛E1000，一端拉、一端推，帶著旅客往返臺灣各地。',
+ '如今一般PP自強號班次已由E500接棒，E1000轉為備用，依當日調度需要出勤。',
+ '如果今天遇見它，你很幸運！這位老朋友已經不是每天都能看到了，是可遇不可求的鐵道小驚喜。',
+ '親子小任務：看看它圓潤的鼻子，再和E500的照片比一比，兩種車頭哪裡不一樣？']),
  'emu3000': dict(name='自強3000｜EMU3000', hint='白色車身、黑色車窗', photos=[photo('EMU3000 Series EMU.jpg','1/16/EMU3000_Series_EMU.jpg','Samson Ng . D201@EAL')], lines=[
  '看到白色車身、黑色車窗了嗎？這是新一代的自強號！',
  '它的車型叫「EMU3000」，車頭線條俐落，車廂之間還有彩色線條。',
@@ -85,7 +91,7 @@ CSS = r'''
 
 JS = r'''
 let guideLocked=false,guideDate='',guideKeys='',guideItems=[];
-const guideLocal=['emu700','emu800_blue','emu800_yellow','emu900'],guideExpress=['e500','puyuma','emu3000'];
+const guideLocal=['emu700','emu800_blue','emu800_yellow','emu900'],guideExpress=['e500','e1000','puyuma','emu3000'];
 function guideElement(tag,text,cls){const e=document.createElement(tag);if(text)e.textContent=text;if(cls)e.className=cls;return e;}
 function guideModel(r){const label=r.type||r.label||'';if(r.special||label.includes('寶可夢'))return 'pokemon';if(label.includes('環島之星'))return 'formosa';if(label.includes('莒光')||['1110','1111','1112','1113','1114','1115'].includes(r.carClass))return 'juguang';if(label==='自強3000'||['110G','110H','110K','110M'].includes(r.carClass))return 'emu3000';if(label==='普悠瑪'||r.carClass==='1107')return 'puyuma';if(['1108','1109','110A'].includes(r.carClass))return 'e500';return null;}
 function guidePicture(p,alt){const img=document.createElement('img');img.src=p.src;img.alt=alt;img.loading='lazy';img.decoding='async';img.width=640;img.height=480;img.addEventListener('error',()=>{img.replaceWith(guideElement('span','照片暫時無法載入，可先依名稱與顏色選擇。','photo-unavailable'));},{once:true});return img;}
@@ -121,7 +127,7 @@ function guideCard(r,index){
   if(model==='e500')card.append(guideElement('p','通常由橘色E500車頭牽引，實際車輛可能調整。','guide-note'));
   const m=trainGuideData[model];if(m.photos.length){const fig=guideElement('div',null,'guide-representative');fig.append(guideVisual(m.photos[0],model,m.name+'外觀對照照片'),guideElement('small','外觀對照，非當次列車實拍'));card.append(fig);}
   guideCopy(copy,model);const intro=guideElement('details',null,'guide-intro');intro.open=true;intro.append(guideElement('summary','認識這班火車'),copy);card.append(intro);
-  const other=guideElement('details',null,'guide-alternatives');other.append(guideElement('summary','車型不同？看照片找找看'));guidePhotos(other,model==='pokemon'?[...guideLocal,...guideExpress]:[...guideExpress,'juguang','formosa'],id=>{guideLocked=true;guideCopy(copy,id,true);intro.open=true;renderTrainGuide();guideReveal(copy);});card.append(other);
+  const other=guideElement('details',null,'guide-alternatives');other.append(guideElement('summary',model==='e500'?'車頭不一樣？看照片找找看':'車型不同？看照片找找看'));guidePhotos(other,model==='e500'?['e1000','emu3000','puyuma','juguang','formosa']:model==='pokemon'?[...guideLocal,...guideExpress]:[...guideExpress,'juguang','formosa'],id=>{guideLocked=true;guideCopy(copy,id,true);intro.open=true;renderTrainGuide();guideReveal(copy);});card.append(other);
  }
  return card;
 }
