@@ -10,6 +10,9 @@ from pathlib import Path
 CAR_CLASS_LABELS = {
     '1101': '太魯閣', '1107': '普悠瑪',
     '110G': '自強3000', '110H': '自強3000',
+    # Current 110K/110M services match TRA's EMU3000 free-seat list;
+    # the older V1.5 ODS manual omits these newer codes.
+    '110K': '自強3000', '110M': '自強3000',
     '1104': '自強專列', '1105': '自強郵輪式列車', '1106': '商務專列',
     '1112': '莒光專列', '1113': '莒光郵輪式列車',
     '1120': '復興', '1121': '復興專列', '1122': '復興郵輪式列車',
