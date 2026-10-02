@@ -7,6 +7,27 @@ from datetime import date, datetime
 from zoneinfo import ZoneInfo
 from pathlib import Path
 
+CAR_CLASS_LABELS = {
+    '1101': '太魯閣', '1107': '普悠瑪',
+    '110G': '自強3000', '110H': '自強3000',
+    '1104': '自強專列', '1105': '自強郵輪式列車', '1106': '商務專列',
+    '1112': '莒光專列', '1113': '莒光郵輪式列車',
+    '1120': '復興', '1121': '復興專列', '1122': '復興郵輪式列車',
+    '1130': '電車專列', '1131': '區間車', '1132': '區間快',
+    '1133': '電車郵輪式列車', '1134': '兩鐵專列', '1135': '區間車',
+    '1140': '普快車', '1141': '柴快車',
+    '1150': '普通車專列', '1151': '普通車',
+    '1154': '柴客專列', '1155': '柴客郵輪式列車',
+}
+for code in ('1100', '1102', '1103', '1108', '1109', '110A', '110B', '110C', '110D', '110E', '110F'):
+    CAR_CLASS_LABELS[code] = '自強'
+for code in ('1110', '1111', '1114', '1115'):
+    CAR_CLASS_LABELS[code] = '莒光'
+
+def car_class_label(code):
+    # Use the official classification; do not infer the day's locomotive or set.
+    return CAR_CLASS_LABELS.get(str(code).upper(), '對號列車')
+
 
 def station_rows(payload):
     rows = []
@@ -19,9 +40,9 @@ def station_rows(payload):
             terminal = index == len(stops) - 1
             kind = '苗栗始發' if origin else '苗栗終到' if terminal else '中途停靠'
             car = train['CarClass']
-            label = {'1131': '區間車', '1132': '區間快', '110G': '自強3000'}.get(car, '對號列車')
+            label = car_class_label(car)
             rows.append(dict(train=train['Train'], direction='南下' if train['LineDir'] == '2' else '北上',
-                type=label, kind=kind, arrival=None if origin else stop['ARRTime'],
+                type=label, carClass=car, kind=kind, arrival=None if origin else stop['ARRTime'],
                 departure=None if terminal else stop['DEPTime'],
                 sortTime=stop['DEPTime'] if origin else stop['ARRTime']))
     return sorted(rows, key=lambda r: (r['sortTime'], r['train']))
@@ -36,7 +57,7 @@ def render(rows, service_date, live_sample=None):
         note = {'苗栗始發': '看出站；本站為起點', '苗栗終到': '看進站；無本車次續行發車', '中途停靠': '可看進站及發車'}[r['kind']]
         color = {'苗栗始發': 'origin', '苗栗終到': 'terminal', '中途停靠': 'stop'}[r['kind']]
         body.append('<tr hidden data-direction="{direction}" data-kind="{kind}" data-time="{sortTime}" data-departure="{departure}" data-arrival="{arrival}" data-train="{train}"><td>{direction}</td><td><b>{train}</b><small>{type}</small></td><td>{arrival}</td><td>{departure}</td><td class="delay">未取得<small>預估時間待更新</small></td><td><span class="badge {color}">{kind}</span><small>{note}</small><small class="state"></small></td></tr>'.format(
-            **{k: cell(v) for k, v in r.items()}, color=color, note=note))
+            **{k: cell(r[k]) for k in ('direction', 'kind', 'sortTime', 'departure', 'arrival', 'train', 'type')}, color=color, note=note))
     template = '''<!doctype html>
 <html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex"><title>苗栗站停靠列車時刻表｜5號店</title>
