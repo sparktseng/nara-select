@@ -11,7 +11,7 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 75
+    timeout-minutes: 210
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
@@ -33,17 +33,43 @@ jobs:
           path: ${{ runner.temp }}/three-stations-start
           if-no-files-found: warn
           retention-days: 90
-      - name: Observe every minute for 65 samples
+      - name: Observe every minute batch 1 of 3
         env:
           TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
           TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
         run: python3 train-watch/station_monitor.py --samples 65 --interval 60 --output "$RUNNER_TEMP/three-stations"
-      - name: Preserve observations
+      - name: Preserve observations batch 1
         if: ${{ always() }}
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: tra-three-stations-${{ github.run_id }}-${{ github.run_attempt }}
           path: ${{ runner.temp }}/three-stations
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Observe every minute batch 2 of 3
+        env:
+          TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
+          TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
+        run: python3 train-watch/station_monitor.py --samples 65 --interval 60 --output "$RUNNER_TEMP/three-stations-2"
+      - name: Preserve observations batch 2
+        if: ${{ always() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: tra-three-stations-${{ github.run_id }}-${{ github.run_attempt }}-part2
+          path: ${{ runner.temp }}/three-stations-2
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Observe every minute batch 3 of 3
+        env:
+          TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
+          TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
+        run: python3 train-watch/station_monitor.py --samples 65 --interval 60 --output "$RUNNER_TEMP/three-stations-3"
+      - name: Preserve observations batch 3
+        if: ${{ always() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: tra-three-stations-${{ github.run_id }}-${{ github.run_attempt }}-part3
+          path: ${{ runner.temp }}/three-stations-3
           if-no-files-found: warn
           retention-days: 90
       - name: Record collection health
