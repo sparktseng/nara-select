@@ -37,6 +37,18 @@ TDX TripLine=1山線、2海線；苗栗站3160位於山線。單憑苗栗縣或�
 - 路線WL的站序38豐富3150（136.6km）、39苗栗3160（140.6km）、40南勢3170（147.2km）。可作三站順序／里程核對，不作通過速度模型。
 - 此次動態四次查詢HTTP_429，屬頻率限制，不能視為沒車或API不支援。後續工具每次請求間隔20秒，429等待60秒且只重試一次；和既有監測共用配額，仍可能被限流。
 
+第二次驗證 run 37136392792、artifact 11277874015 已完成，八項查詢皆成功，原始JSON已下載讀回。
+report.receivedAt=00:19:04是整輪開始時間，非各筆事件收件時間；各端點後續依序查詢，不能將此值用於計算位置事件延遲。
+
+- positions共57筆，實際欄位為TrainNo、TrainTypeID／Code／Name、StationID／Name、TrainStationStatus、DelayTime、UpdateTime，無GPS、速度或ActualPassTime。
+- 本次位置包裝UpdateTime=00:20:04、SrcUpdateTime=00:20:00、UpdateInterval=30、SrcUpdateInterval=60。平台30秒刷新不代表源頭每30秒提供新位置，更不代表通過誤差30秒。
+- 苗栗1128、272均status=2、UpdateTime=00:18:49。單次午夜初始快照不得當成剛通過，運行日與新鮮度仍依既有監測規則判斷。
+- 三站StationLiveBoard皆HTTP成功但0筆（來源包裝更新00:21:00）。因此本輪只完成該端點連線及wrapper驗證；非空row欄位由官方OAS核對，尚未用營業時段非空回應驗證其實際列車覆蓋。不把0筆說成沒有列車。
+- dates／daily／specific6725／lines結果與首輪一致。
+- 三項離線稽核測試通過：跨artifact去重、來源過期／初始快照／未知新鮮度排除、同站狀態更新時間變化不得宣稱實測通過。
+
+可重現摘要保存為tdx-validation-evidence.json，含第二輪report與既有part10事件稽核；原始端點JSON由上述Actions artifact保留30天。
+
 另實際下載既有三站監測 run 37098352220 part10，artifact 11267148463（15:15–15:30，16次成功取樣）。
 
 - 165次苗栗位置事件15:16:30，15:17:10.915598收到，status=2、誤點4分、非初始、未過期。ODS與TDX每日停站序列均無苗栗，證明不停靠車也可能有本站動態事件。
