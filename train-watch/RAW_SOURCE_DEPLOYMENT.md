@@ -34,3 +34,17 @@ station_monitor.py成功快照會將完整公開TrainLiveBoards陣列寫入snaps
 https://github.com/sparktseng/nara-select/pull/14
 https://github.com/sparktseng/nara-select/actions/runs/37162105433
 https://docs.google.com/spreadsheets/d/1HpRApokc_UHJm0YQ6V_Xcue6GXIJxMfuuFzdZnEZ8I8/edit
+
+## 白天站別端點驗證補充（07:34–07:40）
+
+run37162186578、artifact11287709675已實際下載讀回。八項查詢中七項成功；10/4每日班表HTTP_429，不能說八項皆通過。ODS同日班表另外讀取成功，保留其秒數資料。
+
+- TrainLiveBoard回應154筆（來源07:37:00），當次三站位置紀錄皆0；沒有因此宣稱三站沒車。
+- 豐富StationLiveBoard：HTTP成功、0筆（來源07:38:00）。
+- 苗栗StationLiveBoard：HTTP成功、2筆；1107表定07:52到／開，2124表定07:42到、07:43開，誤點皆0。欄位為ScheduleArrivalTime／ScheduleDepartureTime，並非實際到離站。
+- 南勢StationLiveBoard：HTTP成功、0筆（來源07:39:00）。
+- ODS同日停站序列：2124表定南勢07:36:30到／07:37開、苗栗07:42到／07:43開、豐富07:46:30到／07:47開；1107表定豐富07:46:30到／07:47開、苗栗07:52終到。
+
+本輪白天小站看板也未提供可串鏈的事件。這是查詢窗口的證據，仍不推論永久沒有回報；尚未核對現場是否準時到發。三站模型維持資料不足，不發布提前通過秒數。完整來源捕捉已正式運行，不再僅保存篩選後紀錄。
+
+驗證來源：https://github.com/sparktseng/nara-select/actions/runs/37162186578
