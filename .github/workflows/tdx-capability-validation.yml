@@ -20,7 +20,7 @@ jobs:
         env:
           TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
           TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
-        run: python3 train-watch/tdx_validate.py --date 2026-10-03 --output "$RUNNER_TEMP/tdx-validation"
+        run: python3 train-watch/tdx_validate.py --date 2026-10-04 --output "$RUNNER_TEMP/tdx-validation"
       - name: Preserve responses without credentials
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
