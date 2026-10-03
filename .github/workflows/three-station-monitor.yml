@@ -2,79 +2,222 @@ name: TRA Three Station Observations
 on:
   push:
     branches: [main]
-    paths: [.github/workflows/three-station-monitor.yml]
+    paths:
+      - .github/workflows/three-station-monitor.yml
+      - train-watch/station_monitor.py
+      - train-watch/monitor_relay.py
   schedule:
     - cron: '17 * * * *'
   workflow_dispatch:
 permissions:
   contents: read
+  actions: write
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 210
+    timeout-minutes: 225
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
           sparse-checkout: train-watch
-      - name: Validate observer
+      - name: Validate observation and handoff rules
         working-directory: train-watch
-        run: python3 -m unittest test_station_monitor.py
+        run: python3 -m unittest test_station_monitor.py test_monitor_recovery.py
+      - name: Avoid redundant scheduled observers
+        id: gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 train-watch/monitor_relay.py guard
       - name: Verify immediate authenticated snapshot
+        if: steps.gate.outputs.collect == 'true'
         env:
           TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
           TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
         run: python3 train-watch/station_monitor.py --samples 1 --output "$RUNNER_TEMP/three-stations-start"
       - name: Preserve immediate verification
-        if: ${{ always() }}
+        if: always() && steps.gate.outputs.collect == 'true'
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: tra-three-stations-start-${{ github.run_id }}-${{ github.run_attempt }}
           path: ${{ runner.temp }}/three-stations-start
           if-no-files-found: warn
           retention-days: 90
-      - name: Observe every minute batch 1 of 3
+      - name: Verify successor dispatch after source changes
+        if: always() && steps.gate.outputs.collect == 'true' && github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 train-watch/monitor_relay.py handoff
+      - name: Observe minute samples segment 1 of 12
+        if: always() && steps.gate.outputs.collect == 'true'
         env:
           TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
           TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
-        run: python3 train-watch/station_monitor.py --samples 65 --interval 60 --output "$RUNNER_TEMP/three-stations"
-      - name: Preserve observations batch 1
-        if: ${{ always() }}
+        run: python3 train-watch/station_monitor.py --samples 16 --interval 60 --output "$RUNNER_TEMP/three-stations-1"
+      - name: Save segment 1
+        if: always() && steps.gate.outputs.collect == 'true'
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: tra-three-stations-${{ github.run_id }}-${{ github.run_attempt }}
-          path: ${{ runner.temp }}/three-stations
+          name: tra-three-stations-${{ github.run_id }}-${{ github.run_attempt }}-part01
+          path: ${{ runner.temp }}/three-stations-1
           if-no-files-found: warn
           retention-days: 90
-      - name: Observe every minute batch 2 of 3
+      - name: Observe minute samples segment 2 of 12
+        if: always() && steps.gate.outputs.collect == 'true'
         env:
           TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
           TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
-        run: python3 train-watch/station_monitor.py --samples 65 --interval 60 --output "$RUNNER_TEMP/three-stations-2"
-      - name: Preserve observations batch 2
-        if: ${{ always() }}
+        run: python3 train-watch/station_monitor.py --samples 16 --interval 60 --output "$RUNNER_TEMP/three-stations-2"
+      - name: Save segment 2
+        if: always() && steps.gate.outputs.collect == 'true'
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: tra-three-stations-${{ github.run_id }}-${{ github.run_attempt }}-part2
+          name: tra-three-stations-${{ github.run_id }}-${{ github.run_attempt }}-part02
           path: ${{ runner.temp }}/three-stations-2
           if-no-files-found: warn
           retention-days: 90
-      - name: Observe every minute batch 3 of 3
+      - name: Observe minute samples segment 3 of 12
+        if: always() && steps.gate.outputs.collect == 'true'
         env:
           TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
           TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
-        run: python3 train-watch/station_monitor.py --samples 65 --interval 60 --output "$RUNNER_TEMP/three-stations-3"
-      - name: Preserve observations batch 3
-        if: ${{ always() }}
+        run: python3 train-watch/station_monitor.py --samples 16 --interval 60 --output "$RUNNER_TEMP/three-stations-3"
+      - name: Save segment 3
+        if: always() && steps.gate.outputs.collect == 'true'
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: tra-three-stations-${{ github.run_id }}-${{ github.run_attempt }}-part3
+          name: tra-three-stations-${{ github.run_id }}-${{ github.run_attempt }}-part03
           path: ${{ runner.temp }}/three-stations-3
           if-no-files-found: warn
           retention-days: 90
-      - name: Record collection health
-        if: ${{ always() }}
-        run: |
-          if [ -f "$RUNNER_TEMP/three-stations/summary.json" ]; then
-            cat "$RUNNER_TEMP/three-stations/summary.json" >> "$GITHUB_STEP_SUMMARY"
-          fi
+      - name: Observe minute samples segment 4 of 12
+        if: always() && steps.gate.outputs.collect == 'true'
+        env:
+          TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
+          TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
+        run: python3 train-watch/station_monitor.py --samples 16 --interval 60 --output "$RUNNER_TEMP/three-stations-4"
+      - name: Save segment 4
+        if: always() && steps.gate.outputs.collect == 'true'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: tra-three-stations-${{ github.run_id }}-${{ github.run_attempt }}-part04
+          path: ${{ runner.temp }}/three-stations-4
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Observe minute samples segment 5 of 12
+        if: always() && steps.gate.outputs.collect == 'true'
+        env:
+          TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
+          TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
+        run: python3 train-watch/station_monitor.py --samples 16 --interval 60 --output "$RUNNER_TEMP/three-stations-5"
+      - name: Save segment 5
+        if: always() && steps.gate.outputs.collect == 'true'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: tra-three-stations-${{ github.run_id }}-${{ github.run_attempt }}-part05
+          path: ${{ runner.temp }}/three-stations-5
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Observe minute samples segment 6 of 12
+        if: always() && steps.gate.outputs.collect == 'true'
+        env:
+          TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
+          TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
+        run: python3 train-watch/station_monitor.py --samples 16 --interval 60 --output "$RUNNER_TEMP/three-stations-6"
+      - name: Save segment 6
+        if: always() && steps.gate.outputs.collect == 'true'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: tra-three-stations-${{ github.run_id }}-${{ github.run_attempt }}-part06
+          path: ${{ runner.temp }}/three-stations-6
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Observe minute samples segment 7 of 12
+        if: always() && steps.gate.outputs.collect == 'true'
+        env:
+          TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
+          TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
+        run: python3 train-watch/station_monitor.py --samples 16 --interval 60 --output "$RUNNER_TEMP/three-stations-7"
+      - name: Save segment 7
+        if: always() && steps.gate.outputs.collect == 'true'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: tra-three-stations-${{ github.run_id }}-${{ github.run_attempt }}-part07
+          path: ${{ runner.temp }}/three-stations-7
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Observe minute samples segment 8 of 12
+        if: always() && steps.gate.outputs.collect == 'true'
+        env:
+          TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
+          TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
+        run: python3 train-watch/station_monitor.py --samples 16 --interval 60 --output "$RUNNER_TEMP/three-stations-8"
+      - name: Save segment 8
+        if: always() && steps.gate.outputs.collect == 'true'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: tra-three-stations-${{ github.run_id }}-${{ github.run_attempt }}-part08
+          path: ${{ runner.temp }}/three-stations-8
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Start successor before current coverage ends
+        if: always() && steps.gate.outputs.collect == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 train-watch/monitor_relay.py handoff
+      - name: Observe minute samples segment 9 of 12
+        if: always() && steps.gate.outputs.collect == 'true'
+        env:
+          TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
+          TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
+        run: python3 train-watch/station_monitor.py --samples 16 --interval 60 --output "$RUNNER_TEMP/three-stations-9"
+      - name: Save segment 9
+        if: always() && steps.gate.outputs.collect == 'true'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: tra-three-stations-${{ github.run_id }}-${{ github.run_attempt }}-part09
+          path: ${{ runner.temp }}/three-stations-9
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Observe minute samples segment 10 of 12
+        if: always() && steps.gate.outputs.collect == 'true'
+        env:
+          TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
+          TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
+        run: python3 train-watch/station_monitor.py --samples 16 --interval 60 --output "$RUNNER_TEMP/three-stations-10"
+      - name: Save segment 10
+        if: always() && steps.gate.outputs.collect == 'true'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: tra-three-stations-${{ github.run_id }}-${{ github.run_attempt }}-part10
+          path: ${{ runner.temp }}/three-stations-10
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Observe minute samples segment 11 of 12
+        if: always() && steps.gate.outputs.collect == 'true'
+        env:
+          TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
+          TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
+        run: python3 train-watch/station_monitor.py --samples 16 --interval 60 --output "$RUNNER_TEMP/three-stations-11"
+      - name: Save segment 11
+        if: always() && steps.gate.outputs.collect == 'true'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: tra-three-stations-${{ github.run_id }}-${{ github.run_attempt }}-part11
+          path: ${{ runner.temp }}/three-stations-11
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Observe minute samples segment 12 of 12
+        if: always() && steps.gate.outputs.collect == 'true'
+        env:
+          TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
+          TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
+        run: python3 train-watch/station_monitor.py --samples 16 --interval 60 --output "$RUNNER_TEMP/three-stations-12"
+      - name: Save segment 12
+        if: always() && steps.gate.outputs.collect == 'true'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: tra-three-stations-${{ github.run_id }}-${{ github.run_attempt }}-part12
+          path: ${{ runner.temp }}/three-stations-12
+          if-no-files-found: warn
+          retention-days: 90

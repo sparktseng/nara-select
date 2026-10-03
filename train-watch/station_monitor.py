@@ -6,6 +6,7 @@ allowlist, passenger-only filter, or inferred locomotive identity is used.
 import argparse
 import csv
 import json
+import hashlib
 import os
 import re
 import time
@@ -25,7 +26,7 @@ LIVE = 'https://tdx.transportdata.tw/api/basic/v3/Rail/TRA/TrainLiveBoard?$forma
 FIELDS = ['eventDate', 'trainNo', 'station', 'stationId', 'type', 'typeId',
           'direction', 'classification', 'carClass', 'scheduleNote', 'sourceEventAt',
           'firstReceivedAt', 'status', 'delayMinutes', 'eventAgeSeconds',
-          'stale', 'initialSnapshot', 'timeMeaning']
+          'stale', 'initialSnapshot', 'timeMeaning', 'scheduleVersion']
 
 
 def now():
@@ -79,7 +80,11 @@ def classify(train, station, at, timetable):
     return {'classification': '表定停靠' if any(str(s.get('Station')) == station
             for s in stops) else '動態已回報・表定不停靠',
             'direction': {'2': '南下', '1': '北上'}.get(str(r.get('LineDir')), '未知'),
-            'carClass': r.get('CarClass', ''), 'scheduleNote': r.get('Note', '')}
+            'carClass': r.get('CarClass', ''), 'scheduleNote': r.get('Note', ''),
+            'scheduleVersion': hashlib.sha256(json.dumps(
+                {'Line': r.get('Line'), 'LineDir': r.get('LineDir'),
+                 'CarClass': r.get('CarClass'), 'TimeInfos': stops},
+                sort_keys=True, ensure_ascii=False).encode()).hexdigest()[:16]}
 
 
 def extract(payload, received_at, timetable, initial=False):
@@ -118,71 +123,114 @@ def extract(payload, received_at, timetable, initial=False):
     return result
 
 
+def save_checkpoint(output, events, summary):
+    for name, value in [('summary.json', summary), ('events.json', events)]:
+        tmp = output / (name + '.tmp')
+        tmp.write_text(json.dumps(value, ensure_ascii=False, indent=2))
+        tmp.replace(output / name)
+    with (output / 'events.csv').open('w', encoding='utf-8-sig', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=FIELDS)
+        writer.writeheader()
+        writer.writerows(events)
+
+
+def safe_error(error):
+    return 'HTTP_' + str(error.code) if isinstance(error, HTTPError) else type(error).__name__
+
+
 def run(samples, interval, output):
     credentials = [os.environ.get(k) for k in ('TDX_CLIENT_ID', 'TDX_CLIENT_SECRET')]
     if not all(credentials):
         raise RuntimeError('missing_backend_credentials')
     output.mkdir(parents=True, exist_ok=True)
     events, seen, timetable, loaded_day = [], set(), {}, None
-    token, expires = None, 0
+    token, expires, schedule_retry_at = None, 0, 0
     summary = {'startedAt': now(), 'stations': STATIONS, 'samples': 0,
-        'status': 'running', 'coverage': '所有API回報車次，含專列；未公開與輪詢間略過的事件無法保證捕捉',
+        'attemptedSamples': 0, 'failedSamples': 0, 'retryCount': 0,
+        'consecutiveFailures': 0, 'lastSuccessfulSampleAt': None,
+        'status': 'running', 'errors': [],
+        'coverage': '所有API回報車次，含專列；未公開與輪詢間略過的事件無法保證捕捉',
         'intervalSeconds': interval, 'physicalPassageTimeMeasured': False}
+    save_checkpoint(output, events, summary)
     try:
         with (output / 'snapshots.jsonl').open('x', encoding='utf-8') as raw:
             for sample in range(samples):
                 started = time.monotonic()
                 day = datetime.now(TZ).date()
                 schedule_error = None
-                if loaded_day != day:
+                if loaded_day != day and started >= schedule_retry_at:
                     try:
                         timetable = schedules(day)
+                        loaded_day = day
                     except Exception:
-                        timetable = {}
                         schedule_error = 'schedule_unavailable'
-                    loaded_day = day
-                if token is None or started >= expires:
-                    auth = fetch(TOKEN, {'Content-Type': 'application/x-www-form-urlencoded'},
-                        urlencode(dict(grant_type='client_credentials',
-                            client_id=credentials[0], client_secret=credentials[1])).encode())
-                    token = auth['access_token']
-                    lifetime = int(auth['expires_in'])
-                    if not isinstance(token, str) or lifetime <= 60:
-                        raise ValueError('invalid_auth_response')
-                    expires = time.monotonic() + lifetime - 30
-                payload = fetch(LIVE, {'Authorization': 'Bearer ' + token})
-                received = now()
-                records = extract(payload, received, timetable, sample == 0)
-                wrapper = {k: payload.get(k) for k in ('UpdateTime', 'SrcUpdateTime',
-                    'UpdateInterval', 'SrcUpdateInterval', 'Count')}
-                raw.write(json.dumps(dict(sample=sample + 1, receivedAt=received,
-                    metadata=wrapper, records=records, scheduleError=schedule_error),
-                    ensure_ascii=False) + '\n')
+                        schedule_retry_at = time.monotonic() + 600
+                if loaded_day != day:
+                    schedule_error = 'schedule_unavailable'
+                records, payload, received, error = None, None, None, None
+                for attempt in range(3):
+                    try:
+                        if token is None or time.monotonic() >= expires:
+                            auth = fetch(TOKEN, {'Content-Type': 'application/x-www-form-urlencoded'},
+                                urlencode(dict(grant_type='client_credentials',
+                                    client_id=credentials[0], client_secret=credentials[1])).encode())
+                            token = auth['access_token']
+                            lifetime = int(auth['expires_in'])
+                            if not isinstance(token, str) or lifetime <= 60:
+                                raise ValueError('invalid_auth_response')
+                            expires = time.monotonic() + lifetime - 30
+                        payload = fetch(LIVE, {'Authorization': 'Bearer ' + token})
+                        received = now()
+                        records = extract(payload, received, timetable, sample == 0)
+                        break
+                    except Exception as exc:
+                        error = safe_error(exc)
+                        if isinstance(exc, HTTPError) and exc.code in (401, 403):
+                            token = None
+                        if attempt < 2:
+                            summary['retryCount'] += 1
+                            time.sleep(2 ** (attempt + 1))
+                summary['attemptedSamples'] += 1
+                if records is None:
+                    summary['failedSamples'] += 1
+                    summary['consecutiveFailures'] += 1
+                    summary['errors'].append({'at': now(), 'sample': sample + 1, 'error': error})
+                    raw.write(json.dumps({'sample': sample + 1, 'receivedAt': now(),
+                        'error': error, 'records': [], 'querySucceeded': False}) + '\n')
+                    print(f"Sample {sample + 1}: query failed ({error}); saved and retrying next minute", flush=True)
+                else:
+                    summary['consecutiveFailures'] = 0
+                    summary['samples'] += 1
+                    summary['lastSuccessfulSampleAt'] = received
+                    wrapper = {k: payload.get(k) for k in ('UpdateTime', 'SrcUpdateTime',
+                        'UpdateInterval', 'SrcUpdateInterval', 'Count')}
+                    raw.write(json.dumps(dict(sample=sample + 1, receivedAt=received,
+                        metadata=wrapper, records=records, scheduleError=schedule_error,
+                        querySucceeded=True), ensure_ascii=False) + '\n')
+                    for r in records:
+                        key = (r['trainNo'], r['stationId'], r['sourceEventAt'], r['status'])
+                        if key not in seen:
+                            seen.add(key)
+                            events.append(r)
+                    print(f"Sample {sample + 1}: {len(records)} station records, {len(events)} unique events", flush=True)
                 raw.flush()
-                for r in records:
-                    key = (r['trainNo'], r['stationId'], r['sourceEventAt'], r['status'])
-                    if key not in seen:
-                        seen.add(key)
-                        events.append(r)
-                summary['samples'] += 1
-                print(f"Sample {sample + 1}: {len(records)} station records, {len(events)} unique events", flush=True)
+                summary.update(eventCount=len(events), checkpointAt=now())
+                save_checkpoint(output, events, summary)
+                if summary['consecutiveFailures'] >= 5:
+                    summary['status'] = 'failed'
+                    break
                 if sample + 1 < samples:
                     time.sleep(max(0, interval - (time.monotonic() - started)))
-        summary['status'] = 'success'
+        if summary['status'] != 'failed':
+            summary['status'] = 'partial' if summary['failedSamples'] else 'success'
     except Exception as error:
-        # Response bodies, credentials and auth responses must never be logged.
         summary['status'] = 'failed'
-        summary['error'] = 'HTTP_' + str(error.code) if isinstance(error, HTTPError) else type(error).__name__
+        summary['error'] = safe_error(error)
         print('Stopped:', summary['error'], flush=True)
     finally:
         summary.update(finishedAt=now(), eventCount=len(events))
-        (output / 'summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2))
-        (output / 'events.json').write_text(json.dumps(events, ensure_ascii=False, indent=2))
-        with (output / 'events.csv').open('w', encoding='utf-8-sig', newline='') as f:
-            writer = csv.DictWriter(f, fieldnames=FIELDS)
-            writer.writeheader()
-            writer.writerows(events)
-    return summary['status'] == 'success'
+        save_checkpoint(output, events, summary)
+    return summary['status'] in ('success', 'partial')
 
 
 if __name__ == '__main__':
@@ -199,3 +247,4 @@ if __name__ == '__main__':
         print(str(error))
         ok = False
     raise SystemExit(0 if ok else 1)
+
