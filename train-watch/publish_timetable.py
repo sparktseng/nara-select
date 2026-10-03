@@ -57,6 +57,7 @@ def public_page(data):
     page=page.replace("row.querySelector('.delay').textContent='未取得';","if(row.dataset.special!=='1')row.querySelector('.delay').textContent='未取得';")
     page=page.replace('</style>', '.pokemon-row{background:#fff8cf}.pokemon-row td:first-child{border-left:4px solid #e53935}.pokemon-label{display:block;width:fit-content;max-width:160px;background:#ffde3b;color:#283c73;border:1px solid #e4ba18;padding:3px 7px;border-radius:8px;margin-top:5px;font-size:12px;font-weight:750;white-space:normal;line-height:1.45}.special-row{background:#edf5f7}.special-row td:first-child{border-left:4px solid #287b8b}.special-label{display:block;width:fit-content;max-width:160px;background:#d1e9ed;color:#164957;padding:3px 7px;border-radius:8px;margin-top:5px;font-size:12px;font-weight:750;white-space:normal;line-height:1.45}.special-row .delay{font-weight:700;color:#164957}.special-row .delay small{font-weight:400}@media(max-width:680px){.table-wrap table{min-width:610px}}</style>')
     page=page.replace('通過不停的列車另行製作。','已核實的特殊列車也標在時刻表；未公布的通過時間不推算。')
+    page=page.replace('<section class="filters"', "<p style=\"font-size:14px;margin:14px 0\"><a href=\"/juguang-special-miaoli-20261107.html\">11／7 莒光號專列到苗栗｜讀 R100、R20 與這組老火車的故事 →</a></p>\n"+'<section class="filters"',1)
     return add_train_guide(page)
 HYDRATE=r'''
 function confirmedSpecialRows(day){
