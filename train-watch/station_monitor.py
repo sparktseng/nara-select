@@ -206,6 +206,9 @@ def run(samples, interval, output):
                         'UpdateInterval', 'SrcUpdateInterval', 'Count')}
                     raw.write(json.dumps(dict(sample=sample + 1, receivedAt=received,
                         metadata=wrapper, records=records, scheduleError=schedule_error,
+                        # Keep the original public response to distinguish source
+                        # omissions from extraction/backup omissions in later audits.
+                        sourceTrainLiveBoards=payload['TrainLiveBoards'],
                         querySucceeded=True), ensure_ascii=False) + '\n')
                     for r in records:
                         key = (r['trainNo'], r['stationId'], r['sourceEventAt'], r['status'])
@@ -247,4 +250,3 @@ if __name__ == '__main__':
         print(str(error))
         ok = False
     raise SystemExit(0 if ok else 1)
-
