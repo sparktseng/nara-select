@@ -3,6 +3,7 @@ import argparse
 import json
 import os
 import re
+import time
 from datetime import datetime
 from pathlib import Path
 from urllib.error import HTTPError
@@ -56,14 +57,20 @@ def run(day, output):
               'probes': {}, 'physicalPassageTimeMeasured': False}
     payloads = {}
     for name, (path, collection) in probes.items():
+        # Shares the account with the minute monitor; leave room for that work.
+        time.sleep(20)
         try:
-            p = fetch(BASE + path + '?' + urlencode({'$format': 'JSON', '$top': 10000}), headers)
+            url = BASE + path + '?' + urlencode({'$format': 'JSON', '$top': 10000})
+            try:
+                p = fetch(url, headers)
+            except HTTPError as e:
+                if e.code != 429:
+                    raise
+                time.sleep(60)
+                p = fetch(url, headers)
             if not isinstance(p, dict):
                 raise ValueError('invalid_wrapper')
             rows = p.get(collection) if collection else None
-            # Special timetable wrapper is documented separately; inspect rather than guess.
-            if name == 'specific6725':
-                rows = p.get('TrainTimetables', p.get('SpecificTrainTimetables'))
             if collection and not isinstance(rows, list):
                 raise ValueError('invalid_collection')
             payloads[name] = p
