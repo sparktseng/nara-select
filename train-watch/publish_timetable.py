@@ -58,7 +58,19 @@ def public_page(data):
     page=page.replace('</style>', '.pokemon-row{background:#fff8cf}.pokemon-row td:first-child{border-left:4px solid #e53935}.pokemon-label{display:block;width:fit-content;max-width:160px;background:#ffde3b;color:#283c73;border:1px solid #e4ba18;padding:3px 7px;border-radius:8px;margin-top:5px;font-size:12px;font-weight:750;white-space:normal;line-height:1.45}.special-row{background:#edf5f7}.special-row td:first-child{border-left:4px solid #287b8b}.special-label{display:block;width:fit-content;max-width:160px;background:#d1e9ed;color:#164957;padding:3px 7px;border-radius:8px;margin-top:5px;font-size:12px;font-weight:750;white-space:normal;line-height:1.45}.special-row .delay{font-weight:700;color:#164957}.special-row .delay small{font-weight:400}@media(max-width:680px){.table-wrap table{min-width:610px}}</style>')
     page=page.replace('通過不停的列車另行製作。','已核實的特殊列車也標在時刻表；未公布的通過時間不推算。')
     page=page.replace('<section class="filters"', "<p style=\"font-size:14px;margin:14px 0\"><a href=\"/juguang-special-miaoli-20261107.html\">11／7 莒光號專列到苗栗｜讀 R100、R20 與這組老火車的故事 →</a></p>\n"+'<section class="filters"',1)
-    return add_train_guide(page)
+    return add_train_guide(compact_controls(page))
+def compact_controls(page):
+    """Keep explanations accessible without delaying the next-train cards."""
+    notice = '<div class="notice timetable-status"><span>顯示接下來的班次</span><span id="liveStatus" role="status">目前依表定時間顯示</span></div>'
+    page = re.sub(r'<div class="notice"><strong>自動顯示現在之後的班次。</strong>.*?</div>', notice, page, count=1, flags=re.S)
+    help_panel = '<details class="timetable-help"><summary>時間與看車說明</summary><div class="timetable-help-body"><p><strong>苗栗始發</strong>：從苗栗站出發，看離站。</p><p><strong>苗栗終到</strong>：抵達苗栗站後結束本車次，看進站。</p><p><strong>中途停靠</strong>：可以看進站與離站。</p><p>本表列出停靠與已核實經過苗栗站的列車。車站時刻與園區拍攝點看到的時間可能不同；未公布的通過時間不推算。</p><p>即時誤點資料未取得或已過期時，依表定時間顯示。參考通過時間另註明來源。</p></div></details><span id="legendORIGIN" hidden></span><span id="legendTERMINAL" hidden></span><span id="legendSTOP" hidden></span>'
+    page = re.sub(r'<section class="legend".*?</section>', '', page, count=1, flags=re.S)
+    page = page.replace('顯示全部方向</button></section>', '重設</button></section>'+help_panel, 1)
+    page = page.replace('即時誤點資料未取得或已過期，目前依表定時間顯示接下來的列車。', '目前依表定時間顯示')
+    page = page.replace('誤點資料更新：', '誤點更新：').replace('；預估時間依誤點推算。', '（已套用誤點）')
+    css = '.timetable-status{display:flex;flex-wrap:wrap;gap:4px 16px;background:transparent;border:0;padding:0;margin:12px 0;font-size:14px;color:#56685e}.timetable-status #liveStatus{color:#795719}.filters{display:grid;grid-template-columns:minmax(0,180px) minmax(0,240px) auto;justify-content:start;gap:10px;margin:12px 0 4px}.filters label{min-width:0;font-size:14px}.filters select{width:100%;min-width:0;font-size:16px;min-height:44px;padding:8px}.filters #reset{font-size:14px;padding:8px 12px;min-height:44px}.timetable-help{font-size:14px;color:#56685e;margin:4px 0 10px}.timetable-help summary{cursor:pointer;padding:10px 0;min-height:44px;width:fit-content}.timetable-help-body{background:#fff;border:1px solid #d9ded5;border-radius:10px;padding:10px 14px;max-width:680px}.timetable-help-body p{margin:6px 0}.timetable-help summary:focus-visible,.filters :focus-visible{outline:3px solid #a77920;outline-offset:3px}@media(max-width:680px){.filters{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}.filters #reset{grid-column:1/-1;justify-self:end;min-height:36px;padding:4px 10px}.timetable-status{display:block;margin:10px 0}.timetable-status span{display:block}.timetable-help{margin-top:0}.timetable-help-body{padding:8px 12px}}'
+    return page.replace('</style>', css+'</style>', 1)
+
 HYDRATE=r'''
 function confirmedSpecialRows(day){
  const map=new Map();
