@@ -36,7 +36,8 @@ def collect():
 def public_page(data):
     today=next(iter(data['days']))
     page=render(data['days'][today],today)
-    page=page.replace('<meta name="robots" content="noindex">','<meta name="description" content="查看今天苗栗站南下、北上停靠列車，自動顯示接下來班次，標示苗栗始發與終到。5號店整理。"><link rel="canonical" href="https://nara5.tw/miaoli-trains.html">')
+    page=page.replace('<title>苗栗站停靠列車時刻表｜5號店</title>','<title>苗栗火車站時刻表｜今天下一班、北上南下與特殊列車</title>')
+    page=page.replace('<meta name="robots" content="noindex">','<meta name="description" content="查看今天苗栗火車站接下來的列車與北上、南下時刻，標示始發、終到及已核實的特殊列車。未公布的通過時間不推算。5號店整理。"><link rel="canonical" href="https://nara5.tw/miaoli-trains.html">')
     page=page.replace('苗栗站・山線｜時刻表第一版','苗栗站・山線｜停靠列車時刻表')
     page=page.replace('<strong>'+today+' 停靠苗栗站的列車</strong>｜共 '+str(len(data['days'][today]))+' 班','<strong id="dayTitle"></strong>｜<span id="dayTotal"></span>')
     page=page.replace('這是指定日期的時刻表；','本表只列停靠苗栗站的列車；')
