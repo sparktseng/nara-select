@@ -40,7 +40,7 @@ jobs:
           cancelled = []
           for run in runs['workflow_runs']:
               if run['id'] != current and run['status'] in active:
-                  api('/actions/runs/' + str(run['id']) + '/cancel', 'POST')
+                  api('/actions/runs/' + str(run['id']) + '/force-cancel', 'POST')
                   cancelled.append(run['id'])
           print('Cancelled observation runs:', cancelled)
           print('Scheduled monitoring removed; collection and handoff jobs disabled.')
