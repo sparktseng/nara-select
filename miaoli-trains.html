@@ -240,10 +240,10 @@ function renderNextPokemon(){
 }
 const visitorBaseGuideCard=guideCard;
 guideCard=function(r,index){
- const card=visitorBaseGuideCard(r,index),times=card.querySelector('.guide-times'),direction=guideElement('p',parkDirection(r),'guide-direction');times.after(direction);
+ const card=visitorBaseGuideCard(r,index);if(guideModel(r)==='e500')card.querySelector('.guide-note')?.remove();const times=card.querySelector('.guide-times'),direction=guideElement('p',parkDirection(r),'guide-direction');times.after(direction);
  const location=guideElement('p',parkLocation(r),'guide-location');direction.after(location);
  if(index===0){
-  const observation=guideElement('p','一起找找看：車頭是什麼顏色？它從苗栗站出發、在這裡停靠，還是在這裡結束旅程？','guide-observe');location.after(observation);
+  const observation=guideElement('p','一起找找看：車頭是什麼顏色？前後的車頭像不像？','guide-observe');location.after(observation);
   if(!guideModel(r)){
    const comparison=guideElement('div',null,'guide-compare');
    for(const id of ['emu800','emu900']){const m=trainGuideData[id],fig=guideElement('div');fig.append(guideVisual(m.photos[0],id,m.name+'外觀比較照片'),guideElement('small',m.hint));comparison.append(fig);}
@@ -251,7 +251,7 @@ guideCard=function(r,index){
   }
  }else{
   const extra=guideElement('details',null,'guide-extra');extra.append(guideElement('summary','看照片、認識這班火車'));
-  const keep=new Set([card.querySelector('small'),card.querySelector('h3'),times,direction,location,card.querySelector('.guide-event-status')]);
+  if(!['苗栗始發','苗栗終到'].includes(r.kind))location.remove();const keep=new Set([card.querySelector('small'),card.querySelector('h3'),times,direction,location,card.querySelector('.guide-event-status')]);
   for(const node of [...card.children])if(!keep.has(node))extra.append(node);card.append(extra);
  }
  return card;
