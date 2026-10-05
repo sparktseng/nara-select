@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T02:44:01.538Z",
+  "updatedAt": "2026-10-05T02:03:33.257Z",
   "seenIds": [
     "70f9690ea1a30aecb8df4a54",
     "74ab318ef3ebc9ad80eefb8b",
@@ -125,7 +125,8 @@
     "60acbc2e578b0eb3b3934806",
     "bc67bea0ef2e6d8239a28cc1",
     "bf1574053465a632b58c3dde",
-    "0ab50a066edb8cb83a2f460e"
+    "0ab50a066edb8cb83a2f460e",
+    "60e56e407d9f7d4f77130479"
   ],
   "candidateCache": [
     {
@@ -3121,6 +3122,28 @@
       "warnings": [],
       "matchedKeywords": [],
       "id": "0ab50a066edb8cb83a2f460e"
+    },
+    {
+      "sourceItemId": "CBMib0FVX3lxTE1fWXg0blBqRjdTTXItOVJBdG5Wc3AyZXlmejZKOHNHWW8zNWJZbDJ5dmJ4UVEtVzJENGdiUGdxTlNZckUzb0p3QXZlSE5FU2ZMRTZwX0RsYm52d1QyeERLbGd1WkhheGVZeHk2UkZxRQ",
+      "title": "苗栗鐵道文物展示館 - tenshain.pixnet.net",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1fWXg0blBqRjdTTXItOVJBdG5Wc3AyZXlmejZKOHNHWW8zNWJZbDJ5dmJ4UVEtVzJENGdiUGdxTlNZckUzb0p3QXZlSE5FU2ZMRTZwX0RsYm52d1QyeERLbGd1WkhheGVZeHk2UkZxRQ?oc=5",
+      "publishedAt": "Sat, 24 Jan 2026 12:24:41 GMT",
+      "summary": "苗栗鐵道文物展示館 &nbsp;&nbsp; tenshain.pixnet.net",
+      "publisher": "tenshain.pixnet.net",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)",
+      "sourceGroup": "地方部落格",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "60e56e407d9f7d4f77130479"
     }
   ]
 }

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "run": {
-    "startedAt": "2026-10-04T02:43:27.583Z",
-    "finishedAt": "2026-10-04T02:44:01.538Z",
+    "startedAt": "2026-10-05T02:03:16.504Z",
+    "finishedAt": "2026-10-05T02:03:33.257Z",
     "timezone": "Asia/Taipei",
     "status": "完成",
-    "discovered": 105,
-    "newCandidates": 0,
-    "availableCandidates": 123
+    "discovered": 104,
+    "newCandidates": 1,
+    "availableCandidates": 124
   },
   "candidates": [
     {
@@ -3003,34 +3003,60 @@
       "warnings": [],
       "matchedKeywords": [],
       "id": "0ab50a066edb8cb83a2f460e"
+    },
+    {
+      "sourceItemId": "CBMib0FVX3lxTE1fWXg0blBqRjdTTXItOVJBdG5Wc3AyZXlmejZKOHNHWW8zNWJZbDJ5dmJ4UVEtVzJENGdiUGdxTlNZckUzb0p3QXZlSE5FU2ZMRTZwX0RsYm52d1QyeERLbGd1WkhheGVZeHk2UkZxRQ",
+      "title": "苗栗鐵道文物展示館 - tenshain.pixnet.net",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1fWXg0blBqRjdTTXItOVJBdG5Wc3AyZXlmejZKOHNHWW8zNWJZbDJ5dmJ4UVEtVzJENGdiUGdxTlNZckUzb0p3QXZlSE5FU2ZMRTZwX0RsYm52d1QyeERLbGd1WkhheGVZeHk2UkZxRQ?oc=5",
+      "publishedAt": "Sat, 24 Jan 2026 12:24:41 GMT",
+      "summary": "苗栗鐵道文物展示館 &nbsp;&nbsp; tenshain.pixnet.net",
+      "publisher": "tenshain.pixnet.net",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)",
+      "sourceGroup": "地方部落格",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "60e56e407d9f7d4f77130479"
     }
   ],
   "linkChecks": [
     {
       "url": "https://memory.culture.tw/",
-      "checkedAt": "2026-10-04T02:43:33.829Z",
+      "checkedAt": "2026-10-05T02:03:18.562Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
       "error": "fetch failed",
-      "archivedSnapshot": null
+      "archivedSnapshot": {
+        "url": "https://web.archive.org/web/20260224162126/https://memory.culture.tw/",
+        "timestamp": "20260224162126",
+        "status": "200"
+      }
     },
     {
       "url": "https://www.ncl.edu.tw/",
-      "checkedAt": "2026-10-04T02:43:33.812Z",
+      "checkedAt": "2026-10-05T02:03:19.884Z",
       "ok": false,
       "httpStatus": 403,
       "robotsStatus": "未提供(302)",
       "error": null,
       "archivedSnapshot": {
-        "url": "https://web.archive.org/web/20261003105757/https://www.ncl.edu.tw/",
-        "timestamp": "20261003105757",
+        "url": "https://web.archive.org/web/20261004105802/https://www.ncl.edu.tw/",
+        "timestamp": "20261004105802",
         "status": "200"
       }
     },
     {
       "url": "https://data.gov.tw/",
-      "checkedAt": "2026-10-04T02:43:30.240Z",
+      "checkedAt": "2026-10-05T02:03:19.371Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3039,7 +3065,7 @@
     },
     {
       "url": "https://www.railway.gov.tw/",
-      "checkedAt": "2026-10-04T02:43:30.417Z",
+      "checkedAt": "2026-10-05T02:03:19.578Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3048,16 +3074,20 @@
     },
     {
       "url": "https://www.hakka.gov.tw/",
-      "checkedAt": "2026-10-04T02:43:37.141Z",
+      "checkedAt": "2026-10-05T02:03:21.440Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
       "error": "fetch failed",
-      "archivedSnapshot": null
+      "archivedSnapshot": {
+        "url": "https://web.archive.org/web/20220905062318/http://www.hakka.gov.tw/",
+        "timestamp": "20220905062318",
+        "status": "200"
+      }
     },
     {
       "url": "https://www.miaoli.gov.tw/",
-      "checkedAt": "2026-10-04T02:43:31.885Z",
+      "checkedAt": "2026-10-05T02:03:21.096Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3066,7 +3096,7 @@
     },
     {
       "url": "https://www.facebook.com/miaolirailwaymuseum/",
-      "checkedAt": "2026-10-04T02:43:31.981Z",
+      "checkedAt": "2026-10-05T02:03:19.617Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -3075,7 +3105,7 @@
     },
     {
       "url": "https://www.instagram.com/miaoli_railway_museum/",
-      "checkedAt": "2026-10-04T02:43:32.170Z",
+      "checkedAt": "2026-10-05T02:03:19.756Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
