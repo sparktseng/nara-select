@@ -110,7 +110,7 @@ function guideCandidates(){
  }
  return rows.sort((a,b)=>(sec(a.guideTime)+(a.passing?0:(live.get(a.train)||0)*60))-(sec(b.guideTime)+(b.passing?0:(live.get(b.train)||0)*60))||String(a.train).localeCompare(String(b.train))).slice(0,3);
 }
-function guideTimeSlot(label,time,detail){const slot=guideElement('div',null,'guide-time-slot');slot.append(guideElement('span',label,'guide-time-label'),guideElement('strong',time,'guide-clock'));if(detail)slot.append(guideElement('small',detail));return slot;}
+function guideTimeSlot(label,time,detail){const slot=guideElement('div',null,'guide-time-slot');slot.append(guideElement('span',label,'guide-time-label'),guideElement('strong',time,'guide-clock'+(time.split(':').length===3?' has-seconds':'')));if(detail)slot.append(guideElement('small',detail));return slot;}
 function guideCard(r,index){
  const model=guideModel(r),card=guideElement('article',null,'guide-card'+(model==='pokemon'?' pokemon':''));card.dataset.train=r.train;
  card.append(guideElement('small',visitWindow.value==='all'?'符合條件第'+(index+1)+'班':index===0?'下一班':'接下來第'+(index+1)+'班'),guideElement('h3',r.direction+' '+r.train+'次｜'+(r.special?.label||r.label||r.type||'專列')));
