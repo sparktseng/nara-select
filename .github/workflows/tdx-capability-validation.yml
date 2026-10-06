@@ -1,0 +1,31 @@
+name: TDX TRA capability validation
+on:
+  push:
+    branches: [tdx-capability-validation-20261004]
+    paths:
+      - train-watch/tdx_validate.py
+      - .github/workflows/tdx-capability-validation.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Read-only bounded eight-endpoint verification
+        env:
+          TDX_CLIENT_ID: ${{ secrets.TDX_CLIENT_ID }}
+          TDX_CLIENT_SECRET: ${{ secrets.TDX_CLIENT_SECRET }}
+        run: python3 train-watch/tdx_validate.py --date 2026-10-03 --output "$RUNNER_TEMP/tdx-validation"
+      - name: Preserve responses without credentials
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: tdx-capability-${{ github.run_id }}
+          path: ${{ runner.temp }}/tdx-validation
+          retention-days: 30
+          if-no-files-found: warn

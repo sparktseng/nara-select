@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T01:32:57.545Z",
+  "updatedAt": "2026-10-06T03:05:32.382Z",
   "seenIds": [
     "70f9690ea1a30aecb8df4a54",
     "74ab318ef3ebc9ad80eefb8b",
@@ -116,7 +116,17 @@
     "22267894eadbaf0c1b5d6a1f",
     "5279d4de8c2d643108819f08",
     "8b930c91d6e69414abc9ede2",
-    "907350fcd9b0962304b7de7c"
+    "907350fcd9b0962304b7de7c",
+    "23f00e0d58cddf03147e8bcd",
+    "6a10ce5771d4640f69e8717d",
+    "f54a1afccbd1d5b2b75b5353",
+    "5400171609323773a64d056a",
+    "9b9c25028e6bb46ea7540001",
+    "60acbc2e578b0eb3b3934806",
+    "bc67bea0ef2e6d8239a28cc1",
+    "bf1574053465a632b58c3dde",
+    "0ab50a066edb8cb83a2f460e",
+    "60e56e407d9f7d4f77130479"
   ],
   "candidateCache": [
     {
@@ -2955,6 +2965,185 @@
       "warnings": [],
       "matchedKeywords": [],
       "id": "907350fcd9b0962304b7de7c"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE4zY2FlR0N4MlBPY01xdmNfZ3RYcjhHSjdsdlB0T2pwVlpKaUdHZlpRdlpSd2NQZzVwZGlrOWwzV2xrREl5eHNhNHpMSG04UDh4Sk1FZlh3",
+      "title": "苗栗「鐵路一村」不拆了 規劃客家鐵道園區－民視新聞 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4zY2FlR0N4MlBPY01xdmNfZ3RYcjhHSjdsdlB0T2pwVlpKaUdHZlpRdlpSd2NQZzVwZGlrOWwzV2xrREl5eHNhNHpMSG04UDh4Sk1FZlh3?oc=5",
+      "publishedAt": "Fri, 09 Dec 2016 04:47:57 GMT",
+      "summary": "苗栗「鐵路一村」不拆了 規劃客家鐵道園區－民視新聞 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "鐵路一村"
+      ],
+      "id": "23f00e0d58cddf03147e8bcd"
+    },
+    {
+      "sourceItemId": "CBMia0FVX3lxTE9GbTE3bm5DZzlDN1Q4aXZsVlFqNGJwUnd4eGpnU2NiX1JRZjNZQzAyeUtlR2FGS3hRb04wNGNSRjZmLWlnaUNvUG94dndqQl9HREV3aGpod1JYZS1CLVpYTWtzWVozMllrZ2dv",
+      "title": "苗栗稅務局辦理「畫中尋稅-答題揭開畫中謎」租稅作品展覽即日起於苗栗火車頭園區展出 - miaoli.gov.tw",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9GbTE3bm5DZzlDN1Q4aXZsVlFqNGJwUnd4eGpnU2NiX1JRZjNZQzAyeUtlR2FGS3hRb04wNGNSRjZmLWlnaUNvUG94dndqQl9HREV3aGpod1JYZS1CLVpYTWtzWVozMllrZ2dv?oc=5",
+      "publishedAt": "Mon, 13 Oct 2025 11:20:45 GMT",
+      "summary": "苗栗稅務局辦理「畫中尋稅-答題揭開畫中謎」租稅作品展覽即日起於苗栗火車頭園區展出 &nbsp;&nbsp; miaoli.gov.tw",
+      "publisher": "miaoli.gov.tw",
+      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
+      "sourceGroup": "苗栗縣政府",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "6a10ce5771d4640f69e8717d"
+    },
+    {
+      "sourceItemId": "CBMiXEFVX3lxTFBzYV9SeU5nbTNJbXQ2WlVxaHFvamlsbTR6T3ZzQkg4M1VVb19OaEpLWUtyVkdzd2ZjMUhxUzY4YndzQnJVQkFNVkYzYjdVYkMxbFlkSTNQSXM5YVN60gFiQVVfeXFMT0x2S1NVelVqbGZhUWZBeWY0VTAxQW40NThmQ3pjc3hLSjRKNFpYaFBMMF93S1pCQ1FRUDdwaXVWTDhuaktuNVpyak50RlJ1RHd6M3JpRVM0M3F4bnRMaXduRkE",
+      "title": "「豐味苗栗」進駐苗栗火車頭園區 4日起消費滿600元送限量迴力車 - 經濟日報",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBzYV9SeU5nbTNJbXQ2WlVxaHFvamlsbTR6T3ZzQkg4M1VVb19OaEpLWUtyVkdzd2ZjMUhxUzY4YndzQnJVQkFNVkYzYjdVYkMxbFlkSTNQSXM5YVN60gFiQVVfeXFMT0x2S1NVelVqbGZhUWZBeWY0VTAxQW40NThmQ3pjc3hLSjRKNFpYaFBMMF93S1pCQ1FRUDdwaXVWTDhuaktuNVpyak50RlJ1RHd6M3JpRVM0M3F4bnRMaXduRkE?oc=5",
+      "publishedAt": "Thu, 02 Oct 2025 07:00:00 GMT",
+      "summary": "「豐味苗栗」進駐苗栗火車頭園區 4日起消費滿600元送限量迴力車 &nbsp;&nbsp; 經濟日報",
+      "publisher": "經濟日報",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:udn.com OR site:ltn.com.tw OR site:chinatimes.com OR site:ettoday.net)",
+      "sourceGroup": "地方新聞",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "5400171609323773a64d056a"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTFBBU2JncGkzWWtvZHltV3l6c1dPaGNIaDdSM3NMUHRSYzlpZ0VRdGk0dTNkUTNvdXdHY3pCMmhRclZmR2thUGg1dnVQY01BQWt5UVR3SUFB",
+      "title": "【從動工被罵到開幕後的】苗栗火車頭園區 開箱 親子景點 擼貓景點 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBBU2JncGkzWWtvZHltV3l6c1dPaGNIaDdSM3NMUHRSYzlpZ0VRdGk0dTNkUTNvdXdHY3pCMmhRclZmR2thUGg1dnVQY01BQWt5UVR3SUFB?oc=5",
+      "publishedAt": "Sat, 21 Jun 2025 05:05:51 GMT",
+      "summary": "【從動工被罵到開幕後的】苗栗火車頭園區 開箱 親子景點 擼貓景點 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "開幕"
+      ],
+      "id": "60acbc2e578b0eb3b3934806"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE9SMFA1Rk5oNnpCbjB3RF9NcUJWRDI2LWFoRXRCQ1FERDhwTU1KNC1XRGN6dDRkamRHTU02aWNXWjVvWldmN1lzcUdDckwyUlZtandvNTlB",
+      "title": "2009.7.8 台鐵 苗栗鐵道文物展示館 投煤練習場 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9SMFA1Rk5oNnpCbjB3RF9NcUJWRDI2LWFoRXRCQ1FERDhwTU1KNC1XRGN6dDRkamRHTU02aWNXWjVvWldmN1lzcUdDckwyUlZtandvNTlB?oc=5",
+      "publishedAt": "Sun, 28 Feb 2021 04:20:01 GMT",
+      "summary": "2009.7.8 台鐵 苗栗鐵道文物展示館 投煤練習場 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "bc67bea0ef2e6d8239a28cc1"
+    },
+    {
+      "sourceItemId": "commons:157818521",
+      "title": "A railway crossing Bagu Road, Sanyi, Miaoli (1).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:A_railway_crossing_Bagu_Road,_Sanyi,_Miaoli_(1).jpg",
+      "publishedAt": "2025-01-12T05:11:57Z",
+      "summary": "A railway crossing Bagu Road, Sanyi, Miaoli (1)；作者：Ralff Nestor Nacor；授權：CC BY-SA 4.0",
+      "publisher": "Wikimedia Commons",
+      "query": "Miaoli railway",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/A_railway_crossing_Bagu_Road%2C_Sanyi%2C_Miaoli_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "artist": "Ralff Nestor Nacor",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "bf1574053465a632b58c3dde"
+    },
+    {
+      "sourceItemId": "commons:157818527",
+      "title": "A railway crossing Bagu Road, Sanyi, Miaoli (2).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:A_railway_crossing_Bagu_Road,_Sanyi,_Miaoli_(2).jpg",
+      "publishedAt": "2025-01-12T05:12:04Z",
+      "summary": "A railway crossing Bagu Road, Sanyi, Miaoli (2)；作者：Ralff Nestor Nacor；授權：CC BY-SA 4.0",
+      "publisher": "Wikimedia Commons",
+      "query": "Miaoli railway",
+      "sourceGroup": "Wikimedia Commons",
+      "defaultCategory": "影像授權",
+      "lookbackDays": 36500,
+      "subjectHints": [
+        "園區"
+      ],
+      "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/A_railway_crossing_Bagu_Road%2C_Sanyi%2C_Miaoli_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "artist": "Ralff Nestor Nacor",
+      "subjects": [
+        "園區"
+      ],
+      "category": "影像授權",
+      "warnings": [],
+      "matchedKeywords": [],
+      "id": "0ab50a066edb8cb83a2f460e"
+    },
+    {
+      "sourceItemId": "CBMib0FVX3lxTE1fWXg0blBqRjdTTXItOVJBdG5Wc3AyZXlmejZKOHNHWW8zNWJZbDJ5dmJ4UVEtVzJENGdiUGdxTlNZckUzb0p3QXZlSE5FU2ZMRTZwX0RsYm52d1QyeERLbGd1WkhheGVZeHk2UkZxRQ",
+      "title": "苗栗鐵道文物展示館 - tenshain.pixnet.net",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1fWXg0blBqRjdTTXItOVJBdG5Wc3AyZXlmejZKOHNHWW8zNWJZbDJ5dmJ4UVEtVzJENGdiUGdxTlNZckUzb0p3QXZlSE5FU2ZMRTZwX0RsYm52d1QyeERLbGd1WkhheGVZeHk2UkZxRQ?oc=5",
+      "publishedAt": "Sat, 24 Jan 2026 12:24:41 GMT",
+      "summary": "苗栗鐵道文物展示館 &nbsp;&nbsp; tenshain.pixnet.net",
+      "publisher": "tenshain.pixnet.net",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)",
+      "sourceGroup": "地方部落格",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "60e56e407d9f7d4f77130479"
     }
   ]
 }

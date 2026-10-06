@@ -1,0 +1,418 @@
+{
+  "successfulRunId": 37136392792,
+  "artifactId": 11277874015,
+  "reportReceivedAtMeaning": "probe start time, not per-event receipt time",
+  "report": {
+    "requestedTrainDate": "2026-10-03",
+    "receivedAt": "2026-10-04T00:19:04.152107+08:00",
+    "probes": {
+      "dates": {
+        "status": "success",
+        "count": null,
+        "wrapperKeys": [
+          "AuthorityCode",
+          "Count",
+          "EndDate",
+          "StartDate",
+          "TrainDates",
+          "UpdateInterval",
+          "UpdateTime"
+        ],
+        "rowKeys": [],
+        "metadata": {
+          "UpdateTime": "2026-10-03T05:49:16+08:00",
+          "SrcUpdateTime": null,
+          "UpdateInterval": 14400,
+          "SrcUpdateInterval": null,
+          "TrainDate": null,
+          "Count": 61
+        }
+      },
+      "daily": {
+        "status": "success",
+        "count": 915,
+        "wrapperKeys": [
+          "SrcUpdateInterval",
+          "SrcUpdateTime",
+          "TrainDate",
+          "TrainTimetables",
+          "UpdateInterval",
+          "UpdateTime"
+        ],
+        "rowKeys": [
+          "StopTimes",
+          "TrainInfo"
+        ],
+        "metadata": {
+          "UpdateTime": "2026-10-02T09:00:26+08:00",
+          "SrcUpdateTime": "2026-10-01T18:04:45+08:00",
+          "UpdateInterval": 14400,
+          "SrcUpdateInterval": -1,
+          "TrainDate": "2026-10-03",
+          "Count": null
+        }
+      },
+      "specific6725": {
+        "status": "success",
+        "count": 0,
+        "wrapperKeys": [
+          "EffectiveDate",
+          "ExpireDate",
+          "SrcUpdateInterval",
+          "SrcUpdateTime",
+          "SrcVersion",
+          "TimetableName",
+          "TrainTimetables",
+          "UpdateInterval",
+          "UpdateTime",
+          "ValidityDesciption"
+        ],
+        "rowKeys": [],
+        "metadata": {
+          "UpdateTime": "2026-10-03T05:47:10+08:00",
+          "SrcUpdateTime": "2026-09-29T11:07:29+08:00",
+          "UpdateInterval": 14400,
+          "SrcUpdateInterval": -1,
+          "TrainDate": null,
+          "Count": null
+        }
+      },
+      "lines": {
+        "status": "success",
+        "count": 12,
+        "wrapperKeys": [
+          "AuthorityCode",
+          "SrcUpdateInterval",
+          "SrcUpdateTime",
+          "StationOfLines",
+          "UpdateInterval",
+          "UpdateTime"
+        ],
+        "rowKeys": [
+          "LineID",
+          "Stations"
+        ],
+        "metadata": {
+          "UpdateTime": "2026-09-15T20:35:26+08:00",
+          "SrcUpdateTime": "2026-09-15T04:00:00+08:00",
+          "UpdateInterval": 14400,
+          "SrcUpdateInterval": -1,
+          "TrainDate": null,
+          "Count": null
+        }
+      },
+      "positions": {
+        "status": "success",
+        "count": 57,
+        "wrapperKeys": [
+          "AuthorityCode",
+          "SrcUpdateInterval",
+          "SrcUpdateTime",
+          "TrainLiveBoards",
+          "UpdateInterval",
+          "UpdateTime"
+        ],
+        "rowKeys": [
+          "DelayTime",
+          "StationID",
+          "StationName",
+          "TrainNo",
+          "TrainStationStatus",
+          "TrainTypeCode",
+          "TrainTypeID",
+          "TrainTypeName",
+          "UpdateTime"
+        ],
+        "metadata": {
+          "UpdateTime": "2026-10-04T00:20:04+08:00",
+          "SrcUpdateTime": "2026-10-04T00:20:00+08:00",
+          "UpdateInterval": 30,
+          "SrcUpdateInterval": 60,
+          "TrainDate": null,
+          "Count": null
+        }
+      },
+      "station3150": {
+        "status": "success",
+        "count": 0,
+        "wrapperKeys": [
+          "AuthorityCode",
+          "SrcUpdateInterval",
+          "SrcUpdateTime",
+          "StationLiveBoards",
+          "UpdateInterval",
+          "UpdateTime"
+        ],
+        "rowKeys": [],
+        "metadata": {
+          "UpdateTime": "2026-10-04T00:21:04+08:00",
+          "SrcUpdateTime": "2026-10-04T00:21:00+08:00",
+          "UpdateInterval": 30,
+          "SrcUpdateInterval": 60,
+          "TrainDate": null,
+          "Count": null
+        }
+      },
+      "station3160": {
+        "status": "success",
+        "count": 0,
+        "wrapperKeys": [
+          "AuthorityCode",
+          "SrcUpdateInterval",
+          "SrcUpdateTime",
+          "StationLiveBoards",
+          "UpdateInterval",
+          "UpdateTime"
+        ],
+        "rowKeys": [],
+        "metadata": {
+          "UpdateTime": "2026-10-04T00:21:04+08:00",
+          "SrcUpdateTime": "2026-10-04T00:21:00+08:00",
+          "UpdateInterval": 30,
+          "SrcUpdateInterval": 60,
+          "TrainDate": null,
+          "Count": null
+        }
+      },
+      "station3170": {
+        "status": "success",
+        "count": 0,
+        "wrapperKeys": [
+          "AuthorityCode",
+          "SrcUpdateInterval",
+          "SrcUpdateTime",
+          "StationLiveBoards",
+          "UpdateInterval",
+          "UpdateTime"
+        ],
+        "rowKeys": [],
+        "metadata": {
+          "UpdateTime": "2026-10-04T00:21:04+08:00",
+          "SrcUpdateTime": "2026-10-04T00:21:00+08:00",
+          "UpdateInterval": 30,
+          "SrcUpdateInterval": 60,
+          "TrainDate": null,
+          "Count": null
+        }
+      }
+    },
+    "physicalPassageTimeMeasured": false,
+    "dailyChecks": [
+      {
+        "trainNo": "149",
+        "tripLine": 1,
+        "directionRaw": 1,
+        "suspendedFlag": 0,
+        "threeStationStops": [
+          {
+            "StopSequence": 12,
+            "StationID": "3160",
+            "StationName": {
+              "Zh_tw": "苗栗",
+              "En": "Miaoli"
+            },
+            "ArrivalTime": "20:37",
+            "DepartureTime": "20:39",
+            "SuspendedFlag": 0
+          }
+        ],
+        "allStopStationIDs": [
+          "0900",
+          "0920",
+          "0930",
+          "0960",
+          "0990",
+          "1000",
+          "1020",
+          "1080",
+          "1100",
+          "1210",
+          "1250",
+          "3160",
+          "3230",
+          "3300",
+          "3360",
+          "3390",
+          "3470",
+          "3480",
+          "4080",
+          "4120",
+          "4170",
+          "4220",
+          "4340",
+          "4400",
+          "4440",
+          "5000",
+          "5050"
+        ]
+      },
+      {
+        "trainNo": "165",
+        "tripLine": 1,
+        "directionRaw": 1,
+        "suspendedFlag": 0,
+        "threeStationStops": [],
+        "allStopStationIDs": [
+          "0930",
+          "0980",
+          "0990",
+          "1000",
+          "1020",
+          "1210",
+          "3300",
+          "3360",
+          "4080",
+          "4220",
+          "4400",
+          "5000",
+          "5050",
+          "6000"
+        ]
+      },
+      {
+        "trainNo": "6725",
+        "tripLine": 1,
+        "directionRaw": 1,
+        "suspendedFlag": 0,
+        "threeStationStops": [],
+        "allStopStationIDs": [
+          "0990",
+          "1000",
+          "1080",
+          "3300",
+          "4080",
+          "4220",
+          "4340"
+        ]
+      }
+    ],
+    "threeStationPositions": [
+      {
+        "TrainNo": "1128",
+        "TrainTypeID": "1131",
+        "TrainTypeCode": "6",
+        "TrainTypeName": {
+          "Zh_tw": "區間",
+          "En": "Local Train"
+        },
+        "StationID": "3160",
+        "StationName": {
+          "Zh_tw": "苗栗",
+          "En": "Miaoli"
+        },
+        "TrainStationStatus": 2,
+        "DelayTime": 0,
+        "UpdateTime": "2026-10-04T00:18:49+08:00"
+      },
+      {
+        "TrainNo": "272",
+        "TrainTypeID": "1108",
+        "TrainTypeCode": "3",
+        "TrainTypeName": {
+          "Zh_tw": "自強",
+          "En": "Tze-Chiang Express"
+        },
+        "StationID": "3160",
+        "StationName": {
+          "Zh_tw": "苗栗",
+          "En": "Miaoli"
+        },
+        "TrainStationStatus": 2,
+        "DelayTime": 0,
+        "UpdateTime": "2026-10-04T00:18:49+08:00"
+      }
+    ],
+    "threeStationLineMembership": [
+      {
+        "lineID": "WL",
+        "lineNo": null,
+        "stations": [
+          {
+            "Sequence": 38,
+            "StationID": "3150",
+            "StationName": {
+              "Zh_tw": "豐富",
+              "En": "Fengfu"
+            },
+            "CumulativeDistance": 136.6
+          },
+          {
+            "Sequence": 39,
+            "StationID": "3160",
+            "StationName": {
+              "Zh_tw": "苗栗",
+              "En": "Miaoli"
+            },
+            "CumulativeDistance": 140.6
+          },
+          {
+            "Sequence": 40,
+            "StationID": "3170",
+            "StationName": {
+              "Zh_tw": "南勢",
+              "En": "Nanshi"
+            },
+            "CumulativeDistance": 147.2
+          }
+        ]
+      }
+    ]
+  },
+  "existingMonitorArtifactId": 11267148463,
+  "eventAudit": {
+    "uniqueEvents": 8,
+    "freshNonstopEvents": [
+      {
+        "eventDate": "2026-10-03",
+        "trainNo": "165",
+        "station": "苗栗",
+        "stationId": "3160",
+        "type": "自強(3000)",
+        "typeId": "110G",
+        "sourceEventAt": "2026-10-03T15:16:30+08:00",
+        "firstReceivedAt": "2026-10-03T15:17:10.915598+08:00",
+        "status": 2,
+        "delayMinutes": 4,
+        "eventAgeSeconds": 40.915598,
+        "stale": false,
+        "initialSnapshot": false,
+        "timeMeaning": "官方位置事件更新時間；非現場實測通過時間",
+        "classification": "動態已回報・表定不停靠",
+        "direction": "南下",
+        "carClass": "110G",
+        "scheduleNote": "每日行駛。本列次不發售無座票，非持本班次車票旅客，請勿搭乘。 第6節為騰雲座艙，為本公司公告指定不發售無座位車票之車廂，持當日當次騰雲座艙車票旅客始可搭乘。",
+        "scheduleVersion": "d43fde353b071bfb"
+      }
+    ],
+    "sameStationStatusMultipleUpdateTimes": [
+      {
+        "key": [
+          "2026-10-03",
+          "2203",
+          "3160",
+          2
+        ],
+        "updateTimes": [
+          "2026-10-03T15:14:49+08:00",
+          "2026-10-03T15:15:38+08:00",
+          "2026-10-03T15:16:38+08:00",
+          "2026-10-03T15:17:37+08:00",
+          "2026-10-03T15:18:15+08:00"
+        ]
+      },
+      {
+        "key": [
+          "2026-10-03",
+          "122",
+          "3160",
+          2
+        ],
+        "updateTimes": [
+          "2026-10-03T15:25:36+08:00",
+          "2026-10-03T15:27:37+08:00"
+        ]
+      }
+    ],
+    "physicalPassageTimeMeasured": false
+  }
+}
