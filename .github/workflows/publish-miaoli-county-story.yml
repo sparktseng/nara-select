@@ -1,9 +1,7 @@
 name: Publish Miaoli county restoration story
 
 on:
-  schedule:
-    # GitHub Actions cron uses UTC. 12:00 UTC = 20:00 Asia/Taipei.
-    - cron: '0 12 18 10 *'
+  # Story released early; keep manual recovery only, without scheduled re-publication.
   workflow_dispatch:
 
 permissions:
@@ -41,5 +39,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin story/miaoli-county-1950
+          if git merge-base --is-ancestor origin/story/miaoli-county-1950 HEAD; then
+            echo "Reviewed story already included in main; nothing to publish."
+            exit 0
+          fi
           git merge --no-ff --no-edit origin/story/miaoli-county-1950
           git push origin main
