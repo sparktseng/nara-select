@@ -27,7 +27,7 @@
 <div id="train-guide-cards" class="guide-cards"></div>
 <small>照片供外觀對照，非當次列車實拍；你的選擇只用來閱讀介紹，不會修改官方時刻表。通過時間若非臺鐵公告，會標明參考來源。</small>
 <details class="guide-credits"><summary>照片來源與授權</summary><div id="guide-credits-list"></div></details>
-</section><section class="park-entry" aria-labelledby="park-entry-title"><h2 id="park-entry-title">看完來車，還想繼續玩？</h2><p>帶孩子走進苗栗火車頭園區，看看展示的老火車，比一比車頭和車輪。散步到鐵路一村，也可以來5號店坐坐。</p><a href="/miaoli-railway-walk.html">看看園區怎麼逛、怎麼走 →</a><small>園區需購票；本頁為苗栗站時刻，在園區看到列車的時間與視野可能不同。</small></section><nav class="view-shortcuts" aria-label="看車入口"><button type="button" id="view-now">現在看</button><button type="button" id="view-date">選日期</button><button type="button" id="view-special">找特殊列車</button></nav>
+</section><section class="park-entry" aria-labelledby="park-entry-title"><h2 id="park-entry-title">看完來車，還想繼續玩？</h2><p>帶孩子走進苗栗火車頭園區，看看展示的老火車，比一比車頭和車輪。散步到鐵路一村，也可以來5號店坐坐。</p><a data-analytics-event="park_entry_click" href="/miaoli-railway-walk.html">看看園區怎麼逛、怎麼走 →</a><small>園區需購票；本頁為苗栗站時刻，在園區看到列車的時間與視野可能不同。</small></section><nav class="view-shortcuts" aria-label="看車入口"><button type="button" id="view-now">現在看</button><button type="button" id="view-date">選日期</button><button type="button" id="view-special">找特殊列車</button></nav>
 <details id="visitor-panel" class="visitor-panel"><summary>日期、車次與篩選</summary><section class="visitor-controls" aria-label="日期與找車">
 <label>日期<select id="visit-date"></select></label>
 <label>車次搜尋<input id="train-search" type="search" inputmode="numeric" placeholder="例如 109、2183" maxlength="12"></label>
@@ -270,4 +270,4 @@ const daily=document.getElementById('dayTitle')?.parentElement;if(daily){daily.c
 initTrainGuide();
 document.getElementById('train-guide-cards').addEventListener('toggle',e=>{if(e.target.open)guideLocked=true;},true);
 
-</script></body></html>
+</script><script defer src="/assets/site-tracking.js?v=20261008-park-entry"></script></body></html>
