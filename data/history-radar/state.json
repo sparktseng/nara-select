@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T02:27:41.442Z",
+  "updatedAt": "2026-10-08T02:44:12.800Z",
   "seenIds": [
     "70f9690ea1a30aecb8df4a54",
     "74ab318ef3ebc9ad80eefb8b",
@@ -126,7 +126,9 @@
     "bc67bea0ef2e6d8239a28cc1",
     "bf1574053465a632b58c3dde",
     "0ab50a066edb8cb83a2f460e",
-    "60e56e407d9f7d4f77130479"
+    "60e56e407d9f7d4f77130479",
+    "0b29a54de6e69a0afa5d3160",
+    "8350e432dfad799a76c87086"
   ],
   "candidateCache": [
     {
@@ -3144,6 +3146,49 @@
         "文物"
       ],
       "id": "60e56e407d9f7d4f77130479"
+    },
+    {
+      "sourceItemId": "CBMidkFVX3lxTE5ROFNiNjJnc2lmM1Z3ZVRmR3BXUFcxSjhiWFoyTmx1bUR1cE0wTDdxbWVmdUFDOEtjSEppMk9VemtfbDFtcGpXOTZ6d0VQMXBOSzNudE1EcDE4anNZQmZ3SFdpXzJBekRoWnQxZGtSSEdUaEhzVHc",
+      "title": "「苗栗鐵路一村宿舍群調研暨規劃再利用計畫」委託專業服務案 - 苗栗縣政府全球資訊網",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5ROFNiNjJnc2lmM1Z3ZVRmR3BXUFcxSjhiWFoyTmx1bUR1cE0wTDdxbWVmdUFDOEtjSEppMk9VemtfbDFtcGpXOTZ6d0VQMXBOSzNudE1EcDE4anNZQmZ3SFdpXzJBekRoWnQxZGtSSEdUaEhzVHc?oc=5",
+      "publishedAt": "Fri, 12 Apr 2024 06:41:29 GMT",
+      "summary": "「苗栗鐵路一村宿舍群調研暨規劃再利用計畫」委託專業服務案 &nbsp;&nbsp; 苗栗縣政府全球資訊網",
+      "publisher": "苗栗縣政府全球資訊網",
+      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
+      "sourceGroup": "苗栗縣政府",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵路一村",
+        "鐵路一村"
+      ],
+      "id": "0b29a54de6e69a0afa5d3160"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE5oeURpMUtXRjlEVUI0SDFkcGNDdlNpRm5VLXFOTlhwT3pnWHhLb0g1MUF3cDA2THl2UEhwLWZGMW9fdkNlb2gxdzhQOXNJTXlUNlloWGRR",
+      "title": "【苗栗火車頭園區】絕對不能錯過 「轉車台大廳」國寶級CT152蒸汽火車頭360度華麗轉身和「列車展示館」展示12台珍貴的火車頭！ - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5oeURpMUtXRjlEVUI0SDFkcGNDdlNpRm5VLXFOTlhwT3pnWHhLb0g1MUF3cDA2THl2UEhwLWZGMW9fdkNlb2gxdzhQOXNJTXlUNlloWGRR?oc=5",
+      "publishedAt": "Fri, 19 Sep 2025 10:30:44 GMT",
+      "summary": "【苗栗火車頭園區】絕對不能錯過 「轉車台大廳」國寶級CT152蒸汽火車頭360度華麗轉身和「列車展示館」展示12台珍貴的火車頭！ &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "8350e432dfad799a76c87086"
     }
   ]
 }
