@@ -62,7 +62,7 @@ specialOnly.checked=viewParams.get('special')==='1';
 if(['upcoming','30','60','all'].includes(viewParams.get('window')))visitWindow.value=viewParams.get('window');
 if(date!==taipei().date)visitWindow.value='all';
 if(viewParams.size)document.getElementById('visitor-panel').open=true;
-function clockText(t){return !t?'—':t.length>5&&t.slice(6)!=='00'?t:t.slice(0,5);}
+function clockText(t){return !t?'—':t.slice(0,5);}
 function viewSeconds(t){return t.split(':').reduce((a,b)=>a*60+Number(b),0);}
 function viewDelay(train){return date===taipei().date?live.get(String(train)):undefined;}
 function updateVisitDates(){
@@ -72,7 +72,7 @@ function updateVisitDates(){
  visitDate.value=selected;
  for(const option of visitWindow.options)option.disabled=selected!==taipei().date&&option.value!=='all';
  if(selected!==taipei().date)visitWindow.value='all';
- const updated=new Date(scheduleData.updatedAt);document.getElementById('schedule-updated').textContent='5號店整理｜時刻表更新：'+(Number.isFinite(updated.getTime())?updated.toLocaleString('zh-TW',{timeZone:'Asia/Taipei',hour12:false}):'時間未取得')+'｜車型與月台以現場資訊為準';
+ const updated=new Date(scheduleData.updatedAt);document.getElementById('schedule-updated').textContent='5號店整理｜時刻表更新：'+(Number.isFinite(updated.getTime())?updated.toLocaleString('zh-TW',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}):'時間未取得')+'｜車型與月台以現場資訊為準';
 }
 function viewMatches(r){
  if(direction.value&&r.direction!==direction.value||kind.value&&r.kind!==kind.value)return false;
@@ -92,7 +92,7 @@ function filter(){
  let count=0;for(const row of trains){const r={train:row.dataset.train,direction:row.dataset.direction,kind:row.dataset.kind,arrival:row.dataset.arrival==='—'?null:row.dataset.arrival,departure:row.dataset.departure==='—'?null:row.dataset.departure,passTime:row.dataset.passTime==='?'?null:row.dataset.passTime,special:row.dataset.specialLabel?{label:row.dataset.specialLabel}:null};
  const state=row.querySelector('.state');if(state)state.textContent=date===current.date?(viewDelay(r.train)===undefined?'依表定時間':visibility(r.kind,r.departure||r.arrival,current.time,viewDelay(r.train),confirmedEvents.get(r.train)).state):'選定日期表定時間';
  row.hidden=!available||!viewMatches(r);if(!row.hidden)count++;}
- document.getElementById('train-guide-title').textContent=visitWindow.value==='all'?'選定日期，先認識這三班':'下一班火車，長什麼樣？';document.getElementById('count').textContent=(date===current.date?'臺灣時間 '+current.time:date+' 表定時刻')+'｜符合條件 '+count+' 班';document.getElementById('empty').hidden=count!==0;
+ document.getElementById('train-guide-title').textContent=visitWindow.value==='all'?'選定日期，先認識這三班':'下一班火車，長什麼樣？';document.getElementById('count').textContent=(date===current.date?'臺灣時間 '+clockText(current.time):date+' 表定時刻')+'｜符合條件 '+count+' 班';document.getElementById('empty').hidden=count!==0;
  document.getElementById('liveStatus').textContent=date===current.date&&live.size?'已套用可取得的誤點；實際到離站以現場為準':'依表定時間顯示，未提供即時到離站確認';
  document.getElementById('view-feedback').textContent=['30','60'].includes(visitWindow.value)?'依表定／可取得的誤點篩選；通過時間未確認的列車不列入這個時段。':date!==current.date?'正在查看選定日期，不是今天的即時列車。':visitWindow.value==='all'?'顯示今天全天，包含表定時段已過的班次。':'';
  if(window.trainGuideReady)renderTrainGuide();
@@ -140,7 +140,7 @@ function hydrate(data){
  const stops=data.days?.[date]||[],specials=confirmedSpecialRows(date).filter(r=>!stops.some(s=>String(s.train)===String(r.train)));
  const rows=[...stops,...specials].sort((a,b)=>(a.passTime||a.sortTime||a.arrival||a.departure||'99:99').localeCompare(b.passTime||b.sortTime||b.arrival||b.departure||'99:99')||String(a.train).localeCompare(String(b.train))),body=document.querySelector('tbody');body.replaceChildren();
  for(const r of rows){const row=document.createElement('tr');row.hidden=true;Object.assign(row.dataset,{specialLabel:r.special?.label||r.label||'',direction:r.direction,kind:r.kind,train:r.train,arrival:r.arrival||'—',departure:r.departure||'—'});
- const values=[r.direction,r.train,r.arrival||'—',r.departure||'—','未取得',r.kind];
+ const values=[r.direction,r.train,clockText(r.arrival),clockText(r.departure),'未取得',r.kind];
  for(const value of values){const td=document.createElement('td');td.textContent=value;row.append(td);}
  if(r.kind!=='通過不停'){const type=document.createElement('small');type.textContent=r.type;row.cells[1].append(type);}row.cells[4].className='delay';
  if(r.kind==='通過不停'){
@@ -172,7 +172,7 @@ function visibility(kind,scheduled,now,delay,event){
 for(const x of [direction,kind])x.addEventListener('change',filter);document.getElementById('reset').addEventListener('click',()=>{direction.value='';kind.value='';filter();});hydrate(scheduleData);filter();setInterval(filter,15000);
 refreshSchedule();setInterval(refreshSchedule,300000);
 
-function applyLive(data){if(date!==taipei().date)throw Error('not_today');const age=(Date.now()-Date.parse(data.receivedAt))/1000;if(data.serviceDate!==date||!Number.isFinite(age)||age>180||age< -60||!Array.isArray(data.trains))throw Error('stale');for(const e of data.stationEvents||[]){const at=Date.parse(e.occurredAt);if(e.StationID==='3160'&&e.verified===true&&['arrived','departed'].includes(e.event)&&Number.isFinite(at)&&at<=Date.now()&&new Date(at).toLocaleDateString('en-CA',{timeZone:'Asia/Taipei'})===date){const key=String(e.TrainNo);if(confirmedEvents.get(key)!=='departed')confirmedEvents.set(key,e.event);}}live.clear();for(const r of data.trains){const a=(Date.now()-Date.parse(r.UpdateTime))/1000;if(Number.isFinite(a)&&a>=-60&&a<=180&&Number.isFinite(r.DelayTime)&&r.DelayTime>=0)live.set(String(r.TrainNo),r.DelayTime);}for(const row of trains){if(row.dataset.special==='1')continue;const d=live.get(row.dataset.train),cell=row.querySelector('.delay');cell.replaceChildren();cell.append(document.createTextNode(d===undefined?'未取得':d===0?'準點':'誤點 '+d+' 分'));const note=document.createElement('small');if(d!==undefined){const add=t=>{if(t==='—')return '—';let x=t.split(':').map(Number);let m=x[0]*60+x[1]+d;return String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0')+(x[2]?':'+String(x[2]).padStart(2,'0'):'');};note.textContent='預估到 '+add(row.dataset.arrival)+'／開 '+add(row.dataset.departure);}else note.textContent='預估時間待更新';cell.append(note);}document.getElementById('liveStatus').textContent='誤點更新：'+new Date(data.receivedAt).toLocaleTimeString('zh-TW',{timeZone:'Asia/Taipei'})+'（已套用誤點）';filter();}
+function applyLive(data){if(date!==taipei().date)throw Error('not_today');const age=(Date.now()-Date.parse(data.receivedAt))/1000;if(data.serviceDate!==date||!Number.isFinite(age)||age>180||age< -60||!Array.isArray(data.trains))throw Error('stale');for(const e of data.stationEvents||[]){const at=Date.parse(e.occurredAt);if(e.StationID==='3160'&&e.verified===true&&['arrived','departed'].includes(e.event)&&Number.isFinite(at)&&at<=Date.now()&&new Date(at).toLocaleDateString('en-CA',{timeZone:'Asia/Taipei'})===date){const key=String(e.TrainNo);if(confirmedEvents.get(key)!=='departed')confirmedEvents.set(key,e.event);}}live.clear();for(const r of data.trains){const a=(Date.now()-Date.parse(r.UpdateTime))/1000;if(Number.isFinite(a)&&a>=-60&&a<=180&&Number.isFinite(r.DelayTime)&&r.DelayTime>=0)live.set(String(r.TrainNo),r.DelayTime);}for(const row of trains){if(row.dataset.special==='1')continue;const d=live.get(row.dataset.train),cell=row.querySelector('.delay');cell.replaceChildren();cell.append(document.createTextNode(d===undefined?'未取得':d===0?'準點':'誤點 '+d+' 分'));const note=document.createElement('small');if(d!==undefined){const add=t=>{if(t==='—')return '—';let x=t.split(':').map(Number);let m=x[0]*60+x[1]+d;return String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');};note.textContent='預估到 '+add(row.dataset.arrival)+'／開 '+add(row.dataset.departure);}else note.textContent='預估時間待更新';cell.append(note);}document.getElementById('liveStatus').textContent='誤點更新：'+new Date(data.receivedAt).toLocaleTimeString('zh-TW',{timeZone:'Asia/Taipei',hour:'2-digit',minute:'2-digit',hour12:false})+'（已套用誤點）';filter();}
 async function refreshLive(){
 if(date!==taipei().date){filter();return;}
 try{const res=await fetch('./train-watch-live.json',{cache:'no-store'});if(!res.ok)throw Error('unavailable');applyLive(await res.json());}

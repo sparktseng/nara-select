@@ -78,4 +78,11 @@ def add_visitor_experience(page):
     page=page.replace('<p><strong>苗栗站在山線。</strong>北上往豐富、竹南方向；南下往南勢、銅鑼方向。這是行車方向，請依你所在位置辨認來車端。</p>','<p><strong>園區面對鐵軌：</strong>左側是苗栗車站與北方，右側是南方。北上列車從右往左；南下列車從左往右。</p><p><strong>始發與終到要留意位置：</strong>從苗栗站出發或在苗栗站終到的列車，園區部分位置可能看不到；入口附近或車站較有機會。</p>')
     page=page.replace('</style>',CSS+'</style>',1)
     page=page.replace('\ninitTrainGuide();',JS+'\ninitTrainGuide();',1)
+    # Display hours and minutes only; retain full timestamps for filtering and sorting.
+    page=page.replace("function clockText(t){return !t?'—':t.length>5&&t.slice(6)!=='00'?t:t.slice(0,5);}","function clockText(t){return !t?'—':t.slice(0,5);}")
+    page=page.replace("const values=[r.direction,r.train,r.arrival||'—',r.departure||'—','未取得',r.kind];","const values=[r.direction,r.train,clockText(r.arrival),clockText(r.departure),'未取得',r.kind];")
+    page=page.replace("'臺灣時間 '+current.time","'臺灣時間 '+clockText(current.time)")
+    page=page.replace("+(x[2]?':'+String(x[2]).padStart(2,'0'):'')",'')
+    page=page.replace("toLocaleTimeString('zh-TW',{timeZone:'Asia/Taipei'})","toLocaleTimeString('zh-TW',{timeZone:'Asia/Taipei',hour:'2-digit',minute:'2-digit',hour12:false})")
+    page=page.replace("toLocaleString('zh-TW',{timeZone:'Asia/Taipei',hour12:false})","toLocaleString('zh-TW',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false})")
     return page
