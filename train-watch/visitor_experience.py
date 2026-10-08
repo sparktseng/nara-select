@@ -12,7 +12,7 @@ CSS += '''
 @media(max-width:759px){main{padding:14px 12px}.train-guide{padding:12px}.train-guide h2{font-size:22px}.guide-card h3{font-size:17px}.guide-times,.guide-card:not(:first-child) .guide-times{margin:10px 0;gap:8px}.guide-time-slot{min-width:0;padding:10px 8px}.guide-card .guide-clock,.guide-card:not(:first-child) .guide-clock{font-size:clamp(26px,30cqi,32px)}.guide-card .guide-clock.has-seconds,.guide-card:not(:first-child) .guide-clock.has-seconds{font-size:clamp(20px,23cqi,26px)}.guide-time-label{font-size:14px}.guide-toolbar p{font-size:12px}.guide-direction{font-size:13px;margin:4px 0}.train-guide>small,.next-pokemon small{font-size:12px}.timetable-status span:first-child{display:none}.table-wrap td:nth-child(3),.table-wrap td:nth-child(4){font-size:19px;font-weight:750;color:#183f34}}
 '''
 
-PARK_ENTRY = '<section class="park-entry" aria-labelledby="park-entry-title"><h2 id="park-entry-title">看完來車，還想繼續玩？</h2><p>帶孩子走進苗栗火車頭園區，看看展示的老火車，比一比車頭和車輪。散步到鐵路一村，也可以來5號店坐坐。</p><a href="/miaoli-railway-walk.html">看看園區怎麼逛、怎麼走 →</a><small>園區需購票；本頁為苗栗站時刻，在園區看到列車的時間與視野可能不同。</small></section>'
+PARK_ENTRY = '<section class="park-entry" aria-labelledby="park-entry-title"><h2 id="park-entry-title">看完來車，還想繼續玩？</h2><p>帶孩子走進苗栗火車頭園區，看看展示的老火車，比一比車頭和車輪。散步到鐵路一村，也可以來5號店坐坐。</p><a data-analytics-event="park_entry_click" href="/miaoli-railway-walk.html">看看園區怎麼逛、怎麼走 →</a><small>園區需購票；本頁為苗栗站時刻，在園區看到列車的時間與視野可能不同。</small></section>'
 
 JS = r'''
 function parkDirection(r){return r.direction==='北上'?'北上｜從右往左，往苗栗車站方向':'南下｜從左往右，往南方行駛';}
@@ -85,4 +85,5 @@ def add_visitor_experience(page):
     page=page.replace("+(x[2]?':'+String(x[2]).padStart(2,'0'):'')",'')
     page=page.replace("toLocaleTimeString('zh-TW',{timeZone:'Asia/Taipei'})","toLocaleTimeString('zh-TW',{timeZone:'Asia/Taipei',hour:'2-digit',minute:'2-digit',hour12:false})")
     page=page.replace("toLocaleString('zh-TW',{timeZone:'Asia/Taipei',hour12:false})","toLocaleString('zh-TW',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false})")
+    page=page.replace('</body>','<script defer src="/assets/site-tracking.js?v=20261008-park-entry"></script></body>',1)
     return page
