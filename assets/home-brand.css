@@ -7,3 +7,5 @@ body{background:var(--nara-cream);color:var(--nara-ink)}header{background:rgba(2
 
 /* Preserve the full uploaded green-tea poster in the homepage photo. */
 .home-brand-tea img{height:auto;object-fit:contain}
+
+footer .site-copyright{display:block;max-width:760px;margin:16px auto 0;font-size:12px;line-height:1.9;text-align:left;overflow-wrap:anywhere}
