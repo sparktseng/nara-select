@@ -43,6 +43,12 @@
 #miaoli-guide-preview .shop + .shop{margin-top:20px}
 #miaoli-guide-preview .products{margin:0 0 20px}
 #miaoli-guide-preview .address{margin:0 0 20px;font-size:14px;overflow-wrap:anywhere}
+#miaoli-guide-preview .featured-shop{border-color:var(--green);background:#f5f7ed}
+#miaoli-guide-preview .shop-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 20px}
+#miaoli-guide-preview .shop-photos figure{margin:0;min-width:0}
+#miaoli-guide-preview .shop-photos a{display:block}
+#miaoli-guide-preview .shop-photos img{display:block;width:100%;height:auto;border-radius:10px}
+#miaoli-guide-preview .shop-photos figcaption{margin-top:8px;color:var(--muted);font-size:12px;line-height:1.5}
 </style>
 <div id="miaoli-guide-preview" lang="zh-Hant">
   <header class="brandbar"><a class="brand" href="/">5號店｜NARA SELECT</a><a class="draft" href="/">返回首頁</a></header>
@@ -80,11 +86,15 @@
       <p class="address">地址：360苗栗縣苗栗市鐵路一村36號</p>
       <div class="actions"><a class="action" href="https://maps.app.goo.gl/kSaruZ2FhpVwn1tT7" target="_blank" rel="noopener noreferrer">查看 Google 評論 ↗</a></div>
     </article>
-    <article class="shop">
+    <article class="shop featured-shop">
       <div class="category">飲品・選物</div>
       <h2>文創五號店</h2>
       <p class="products">泰式飲品、泰國小物</p>
       <p class="address">地址：360苗栗縣苗栗市鐵路一村37號</p>
+      <div class="shop-photos">
+        <figure><a href="/" aria-label="認識5號店與店面"><img src="/assets/storefront.webp" width="900" height="1200" loading="lazy" decoding="async" alt="5號店門口的木窗、庭院與暖色燈光"></a><figcaption>鐵路一村37號，5號店在這裡</figcaption></figure>
+        <figure><a href="/#taste" aria-label="看看5號店泰式飲品"><img src="/assets/home-thai-green-tea.webp" width="640" height="905" loading="lazy" decoding="async" alt="5號店泰式奶綠飲品介紹圖"></a><figcaption>逛逛小店，喝一瓶泰式奶綠</figcaption></figure>
+      </div>
       <div class="actions"><a class="action" href="/">認識五號店 →</a></div>
     </article>
     <article class="shop">
