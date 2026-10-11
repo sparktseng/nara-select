@@ -36,6 +36,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+      - name: Check inner-page copyright and timetable regeneration
+        run: python3 -m unittest discover -s train-watch -p test_copyright.py
       - name: Test audit engine
         working-directory: seo-audit
         run: npm test

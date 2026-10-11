@@ -1,5 +1,6 @@
 """Refresh a seven-day Miaoli station schedule from TRA's official index."""
 import argparse,json,re,time
+from html import escape
 from datetime import datetime,timedelta
 from pathlib import Path
 from urllib.request import Request,urlopen
@@ -62,6 +63,10 @@ def public_page(data):
     page=page.replace('</style>', '.pokemon-row{background:#fff8cf}.pokemon-row td:first-child{border-left:4px solid #e53935}.pokemon-label{display:block;width:fit-content;max-width:160px;background:#ffde3b;color:#283c73;border:1px solid #e4ba18;padding:3px 7px;border-radius:8px;margin-top:5px;font-size:12px;font-weight:750;white-space:normal;line-height:1.45}.special-row{background:#edf5f7}.special-row td:first-child{border-left:4px solid #287b8b}.special-label{display:block;width:fit-content;max-width:160px;background:#d1e9ed;color:#164957;padding:3px 7px;border-radius:8px;margin-top:5px;font-size:12px;font-weight:750;white-space:normal;line-height:1.45}.special-row .delay{font-weight:700;color:#164957}.special-row .delay small{font-weight:400}@media(max-width:680px){.table-wrap table{min-width:610px}}</style>')
     page=page.replace('通過不停的列車另行製作。','已核實的特殊列車也標在時刻表；未公布的通過時間不推算。')
     page=page.replace('<section class="filters"', '<a class="train-story-link" href="/juguang-special-miaoli-20261107.html"><span class="train-story-date">11／7</span><span class="train-story-text"><strong>莒光號專列到苗栗</strong><span>R100 手動轉車台限定觀賞・查看時間與地點</span></span><span class="train-story-arrow" aria-hidden="true">→</span></a>\n'+'<section class="filters"',1)
+    # Use the same approved text as static inner pages; refreshes must preserve it.
+    notices = json.loads((Path(__file__).resolve().parents[1] / 'assets/site-copyright.json').read_text())
+    page = page.replace('</head>', '<link rel="stylesheet" href="/assets/site-copyright.css?v=20261011"></head>', 1)
+    page = page.replace('</footer>', '<span class="site-copyright">' + escape(notices['zh-Hant']) + '</span></footer>', 1)
     return add_delay_ui(add_visitor_experience(add_visitor_upgrade(add_train_guide(compact_controls(page)))))
 def compact_controls(page):
     """Keep explanations accessible without delaying the next-train cards."""
