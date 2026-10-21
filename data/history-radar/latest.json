@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "run": {
-    "startedAt": "2026-10-20T01:53:26.278Z",
-    "finishedAt": "2026-10-20T01:53:46.972Z",
+    "startedAt": "2026-10-21T01:40:13.689Z",
+    "finishedAt": "2026-10-21T01:40:21.316Z",
     "timezone": "Asia/Taipei",
     "status": "完成",
-    "discovered": 100,
-    "newCandidates": 0,
-    "availableCandidates": 126
+    "discovered": 103,
+    "newCandidates": 1,
+    "availableCandidates": 127
   },
   "candidates": [
     {
@@ -3068,12 +3068,33 @@
         "苗栗火車頭園區"
       ],
       "id": "8350e432dfad799a76c87086"
+    },
+    {
+      "sourceItemId": "CBMia0FVX3lxTE51REV2dndfQ3FkS0JTbXRPX2d3NTBXMmdXdnNvZXBjYzlqamtudnpiVnZEZDlPYy12WXRCbTdvRnRiN0NISWx0R2JDTXI0NWZmQWt2VlB4U05uS1JqQ0w0Rk5TNmd3VGhweVNz",
+      "title": "副縣長鄧桂菊29日出席由縣政府、客委會及台鐵共同合作進行空間整理的鐵路一村開村典禮。 - 苗栗縣政府全球資訊網",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE51REV2dndfQ3FkS0JTbXRPX2d3NTBXMmdXdnNvZXBjYzlqamtudnpiVnZEZDlPYy12WXRCbTdvRnRiN0NISWx0R2JDTXI0NWZmQWt2VlB4U05uS1JqQ0w0Rk5TNmd3VGhweVNz?oc=5",
+      "publishedAt": "Mon, 28 Mar 2022 22:26:30 GMT",
+      "summary": "副縣長鄧桂菊29日出席由縣政府、客委會及台鐵共同合作進行空間整理的鐵路一村開村典禮。 &nbsp;&nbsp; 苗栗縣政府全球資訊網",
+      "publisher": "苗栗縣政府全球資訊網",
+      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
+      "sourceGroup": "苗栗縣政府",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "鐵路一村"
+      ],
+      "id": "9b9c8306b2f6f883f0b2da0f"
     }
   ],
   "linkChecks": [
     {
       "url": "https://memory.culture.tw/",
-      "checkedAt": "2026-10-20T01:53:28.426Z",
+      "checkedAt": "2026-10-21T01:40:14.957Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
@@ -3086,20 +3107,20 @@
     },
     {
       "url": "https://www.ncl.edu.tw/",
-      "checkedAt": "2026-10-20T01:53:30.061Z",
+      "checkedAt": "2026-10-21T01:40:18.335Z",
       "ok": false,
       "httpStatus": 403,
       "robotsStatus": "未提供(302)",
       "error": null,
       "archivedSnapshot": {
-        "url": "https://web.archive.org/web/20261013110551/https://www.ncl.edu.tw/",
-        "timestamp": "20261013110551",
+        "url": "https://web.archive.org/web/20261017105721/https://www.ncl.edu.tw/",
+        "timestamp": "20261017105721",
         "status": "200"
       }
     },
     {
       "url": "https://data.gov.tw/",
-      "checkedAt": "2026-10-20T01:53:29.378Z",
+      "checkedAt": "2026-10-21T01:40:16.890Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3108,7 +3129,7 @@
     },
     {
       "url": "https://www.railway.gov.tw/",
-      "checkedAt": "2026-10-20T01:53:29.051Z",
+      "checkedAt": "2026-10-21T01:40:16.180Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3117,7 +3138,7 @@
     },
     {
       "url": "https://www.hakka.gov.tw/",
-      "checkedAt": "2026-10-20T01:53:32.600Z",
+      "checkedAt": "2026-10-21T01:40:18.617Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "允許",
@@ -3126,7 +3147,7 @@
     },
     {
       "url": "https://www.miaoli.gov.tw/",
-      "checkedAt": "2026-10-20T01:53:31.118Z",
+      "checkedAt": "2026-10-21T01:40:17.807Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3135,7 +3156,7 @@
     },
     {
       "url": "https://www.facebook.com/miaolirailwaymuseum/",
-      "checkedAt": "2026-10-20T01:53:29.440Z",
+      "checkedAt": "2026-10-21T01:40:16.907Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -3144,7 +3165,7 @@
     },
     {
       "url": "https://www.instagram.com/miaoli_railway_museum/",
-      "checkedAt": "2026-10-20T01:53:29.568Z",
+      "checkedAt": "2026-10-21T01:40:17.000Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",

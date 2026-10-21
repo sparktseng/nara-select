@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T01:53:46.972Z",
+  "updatedAt": "2026-10-21T01:40:21.316Z",
   "seenIds": [
     "70f9690ea1a30aecb8df4a54",
     "74ab318ef3ebc9ad80eefb8b",
@@ -128,7 +128,8 @@
     "0ab50a066edb8cb83a2f460e",
     "60e56e407d9f7d4f77130479",
     "0b29a54de6e69a0afa5d3160",
-    "8350e432dfad799a76c87086"
+    "8350e432dfad799a76c87086",
+    "9b9c8306b2f6f883f0b2da0f"
   ],
   "candidateCache": [
     {
@@ -3189,6 +3190,27 @@
         "苗栗火車頭園區"
       ],
       "id": "8350e432dfad799a76c87086"
+    },
+    {
+      "sourceItemId": "CBMia0FVX3lxTE51REV2dndfQ3FkS0JTbXRPX2d3NTBXMmdXdnNvZXBjYzlqamtudnpiVnZEZDlPYy12WXRCbTdvRnRiN0NISWx0R2JDTXI0NWZmQWt2VlB4U05uS1JqQ0w0Rk5TNmd3VGhweVNz",
+      "title": "副縣長鄧桂菊29日出席由縣政府、客委會及台鐵共同合作進行空間整理的鐵路一村開村典禮。 - 苗栗縣政府全球資訊網",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE51REV2dndfQ3FkS0JTbXRPX2d3NTBXMmdXdnNvZXBjYzlqamtudnpiVnZEZDlPYy12WXRCbTdvRnRiN0NISWx0R2JDTXI0NWZmQWt2VlB4U05uS1JqQ0w0Rk5TNmd3VGhweVNz?oc=5",
+      "publishedAt": "Mon, 28 Mar 2022 22:26:30 GMT",
+      "summary": "副縣長鄧桂菊29日出席由縣政府、客委會及台鐵共同合作進行空間整理的鐵路一村開村典禮。 &nbsp;&nbsp; 苗栗縣政府全球資訊網",
+      "publisher": "苗栗縣政府全球資訊網",
+      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
+      "sourceGroup": "苗栗縣政府",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "鐵路一村"
+      ],
+      "id": "9b9c8306b2f6f883f0b2da0f"
     }
   ]
 }
