@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T01:40:21.316Z",
+  "updatedAt": "2026-10-22T01:35:20.257Z",
   "seenIds": [
     "70f9690ea1a30aecb8df4a54",
     "74ab318ef3ebc9ad80eefb8b",
@@ -129,7 +129,9 @@
     "60e56e407d9f7d4f77130479",
     "0b29a54de6e69a0afa5d3160",
     "8350e432dfad799a76c87086",
-    "9b9c8306b2f6f883f0b2da0f"
+    "9b9c8306b2f6f883f0b2da0f",
+    "2aea4e33deae8406592f8bfd",
+    "01f1cad0ee2da872209c9735"
   ],
   "candidateCache": [
     {
@@ -3211,6 +3213,49 @@
         "鐵路一村"
       ],
       "id": "9b9c8306b2f6f883f0b2da0f"
+    },
+    {
+      "sourceItemId": "CBMia0FVX3lxTE43WjIxX0RKNExaX2hxYmgzcWNWeUs0WlUxb0ducllaVnJYNGp4MnFtb0Ewc09FU2otalBBbFdqMEhlS2ZOSjE0OGFyU2xwcTl6TXUzNmtZcWFtMTc5SXRZODZWWDNqSURNTkg4",
+      "title": "縣長徐耀昌陪同蘇揆視察鐵路一村 爭取14項建設補助並獲允整修警光山莊 - 苗栗縣政府全球資訊網",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE43WjIxX0RKNExaX2hxYmgzcWNWeUs0WlUxb0ducllaVnJYNGp4MnFtb0Ewc09FU2otalBBbFdqMEhlS2ZOSjE0OGFyU2xwcTl6TXUzNmtZcWFtMTc5SXRZODZWWDNqSURNTkg4?oc=5",
+      "publishedAt": "Fri, 19 Apr 2019 07:00:00 GMT",
+      "summary": "縣長徐耀昌陪同蘇揆視察鐵路一村 爭取14項建設補助並獲允整修警光山莊 &nbsp;&nbsp; 苗栗縣政府全球資訊網",
+      "publisher": "苗栗縣政府全球資訊網",
+      "query": "(鐵路一村 OR 火車頭園區 OR 鐵道文物) site:miaoli.gov.tw",
+      "sourceGroup": "苗栗縣政府",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "鐵路一村"
+      ],
+      "id": "2aea4e33deae8406592f8bfd"
+    },
+    {
+      "sourceItemId": "CBMiZkFVX3lxTE0zdTlPMnoyNW10YTJlcjY2ZDZucDVSemJ1bUFNMjNYYTBlYktTeVlDNUczVl9MaUNWcTFPQUZzdTh1bXl0RnZoNHNQdEtnTmhrVW5HYXFQS2VkemNlMEltWGh0Snl0UQ",
+      "title": "【苗栗景點】苗栗火車頭園區│結合鐵道文化與可愛貓貓的超好拍景點│鐵道迷必訪│親子一日遊景點 - 痞客邦PIXNET",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE0zdTlPMnoyNW10YTJlcjY2ZDZucDVSemJ1bUFNMjNYYTBlYktTeVlDNUczVl9MaUNWcTFPQUZzdTh1bXl0RnZoNHNQdEtnTmhrVW5HYXFQS2VkemNlMEltWGh0Snl0UQ?oc=5",
+      "publishedAt": "Mon, 04 Aug 2025 07:00:00 GMT",
+      "summary": "【苗栗景點】苗栗火車頭園區│結合鐵道文化與可愛貓貓的超好拍景點│鐵道迷必訪│親子一日遊景點 &nbsp;&nbsp; 痞客邦PIXNET",
+      "publisher": "痞客邦PIXNET",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)",
+      "sourceGroup": "地方部落格",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "鐵道文化"
+      ],
+      "id": "01f1cad0ee2da872209c9735"
     }
   ]
 }
