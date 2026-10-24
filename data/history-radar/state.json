@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T01:35:47.696Z",
+  "updatedAt": "2026-10-24T01:40:03.482Z",
   "seenIds": [
     "70f9690ea1a30aecb8df4a54",
     "74ab318ef3ebc9ad80eefb8b",
@@ -131,7 +131,8 @@
     "8350e432dfad799a76c87086",
     "9b9c8306b2f6f883f0b2da0f",
     "2aea4e33deae8406592f8bfd",
-    "01f1cad0ee2da872209c9735"
+    "01f1cad0ee2da872209c9735",
+    "8f9eac9ec45cb4240c1bbddb"
   ],
   "candidateCache": [
     {
@@ -3256,6 +3257,28 @@
         "鐵道文化"
       ],
       "id": "01f1cad0ee2da872209c9735"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE1Db2VIMW5KcGhMMU9qNDVNZDZBaTI2MkZnRTZUV3FZSm13YzNuOU5tWHM2WVRBa2hqdWU5UjA4eXpubHd4bURFQ285WFBaTkRUSjBzX0pn",
+      "title": "2025.4.27 「苗栗火車頭園區」開幕營運 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1Db2VIMW5KcGhMMU9qNDVNZDZBaTI2MkZnRTZUV3FZSm13YzNuOU5tWHM2WVRBa2hqdWU5UjA4eXpubHd4bURFQ285WFBaTkRUSjBzX0pn?oc=5",
+      "publishedAt": "Sun, 27 Apr 2025 08:08:27 GMT",
+      "summary": "2025.4.27 「苗栗火車頭園區」開幕營運 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "開幕"
+      ],
+      "id": "8f9eac9ec45cb4240c1bbddb"
     }
   ]
 }
