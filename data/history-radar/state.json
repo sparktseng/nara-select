@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T01:15:49.527Z",
+  "updatedAt": "2026-10-26T01:16:54.474Z",
   "seenIds": [
     "70f9690ea1a30aecb8df4a54",
     "74ab318ef3ebc9ad80eefb8b",
@@ -132,7 +132,9 @@
     "9b9c8306b2f6f883f0b2da0f",
     "2aea4e33deae8406592f8bfd",
     "01f1cad0ee2da872209c9735",
-    "8f9eac9ec45cb4240c1bbddb"
+    "8f9eac9ec45cb4240c1bbddb",
+    "1864d0f00d3803a8d4a555b5",
+    "95482e2adefc15ec0c9fb0af"
   ],
   "candidateCache": [
     {
@@ -3279,6 +3281,50 @@
         "開幕"
       ],
       "id": "8f9eac9ec45cb4240c1bbddb"
+    },
+    {
+      "sourceItemId": "CBMiX0FVX3lxTE56Yno1SUZOaDhyMUxBS0lUSVpXdDVEbVl1R0liMHJUaXl4LXdjU3VRTWRkYTR5clNKNFZjNUs5ZnRxcm5uQ3drb3BkSWxqcHh1SUhWU2NPOTcxZnNQcm5B",
+      "title": "[苗栗]苗栗站-鐵路一村‧鐵道文物展示館 - 痞客邦PIXNET",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE56Yno1SUZOaDhyMUxBS0lUSVpXdDVEbVl1R0liMHJUaXl4LXdjU3VRTWRkYTR5clNKNFZjNUs5ZnRxcm5uQ3drb3BkSWxqcHh1SUhWU2NPOTcxZnNQcm5B?oc=5",
+      "publishedAt": "Thu, 27 Sep 2012 07:00:00 GMT",
+      "summary": "[苗栗]苗栗站-鐵路一村‧鐵道文物展示館 &nbsp;&nbsp; 痞客邦PIXNET",
+      "publisher": "痞客邦PIXNET",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)",
+      "sourceGroup": "地方部落格",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "鐵路一村",
+        "文物"
+      ],
+      "id": "1864d0f00d3803a8d4a555b5"
+    },
+    {
+      "sourceItemId": "CBMiZkFVX3lxTE9GYkdKUlZpOWxKODg4QVpfS2VfdlloS0c4bjJreDZ3LUZXUnZqMTdwbE9WU2pkNXc4Y1dvNllVX0RCNElRQWhnNUo1WkgzeG1WUkVhRnZJZDZTRkZrVVdtLUR2anNHZw",
+      "title": "[底片攝影] 苗栗鐵道文物展示館、彰化扇形車庫、彰化市區 - 卡蘭坦斯",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9GYkdKUlZpOWxKODg4QVpfS2VfdlloS0c4bjJreDZ3LUZXUnZqMTdwbE9WU2pkNXc4Y1dvNllVX0RCNElRQWhnNUo1WkgzeG1WUkVhRnZJZDZTRkZrVVdtLUR2anNHZw?oc=5",
+      "publishedAt": "Sun, 05 Mar 2017 08:00:00 GMT",
+      "summary": "[底片攝影] 苗栗鐵道文物展示館、彰化扇形車庫、彰化市區 &nbsp;&nbsp; 卡蘭坦斯",
+      "publisher": "卡蘭坦斯",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)",
+      "sourceGroup": "地方部落格",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "95482e2adefc15ec0c9fb0af"
     }
   ]
 }

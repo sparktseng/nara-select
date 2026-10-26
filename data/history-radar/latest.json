@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "run": {
-    "startedAt": "2026-10-25T01:15:28.703Z",
-    "finishedAt": "2026-10-25T01:15:49.527Z",
+    "startedAt": "2026-10-26T01:16:39.979Z",
+    "finishedAt": "2026-10-26T01:16:54.474Z",
     "timezone": "Asia/Taipei",
     "status": "完成",
-    "discovered": 100,
-    "newCandidates": 0,
-    "availableCandidates": 130
+    "discovered": 105,
+    "newCandidates": 2,
+    "availableCandidates": 132
   },
   "candidates": [
     {
@@ -3154,12 +3154,56 @@
         "開幕"
       ],
       "id": "8f9eac9ec45cb4240c1bbddb"
+    },
+    {
+      "sourceItemId": "CBMiX0FVX3lxTE56Yno1SUZOaDhyMUxBS0lUSVpXdDVEbVl1R0liMHJUaXl4LXdjU3VRTWRkYTR5clNKNFZjNUs5ZnRxcm5uQ3drb3BkSWxqcHh1SUhWU2NPOTcxZnNQcm5B",
+      "title": "[苗栗]苗栗站-鐵路一村‧鐵道文物展示館 - 痞客邦PIXNET",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE56Yno1SUZOaDhyMUxBS0lUSVpXdDVEbVl1R0liMHJUaXl4LXdjU3VRTWRkYTR5clNKNFZjNUs5ZnRxcm5uQ3drb3BkSWxqcHh1SUhWU2NPOTcxZnNQcm5B?oc=5",
+      "publishedAt": "Thu, 27 Sep 2012 07:00:00 GMT",
+      "summary": "[苗栗]苗栗站-鐵路一村‧鐵道文物展示館 &nbsp;&nbsp; 痞客邦PIXNET",
+      "publisher": "痞客邦PIXNET",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)",
+      "sourceGroup": "地方部落格",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "鐵路一村",
+        "文物"
+      ],
+      "id": "1864d0f00d3803a8d4a555b5"
+    },
+    {
+      "sourceItemId": "CBMiZkFVX3lxTE9GYkdKUlZpOWxKODg4QVpfS2VfdlloS0c4bjJreDZ3LUZXUnZqMTdwbE9WU2pkNXc4Y1dvNllVX0RCNElRQWhnNUo1WkgzeG1WUkVhRnZJZDZTRkZrVVdtLUR2anNHZw",
+      "title": "[底片攝影] 苗栗鐵道文物展示館、彰化扇形車庫、彰化市區 - 卡蘭坦斯",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9GYkdKUlZpOWxKODg4QVpfS2VfdlloS0c4bjJreDZ3LUZXUnZqMTdwbE9WU2pkNXc4Y1dvNllVX0RCNElRQWhnNUo1WkgzeG1WUkVhRnZJZDZTRkZrVVdtLUR2anNHZw?oc=5",
+      "publishedAt": "Sun, 05 Mar 2017 08:00:00 GMT",
+      "summary": "[底片攝影] 苗栗鐵道文物展示館、彰化扇形車庫、彰化市區 &nbsp;&nbsp; 卡蘭坦斯",
+      "publisher": "卡蘭坦斯",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)",
+      "sourceGroup": "地方部落格",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗鐵道文物展示館",
+        "文物"
+      ],
+      "id": "95482e2adefc15ec0c9fb0af"
     }
   ],
   "linkChecks": [
     {
       "url": "https://memory.culture.tw/",
-      "checkedAt": "2026-10-25T01:15:30.287Z",
+      "checkedAt": "2026-10-26T01:16:41.332Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
@@ -3172,7 +3216,7 @@
     },
     {
       "url": "https://www.ncl.edu.tw/",
-      "checkedAt": "2026-10-25T01:15:33.745Z",
+      "checkedAt": "2026-10-26T01:16:43.362Z",
       "ok": false,
       "httpStatus": 403,
       "robotsStatus": "未提供(302)",
@@ -3185,7 +3229,7 @@
     },
     {
       "url": "https://data.gov.tw/",
-      "checkedAt": "2026-10-25T01:15:32.586Z",
+      "checkedAt": "2026-10-26T01:16:42.835Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3194,7 +3238,7 @@
     },
     {
       "url": "https://www.railway.gov.tw/",
-      "checkedAt": "2026-10-25T01:15:31.650Z",
+      "checkedAt": "2026-10-26T01:16:43.516Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3203,7 +3247,7 @@
     },
     {
       "url": "https://www.hakka.gov.tw/",
-      "checkedAt": "2026-10-25T01:15:35.809Z",
+      "checkedAt": "2026-10-26T01:16:44.904Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "允許",
@@ -3212,7 +3256,7 @@
     },
     {
       "url": "https://www.miaoli.gov.tw/",
-      "checkedAt": "2026-10-25T01:15:33.842Z",
+      "checkedAt": "2026-10-26T01:16:44.996Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3221,7 +3265,7 @@
     },
     {
       "url": "https://www.facebook.com/miaolirailwaymuseum/",
-      "checkedAt": "2026-10-25T01:15:32.609Z",
+      "checkedAt": "2026-10-26T01:16:43.381Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -3230,7 +3274,7 @@
     },
     {
       "url": "https://www.instagram.com/miaoli_railway_museum/",
-      "checkedAt": "2026-10-25T01:15:32.695Z",
+      "checkedAt": "2026-10-26T01:16:43.497Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
