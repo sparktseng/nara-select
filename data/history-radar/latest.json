@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "run": {
-    "startedAt": "2026-10-30T02:39:37.657Z",
-    "finishedAt": "2026-10-30T02:40:07.432Z",
+    "startedAt": "2026-10-31T02:28:45.299Z",
+    "finishedAt": "2026-10-31T02:29:26.143Z",
     "timezone": "Asia/Taipei",
     "status": "完成",
-    "discovered": 98,
+    "discovered": 91,
     "newCandidates": 0,
     "availableCandidates": 132
   },
@@ -3203,7 +3203,7 @@
   "linkChecks": [
     {
       "url": "https://memory.culture.tw/",
-      "checkedAt": "2026-10-30T02:39:38.664Z",
+      "checkedAt": "2026-10-31T02:28:47.983Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
@@ -3216,7 +3216,7 @@
     },
     {
       "url": "https://www.ncl.edu.tw/",
-      "checkedAt": "2026-10-30T02:39:40.558Z",
+      "checkedAt": "2026-10-31T02:28:51.217Z",
       "ok": false,
       "httpStatus": 403,
       "robotsStatus": "未提供(302)",
@@ -3229,7 +3229,7 @@
     },
     {
       "url": "https://data.gov.tw/",
-      "checkedAt": "2026-10-30T02:39:40.884Z",
+      "checkedAt": "2026-10-31T02:28:47.870Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3238,7 +3238,7 @@
     },
     {
       "url": "https://www.railway.gov.tw/",
-      "checkedAt": "2026-10-30T02:39:39.920Z",
+      "checkedAt": "2026-10-31T02:28:47.602Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3247,7 +3247,7 @@
     },
     {
       "url": "https://www.hakka.gov.tw/",
-      "checkedAt": "2026-10-30T02:39:41.572Z",
+      "checkedAt": "2026-10-31T02:28:52.879Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "允許",
@@ -3256,7 +3256,7 @@
     },
     {
       "url": "https://www.miaoli.gov.tw/",
-      "checkedAt": "2026-10-30T02:39:41.553Z",
+      "checkedAt": "2026-10-31T02:28:49.424Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3265,7 +3265,7 @@
     },
     {
       "url": "https://www.facebook.com/miaolirailwaymuseum/",
-      "checkedAt": "2026-10-30T02:39:40.723Z",
+      "checkedAt": "2026-10-31T02:28:48.441Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -3274,7 +3274,7 @@
     },
     {
       "url": "https://www.instagram.com/miaoli_railway_museum/",
-      "checkedAt": "2026-10-30T02:39:41.023Z",
+      "checkedAt": "2026-10-31T02:28:48.896Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
