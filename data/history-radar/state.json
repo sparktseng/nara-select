@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T02:33:02.766Z",
+  "updatedAt": "2026-11-09T02:43:23.010Z",
   "seenIds": [
     "70f9690ea1a30aecb8df4a54",
     "74ab318ef3ebc9ad80eefb8b",
@@ -139,7 +139,8 @@
     "f622b9dc83a18a65eab1dc59",
     "437c7f6ef884ed155252b647",
     "194add1c5a9586ecfb8cdec8",
-    "53c8703431a3bad204162434"
+    "53c8703431a3bad204162434",
+    "c7c9af195f9405aeb97fb49e"
   ],
   "candidateCache": [
     {
@@ -3422,6 +3423,28 @@
         "苗栗火車頭園區"
       ],
       "id": "194add1c5a9586ecfb8cdec8"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE1HaDBPS2IwV0piRXJqZDFkUkJUUUZKdWlKbHNSbll5bUl1MzN2YmZHWV9RQlRhc253ZDJoSHVlY1lkNnA4NTJDSXBKMWEzWFpRTDJjRWFn",
+      "title": "苗栗火車頭園區開幕 鐵道迷貓奴集合 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1HaDBPS2IwV0piRXJqZDFkUkJUUUZKdWlKbHNSbll5bUl1MzN2YmZHWV9RQlRhc253ZDJoSHVlY1lkNnA4NTJDSXBKMWEzWFpRTDJjRWFn?oc=5",
+      "publishedAt": "Fri, 25 Apr 2025 10:01:21 GMT",
+      "summary": "苗栗火車頭園區開幕 鐵道迷貓奴集合 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "開幕"
+      ],
+      "id": "c7c9af195f9405aeb97fb49e"
     }
   ]
 }
