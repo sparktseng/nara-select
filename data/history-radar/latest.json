@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "run": {
-    "startedAt": "2026-11-12T03:52:58.234Z",
-    "finishedAt": "2026-11-12T03:53:07.051Z",
+    "startedAt": "2026-11-13T03:27:02.279Z",
+    "finishedAt": "2026-11-13T03:27:15.221Z",
     "timezone": "Asia/Taipei",
     "status": "完成",
-    "discovered": 96,
-    "newCandidates": 0,
-    "availableCandidates": 137
+    "discovered": 99,
+    "newCandidates": 1,
+    "availableCandidates": 138
   },
   "candidates": [
     {
@@ -3312,12 +3312,33 @@
         "開幕"
       ],
       "id": "c7c9af195f9405aeb97fb49e"
+    },
+    {
+      "sourceItemId": "CBMiWkFVX3lxTE1HSTdSdEZuTFRsY1BoYzBDM3dzMkVxODNOd0ZGa3pLZ1RZWFNSdHhqcWxlYTltUkVMSDc1a3BMT0xlZkdWTGx1Q3lBSXpZdmJON1dRYkRYUUZad9IBT0FVX3lxTE5vQTlHd1ZSU21Ia2lZSHJ5SFV3Yi1WVVpCT1g2Qk5td2pvUTBScVZGaFI5bVpFS1dLOW90WWl0UHZzV2Nhb1YyYXNwNUtKQkk",
+      "title": "鑽進鐵軌廊道直擊火車底盤！苗栗火車頭園區各種經典列車齊聚 - ETtoday旅遊雲",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1HSTdSdEZuTFRsY1BoYzBDM3dzMkVxODNOd0ZGa3pLZ1RZWFNSdHhqcWxlYTltUkVMSDc1a3BMT0xlZkdWTGx1Q3lBSXpZdmJON1dRYkRYUUZad9IBT0FVX3lxTE5vQTlHd1ZSU21Ia2lZSHJ5SFV3Yi1WVVpCT1g2Qk5td2pvUTBScVZGaFI5bVpFS1dLOW90WWl0UHZzV2Nhb1YyYXNwNUtKQkk?oc=5",
+      "publishedAt": "Mon, 19 May 2025 07:00:00 GMT",
+      "summary": "鑽進鐵軌廊道直擊火車底盤！苗栗火車頭園區各種經典列車齊聚 &nbsp;&nbsp; ETtoday旅遊雲",
+      "publisher": "ETtoday旅遊雲",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:udn.com OR site:ltn.com.tw OR site:chinatimes.com OR site:ettoday.net)",
+      "sourceGroup": "地方新聞",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "968da8df45403f655862ad38"
     }
   ],
   "linkChecks": [
     {
       "url": "https://memory.culture.tw/",
-      "checkedAt": "2026-11-12T03:52:59.156Z",
+      "checkedAt": "2026-11-13T03:27:03.805Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
@@ -3330,7 +3351,7 @@
     },
     {
       "url": "https://www.ncl.edu.tw/",
-      "checkedAt": "2026-11-12T03:53:01.726Z",
+      "checkedAt": "2026-11-13T03:27:05.135Z",
       "ok": false,
       "httpStatus": 403,
       "robotsStatus": "未提供(302)",
@@ -3343,7 +3364,7 @@
     },
     {
       "url": "https://data.gov.tw/",
-      "checkedAt": "2026-11-12T03:53:00.657Z",
+      "checkedAt": "2026-11-13T03:27:05.578Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3352,7 +3373,7 @@
     },
     {
       "url": "https://www.railway.gov.tw/",
-      "checkedAt": "2026-11-12T03:53:00.701Z",
+      "checkedAt": "2026-11-13T03:27:05.016Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3361,7 +3382,7 @@
     },
     {
       "url": "https://www.hakka.gov.tw/",
-      "checkedAt": "2026-11-12T03:53:01.529Z",
+      "checkedAt": "2026-11-13T03:27:07.217Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "允許",
@@ -3370,7 +3391,7 @@
     },
     {
       "url": "https://www.miaoli.gov.tw/",
-      "checkedAt": "2026-11-12T03:53:02.130Z",
+      "checkedAt": "2026-11-13T03:27:06.669Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3379,7 +3400,7 @@
     },
     {
       "url": "https://www.facebook.com/miaolirailwaymuseum/",
-      "checkedAt": "2026-11-12T03:53:00.934Z",
+      "checkedAt": "2026-11-13T03:27:05.473Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -3388,7 +3409,7 @@
     },
     {
       "url": "https://www.instagram.com/miaoli_railway_museum/",
-      "checkedAt": "2026-11-12T03:53:01.282Z",
+      "checkedAt": "2026-11-13T03:27:05.819Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",

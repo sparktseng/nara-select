@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T03:53:07.051Z",
+  "updatedAt": "2026-11-13T03:27:15.221Z",
   "seenIds": [
     "70f9690ea1a30aecb8df4a54",
     "74ab318ef3ebc9ad80eefb8b",
@@ -140,7 +140,8 @@
     "437c7f6ef884ed155252b647",
     "194add1c5a9586ecfb8cdec8",
     "53c8703431a3bad204162434",
-    "c7c9af195f9405aeb97fb49e"
+    "c7c9af195f9405aeb97fb49e",
+    "968da8df45403f655862ad38"
   ],
   "candidateCache": [
     {
@@ -3445,6 +3446,27 @@
         "開幕"
       ],
       "id": "c7c9af195f9405aeb97fb49e"
+    },
+    {
+      "sourceItemId": "CBMiWkFVX3lxTE1HSTdSdEZuTFRsY1BoYzBDM3dzMkVxODNOd0ZGa3pLZ1RZWFNSdHhqcWxlYTltUkVMSDc1a3BMT0xlZkdWTGx1Q3lBSXpZdmJON1dRYkRYUUZad9IBT0FVX3lxTE5vQTlHd1ZSU21Ia2lZSHJ5SFV3Yi1WVVpCT1g2Qk5td2pvUTBScVZGaFI5bVpFS1dLOW90WWl0UHZzV2Nhb1YyYXNwNUtKQkk",
+      "title": "鑽進鐵軌廊道直擊火車底盤！苗栗火車頭園區各種經典列車齊聚 - ETtoday旅遊雲",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1HSTdSdEZuTFRsY1BoYzBDM3dzMkVxODNOd0ZGa3pLZ1RZWFNSdHhqcWxlYTltUkVMSDc1a3BMT0xlZkdWTGx1Q3lBSXpZdmJON1dRYkRYUUZad9IBT0FVX3lxTE5vQTlHd1ZSU21Ia2lZSHJ5SFV3Yi1WVVpCT1g2Qk5td2pvUTBScVZGaFI5bVpFS1dLOW90WWl0UHZzV2Nhb1YyYXNwNUtKQkk?oc=5",
+      "publishedAt": "Mon, 19 May 2025 07:00:00 GMT",
+      "summary": "鑽進鐵軌廊道直擊火車底盤！苗栗火車頭園區各種經典列車齊聚 &nbsp;&nbsp; ETtoday旅遊雲",
+      "publisher": "ETtoday旅遊雲",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:udn.com OR site:ltn.com.tw OR site:chinatimes.com OR site:ettoday.net)",
+      "sourceGroup": "地方新聞",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "968da8df45403f655862ad38"
     }
   ]
 }
