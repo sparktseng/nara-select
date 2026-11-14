@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T03:27:15.221Z",
+  "updatedAt": "2026-11-14T03:22:25.864Z",
   "seenIds": [
     "70f9690ea1a30aecb8df4a54",
     "74ab318ef3ebc9ad80eefb8b",
@@ -141,7 +141,8 @@
     "194add1c5a9586ecfb8cdec8",
     "53c8703431a3bad204162434",
     "c7c9af195f9405aeb97fb49e",
-    "968da8df45403f655862ad38"
+    "968da8df45403f655862ad38",
+    "d1d808b1bad55ca5d260eed1"
   ],
   "candidateCache": [
     {
@@ -3467,6 +3468,27 @@
         "苗栗火車頭園區"
       ],
       "id": "968da8df45403f655862ad38"
+    },
+    {
+      "sourceItemId": "CBMinwFBVV95cUxOd2VBMHA0LURPbUpGMUh4WmZYdDJDUFFpa2RzcnZQbGRPTlJwc0sxeEk2bzFDd09RekZzamUxbVl1WXZGSXlsZmpJYXViV09NVGNlVm1MRHVJMDVUU3N4ZVNiZjlld0hTcmRGcUxmcWpMWU1CZ2U0Y3ZiYVdDMTYtSmNfQ3E3QUdXVmI1N3JQY1lKNkRTbmFQeHhtcXZ0dnM",
+      "title": "苗栗火車頭園區 - 客庄小旅行",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOd2VBMHA0LURPbUpGMUh4WmZYdDJDUFFpa2RzcnZQbGRPTlJwc0sxeEk2bzFDd09RekZzamUxbVl1WXZGSXlsZmpJYXViV09NVGNlVm1MRHVJMDVUU3N4ZVNiZjlld0hTcmRGcUxmcWpMWU1CZ2U0Y3ZiYVdDMTYtSmNfQ3E3QUdXVmI1N3JQY1lKNkRTbmFQeHhtcXZ0dnM?oc=5",
+      "publishedAt": "Wed, 04 Nov 2026 13:27:59 GMT",
+      "summary": "苗栗火車頭園區 &nbsp;&nbsp; 客庄小旅行",
+      "publisher": "客庄小旅行",
+      "query": "(苗栗 鐵路一村 OR 苗栗 火車頭園區) site:hakka.gov.tw",
+      "sourceGroup": "客家委員會",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "d1d808b1bad55ca5d260eed1"
     }
   ]
 }
