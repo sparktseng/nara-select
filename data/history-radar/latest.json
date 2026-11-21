@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "run": {
-    "startedAt": "2026-11-20T04:01:19.394Z",
-    "finishedAt": "2026-11-20T04:01:25.992Z",
+    "startedAt": "2026-11-21T04:01:04.286Z",
+    "finishedAt": "2026-11-21T04:01:11.070Z",
     "timezone": "Asia/Taipei",
     "status": "完成",
-    "discovered": 101,
-    "newCandidates": 3,
+    "discovered": 94,
+    "newCandidates": 0,
     "availableCandidates": 142
   },
   "candidates": [
@@ -3425,7 +3425,7 @@
   "linkChecks": [
     {
       "url": "https://memory.culture.tw/",
-      "checkedAt": "2026-11-20T04:01:20.734Z",
+      "checkedAt": "2026-11-21T04:01:05.963Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
@@ -3438,7 +3438,7 @@
     },
     {
       "url": "https://www.ncl.edu.tw/",
-      "checkedAt": "2026-11-20T04:01:22.352Z",
+      "checkedAt": "2026-11-21T04:01:07.379Z",
       "ok": false,
       "httpStatus": 403,
       "robotsStatus": "未提供(302)",
@@ -3451,7 +3451,7 @@
     },
     {
       "url": "https://data.gov.tw/",
-      "checkedAt": "2026-11-20T04:01:23.124Z",
+      "checkedAt": "2026-11-21T04:01:10.101Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3460,16 +3460,20 @@
     },
     {
       "url": "https://www.railway.gov.tw/",
-      "checkedAt": "2026-11-20T04:01:22.493Z",
-      "ok": true,
-      "httpStatus": 200,
-      "robotsStatus": "未提供(404)",
-      "error": null,
-      "archivedSnapshot": null
+      "checkedAt": "2026-11-21T04:01:07.055Z",
+      "ok": false,
+      "httpStatus": 0,
+      "robotsStatus": "無法取得",
+      "error": "fetch failed",
+      "archivedSnapshot": {
+        "url": "https://web.archive.org/web/20260318183216/https://www.railway.gov.tw/",
+        "timestamp": "20260318183216",
+        "status": "200"
+      }
     },
     {
       "url": "https://www.hakka.gov.tw/",
-      "checkedAt": "2026-11-20T04:01:24.037Z",
+      "checkedAt": "2026-11-21T04:01:09.740Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "允許",
@@ -3478,7 +3482,7 @@
     },
     {
       "url": "https://www.miaoli.gov.tw/",
-      "checkedAt": "2026-11-20T04:01:23.581Z",
+      "checkedAt": "2026-11-21T04:01:08.418Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
@@ -3491,7 +3495,7 @@
     },
     {
       "url": "https://www.facebook.com/miaolirailwaymuseum/",
-      "checkedAt": "2026-11-20T04:01:22.620Z",
+      "checkedAt": "2026-11-21T04:01:07.510Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -3500,30 +3504,30 @@
     },
     {
       "url": "https://www.instagram.com/miaoli_railway_museum/",
-      "checkedAt": "2026-11-20T04:01:23.582Z",
-      "ok": true,
-      "httpStatus": 200,
-      "robotsStatus": "允許",
-      "error": null,
+      "checkedAt": "2026-11-21T04:01:07.770Z",
+      "ok": false,
+      "httpStatus": 0,
+      "robotsStatus": "禁止",
+      "error": "robots.txt 禁止存取",
       "archivedSnapshot": null
     }
   ],
   "errors": [
     {
       "source": "Google News RSS",
-      "query": "苗栗鐵道文物展示館",
+      "query": "文創五號店 苗栗",
       "status": "API未取得",
       "error": "HTTP 429"
     },
     {
       "source": "Google News RSS",
-      "query": "\"5號店\" 苗栗 鐵道",
+      "query": "苗栗火車頭園區 導覽",
       "status": "API未取得",
       "error": "HTTP 429"
     },
     {
       "source": "Google News RSS",
-      "query": "苗栗火車頭園區 營業時間",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:pixnet.net OR site:blogspot.com)",
       "status": "API未取得",
       "error": "HTTP 429"
     },
