@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "run": {
-    "startedAt": "2026-11-22T03:15:12.994Z",
-    "finishedAt": "2026-11-22T03:15:19.765Z",
+    "startedAt": "2026-11-23T03:44:38.372Z",
+    "finishedAt": "2026-11-23T03:44:45.165Z",
     "timezone": "Asia/Taipei",
     "status": "完成",
-    "discovered": 96,
-    "newCandidates": 0,
-    "availableCandidates": 142
+    "discovered": 99,
+    "newCandidates": 1,
+    "availableCandidates": 143
   },
   "candidates": [
     {
@@ -3420,12 +3420,34 @@
         "苗栗火車頭園區"
       ],
       "id": "020043e95cd6f7284a772b44"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE1PeFExVnVXbm9Ub01NaWVYUlBHU016eGVQSzlqUGkya3dfbWlsdFA4TXRFeHk1S1VmSkNPWkVWV3NaenlkdGpSSEtFa1REdWtEVEFuek1B",
+      "title": "【后里，苗栗】 萌芳花卉農場美麗的石斛蘭瀑布超吸睛、苗栗火車頭園區鐵道迷的最愛、後龍好望角海景步道大風車超級療癒的打卡景點- 小小茉莉~簡單生活 - udn部落格",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1PeFExVnVXbm9Ub01NaWVYUlBHU016eGVQSzlqUGkya3dfbWlsdFA4TXRFeHk1S1VmSkNPWkVWV3NaenlkdGpSSEtFa1REdWtEVEFuek1B?oc=5",
+      "publishedAt": "Thu, 22 May 2025 07:00:00 GMT",
+      "summary": "【后里，苗栗】 萌芳花卉農場美麗的石斛蘭瀑布超吸睛、苗栗火車頭園區鐵道迷的最愛、後龍好望角海景步道大風車超級療癒的打卡景點- 小小茉莉~簡單生活 &nbsp;&nbsp; udn部落格",
+      "publisher": "udn部落格",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:udn.com OR site:ltn.com.tw OR site:chinatimes.com OR site:ettoday.net)",
+      "sourceGroup": "地方新聞",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "打卡"
+      ],
+      "id": "7290574a1969d685a27be10e"
     }
   ],
   "linkChecks": [
     {
       "url": "https://memory.culture.tw/",
-      "checkedAt": "2026-11-22T03:15:14.279Z",
+      "checkedAt": "2026-11-23T03:44:39.277Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
@@ -3438,7 +3460,7 @@
     },
     {
       "url": "https://www.ncl.edu.tw/",
-      "checkedAt": "2026-11-22T03:15:15.398Z",
+      "checkedAt": "2026-11-23T03:44:40.940Z",
       "ok": false,
       "httpStatus": 403,
       "robotsStatus": "未提供(302)",
@@ -3451,7 +3473,7 @@
     },
     {
       "url": "https://data.gov.tw/",
-      "checkedAt": "2026-11-22T03:15:15.319Z",
+      "checkedAt": "2026-11-23T03:44:40.850Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3460,7 +3482,7 @@
     },
     {
       "url": "https://www.railway.gov.tw/",
-      "checkedAt": "2026-11-22T03:15:15.462Z",
+      "checkedAt": "2026-11-23T03:44:40.661Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3469,7 +3491,7 @@
     },
     {
       "url": "https://www.hakka.gov.tw/",
-      "checkedAt": "2026-11-22T03:15:17.709Z",
+      "checkedAt": "2026-11-23T03:44:42.514Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "允許",
@@ -3478,7 +3500,7 @@
     },
     {
       "url": "https://www.miaoli.gov.tw/",
-      "checkedAt": "2026-11-22T03:15:16.344Z",
+      "checkedAt": "2026-11-23T03:44:41.901Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
@@ -3491,7 +3513,7 @@
     },
     {
       "url": "https://www.facebook.com/miaolirailwaymuseum/",
-      "checkedAt": "2026-11-22T03:15:15.677Z",
+      "checkedAt": "2026-11-23T03:44:41.045Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -3500,7 +3522,7 @@
     },
     {
       "url": "https://www.instagram.com/miaoli_railway_museum/",
-      "checkedAt": "2026-11-22T03:15:15.781Z",
+      "checkedAt": "2026-11-23T03:44:41.193Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",

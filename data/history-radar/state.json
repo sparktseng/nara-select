@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T03:15:19.765Z",
+  "updatedAt": "2026-11-23T03:44:45.165Z",
   "seenIds": [
     "70f9690ea1a30aecb8df4a54",
     "74ab318ef3ebc9ad80eefb8b",
@@ -146,7 +146,8 @@
     "a23371fa5c08158e4da803e2",
     "6f310f5b05cf47f37feb1615",
     "6269f62d280ca3a8b39be154",
-    "020043e95cd6f7284a772b44"
+    "020043e95cd6f7284a772b44",
+    "7290574a1969d685a27be10e"
   ],
   "candidateCache": [
     {
@@ -3559,6 +3560,28 @@
         "苗栗火車頭園區"
       ],
       "id": "020043e95cd6f7284a772b44"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE1PeFExVnVXbm9Ub01NaWVYUlBHU016eGVQSzlqUGkya3dfbWlsdFA4TXRFeHk1S1VmSkNPWkVWV3NaenlkdGpSSEtFa1REdWtEVEFuek1B",
+      "title": "【后里，苗栗】 萌芳花卉農場美麗的石斛蘭瀑布超吸睛、苗栗火車頭園區鐵道迷的最愛、後龍好望角海景步道大風車超級療癒的打卡景點- 小小茉莉~簡單生活 - udn部落格",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1PeFExVnVXbm9Ub01NaWVYUlBHU016eGVQSzlqUGkya3dfbWlsdFA4TXRFeHk1S1VmSkNPWkVWV3NaenlkdGpSSEtFa1REdWtEVEFuek1B?oc=5",
+      "publishedAt": "Thu, 22 May 2025 07:00:00 GMT",
+      "summary": "【后里，苗栗】 萌芳花卉農場美麗的石斛蘭瀑布超吸睛、苗栗火車頭園區鐵道迷的最愛、後龍好望角海景步道大風車超級療癒的打卡景點- 小小茉莉~簡單生活 &nbsp;&nbsp; udn部落格",
+      "publisher": "udn部落格",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) (site:udn.com OR site:ltn.com.tw OR site:chinatimes.com OR site:ettoday.net)",
+      "sourceGroup": "地方新聞",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區",
+        "打卡"
+      ],
+      "id": "7290574a1969d685a27be10e"
     }
   ]
 }
