@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "run": {
-    "startedAt": "2026-11-23T03:44:38.372Z",
-    "finishedAt": "2026-11-23T03:44:45.165Z",
+    "startedAt": "2026-11-24T20:26:19.214Z",
+    "finishedAt": "2026-11-24T20:26:28.840Z",
     "timezone": "Asia/Taipei",
-    "status": "完成",
-    "discovered": 99,
+    "status": "部分失敗",
+    "discovered": 100,
     "newCandidates": 1,
-    "availableCandidates": 143
+    "availableCandidates": 144
   },
   "candidates": [
     {
@@ -3442,12 +3442,33 @@
         "打卡"
       ],
       "id": "7290574a1969d685a27be10e"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE43aFRxOFFWUjFDNE9kS3ZlaDBmNHUxcExvRVQxWXNLQk50V1dtbVMxTVh1THB6N25vOFpKZVROUHM5S0FzX1hmX3V4cjNBZTFnVmQzV2ZR",
+      "title": "台鐵公司 苗栗火車頭園區 「鐵客之緣 苗栗火車頭園區竣工典禮」 展示轉車台 CT152蒸汽火車頭 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE43aFRxOFFWUjFDNE9kS3ZlaDBmNHUxcExvRVQxWXNLQk50V1dtbVMxTVh1THB6N25vOFpKZVROUHM5S0FzX1hmX3V4cjNBZTFnVmQzV2ZR?oc=5",
+      "publishedAt": "Fri, 05 Jan 2024 08:21:16 GMT",
+      "summary": "台鐵公司 苗栗火車頭園區 「鐵客之緣 苗栗火車頭園區竣工典禮」 展示轉車台 CT152蒸汽火車頭 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "172b737836c36486d552407e"
     }
   ],
   "linkChecks": [
     {
       "url": "https://memory.culture.tw/",
-      "checkedAt": "2026-11-23T03:44:39.277Z",
+      "checkedAt": "2026-11-24T20:26:20.603Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
@@ -3460,7 +3481,7 @@
     },
     {
       "url": "https://www.ncl.edu.tw/",
-      "checkedAt": "2026-11-23T03:44:40.940Z",
+      "checkedAt": "2026-11-24T20:26:21.732Z",
       "ok": false,
       "httpStatus": 403,
       "robotsStatus": "未提供(302)",
@@ -3473,16 +3494,20 @@
     },
     {
       "url": "https://data.gov.tw/",
-      "checkedAt": "2026-11-23T03:44:40.850Z",
-      "ok": true,
-      "httpStatus": 200,
+      "checkedAt": "2026-11-24T20:26:28.387Z",
+      "ok": false,
+      "httpStatus": 0,
       "robotsStatus": "未提供(404)",
-      "error": null,
-      "archivedSnapshot": null
+      "error": "The operation was aborted due to timeout",
+      "archivedSnapshot": {
+        "url": "https://web.archive.org/web/20261117014111/https://data.gov.tw/",
+        "timestamp": "20261117014111",
+        "status": "200"
+      }
     },
     {
       "url": "https://www.railway.gov.tw/",
-      "checkedAt": "2026-11-23T03:44:40.661Z",
+      "checkedAt": "2026-11-24T20:26:22.137Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "未提供(404)",
@@ -3491,7 +3516,7 @@
     },
     {
       "url": "https://www.hakka.gov.tw/",
-      "checkedAt": "2026-11-23T03:44:42.514Z",
+      "checkedAt": "2026-11-24T20:26:23.714Z",
       "ok": true,
       "httpStatus": 200,
       "robotsStatus": "允許",
@@ -3500,7 +3525,7 @@
     },
     {
       "url": "https://www.miaoli.gov.tw/",
-      "checkedAt": "2026-11-23T03:44:41.901Z",
+      "checkedAt": "2026-11-24T20:26:23.467Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "無法取得",
@@ -3513,7 +3538,7 @@
     },
     {
       "url": "https://www.facebook.com/miaolirailwaymuseum/",
-      "checkedAt": "2026-11-23T03:44:41.045Z",
+      "checkedAt": "2026-11-24T20:26:22.242Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -3522,7 +3547,7 @@
     },
     {
       "url": "https://www.instagram.com/miaoli_railway_museum/",
-      "checkedAt": "2026-11-23T03:44:41.193Z",
+      "checkedAt": "2026-11-24T20:26:22.414Z",
       "ok": false,
       "httpStatus": 0,
       "robotsStatus": "禁止",
@@ -3535,31 +3560,31 @@
       "source": "Threads API",
       "query": "苗栗火車頭園區",
       "status": "API未取得",
-      "error": "HTTP 400"
+      "error": "HTTP 400; code=190; error_subcode=0; 權杖無效或已過期，需重新授權"
     },
     {
       "source": "Threads API",
       "query": "苗栗鐵道文物展示館",
       "status": "API未取得",
-      "error": "HTTP 400"
+      "error": "HTTP 400; code=190; error_subcode=0; 權杖無效或已過期，需重新授權"
     },
     {
       "source": "Threads API",
       "query": "苗栗鐵路一村",
       "status": "API未取得",
-      "error": "HTTP 400"
+      "error": "HTTP 400; code=190; error_subcode=0; 權杖無效或已過期，需重新授權"
     },
     {
       "source": "Threads API",
       "query": "文創五號店 苗栗",
       "status": "API未取得",
-      "error": "HTTP 400"
+      "error": "HTTP 400; code=190; error_subcode=0; 權杖無效或已過期，需重新授權"
     },
     {
       "source": "Threads API",
       "query": "\"5號店\" 苗栗 鐵道",
       "status": "API未取得",
-      "error": "HTTP 400"
+      "error": "HTTP 400; code=190; error_subcode=0; 權杖無效或已過期，需重新授權"
     }
   ]
 }

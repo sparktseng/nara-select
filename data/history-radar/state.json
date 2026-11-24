@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T03:44:45.165Z",
+  "updatedAt": "2026-11-24T20:26:28.840Z",
   "seenIds": [
     "70f9690ea1a30aecb8df4a54",
     "74ab318ef3ebc9ad80eefb8b",
@@ -147,7 +147,8 @@
     "6f310f5b05cf47f37feb1615",
     "6269f62d280ca3a8b39be154",
     "020043e95cd6f7284a772b44",
-    "7290574a1969d685a27be10e"
+    "7290574a1969d685a27be10e",
+    "172b737836c36486d552407e"
   ],
   "candidateCache": [
     {
@@ -3582,6 +3583,27 @@
         "打卡"
       ],
       "id": "7290574a1969d685a27be10e"
+    },
+    {
+      "sourceItemId": "CBMiVkFVX3lxTE43aFRxOFFWUjFDNE9kS3ZlaDBmNHUxcExvRVQxWXNLQk50V1dtbVMxTVh1THB6N25vOFpKZVROUHM5S0FzX1hmX3V4cjNBZTFnVmQzV2ZR",
+      "title": "台鐵公司 苗栗火車頭園區 「鐵客之緣 苗栗火車頭園區竣工典禮」 展示轉車台 CT152蒸汽火車頭 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE43aFRxOFFWUjFDNE9kS3ZlaDBmNHUxcExvRVQxWXNLQk50V1dtbVMxTVh1THB6N25vOFpKZVROUHM5S0FzX1hmX3V4cjNBZTFnVmQzV2ZR?oc=5",
+      "publishedAt": "Fri, 05 Jan 2024 08:21:16 GMT",
+      "summary": "台鐵公司 苗栗火車頭園區 「鐵客之緣 苗栗火車頭園區竣工典禮」 展示轉車台 CT152蒸汽火車頭 &nbsp;&nbsp; YouTube",
+      "publisher": "YouTube",
+      "query": "(苗栗 火車頭園區 OR 苗栗 鐵路一村 OR 苗栗 鐵道) site:youtube.com",
+      "sourceGroup": "影音平台",
+      "defaultCategory": "史料線索",
+      "lookbackDays": 36500,
+      "subjects": [
+        "園區"
+      ],
+      "category": "史料線索",
+      "warnings": [],
+      "matchedKeywords": [
+        "苗栗火車頭園區"
+      ],
+      "id": "172b737836c36486d552407e"
     }
   ]
 }
