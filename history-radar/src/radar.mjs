@@ -164,6 +164,35 @@ async function mapLimit(items, limit, worker) {
   return output;
 }
 
+export async function fetchWithRetry(url, options, config, fetchImpl = fetch) {
+  const attempts = config.requestAttempts ?? 3;
+  const delayMs = config.retryDelayMs ?? 1000;
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    try {
+      const response = await fetchImpl(url, {
+        ...options, signal: AbortSignal.timeout(config.requestTimeoutMs)
+      });
+      if (response.ok) return response;
+      const error = new Error(`HTTP ${response.status}`);
+      error.retryable = response.status === 429 || response.status >= 500;
+      if (!error.retryable || attempt === attempts) throw error;
+      await response.body?.cancel();
+    } catch (error) {
+      if (error.retryable === false || attempt === attempts) throw error;
+    }
+    await new Promise(done => setTimeout(done, attempt * delayMs));
+  }
+}
+
+export function threadsErrorDetails(status, json) {
+  const detail = json?.error || {};
+  const codes = ['code', 'error_subcode'].filter(key => Number.isInteger(detail[key]))
+    .map(key => `${key}=${detail[key]}`);
+  // Only expose structured codes; provider messages can contain request credentials.
+  const hint = detail.code === 190 ? '權杖無效或已過期，需重新授權' : '';
+  return [`HTTP ${status}`, ...codes, hint].filter(Boolean).join('; ');
+}
+
 async function fetchGoogleNews(config, fetchImpl = fetch) {
   const results = [];
   const errors = [];
@@ -172,8 +201,7 @@ async function fetchGoogleNews(config, fetchImpl = fetch) {
     const query = feed.query;
     const url = `https://news.google.com/rss/search?q=${encodeURIComponent(query)}&hl=zh-TW&gl=TW&ceid=TW:zh-Hant`;
     try {
-      const response = await fetchImpl(url, { signal: AbortSignal.timeout(config.requestTimeoutMs), headers: { 'User-Agent': UA } });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const response = await fetchWithRetry(url, { headers: { 'User-Agent': UA } }, config, fetchImpl);
       results.push(...parseRss(await response.text(), query, {
         sourceGroup: feed.name,
         defaultCategory: feed.category || null,
@@ -253,19 +281,21 @@ async function fetchThreads(config, fetchImpl = fetch) {
     url.searchParams.set('access_token', token);
     try {
       let response;
-      let lastError;
-      const timeoutMs = Math.max(config.requestTimeoutMs, 30000);
       for (let attempt = 1; attempt <= 3; attempt++) {
         try {
-          response = await fetchImpl(url, { signal: AbortSignal.timeout(timeoutMs) });
-          if (response.ok || response.status < 500) break;
-          lastError = new Error(`HTTP ${response.status}`);
-        } catch (error) {
-          lastError = error;
+          response = await fetchImpl(url, { signal: AbortSignal.timeout(Math.max(config.requestTimeoutMs, 30000)) });
+        } catch {
+          if (attempt === 3) throw new Error('Threads API 網路錯誤或逾時');
+          await new Promise(done => setTimeout(done, attempt * 1000));
+          continue;
         }
-        if (attempt < 3) await new Promise(done => setTimeout(done, attempt * 1000));
+        if (response.ok) break;
+        let detail;
+        try { detail = await response.json(); } catch {}
+        const error = new Error(threadsErrorDetails(response.status, detail));
+        if ((response.status !== 429 && response.status < 500) || attempt === 3) throw error;
+        await new Promise(done => setTimeout(done, attempt * 1000));
       }
-      if (!response?.ok) throw lastError || new Error(`HTTP ${response?.status || 0}`);
       const json = await response.json();
       for (const row of json.data || []) results.push({
         sourceItemId: row.id, title: (row.text || '').slice(0, 120) || 'Threads 貼文',
@@ -335,7 +365,7 @@ export async function run({ configPath = DEFAULT_CONFIG, statePath = DEFAULT_STA
     schemaVersion: 1,
     run: {
       startedAt, finishedAt: new Date().toISOString(), timezone: config.timezone,
-      status: news.errors.length === buildSearchFeeds(config).length ? '部分失敗' : '完成',
+      status: news.errors.length + commons.errors.length + threads.errors.length > 0 ? '部分失敗' : '完成',
       discovered: discovered.length, newCandidates: allCandidates.length,
       availableCandidates: candidateCache.length
     },
