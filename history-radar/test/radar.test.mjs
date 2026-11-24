@@ -71,3 +71,69 @@ test('候選佇列會保留前次結果並去重', () => {
   assert.equal(cache.length, 2);
   assert.deepEqual(cache.map(row => row.sourceItemId), ['a', 'b']);
 });
+
+const { fetchWithRetry, threadsErrorDetails, run } = await import('../src/radar.mjs');
+const { mkdtemp, writeFile, readFile, rm } = await import('node:fs/promises');
+const { tmpdir } = await import('node:os');
+const { join } = await import('node:path');
+
+test('搜尋遇到 503 與逾時會重試並恢復', async () => {
+  let calls = 0;
+  const response = await fetchWithRetry('https://example.com', {}, { requestTimeoutMs: 1000, retryDelayMs: 0 }, async () => {
+    calls++;
+    if (calls === 1) return new Response('', { status: 503 });
+    if (calls === 2) throw new Error('timeout');
+    return new Response('ok');
+  });
+  assert.equal(calls, 3);
+  assert.equal(await response.text(), 'ok');
+});
+
+test('搜尋重試有上限，400 不重試', async () => {
+  for (const [status, expected] of [[503, 3], [400, 1]]) {
+    let calls = 0;
+    await assert.rejects(fetchWithRetry('https://example.com', {}, { requestTimeoutMs: 1000, retryDelayMs: 0 }, async () => {
+      calls++;
+      return new Response('', { status });
+    }), new RegExp(`HTTP ${status}`));
+    assert.equal(calls, expected);
+  }
+});
+
+test('Threads 診斷保留代碼但不輸出權杖與原始訊息', () => {
+  const detail = threadsErrorDetails(400, { error: { code: 190, error_subcode: 463, message: 'secret-token', access_token: 'secret-token' } });
+  assert.match(detail, /code=190/);
+  assert.match(detail, /error_subcode=463/);
+  assert.match(detail, /重新授權/);
+  assert.doesNotMatch(detail, /secret-token/);
+});
+
+test('來源部分失敗仍寫入報告並保留候選資料', async () => {
+  const dir = await mkdtemp(join(tmpdir(), 'radar-test-'));
+  const configPath = join(dir, 'config.json');
+  const statePath = join(dir, 'state.json');
+  const outputPath = join(dir, 'latest.json');
+  const oldToken = process.env.THREADS_ACCESS_TOKEN;
+  process.env.THREADS_ACCESS_TOKEN = 'test-only';
+  try {
+    const prior = { sourceItemId: 'cached', title: '舊史料', url: 'https://example.com/prior' };
+    await writeFile(configPath, JSON.stringify({ ...config, queries: ['苗栗'], allowedDomains: ['example.com'], requestTimeoutMs: 1000, requestDelayMs: 0, retryDelayMs: 0, maxItemsPerQuery: 10, lookbackDays: 36500, timezone: 'Asia/Taipei' }));
+    await writeFile(statePath, JSON.stringify({ seenIds: [candidateId(prior)], candidateCache: [prior] }));
+    const report = await run({ configPath, statePath, outputPath, fetchImpl: async url => {
+      if (String(url).includes('graph.threads.net')) return Response.json({ error: { code: 190, error_subcode: 463, message: 'test-only' } }, { status: 400 });
+      return new Response('<rss><channel><item><guid>new</guid><title>苗栗火車頭園區新史料</title><link>https://example.com/new</link></item></channel></rss>');
+    } });
+    assert.equal(report.run.status, '部分失敗');
+    assert.equal(report.run.newCandidates, 1);
+    assert.equal(report.candidates.length, 2);
+    assert.match(report.errors[0].error, /code=190/);
+    const saved = await readFile(outputPath, 'utf8');
+    assert.doesNotMatch(saved, /test-only/);
+    assert.equal(JSON.parse(saved).candidates.length, 2);
+    assert.equal(JSON.parse(await readFile(statePath, 'utf8')).candidateCache.length, 2);
+  } finally {
+    if (oldToken === undefined) delete process.env.THREADS_ACCESS_TOKEN;
+    else process.env.THREADS_ACCESS_TOKEN = oldToken;
+    await rm(dir, { recursive: true, force: true });
+  }
+});
