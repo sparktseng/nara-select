@@ -20,7 +20,9 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
       - name: Test station and route safeguards
-        run: python3 -m unittest discover -s train-watch -p 'test_special_services.py'
+        run: |
+          python3 -m unittest discover -s train-watch -p 'test_special_services.py'
+          python3 -m unittest discover -s train-watch -p 'test_monitor_special.py'
       - name: Refresh seven days of official station and special services
         id: timetable
         continue-on-error: true
@@ -42,8 +44,10 @@ jobs:
           d=json.loads(p.read_text()) if p.exists() else {}
           with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
               f.write('Official timetable: '+os.environ['TIMETABLE_RESULT']+'\n\nPublic sources: '+os.environ['SOURCE_RESULT']+'\n\n')
+              f.write('Monitor state: '+d.get('status','unknown')+' | '+json.dumps(d.get('summary',{}),ensure_ascii=False)+'\n\n')
               for s in d.get('pages',[]):
-                  f.write('- '+s['name']+': '+s['status']+'\n')
+                  detail=(' | '+s.get('error','')+': '+s.get('errorMessage','')) if s['status']=='failed' else ''
+                  f.write('- '+s['name']+': '+s['status']+detail.replace('\n',' ')+' | '+s.get('finalUrl',s['url'])+' | last success: '+str(s.get('lastSuccessAt'))+'\n')
               f.write('\nUnverified changes; do not publish as confirmed services:\n\n')
               for c in d.get('candidates',[]):
                   f.write('- '+c['title'].replace('\n',' ')+' — '+c['source']+'\n')
